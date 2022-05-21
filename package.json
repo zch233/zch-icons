@@ -1,0 +1,17 @@
+{
+  "name": "zch-icons",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zch233/zch-icons.git",
+  "author": "zhangchao <529743595@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "bootstrap:china": "lerna bootstrap --registry=https://registry.npm.taobao.org",
+    "lint": "lerna run lint"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
