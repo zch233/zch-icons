@@ -6,12 +6,17 @@
   "author": "zhangchao <529743595@qq.com>",
   "license": "MIT",
   "scripts": {
+    "build": "nuxt build",
+    "serve": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "bootstrap:china": "lerna bootstrap --registry=https://registry.npm.taobao.org",
     "lint": "lerna run lint"
   },
   "devDependencies": {
+    "nuxt": "3.0.0-rc.4",
     "lerna": "^4.0.0"
   }
 }
