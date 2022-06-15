@@ -7,8 +7,8 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: 'icons',
-            charset: 'utf-8',
+            title: '古珀图标',
+            titleTemplate: (title: string) => `${title} - 古珀图标`,
             viewport: 'width=device-width, initial-scale=1',
             htmlAttrs: {
                 lang: 'zh-Hans',
