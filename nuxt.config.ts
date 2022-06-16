@@ -7,8 +7,7 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: '古珀图标',
-            titleTemplate: (title: string) => `${title} - 古珀图标`,
+            titleTemplate: `%s - 古珀图标库`,
             viewport: 'width=device-width, initial-scale=1',
             htmlAttrs: {
                 lang: 'zh-Hans',
@@ -16,6 +15,6 @@ export default defineNuxtConfig({
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
         },
     },
-    css: [],
+    css: ['@/assets/styles/reset.css', '@/assets/styles/global.less'],
     build: {},
 });
