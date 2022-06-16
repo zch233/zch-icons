@@ -24,6 +24,7 @@ export default defineComponent({
 
 <style scoped lang="less">
 .nuxtApp {
+    background-color: #fff;
     &-header {
         display: flex;
         padding: 16px 0;
