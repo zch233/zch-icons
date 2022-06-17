@@ -48,8 +48,12 @@ definePageMeta({
 
 <style scoped lang="less">
 .icons {
+    * {
+        margin: 0;
+        padding: 0;
+    }
     background-color: #f0f1f3;
-    &-header {
+    & &-header {
         padding-top: 32px;
         background-color: #fff;
         &-tab {
@@ -68,11 +72,9 @@ definePageMeta({
             }
         }
     }
-    &-main {
-        //padding: 32px 0;
-        //width: 86vw;
+    & &-main {
         margin: 0 auto;
-        /deep/.n-tabs {
+        :deep(.n-tabs) {
             .n-tabs-nav {
                 background-color: #fff;
                 padding-bottom: 40px;

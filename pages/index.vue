@@ -117,8 +117,12 @@ onMounted(() => {
 
 <style scoped lang="less">
 .home {
+    * {
+        margin: 0;
+        padding: 0;
+    }
     padding-top: 32px;
-    &-statistics {
+    & &-statistics {
         max-width: 66.4vw;
         display: flex;
         margin: 0 auto;
@@ -137,7 +141,7 @@ onMounted(() => {
             }
         }
     }
-    &-banner {
+    & &-banner {
         display: flex;
         padding: 48px 0;
         width: 86vw;
@@ -155,7 +159,7 @@ onMounted(() => {
             }
         }
     }
-    &-example {
+    & &-example {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -201,7 +205,7 @@ onMounted(() => {
             }
         }
     }
-    &-sub {
+    & &-sub {
         background-color: #f0f1f3;
         &-title {
             font-size: 24px;

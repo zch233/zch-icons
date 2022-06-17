@@ -126,10 +126,12 @@ export default defineComponent({
             }
         }
         .nav {
+            padding: 0;
             display: flex;
             margin-left: 3.6vw;
             line-height: 24px;
             font-size: 16px;
+            list-style: none;
             &-item {
                 padding: 10px 16px;
                 margin-right: 16px;
