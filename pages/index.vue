@@ -29,11 +29,11 @@
                 <span>Easy</span>
             </div>
             <div class="home-banner-item">
-                <img src="../assets/home/banner2.png" alt="" />
+                <img src="~/assets/home/banner2.png" alt="" />
                 <span>To</span>
             </div>
             <div class="home-banner-item">
-                <img src="../assets/home/banner3.png" alt="" />
+                <img src="~/assets/home/banner3.png" alt="" />
                 <span>Use</span>
             </div>
         </div>
@@ -74,21 +74,21 @@
                             <b>Filled</b>
                             <p>Great for bold statements or small sizes.</p>
                         </div>
-                        <img src="../assets/home/profile1.png" alt="" />
+                        <img src="~/assets/home/profile1.png" alt="" />
                     </div>
                     <div class="home-sub-profile-item">
                         <div>
                             <b>Regular</b>
                             <p>Easy, readable icons that blend right in.</p>
                         </div>
-                        <img src="../assets/home/profile2.png" alt="" />
+                        <img src="~/assets/home/profile2.png" alt="" />
                     </div>
                     <div class="home-sub-profile-item long">
                         <div>
                             <b>TwoTone & Colorful</b>
                             <p>Gives an illustrated feel or a pop of color.</p>
                         </div>
-                        <img src="../assets/home/profile3.png" alt="" />
+                        <img src="~/assets/home/profile3.png" alt="" />
                     </div>
                 </div>
             </div>
