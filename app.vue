@@ -1,5 +1,5 @@
 <script lang="tsx">
-export default defineComponent({
+export default {
     setup() {
         return () => (
             <div class='nuxtApp'>
@@ -19,13 +19,17 @@ export default defineComponent({
             </div>
         );
     },
-});
+};
 </script>
 
 <style scoped lang="less">
 .nuxtApp {
     background-color: #fff;
-    &-header {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    & &-header {
         display: flex;
         padding: 16px 0;
         max-width: 80vw;
