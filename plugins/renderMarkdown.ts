@@ -8,7 +8,7 @@ export default defineNuxtPlugin(app => {
         provide: {
             renderMarkdown(fileName: string) {
                 let md = new markdownIt({
-                    highlight: function (str, lang) {
+                    highlight: function (str: string, lang: string) {
                         if (lang && hljs.getLanguage(lang)) {
                             try {
                                 return hljs.highlight(str, { language: lang }).value;
