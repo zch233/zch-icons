@@ -1,26 +1,22 @@
-<script lang="tsx">
-export default {
-    setup() {
-        return () => (
-            <div class='nuxtApp'>
-                <header class='nuxtApp-header'>
-                    <b class='logo' data-word='GUPO'>
-                        <span class='white'>GUPO</span>
-                    </b>
-                    <ul class='nav'>
-                        <li class='nav-item'>Start</li>
-                        <li class='nav-item'>Design</li>
-                        <li class='nav-item'>Docs</li>
-                        <li class='nav-item'>Icons</li>
-                        <li class='nav-item'>Codeup</li>
-                    </ul>
-                </header>
-                <NuxtPage />
-            </div>
-        );
-    },
-};
-</script>
+<template>
+    <div class="nuxtApp">
+        <header class="nuxtApp-header">
+            <NuxtLink to="/">
+                <b class="logo" data-word="GUPO">
+                    <span class="white">GUPO</span>
+                </b>
+            </NuxtLink>
+            <ul class="nav">
+                <li class="nav-item"><NuxtLink to="/start">Start</NuxtLink></li>
+                <li class="nav-item"><NuxtLink to="/design">Design</NuxtLink></li>
+                <li class="nav-item"><NuxtLink to="/docs">Docs</NuxtLink></li>
+                <li class="nav-item"><NuxtLink to="/icons">Icons</NuxtLink></li>
+                <li class="nav-item"><NuxtLink to="https://nuxtjs.org" target="_blank">Codeup</NuxtLink></li>
+            </ul>
+        </header>
+        <NuxtPage />
+    </div>
+</template>
 
 <style scoped lang="less">
 .nuxtApp {
