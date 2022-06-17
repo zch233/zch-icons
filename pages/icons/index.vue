@@ -41,8 +41,8 @@
 <script setup>
 import { IconBookFilled } from 'icon-vue3';
 
-definePageMeta({
-    title: 'Icons',
+useHead({
+    title: '图标',
 });
 </script>
 
