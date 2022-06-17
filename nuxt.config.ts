@@ -31,8 +31,16 @@ export default defineNuxtConfig({
             include: ['date-fns-tz/esm/formatInTimeZone'],
         },
     },
-    css: ['@/assets/styles/reset.css', '@/assets/styles/global.less'],
+    css: ['@/assets/styles/atom.min.css', '@/assets/styles/global.less'],
     build: {
         transpile: ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'],
     },
+    buildModules: [
+        [
+            '@nuxt-modules/compression',
+            {
+                ext: '.gz',
+            },
+        ],
+    ],
 });
