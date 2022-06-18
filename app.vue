@@ -133,9 +133,12 @@
             font-size: 16px;
             list-style: none;
             &-item {
-                padding: 10px 16px;
                 margin-right: 16px;
                 color: rgb(95, 105, 125);
+                a {
+                    display: inline-block;
+                    padding: 10px 16px;
+                }
             }
         }
     }
