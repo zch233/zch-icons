@@ -9,7 +9,11 @@ import markdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 import mdContainer from 'markdown-it-container';
 
-const { data } = await useFetch('/api/getMarkdownContent', { params: { path: 'design' } });
+const { path } = defineProps({
+    path: String,
+});
+
+const { data } = await useFetch('/api/getMarkdownContent', { params: { path } });
 let text = new markdownIt({
     highlight: function (str: string, lang: string) {
         if (lang && hljs.getLanguage(lang)) {
@@ -186,6 +190,11 @@ let text = new markdownIt({
             border-collapse: collapse;
             margin: 1rem 0;
             overflow-x: auto;
+            width: 100%;
+        }
+
+        table th {
+            background-color: #f6f8fa;
         }
 
         table th,
@@ -199,7 +208,7 @@ let text = new markdownIt({
         }
 
         table tr:nth-child(2n) {
-            background-color: #f6f8fa;
+            background-color: #fafafa;
         }
 
         /* 删除了调整 font-size、padding 的选项 */
