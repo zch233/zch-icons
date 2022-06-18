@@ -109,10 +109,6 @@ import {
 useHead({
     title: '😍',
 });
-
-onMounted(() => {
-    console.log(1111);
-});
 </script>
 
 <style scoped lang="less">
@@ -146,6 +142,7 @@ onMounted(() => {
         padding: 48px 0;
         width: 86vw;
         margin: 0 auto;
+        justify-content: center;
         &-item {
             padding: 24px 16px;
             position: relative;
