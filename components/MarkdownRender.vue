@@ -5,11 +5,23 @@
 </template>
 
 <script setup lang="ts">
-const { path } = defineProps({
-    path: String,
-});
-const { $renderMarkdown } = useNuxtApp();
-const text = $renderMarkdown(`./pages/${path}/index.md`);
+import markdownIt from 'markdown-it';
+import hljs from 'highlight.js';
+import mdContainer from 'markdown-it-container';
+
+const { data } = await useFetch('/api/getMarkdownContent', { params: { path: 'design' } });
+let text = new markdownIt({
+    highlight: function (str: string, lang: string) {
+        if (lang && hljs.getLanguage(lang)) {
+            try {
+                return hljs.highlight(str, { language: lang }).value;
+            } catch (_) {}
+        }
+        return ''; // use external default escaping
+    },
+})
+    .use(mdContainer)
+    .render(data.value);
 </script>
 
 <style scoped lang="less">
