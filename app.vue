@@ -11,7 +11,7 @@
                 <li class="nav-item"><NuxtLink to="/design">Design</NuxtLink></li>
                 <li class="nav-item"><NuxtLink to="/docs">Docs</NuxtLink></li>
                 <li class="nav-item"><NuxtLink to="/icons">Icons</NuxtLink></li>
-                <li class="nav-item"><NuxtLink to="https://nuxtjs.org" target="_blank">Codeup</NuxtLink></li>
+                <li class="nav-item"><NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">Codeup</NuxtLink></li>
             </ul>
         </header>
         <NuxtPage />
