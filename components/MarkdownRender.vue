@@ -28,7 +28,7 @@ let text = new markdownIt({
 // https://imageslr.github.io/mweb-themes/
 .markdownContainer {
     :deep(.markdown-body) {
-        max-width: 1200px;
+        max-width: 66.4vw;
         margin: 0 auto;
         padding: 1em;
         word-break: break-word;
