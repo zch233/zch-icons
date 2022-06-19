@@ -3,7 +3,7 @@
         <IconSearcher />
         <div class="home-statistics">
             <div class="home-statistics-item">
-                <b>19,999</b>
+                <b>{{ Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length }}</b>
                 <p>total icon in<br />gupo icons</p>
             </div>
             <div class="home-statistics-item">
@@ -11,15 +11,15 @@
                 <p>styles<br />of icons</p>
             </div>
             <div class="home-statistics-item">
-                <b>99</b>
+                <b>{{ Object.keys(filledIcons).length + Object.keys(outlinedIcons).length }}</b>
                 <p>new icon in<br />simple</p>
             </div>
             <div class="home-statistics-item">
-                <b>199</b>
+                <b>{{ Object.keys(twoToneIcons).length }}</b>
                 <p>new icon in<br />twoTone</p>
             </div>
             <div class="home-statistics-item">
-                <b>99</b>
+                <b>{{ Object.keys(colorfulIcons).length }}</b>
                 <p>new icon in<br />colorful</p>
             </div>
         </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="home-sub-profile-item">
                         <div>
-                            <b>Regular</b>
+                            <b>Outlined</b>
                             <p>Easy, readable icons that blend right in.</p>
                         </div>
                         <img src="~/assets/home/profile2.png" alt="" />
@@ -105,7 +105,13 @@ import {
     IconMediumSquareFilled,
     IconDashboardFilled,
 } from 'icon-vue3';
+import * as allIcons from 'icon-vue3';
+import * as filledIcons from 'icon-vue3/es/icons/filled';
+import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
+import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
+import * as colorfulIcons from 'icon-vue3/es/icons/color';
 
+console.log(allIcons);
 useHead({
     title: '😍',
 });
