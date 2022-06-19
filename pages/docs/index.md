@@ -7,17 +7,17 @@
 | rotate         | 图标旋转角度（IE9 无效）                   | number                | -      |      |
 | spin           | 是否有旋转动画                             | boolean               | false  |      |
 | style          | 设置图标的样式，例如 `fontSize` 和 `color` | CSSProperties         | -      |      |
-| parmaryColoe   | 仅适用双色图标。设置双色图标的主要颜色     | string (十六进制颜色) | -      |      |
+| primaryColor   | 仅适用双色图标。设置双色图标的主要颜色     | string (十六进制颜色) | -      |      |
 | secondaryColor | 仅适用双色图标。设置双色图标的次要颜色     | string (十六进制颜色) | -      |      |
 
 其中我们提供了三种主题的图标，不同主题的 Icon 组件名为图标名加主题做为后缀。
 
 ```jsx
-import { StarOutlined, StarFilled, StarTwoTone } from '@ant-design/icons-vue';
+import { IconStarOutlined, IconStarFilled, IconStarTwoTone } from 'gupo-icons-vue3';
 
 <icon-star-outlined />
 <icon-star-filled />
-<icon-star-two-tone parmaryColoe="#eb2f96" />
+<icon-star-two-tone primaryColor="#eb2f96" />
 ```
 
 ### SVG 图标
@@ -59,7 +59,7 @@ getTwoToneColor(); // #eb2f96
 
 ### 使用 Iconfont 图标
 
-在 `1.2.0` 之后，我们提供了一个 `createFromIconfont` 方法，方便开发者调用在 [iconfont.cn](http://iconfont.cn/) 上自行管理的图标。
+我们提供了一个 `createFromIconfont` 方法，方便开发者调用在 [iconfont.cn](http://iconfont.cn/) 上自行管理的图标。
 
 ```jsx
 import { createFromIconfont } from 'gupo-icons-vue3';
