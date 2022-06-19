@@ -3,7 +3,7 @@
         <IconSearcher />
         <div class="home-statistics">
             <div class="home-statistics-item">
-                <b>{{ Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length }}</b>
+                <b>{{ statistic.total }}</b>
                 <p>total icon in<br />gupo icons</p>
             </div>
             <div class="home-statistics-item">
@@ -11,15 +11,15 @@
                 <p>styles<br />of icons</p>
             </div>
             <div class="home-statistics-item">
-                <b>{{ Object.keys(filledIcons).length + Object.keys(outlinedIcons).length }}</b>
+                <b>{{ statistic.simple }}</b>
                 <p>new icon in<br />simple</p>
             </div>
             <div class="home-statistics-item">
-                <b>{{ Object.keys(twoToneIcons).length }}</b>
+                <b>{{ statistic.twoTone }}</b>
                 <p>new icon in<br />twoTone</p>
             </div>
             <div class="home-statistics-item">
-                <b>{{ Object.keys(colorfulIcons).length }}</b>
+                <b>{{ statistic.colorful }}</b>
                 <p>new icon in<br />colorful</p>
             </div>
         </div>
@@ -109,9 +109,14 @@ import * as allIcons from 'icon-vue3';
 import * as filledIcons from 'icon-vue3/es/icons/filled';
 import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
 import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
-import * as colorfulIcons from 'icon-vue3/es/icons/color';
+import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 
-console.log(allIcons);
+const statistic = computed(() => ({
+    total: Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length,
+    simple: Object.keys(filledIcons).length + Object.keys(outlinedIcons).length,
+    twoTone: Object.keys(twoToneIcons).length,
+    colorful: Object.keys(colorfulIcons).length,
+}));
 useHead({
     title: '😍',
 });
