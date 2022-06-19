@@ -4111,18 +4111,18 @@ husky@^7.0.0:
   resolved "https://registry.npmmirror.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
   integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==
 
-icon-base@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.npmmirror.com/icon-base/-/icon-base-0.0.4.tgz#23f2c81138ceb79ac6e77d7e3bd993f5b3f74098"
-  integrity sha512-fNj4ZNjyGjEDwFSCTe47DmB1QwL16Y24gTgytbtujzKza98C+3bdnTQUW87GT4ATP6A8+q+kZAAqyqeofzMkLw==
+icon-base@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.6.tgz#40ed411339f169d002dd44c53d2f178e4eded759"
+  integrity sha512-fA4TXDbv+kr9fQaRKj4nSBi3zC9C4jox8jA4l0IO+2vXzxL9xvyVh384bgHMDYQJa6Gf4vFOfKvaEvu0rLy4wQ==
 
-icon-vue3@^0.0.25:
-  version "0.0.25"
-  resolved "https://registry.npmmirror.com/icon-vue3/-/icon-vue3-0.0.25.tgz#41494b6c5439bb0d8032f808be725c3ebc30918e"
-  integrity sha512-HFdWq0uVvvAxZtHgP7O3yL4ifv1DyXQ0VKqIfvVW4oplWnQTsDNn9psYztewd2R9RarZlkncuTdV/mEajJVr0Q==
+icon-vue3@^0.0.30:
+  version "0.0.30"
+  resolved "https://registry.npmjs.org/icon-vue3/-/icon-vue3-0.0.30.tgz#935a258cd0eddf58b0e077f39b31b2febc9a3ae6"
+  integrity sha512-4wdunDN6MyoS0qIPz1lrReMqXIxiNLMPdsf6OCskYyADlCAxbD10H2EtxEsY7oAISZLRLzj1hBOff692sLFRWA==
   dependencies:
     "@ant-design/colors" "^6.0.0"
-    icon-base "0.0.4"
+    icon-base "^0.0.6"
     vue "3.2.33"
 
 iconv-lite@^0.4.24, iconv-lite@^0.4.4:
