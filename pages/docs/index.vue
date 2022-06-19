@@ -65,6 +65,10 @@ import {
 } from 'icon-vue3';
 import CodeRender from '../../components/CodeRender';
 
+useHead({
+    title: '文档',
+});
+
 const IconFont = createFromIconfont({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
 });
