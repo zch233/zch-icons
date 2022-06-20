@@ -1,14 +1,15 @@
 {
     "name": "gupo-icons-vue3",
     "version": "0.0.1",
+    "author": "zhangchao <529743595@qq.com>",
+    "license": "MIT",
+    "sideEffects": false,
     "main": "./lib/index.js",
     "module": "./es/index.js",
     "files": [
         "lib/*",
         "es/*"
     ],
-    "sideEffects": false,
-    "license": "MIT",
     "scripts": {
         "serve": "vite",
         "serve:stage": "vite serve --mode staging",
@@ -26,7 +27,6 @@
         "lint:ls-lint": "ls-lint",
         "commit": "git-cz",
         "pre-commit:pretty": "pretty-quick --staged",
-        "prepare": "husky install",
         "generate": "rimraf src/icons && ts-node scripts/index.ts",
         "compile": "vc-tools run compile",
         "prepublishOnly": "yarn generate && yarn compile"
