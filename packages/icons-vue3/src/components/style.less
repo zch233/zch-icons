@@ -1,0 +1,54 @@
+.gupoIcon {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    line-height: 0;
+    color: inherit;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    text-transform: none;
+    vertical-align: -0.125em;
+}
+
+.gupoIcon > * {
+    line-height: 1;
+}
+
+.gupoIcon svg {
+    display: inline-block;
+}
+
+.gupoIcon::before {
+    display: none;
+}
+
+.gupoIcon .gupoIcon-icon {
+    width: 1em;
+    height: 1em;
+    fill: currentcolor;
+    overflow: hidden;
+    vertical-align: -0.15em;
+}
+
+.gupoIcon[tabindex] {
+    cursor: pointer;
+}
+
+.gupoIcon-spin::before,
+.gupoIcon-spin {
+    display: inline-block;
+    animation: loading-circle 1s infinite linear;
+}
+
+@keyframes loading-circle {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-circle {
+    100% {
+        transform: rotate(360deg);
+    }
+}
