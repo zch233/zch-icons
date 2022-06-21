@@ -19,7 +19,15 @@
         </NMessageProvider>
     </div>
 </template>
+<script setup>
+import { permission, setPermission } from './store';
+import Icon from 'icon-vue3';
 
+onMounted(() => {
+    setPermission('design', window.localStorage.getItem('permissionDesign') === '1');
+    setPermission('publish', window.localStorage.getItem('permissionPublish') === '1');
+});
+</script>
 <style scoped lang="less">
 .nuxtApp {
     background-color: #fff;

@@ -49,7 +49,7 @@
                               <code v-html="codeTemplate" />
                             </pre>
                             </div>
-                            <div class="editBar">
+                            <div v-if="permission.design" class="editBar">
                                 <NForm ref="formRef" inline :label-width="80" :model="form.data" :rules="form.rules">
                                     <NGrid :cols="24" :x-gap="24">
                                         <NFormItemGi :span="12" label="分类" path="category">
@@ -95,6 +95,7 @@ import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
 import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 import { useMessage } from 'naive-ui';
 import { getHighlightCode } from '../../utils';
+import { permission } from '../../store';
 
 const message = useMessage();
 const statistic = computed(() => ({
