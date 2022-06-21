@@ -1,7 +1,7 @@
 <template>
     <div class="iconSearcherWrapper">
         <div class="iconSearcher">
-            <div class="iconSearcher-input"><IconSearchOutlined /><input placeholder="Search 19,999 icons" type="text" /></div>
+            <div class="iconSearcher-input"><IconSearchOutlined /><input :placeholder="`Search ${total} icons`" type="text" /></div>
             <div class="iconSearcher-tips">Try <em>date</em>，<em>date</em>，<em>date</em>，<em>date</em>，<em>date</em>，<em>date</em></div>
         </div>
     </div>
@@ -9,6 +9,9 @@
 
 <script setup>
 import { IconSearchOutlined } from 'icon-vue3';
+import * as allIcons from 'icon-vue3';
+
+const total = computed(() => Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length);
 </script>
 
 <style scoped lang="less">
