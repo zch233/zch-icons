@@ -4123,10 +4123,10 @@ icon-base@^0.0.6:
   resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.6.tgz#40ed411339f169d002dd44c53d2f178e4eded759"
   integrity sha512-fA4TXDbv+kr9fQaRKj4nSBi3zC9C4jox8jA4l0IO+2vXzxL9xvyVh384bgHMDYQJa6Gf4vFOfKvaEvu0rLy4wQ==
 
-icon-vue3@^0.0.30:
-  version "0.0.30"
-  resolved "https://registry.npmjs.org/icon-vue3/-/icon-vue3-0.0.30.tgz#935a258cd0eddf58b0e077f39b31b2febc9a3ae6"
-  integrity sha512-4wdunDN6MyoS0qIPz1lrReMqXIxiNLMPdsf6OCskYyADlCAxbD10H2EtxEsY7oAISZLRLzj1hBOff692sLFRWA==
+icon-vue3@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.npmjs.org/icon-vue3/-/icon-vue3-0.0.31.tgz#24eab03504d7fa2f7a467711de07e30bf9886236"
+  integrity sha512-bCaDvCN4udzMZoqEAofvn8uwP4VMcgVfmwXn5Iu6B/H6g4Pd3LaF/gVeBrG/xJzshVSrf9/rGWoSawwJSI2pkQ==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     icon-base "^0.0.6"
