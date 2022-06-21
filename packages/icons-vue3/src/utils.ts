@@ -28,7 +28,7 @@ export const iconStyles = `
     display: none;
 }
 
-.gupoIcon-icon {
+.gupoIcon svg {
     width: 1em;
     height: 1em;
     fill: currentcolor;

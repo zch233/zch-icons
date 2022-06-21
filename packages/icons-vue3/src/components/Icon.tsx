@@ -55,8 +55,11 @@ const Icon: FunctionalComponent<IconProps> = (props, context) => {
     return target ? (
         <span role='img' aria-label={name} {...restProps} class={classResult} style={styleResult}>
             {generateSvgNode(target.icon as AbstractNode, `gupoIcon-svg-${target.name}`, {
-                class: 'gupoIcon-icon',
+                width: '1em',
+                height: '1em',
                 'data-icon': target.name,
+                fill: 'currentColor',
+                'aria-hidden': 'true',
             })}
         </span>
     ) : (
