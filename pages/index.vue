@@ -59,7 +59,7 @@
                 <IconMediumSquareFilled />
                 <p>medium-square</p>
             </div>
-            <button class="home-example-button">
+            <button class="home-example-button" @click="router.push('/icons')">
                 View All Icons
                 <IconDashboardFilled />
             </button>
@@ -111,6 +111,7 @@ import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
 import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
 import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 
+const router = useRouter();
 const statistic = computed(() => ({
     total: Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length,
     simple: Object.keys(filledIcons).length + Object.keys(outlinedIcons).length,
