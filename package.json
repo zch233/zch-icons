@@ -39,6 +39,7 @@
         "vite-plugin-compression": "^0.5.1"
     },
     "dependencies": {
+        "copy-to-clipboard": "^3.3.1",
         "icon-vue3": "^0.0.30"
     }
 }
