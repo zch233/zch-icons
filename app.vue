@@ -14,7 +14,9 @@
                 <li class="nav-item"><NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">Codeup</NuxtLink></li>
             </ul>
         </header>
-        <NuxtPage />
+        <NMessageProvider>
+            <NuxtPage />
+        </NMessageProvider>
     </div>
 </template>
 
