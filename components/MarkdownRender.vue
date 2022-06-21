@@ -8,6 +8,7 @@
 import markdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 import mdContainer from 'markdown-it-container';
+import { getHighlightCode } from '~/utils';
 
 const { path } = defineProps({
     path: String,
@@ -18,7 +19,7 @@ let text = new markdownIt({
     highlight: function (str: string, lang: string) {
         if (lang && hljs.getLanguage(lang)) {
             try {
-                return hljs.highlight(str, { language: lang }).value;
+                return getHighlightCode(str, lang);
             } catch (_) {}
         }
         return ''; // use external default escaping
