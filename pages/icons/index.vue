@@ -8,7 +8,7 @@
                 <NTabPane v-for="(item, key) in statistic" :key="key" :name="key" :tab="item.title">
                     <h1 class="icons-main-title">{{ Object.keys(item.list).length }} Icons</h1>
                     <div class="icons-main-list">
-                        <div v-for="(icon, iconName) in item.list" :key="iconName" class="icons-main-list-item" @click="copySvgComponent(iconName)">
+                        <div v-for="(icon, iconName) in item.list" :key="iconName" class="icons-main-list-item" @click="copySvgComponentName(iconName)">
                             <component :is="icon" />
                             <p @click.stop="showDetailModal(icon, iconName)">{{ iconName }}</p>
                         </div>
@@ -34,14 +34,48 @@
                             <component :is="currentIcon.icon" />
                         </div>
                         <div class="detailModal-main-content-right">
-                            <ul>
-                                <li v-for="item in ['Vue3', 'React', 'HTML']" :class="{ active: currentTab === item }" @click="currentTab = item" :key="item">
-                                    {{ item }}
-                                </li>
-                            </ul>
-                            <pre>
-              <code>{{codeTemplate}}</code>
-            </pre>
+                            <div class="codeBar">
+                                <ul>
+                                    <li
+                                        v-for="item in ['Vue3', 'React', 'HTML']"
+                                        :class="{ active: currentTab === item }"
+                                        @click="currentTab = item"
+                                        :key="item"
+                                    >
+                                        {{ item }}
+                                    </li>
+                                </ul>
+                                <pre>
+                              <code v-html="codeTemplate" />
+                            </pre>
+                            </div>
+                            <div class="editBar">
+                                <NForm ref="formRef" inline :label-width="80" :model="form.data" :rules="form.rules">
+                                    <NGrid :cols="24" :x-gap="24">
+                                        <NFormItemGi :span="12" label="分类" path="category">
+                                            <n-select
+                                                v-model:value="form.data.category"
+                                                placeholder="请选择分类"
+                                                :options="[
+                                                    { label: '线框风格', value: 'filled' },
+                                                    { label: '实底风格', value: 'outlined' },
+                                                    { label: '双色风格', value: 'twotone' },
+                                                    { label: '彩色风格', value: 'colorful' },
+                                                ]"
+                                            />
+                                        </NFormItemGi>
+                                        <NFormItemGi :span="12" label="key" path="key">
+                                            <NInput v-model:value="form.data.key" placeholder="请输入英文名称（格式 YRC-XXX）" />
+                                        </NFormItemGi>
+                                        <NFormItemGi :span="12" label="名称" path="name">
+                                            <NInput v-model:value="form.data.name" placeholder="请输入中文名称" />
+                                        </NFormItemGi>
+                                        <NFormItemGi :span="12">
+                                            <NButton attr-type="button" @click="handleSaveClick">保存</NButton>
+                                        </NFormItemGi>
+                                    </NGrid>
+                                </NForm>
+                            </div>
                         </div>
                     </div>
                     <div class="detailModal-main-bottom">
@@ -60,6 +94,7 @@ import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
 import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
 import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 import { useMessage } from 'naive-ui';
+import { getHighlightCode } from '../../utils';
 
 const message = useMessage();
 const statistic = computed(() => ({
@@ -87,7 +122,7 @@ useHead({
 
 const detailModalVisible = ref(false);
 
-const copySvgComponent = iconName => {
+const copySvgComponentName = iconName => {
     const content = `<${iconName} />`;
     copy(content);
     message.success(`${content} copied 🎉`);
@@ -99,12 +134,45 @@ const showDetailModal = (icon, iconName) => {
     currentIcon.value = { icon, iconName };
 };
 const currentTab = ref('Vue3');
-const codeTemplate = computed(
-    () => `
+const codeTemplate = computed(() =>
+    getHighlightCode(
+        currentTab.value === 'HTML'
+            ? `
+<i class="gupoIcon ${currentIcon.value.iconName}"></i>`
+            : `
 import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
 
 <${currentIcon.value.iconName} />`
+    )
 );
+
+const form = ref({
+    data: {
+        category: undefined,
+        key: '',
+        name: '',
+    },
+    rules: {
+        category: {
+            required: true,
+            message: '请输入分类',
+            trigger: ['input'],
+        },
+        key: {
+            required: true,
+            message: '请输入英文名称',
+            trigger: ['input'],
+        },
+        name: {
+            required: true,
+            message: '请输入中文名称',
+            trigger: ['input'],
+        },
+    },
+});
+const handleSaveClick = () => {
+    message.success(`保存成功 🎉`);
+};
 </script>
 
 <style scoped lang="less">
@@ -238,41 +306,48 @@ import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 440px;
                 border: 2px solid #f0f1f3;
                 border-radius: 12px;
-                padding: 28px 0;
+                padding: 28px;
                 font-size: 184px;
             }
             &-right {
-                border-radius: 12px;
-                background-color: #183153;
-                margin: 0 0 0 32px;
                 flex: 1;
-                ul {
-                    list-style: none;
-                    display: flex;
-                    color: #74c0e1;
-                    font-size: 14px;
-                    padding-left: 32px;
-                    li {
-                        padding: 7px 10.5px;
-                        border-radius: 8px;
-                        transition: all 0.25s;
-                        cursor: pointer;
-                        font-weight: bold;
-                        &.active {
-                            color: #fff;
-                        }
-                        &:hover {
-                            background-color: #001c40;
+                margin: 0 0 0 32px;
+                display: flex;
+                flex-direction: column;
+                .codeBar {
+                    flex: 1;
+                    width: 100%;
+                    border-radius: 12px;
+                    background-color: #183153;
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        color: #74c0e1;
+                        font-size: 14px;
+                        padding: 12px 32px;
+                        margin: 0;
+                        li {
+                            padding: 7px 10.5px;
+                            border-radius: 8px;
+                            transition: all 0.25s;
+                            cursor: pointer;
+                            font-weight: bold;
+                            &.active {
+                                color: #fff;
+                            }
+                            &:hover {
+                                background-color: #001c40;
+                            }
                         }
                     }
-                }
-                > pre {
-                    padding: 18px 6px 18px 32px;
-                    code {
-                        color: #fff;
+                    > pre {
+                        margin: 0;
+                        padding: 0 6px 0 32px;
+                        code {
+                            color: #fff;
+                        }
                     }
                 }
             }
