@@ -2085,9 +2085,9 @@ astral-regex@^2.0.0:
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
 async-validator@^4.0.7:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/async-validator/-/async-validator-4.1.1.tgz#3cd1437faa2de64743f7d56649dd904c946a18fe"
-  integrity sha512-p4DO/JXwjs8klJyJL8Q2oM4ks5fUTze/h5k10oPPKMiLe1fj3G1QMzPHNmN1Py4ycOk7WlO2DcGXv1qiESJCZA==
+  version "4.2.5"
+  resolved "https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz#c96ea3332a521699d0afaaceed510a54656c6339"
+  integrity sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==
 
 async@^3.2.3:
   version "3.2.4"
@@ -2895,9 +2895,9 @@ data-uri-to-buffer@^4.0.0:
   integrity sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==
 
 date-fns-tz@^1.3.3:
-  version "1.3.4"
-  resolved "https://registry.npmjs.org/date-fns-tz/-/date-fns-tz-1.3.4.tgz#8b0e75beb771c7e9f1597aba467dc14431bb5403"
-  integrity sha512-O47vEyz85F2ax/ZdhMBJo187RivZGjH6V0cPjPzpm/yi6YffJg4upD/8ibezO11ezZwP3QYlBHh/t4JhRNx0Ow==
+  version "1.3.5"
+  resolved "https://registry.npmjs.org/date-fns-tz/-/date-fns-tz-1.3.5.tgz#415086b0095dab80121d66912b93f1dec5729e6e"
+  integrity sha512-SNhl/fWe7i2HoIB9ejLZhEEJ6ZtRRpOBbzizFrq11K2/iceS9Nk7fPN2VTYVOMgFB9u0f3eidSC4n1xaRONW2A==
 
 date-fns@^2.28.0:
   version "2.28.0"
@@ -5357,10 +5357,10 @@ mute-stream@0.0.8, mute-stream@~0.0.4:
   resolved "https://registry.npmmirror.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-naive-ui@^2.30.6:
-  version "2.30.6"
-  resolved "https://registry.npmjs.org/naive-ui/-/naive-ui-2.30.6.tgz#efd23a573b283ffed7b2d8fe177e7ad3e1b9e01b"
-  integrity sha512-QawTYvC+V9zc2hCl5dKgTowiAfCh+GBTdOp8Kswd4bx+o2rdtxrH83tZeFoABsxh3nOx4AL3r/DWfIVdoBqi1A==
+naive-ui@2.30.4:
+  version "2.30.4"
+  resolved "https://registry.npmjs.org/naive-ui/-/naive-ui-2.30.4.tgz#8208aebfa25253148d988f102e93d25dea731b0f"
+  integrity sha512-xf9Re46gfy8U/P71ON3hIEgr9ag0ffmthnzU4O7RHRhdzXkfN1KuDQZsBsDY34nl9ycAy1wnem3ob4tqBAChOA==
   dependencies:
     "@css-render/plugin-bem" "^0.15.10"
     "@css-render/vue3-ssr" "^0.15.10"
@@ -5378,7 +5378,7 @@ naive-ui@^2.30.6:
     treemate "^0.3.11"
     vdirs "^0.1.8"
     vooks "^0.2.12"
-    vueuc "^0.4.45"
+    vueuc "^0.4.44"
 
 nanoid@^3.1.32, nanoid@^3.3.3, nanoid@^3.3.4:
   version "3.3.4"
@@ -8049,7 +8049,7 @@ vue@^3.2.37:
     "@vue/server-renderer" "3.2.37"
     "@vue/shared" "3.2.37"
 
-vueuc@^0.4.45:
+vueuc@^0.4.44:
   version "0.4.45"
   resolved "https://registry.npmjs.org/vueuc/-/vueuc-0.4.45.tgz#347cc5619157b77d5d18a096ebceb1b54dd5f085"
   integrity sha512-TdiDHn9TkJyStKJYzGGiZlekasdoYTial47UAMwQ5fuVp/5GAeJKvFk4UMtSrDfECsNncfNJ6TNveVBAq+IvrQ==
