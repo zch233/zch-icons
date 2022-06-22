@@ -53,7 +53,7 @@
                                 <NForm ref="formRef" inline :label-width="80" :model="form.data" :rules="form.rules">
                                     <NGrid :cols="24" :x-gap="24">
                                         <NFormItemGi :span="12" label="分类" path="category">
-                                            <n-select
+                                            <NSelect
                                                 v-model:value="form.data.category"
                                                 placeholder="请选择分类"
                                                 :options="[
