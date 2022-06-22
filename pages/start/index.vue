@@ -59,7 +59,11 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+    title: '开始',
+});
+</script>
 
 <style scoped lang="less">
 .start {
