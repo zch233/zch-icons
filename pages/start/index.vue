@@ -41,7 +41,7 @@
 
     npm install --save gupo-icons-vue3</code>
           </pre>
-                <p class="start-main-title">设计师专属</p>
+                <p class="start-main-title" @click="startToDesign">设计师专属</p>
                 <p class="start-main-subtitle">
                     安装 <a href="https://kitchen.alipay.com" target="_blank">Kitchen Sketch 插件 💎</a>，就可以一键拖拽使用海量图标，还可以关联自有项目。
                 </p>
@@ -60,6 +60,12 @@
 </template>
 
 <script setup>
+import { setPermission } from '../../store';
+
+const startToDesign = () => {
+    setPermission('design', true);
+    window.localStorage.setItem('permissionDesign', '1');
+};
 useHead({
     title: '开始',
 });
