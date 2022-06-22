@@ -14,10 +14,10 @@
                 <li class="nav-item"><NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">Codeup</NuxtLink></li>
             </ul>
             <div class="options">
-                <NTooltip placement="left" trigger="hover">
+                <NTooltip v-if="permission.design" placement="left" trigger="hover">
                     <span>上传</span>
                     <template #trigger>
-                        <Icon
+                        <Icon @click="uploadModalVisible = true"
                             ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
                                 <path
                                     d="M518.3 459a8 8 0 0 0-12.6 0l-112 141.7a7.98 7.98 0 0 0 6.3 12.9h73.9V856c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V613.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 459z"
@@ -36,6 +36,59 @@
         <NMessageProvider>
             <NuxtPage />
         </NMessageProvider>
+        <NModal v-model:show="uploadModalVisible" :closable="true">
+            <div class="uploadModal">
+                <NUpload :multiple="true" :directory-dnd="true" action="https://www.mocky.io/v2/5e4bafc63100007100d8b70f">
+                    <NUploadDragger>
+                        <div style="margin-bottom: 12px">
+                            <Icon size="48">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M80 152v256a40.12 40.12 0 0 0 40 40h272a40.12 40.12 0 0 0 40-40V152"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="32"
+                                    ></path>
+                                    <rect
+                                        x="48"
+                                        y="64"
+                                        width="416"
+                                        height="80"
+                                        rx="28"
+                                        ry="28"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linejoin="round"
+                                        stroke-width="32"
+                                    ></rect>
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="32"
+                                        d="M320 304l-64 64l-64-64"
+                                    ></path>
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="32"
+                                        d="M256 345.89V224"
+                                    ></path>
+                                </svg>
+                            </Icon>
+                        </div>
+                        <NText style="font-size: 16px"> 点击或者拖动文件到该区域来上传 </NText>
+                        <NP depth="3" style="margin: 8px 0 0 0"> 请不要上传敏感数据，比如你的银行卡号和密码，信用卡号有效期和安全码 </NP>
+                    </NUploadDragger>
+                </NUpload>
+                <NButton>上传</NButton>
+            </div>
+        </NModal>
     </div>
 </template>
 <script setup>
@@ -46,6 +99,19 @@ onMounted(() => {
     setPermission('design', window.localStorage.getItem('permissionDesign') === '1');
     setPermission('publish', window.localStorage.getItem('permissionPublish') === '1');
 });
+
+const uploadModalVisible = ref(false);
+const uploadSvg = async () => {
+    const formData = new FormData();
+    formData.append('category', 'filled');
+    const data = await $fetch('/api/uploadSvg', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
+        data: formData,
+    });
+};
 </script>
 <style scoped lang="less">
 .nuxtApp {
@@ -175,7 +241,7 @@ onMounted(() => {
             display: flex;
             align-items: center;
             gap: 8px 12px;
-            .gupoIcon {
+            :deep(.gupoIcon) {
                 font-size: 24px;
                 color: #5f697d;
                 transition: all 0.25s;
@@ -188,6 +254,9 @@ onMounted(() => {
                 padding: 0 14px;
             }
         }
+    }
+    .uploadModal {
+        width: 500px;
     }
 }
 </style>
