@@ -2,7 +2,7 @@
     // https://v3.nuxtjs.org/concepts/typescript
     "extends": "./.nuxt/tsconfig.json",
     "compilerOptions": {
-        "target": "ES2018",
+        "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Node",
         "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
