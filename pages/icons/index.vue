@@ -210,7 +210,7 @@ const handleSaveClick = () => {
                 padding-bottom: 40px;
             }
             .n-tabs-rail {
-                margin-left: 8vw;
+                margin-left: 10vw;
                 width: 660px;
             }
             .n-tabs-tab {
@@ -220,7 +220,7 @@ const handleSaveClick = () => {
             .n-tab-pane {
                 margin: 20px auto 32px;
                 padding: 0 16px;
-                max-width: 1600px;
+                max-width: 80vw;
             }
         }
         &-title {
