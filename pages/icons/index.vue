@@ -52,9 +52,9 @@
                             <div v-if="permission.design" class="editBar">
                                 <NForm ref="formRef" inline :label-width="80" :model="formValue.data" :rules="formValue.rules">
                                     <NGrid :cols="24" :x-gap="24">
-                                        <NFormItemGi :span="12" label="分类" path="category">
+                                        <NFormItemGi :span="12" label="分类" path="theme">
                                             <NSelect
-                                                v-model:value="formValue.data.category"
+                                                v-model:value="formValue.data.theme"
                                                 placeholder="请选择分类"
                                                 :options="[
                                                     { label: '线框风格', value: 'filled' },
@@ -149,12 +149,12 @@ import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
 
 const formValue = ref({
     data: {
-        category: undefined,
+        theme: undefined,
         key: '',
         name: '',
     },
     rules: {
-        category: {
+        theme: {
             required: true,
             message: '请输入分类',
             trigger: ['input'],

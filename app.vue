@@ -52,9 +52,9 @@
                 <div class="uploadModal-options">
                     <NForm inline :label-width="80" ref="formRef" :model="formValue.data" :rules="formValue.rules">
                         <NGrid :cols="24" :x-gap="24">
-                            <NFormItemGi :span="10" label="分类" path="category">
+                            <NFormItemGi :span="10" label="分类" path="theme">
                                 <NSelect
-                                    v-model:value="formValue.data.category"
+                                    v-model:value="formValue.data.theme"
                                     placeholder="请选择分类"
                                     :options="[
                                         { label: '线框风格', value: 'filled' },
@@ -150,11 +150,11 @@ const uploadModalVisible = ref(false);
 const formRef = ref(null);
 const formValue = ref({
     data: {
-        category: undefined,
+        theme: undefined,
         design: '',
     },
     rules: {
-        category: { required: true, message: '请选择分类', trigger: 'blur' },
+        theme: { required: true, message: '请选择分类', trigger: 'blur' },
         design: { required: true, message: '请输入姓名缩写', trigger: 'blur' },
     },
 });
@@ -164,7 +164,7 @@ const uploadSvg = () => {
         if (!errors) {
             if (fileList.value.length === 0) return;
             const formData = new FormData();
-            formData.append('category', formValue.value.data.category);
+            formData.append('theme', formValue.value.data.theme);
             formData.append('design', formValue.value.data.design);
             fileList.value.map(v => formData.append('file', v.file));
             loading.value = true;
