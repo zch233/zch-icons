@@ -60,11 +60,11 @@
 </template>
 
 <script setup>
-import { setPermission } from '../../store';
+import { setPermission, permission } from '../../store';
 
 const startToDesign = () => {
-    setPermission('design', true);
-    window.localStorage.setItem('permissionDesign', '1');
+    setPermission('design', !permission.design);
+    window.localStorage.setItem('permissionDesign', permission.design && '1');
 };
 useHead({
     title: '开始',
