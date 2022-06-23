@@ -50,11 +50,11 @@
                             </pre>
                             </div>
                             <div v-if="permission.design" class="editBar">
-                                <NForm ref="formRef" inline :label-width="80" :model="form.data" :rules="form.rules">
+                                <NForm ref="formRef" inline :label-width="80" :model="formValue.data" :rules="formValue.rules">
                                     <NGrid :cols="24" :x-gap="24">
                                         <NFormItemGi :span="12" label="分类" path="category">
                                             <NSelect
-                                                v-model:value="form.data.category"
+                                                v-model:value="formValue.data.category"
                                                 placeholder="请选择分类"
                                                 :options="[
                                                     { label: '线框风格', value: 'filled' },
@@ -65,10 +65,10 @@
                                             />
                                         </NFormItemGi>
                                         <NFormItemGi :span="12" label="key" path="key">
-                                            <NInput v-model:value="form.data.key" placeholder="请输入英文名称（格式 yrc-xxx）" />
+                                            <NInput v-model:value="formValue.data.key" placeholder="请输入英文名称（格式 yyy-xxx）" />
                                         </NFormItemGi>
                                         <NFormItemGi :span="12" label="名称" path="name">
-                                            <NInput v-model:value="form.data.name" placeholder="请输入中文名称" />
+                                            <NInput v-model:value="formValue.data.name" placeholder="请输入中文名称" />
                                         </NFormItemGi>
                                         <NFormItemGi :span="12">
                                             <NButton attr-type="button" @click="handleSaveClick">保存</NButton>
@@ -147,7 +147,7 @@ import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
     )
 );
 
-const form = ref({
+const formValue = ref({
     data: {
         category: undefined,
         key: '',
