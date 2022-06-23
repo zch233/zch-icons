@@ -26,7 +26,7 @@ export default defineEventHandler(async event => {
             )
                 .then(() => {
                     setDigest({ design });
-                    commitCode(`add ${svgFiles.map(({ originalFilename }) => `${design}-${originalFilename?.toLowerCase()}`).join(',')}`);
+                    commitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${design}-${originalFilename?.toLowerCase()}`).join(',')}`);
                 })
                 .catch(err => {
                     throw err;
