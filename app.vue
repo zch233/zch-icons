@@ -50,19 +50,28 @@
         <NModal v-model:show="uploadModalVisible" :closable="true">
             <div class="uploadModal">
                 <div class="uploadModal-options">
-                    <NSelect
-                        v-model:value="category.value"
-                        :status="category.status"
-                        placeholder="请选择分类"
-                        @update:value="category.status = undefined"
-                        :options="[
-                            { label: '线框风格', value: 'filled' },
-                            { label: '实底风格', value: 'outlined' },
-                            { label: '双色风格', value: 'twotone' },
-                            { label: '彩色风格', value: 'colorful' },
-                        ]"
-                    />
-                    <NButton @click="uploadSvg" :loading="loading">上传</NButton>
+                    <NForm inline :label-width="80" ref="formRef" :model="formValue.data" :rules="formValue.rules">
+                        <NGrid :cols="24" :x-gap="24">
+                            <NFormItemGi :span="10" label="分类" path="category">
+                                <NSelect
+                                    v-model:value="formValue.data.category"
+                                    placeholder="请选择分类"
+                                    :options="[
+                                        { label: '线框风格', value: 'filled' },
+                                        { label: '实底风格', value: 'outlined' },
+                                        { label: '双色风格', value: 'twotone' },
+                                        { label: '彩色风格', value: 'colorful' },
+                                    ]"
+                                />
+                            </NFormItemGi>
+                            <NFormItemGi :span="10" label="设计者" path="design">
+                                <NInput v-model:value="formValue.data.design" placeholder="请输入你的名字缩写" />
+                            </NFormItemGi>
+                            <NFormItemGi :span="4">
+                                <NButton @click="uploadSvg" attr-type="button" :loading="loading">上传</NButton>
+                            </NFormItemGi>
+                        </NGrid>
+                    </NForm>
                 </div>
                 <div class="uploadModal-uploader">
                     <NUpload
@@ -138,28 +147,35 @@ onMounted(() => {
 
 const loading = ref(false);
 const uploadModalVisible = ref(false);
-const category = reactive({
-    value: undefined,
-    status: undefined,
+const formRef = ref(null);
+const formValue = ref({
+    data: {
+        category: undefined,
+        design: '',
+    },
+    rules: {
+        category: { required: true, message: '请选择分类', trigger: 'blur' },
+        design: { required: true, message: '请输入姓名缩写', trigger: 'blur' },
+    },
 });
 const fileList = ref([]);
-const uploadSvg = async () => {
-    if (!category.value) {
-        category.status = 'error';
-        return;
-    }
-    if (fileList.value.length === 0) return;
-    const formData = new FormData();
-    formData.append('category', category.value);
-    fileList.value.map(v => formData.append('file', v.file));
-    loading.value = true;
-    await $fetch('/api/upload', {
-        method: 'post',
-        body: formData,
-    }).finally(() => (loading.value = false));
-    fileList.value = [];
-    category.value = undefined;
-    uploadModalVisible.value = false;
+const uploadSvg = () => {
+    formRef.value?.validate(async errors => {
+        if (!errors) {
+            if (fileList.value.length === 0) return;
+            const formData = new FormData();
+            formData.append('category', formValue.value.data.category);
+            formData.append('design', formValue.value.data.design);
+            fileList.value.map(v => formData.append('file', v.file));
+            loading.value = true;
+            await $fetch('/api/upload', {
+                method: 'post',
+                body: formData,
+            }).finally(() => (loading.value = false));
+            fileList.value = [];
+            uploadModalVisible.value = false;
+        }
+    });
 };
 </script>
 <style scoped lang="less">
@@ -338,7 +354,6 @@ const uploadSvg = async () => {
 
     &-options {
         padding: 12px 0 24px;
-        display: flex;
     }
 }
 </style>

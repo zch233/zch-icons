@@ -12,13 +12,14 @@ export default defineEventHandler(async event => {
         form.parse(event.event.req, async (err, fields, files) => {
             if (err) throw err;
             const category = fields.category?.[0];
+            const design = fields.design?.[0];
             const svgFiles = files.file as formidable.File[];
             await createDir(`${svgDir}/${category}`);
             const generatePath = (fileName: string, categoryDir?: string) => path.resolve('./svg', categoryDir || '', fileName);
             Promise.all(
                 svgFiles.map(
                     ({ originalFilename, newFilename }) =>
-                        new Promise(() => fs.renameSync(generatePath(newFilename), generatePath(originalFilename!, category)))
+                        new Promise(() => fs.renameSync(generatePath(newFilename), generatePath(`${design}-${originalFilename?.toLowerCase()}`, category)))
                 )
             ).catch(err => {
                 throw err;
