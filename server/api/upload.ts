@@ -1,6 +1,8 @@
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
+import { globbySync } from 'globby';
+import shelljs from 'shelljs';
 
 const svgDir = 'svg';
 
@@ -16,14 +18,19 @@ export default defineEventHandler(async event => {
             const svgFiles = files.file as formidable.File[];
             await createDir(`${svgDir}/${theme}`);
             const generatePath = (fileName: string, themeDir?: string) => path.resolve('./svg', themeDir || '', fileName);
-            Promise.all(
+            Promise.allSettled(
                 svgFiles.map(
                     ({ originalFilename, newFilename }) =>
-                        new Promise(() => fs.renameSync(generatePath(newFilename), generatePath(`${design}-${originalFilename?.toLowerCase()}`, theme)))
+                        new Promise(r => r(fs.renameSync(generatePath(newFilename), generatePath(`${design}-${originalFilename?.toLowerCase()}`, theme))))
                 )
-            ).catch(err => {
-                throw err;
-            });
+            )
+                .then(() => {
+                    setDigest({ design });
+                    commitCode(`add ${svgFiles.map(({ originalFilename }) => `${design}-${originalFilename?.toLowerCase()}`).join(',')}`);
+                })
+                .catch(err => {
+                    throw err;
+                });
             resolve({ theme: fields.theme, files });
         });
     });
@@ -37,4 +44,26 @@ export const createDir = async (dir: string) => {
     } catch (err) {
         await fs.mkdirSync(iconsDir);
     }
+};
+
+const getDigest = () => fs.readFileSync(path.resolve('./svg/digest.json'));
+
+const setDigest = ({ design }: any) => {
+    const digest: any = {};
+
+    for (const theme of ['filled', 'outlined', 'twotone', 'colorful']) {
+        globbySync(`./svg/${theme}/*.svg`).forEach(p => {
+            const parsed = path.parse(p);
+            const { name } = parsed;
+            digest[name] = { key: name, theme, name: '', version: '', status: 'stage', design };
+        });
+    }
+
+    fs.writeFileSync(path.resolve('./svg/digest.json'), JSON.stringify(digest, null, 4), 'utf8');
+};
+
+const commitCode = (message: string) => {
+    shelljs.exec('git add .');
+    shelljs.exec(`git commit -m "feat: ${message}"`);
+    shelljs.exec('git push');
 };
