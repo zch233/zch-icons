@@ -65,7 +65,7 @@
                                             />
                                         </NFormItemGi>
                                         <NFormItemGi :span="12" label="key" path="key">
-                                            <NInput v-model:value="form.data.key" placeholder="请输入英文名称（格式 YRC-XXX）" />
+                                            <NInput v-model:value="form.data.key" placeholder="请输入英文名称（格式 yrc-xxx）" />
                                         </NFormItemGi>
                                         <NFormItemGi :span="12" label="名称" path="name">
                                             <NInput v-model:value="form.data.name" placeholder="请输入中文名称" />
@@ -267,7 +267,7 @@ const handleSaveClick = () => {
 .detailModal {
     background-color: #fff;
     border-radius: 12px;
-    width: 890px;
+    width: 900px;
     &-header {
         padding: 28px 32px;
         display: flex;
@@ -309,7 +309,7 @@ const handleSaveClick = () => {
                 justify-content: center;
                 border: 2px solid #f0f1f3;
                 border-radius: 12px;
-                padding: 28px;
+                padding: 28px 40px;
                 font-size: 184px;
             }
             &-right {
