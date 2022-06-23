@@ -26,6 +26,7 @@
         "@types/highlight.js": "^10.1.0",
         "@types/markdown-it": "^12.2.3",
         "@types/markdown-it-container": "^2.0.5",
+        "@types/shelljs": "^0.8.11",
         "highlight.js": "^11.5.1",
         "husky": "^7.0.0",
         "lerna": "^4.0.0",
