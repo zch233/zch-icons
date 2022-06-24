@@ -1,8 +1,7 @@
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
-import { globbySync } from 'globby';
-import shelljs from 'shelljs';
+import { getDigest, gitCommitCode, setDigest } from '~/server/utils';
 
 const svgDir = 'svg';
 
@@ -18,22 +17,24 @@ export default defineEventHandler(async event => {
             const svgFiles = files.file as formidable.File[];
             await createDir(`${svgDir}/${theme}`);
             const generatePath = (fileName: string, themeDir?: string) => path.resolve('./svg', themeDir || '', fileName);
-            Promise.allSettled(
-                svgFiles.map(
-                    ({ originalFilename, newFilename }) =>
-                        new Promise(r => {
-                            try {
-                                const data = JSON.parse(getDigest());
-                            } catch (err) {
-                                setDigest({ design });
-                            }
-                            fs.renameSync(generatePath(newFilename), generatePath(`${originalFilename?.toLowerCase()}`, theme));
-                            r('success');
-                        })
-                )
-            )
+            const renameFileTasks: Promise<string>[] = [];
+            const digest = getDigest();
+            svgFiles.map(({ originalFilename, newFilename }) => {
+                const svgFilename = (originalFilename?.toLowerCase() || 'unknown-file.svg').replace('.svg', '');
+                const isExistSvg = !!digest[svgFilename];
+                const svgFilenameUnique = isExistSvg ? `${svgFilename}-copy` : svgFilename;
+                renameFileTasks.push(
+                    new Promise(resolve => {
+                        fs.renameSync(generatePath(newFilename), generatePath(`${svgFilenameUnique}.svg`, theme));
+                        resolve('rename success');
+                    })
+                );
+                digest[svgFilenameUnique] = { key: svgFilenameUnique, theme, name: '', version: '', status: isExistSvg ? 'error' : 'stage', design };
+            });
+            setDigest(digest);
+            Promise.allSettled(renameFileTasks)
                 .then(() => {
-                    commitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${originalFilename?.toLowerCase()}`).join(',')}`);
+                    gitCommitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${originalFilename?.toLowerCase()}`).join(',')}`);
                 })
                 .catch(err => {
                     throw err;
@@ -51,35 +52,4 @@ export const createDir = async (dir: string) => {
     } catch (err) {
         await fs.mkdirSync(iconsDir);
     }
-};
-
-export const createJsonFile = async (dir: string) => {
-    const iconsDir = path.join('./', dir);
-    try {
-        await fs.accessSync(iconsDir);
-    } catch (err) {
-        await fs.appendFileSync(iconsDir, '{}');
-    }
-};
-
-const getDigest = () => fs.readFileSync(path.resolve('./svg/digest.json'), 'utf8');
-
-const setDigest = ({ design }: any) => {
-    const digest: any = {};
-
-    for (const theme of ['filled', 'outlined', 'twotone', 'colorful']) {
-        globbySync(`./svg/${theme}/*.svg`).forEach(p => {
-            const parsed = path.parse(p);
-            const { name } = parsed;
-            digest[name] = { key: name, theme, name: '', version: '', status: 'stage', design };
-        });
-    }
-
-    fs.writeFileSync(path.resolve('./svg/digest.json'), JSON.stringify(digest, null, 4), 'utf8');
-};
-
-const commitCode = (message: string) => {
-    shelljs.exec('git add .');
-    shelljs.exec(`git commit -m "feat: ${message}"`);
-    shelljs.exec('git push');
 };
