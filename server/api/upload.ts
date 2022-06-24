@@ -21,12 +21,17 @@ export default defineEventHandler(async event => {
             Promise.allSettled(
                 svgFiles.map(
                     ({ originalFilename, newFilename }) =>
-                        new Promise(r => r(fs.renameSync(generatePath(newFilename), generatePath(`${design}-${originalFilename?.toLowerCase()}`, theme))))
+                        new Promise(r => r(fs.renameSync(generatePath(newFilename), generatePath(`${originalFilename?.toLowerCase()}`, theme))))
                 )
             )
                 .then(() => {
-                    setDigest({ design });
-                    commitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${design}-${originalFilename?.toLowerCase()}`).join(',')}`);
+                    try {
+                        const data = JSON.parse(getDigest());
+                        console.log(data);
+                    } catch (err) {
+                        setDigest({ design });
+                    }
+                    commitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${originalFilename?.toLowerCase()}`).join(',')}`);
                 })
                 .catch(err => {
                     throw err;
@@ -46,7 +51,7 @@ export const createDir = async (dir: string) => {
     }
 };
 
-const getDigest = () => fs.readFileSync(path.resolve('./svg/digest.json'));
+const getDigest = () => fs.readFileSync(path.resolve('./svg/digest.json'), 'utf8');
 
 const setDigest = ({ design }: any) => {
     const digest: any = {};
