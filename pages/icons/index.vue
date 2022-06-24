@@ -5,12 +5,12 @@
         </div>
         <div class="icons-main">
             <NTabs type="segment">
-                <NTabPane v-for="(item, key) in statistic" :key="key" :name="key" :tab="item.title">
-                    <h1 class="icons-main-title">{{ Object.keys(item.list).length }} Icons</h1>
+                <NTabPane v-for="(item, key) in statistic" :key="key" :name="key" :tab="item.title + (route.query.q ? `(${item.list.length})` : '')">
+                    <h1 class="icons-main-title">{{ item.list.length }} Icons</h1>
                     <div class="icons-main-list">
-                        <div v-for="(icon, iconName) in item.list" :key="iconName" class="icons-main-list-item" @click="copySvgComponentName(iconName)">
+                        <div v-for="icon in item.list" :key="icon.displayName" class="icons-main-list-item" @click="copySvgComponentName(icon.displayName)">
                             <component :is="icon" />
-                            <p @click.stop="showDetailModal(icon, iconName)">{{ iconName }}</p>
+                            <p @click.stop="showDetailModal(icon, icon.displayName)">{{ icon.displayName }}</p>
                         </div>
                     </div>
                 </NTabPane>
@@ -97,23 +97,29 @@ import { useMessage } from 'naive-ui';
 import { getHighlightCode } from '../../utils';
 import { permission } from '../../store';
 
+console.log(filledIcons);
 const message = useMessage();
+
+const route = useRoute();
+
+const searchValue = computed(() => route.query.q || '');
+
 const statistic = computed(() => ({
     filled: {
         title: 'Filled',
-        list: filledIcons,
+        list: Object.values(filledIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
     },
     outlined: {
         title: 'Outlined',
-        list: outlinedIcons,
+        list: Object.values(outlinedIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
     },
     twoTone: {
         title: 'TwoTone',
-        list: twoToneIcons,
+        list: Object.values(twoToneIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
     },
     colorful: {
         title: 'Colorful',
-        list: colorfulIcons,
+        list: Object.values(colorfulIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
     },
 }));
 

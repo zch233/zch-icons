@@ -1,7 +1,14 @@
 <template>
     <div class="iconSearcherWrapper">
         <div class="iconSearcher">
-            <div class="iconSearcher-input"><IconSearchOutlined /><input :placeholder="`Search ${total} icons`" type="text" /></div>
+            <div class="iconSearcher-input">
+                <IconSearchOutlined /><input
+                    :placeholder="`Search ${total} icons`"
+                    v-model="searchValue"
+                    @keydown.enter="router.push({ path: '/icons', query: { q: searchValue } })"
+                    type="text"
+                />
+            </div>
             <div class="iconSearcher-tips">Try <em>date</em>，<em>date</em>，<em>date</em>，<em>date</em>，<em>date</em>，<em>date</em></div>
         </div>
     </div>
@@ -10,6 +17,11 @@
 <script setup>
 import { IconSearchOutlined } from 'icon-vue3';
 import * as allIcons from 'icon-vue3';
+
+const router = useRouter();
+const route = useRoute();
+
+const searchValue = ref(route.query.q || '');
 
 const total = computed(() => Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length);
 </script>
