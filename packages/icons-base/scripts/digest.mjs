@@ -21,7 +21,8 @@ for (const theme of ['filled', 'outlined', 'twotone', 'colorful']) {
     globbySync(`./svg/${theme}/*.svg`).forEach(p => {
         const parsed = path.parse(p);
         const { name } = parsed;
-        digest[name] = { key: name, theme, name: '', version: '1.0.0', status: '', design: '' };
+        digest[theme] = digest[theme] || {};
+        digest[theme][name] = { key: name, theme, name: '', version: '1.0.0', status: 'publish', design: 'gupo' };
     });
 }
 
