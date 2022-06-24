@@ -21,22 +21,24 @@ export default defineEventHandler(async event => {
             Promise.allSettled(
                 svgFiles.map(
                     ({ originalFilename, newFilename }) =>
-                        new Promise(r => r(fs.renameSync(generatePath(newFilename), generatePath(`${originalFilename?.toLowerCase()}`, theme))))
+                        new Promise(r => {
+                            try {
+                                const data = JSON.parse(getDigest());
+                            } catch (err) {
+                                setDigest({ design });
+                            }
+                            fs.renameSync(generatePath(newFilename), generatePath(`${originalFilename?.toLowerCase()}`, theme));
+                            r('success');
+                        })
                 )
             )
                 .then(() => {
-                    try {
-                        const data = JSON.parse(getDigest());
-                        console.log(data);
-                    } catch (err) {
-                        setDigest({ design });
-                    }
                     commitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${originalFilename?.toLowerCase()}`).join(',')}`);
                 })
                 .catch(err => {
                     throw err;
                 });
-            resolve({ theme: fields.theme, files });
+            resolve({ theme: fields.theme, svgFiles });
         });
     });
     return { code: 200, message: 'success', data: null };
@@ -48,6 +50,15 @@ export const createDir = async (dir: string) => {
         await fs.accessSync(iconsDir);
     } catch (err) {
         await fs.mkdirSync(iconsDir);
+    }
+};
+
+export const createJsonFile = async (dir: string) => {
+    const iconsDir = path.join('./', dir);
+    try {
+        await fs.accessSync(iconsDir);
+    } catch (err) {
+        await fs.appendFileSync(iconsDir, '{}');
     }
 };
 
