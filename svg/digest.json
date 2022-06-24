@@ -64,5 +64,39 @@
             "status": "error",
             "design": "zc"
         }
+    },
+    "outlined": {
+        "1": {
+            "key": "1",
+            "theme": "outlined",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "zc"
+        },
+        "2": {
+            "key": "2",
+            "theme": "outlined",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "zc"
+        },
+        "3": {
+            "key": "3",
+            "theme": "outlined",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "zc"
+        },
+        "4": {
+            "key": "4",
+            "theme": "outlined",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "zc"
+        }
     }
 }
