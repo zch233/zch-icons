@@ -22,7 +22,7 @@ export default defineEventHandler(async event => {
             const digest = getDigest();
             svgFiles.map(({ originalFilename, newFilename }) => {
                 const svgFilename = (originalFilename?.toLowerCase() || 'unknown-file.svg').replace('.svg', '');
-                const isExistSvg = !!digest[svgFilename];
+                const isExistSvg = !!digest[theme]?.[svgFilename];
                 const svgFilenameUnique = isExistSvg ? `${svgFilename}-copy` : svgFilename;
                 const svgFilenameUniqueWithExt = `${svgFilenameUnique}.svg`;
                 svgFilenameCollect.push(svgFilenameUniqueWithExt);
@@ -32,7 +32,8 @@ export default defineEventHandler(async event => {
                         resolve('rename success');
                     })
                 );
-                digest[svgFilenameUnique] = { key: svgFilenameUnique, theme, name: '', version: '', status: isExistSvg ? 'error' : 'stage', design };
+                digest[theme] = digest[theme] || {};
+                digest[theme][svgFilenameUnique] = { key: svgFilenameUnique, theme, name: '', version: '', status: isExistSvg ? 'error' : 'stage', design };
             });
             setDigest(digest);
             Promise.allSettled(renameFileTasks)
