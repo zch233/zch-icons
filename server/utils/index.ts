@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { globbySync } from 'globby';
 import shelljs from 'shelljs';
 
 export const getDigest = () => {
