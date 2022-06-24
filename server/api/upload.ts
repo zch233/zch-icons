@@ -18,14 +18,17 @@ export default defineEventHandler(async event => {
             await createDir(`${svgDir}/${theme}`);
             const generatePath = (fileName: string, themeDir?: string) => path.resolve('./svg', themeDir || '', fileName);
             const renameFileTasks: Promise<string>[] = [];
+            const svgFilenameCollect: string[] = [];
             const digest = getDigest();
             svgFiles.map(({ originalFilename, newFilename }) => {
                 const svgFilename = (originalFilename?.toLowerCase() || 'unknown-file.svg').replace('.svg', '');
                 const isExistSvg = !!digest[svgFilename];
                 const svgFilenameUnique = isExistSvg ? `${svgFilename}-copy` : svgFilename;
+                const svgFilenameUniqueWithExt = `${svgFilenameUnique}.svg`;
+                svgFilenameCollect.push(svgFilenameUniqueWithExt);
                 renameFileTasks.push(
                     new Promise(resolve => {
-                        fs.renameSync(generatePath(newFilename), generatePath(`${svgFilenameUnique}.svg`, theme));
+                        fs.renameSync(generatePath(newFilename), generatePath(svgFilenameUniqueWithExt, theme));
                         resolve('rename success');
                     })
                 );
@@ -34,7 +37,7 @@ export default defineEventHandler(async event => {
             setDigest(digest);
             Promise.allSettled(renameFileTasks)
                 .then(() => {
-                    gitCommitCode(`add ${theme}: ${svgFiles.map(({ originalFilename }) => `${originalFilename?.toLowerCase()}`).join(',')}`);
+                    gitCommitCode(`add svg with ${theme}: ${svgFilenameCollect.join(',')}`);
                 })
                 .catch(err => {
                     throw err;
