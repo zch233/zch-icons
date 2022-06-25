@@ -15,10 +15,11 @@ const generateIcons = async () => {
     // generate icon file
     Promise.all(
         Object.keys(allIconDefs).map(async svgIdentifier => {
-            await createDir(`../src/icons/${allIconDefs[svgIdentifier].theme}`);
+            const { theme, name } = allIconDefs[svgIdentifier];
+            await createDir(`../src/icons/${theme}`);
             const fileName = `Icon${svgIdentifier}`;
             await writeFile(
-                path.resolve(__dirname, `../src/icons/${allIconDefs[svgIdentifier].theme}/${fileName}.tsx`),
+                path.resolve(__dirname, `../src/icons/${theme}/${fileName}.tsx`),
                 `
 ${codeRemark}
 
@@ -28,6 +29,8 @@ import ${svgIdentifier}Svg from 'icon-base/es/asn/${svgIdentifier}';
 
 export interface ${svgIdentifier}IconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const ${fileName}: ${svgIdentifier}IconType = (props, context) => (
@@ -35,6 +38,8 @@ const ${fileName}: ${svgIdentifier}IconType = (props, context) => (
 );
 
 ${fileName}.displayName = '${fileName}';
+${fileName}.theme = '${theme}';
+${fileName}.originName = '${name}';
 
 export default ${fileName};
                 `.trim()
