@@ -5,12 +5,22 @@
         </div>
         <div class="icons-main">
             <NTabs type="segment">
-                <NTabPane v-for="(item, key) in statistic" :key="key" :name="key" :tab="item.title + (route.query.q ? `(${item.list.length})` : '')">
-                    <h1 class="icons-main-title">{{ item.list.length }} Icons</h1>
+                <NTabPane
+                    v-for="(item, key) in digest"
+                    :key="key"
+                    :name="key"
+                    :tab="upperFirst(key) + (route.query.q ? `(${Object.values(item).filter(v => v.key.includes(searchValue)).length})` : '')"
+                >
+                    <h1 class="icons-main-title">{{ Object.values(item).filter(v => v.key.includes(searchValue)).length }} Icons</h1>
                     <div class="icons-main-list">
-                        <div v-for="icon in item.list" :key="icon.displayName" class="icons-main-list-item" @click="copySvgComponentName(icon.displayName)">
-                            <component :is="icon" />
-                            <p @click.stop="showDetailModal(icon, icon.displayName)">{{ icon.displayName }}</p>
+                        <div
+                            v-for="icon in Object.values(item).filter(v => v.key.includes(searchValue))"
+                            :key="icon.key"
+                            class="icons-main-list-item"
+                            @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
+                        >
+                            <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
+                            <p @click.stop="showDetailModal(getIconComponentNameByDigest(icon))">{{ icon.key }}</p>
                         </div>
                     </div>
                 </NTabPane>
@@ -89,39 +99,21 @@
 
 <script setup>
 import copy from 'copy-to-clipboard';
-import * as filledIcons from 'icon-vue3/es/icons/filled';
-import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
-import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
-import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
+import * as allIcons from 'icon-vue3';
 import { useMessage } from 'naive-ui';
-import { getHighlightCode } from '../../utils';
+import { getHighlightCode, upperFirst } from '../../utils';
 import { permission } from '../../store';
+import camelCase from 'lodash.camelcase';
 
-console.log(filledIcons);
+const { data: digest } = await useFetch('/api/getIconBaseDigest');
+
 const message = useMessage();
 
 const route = useRoute();
 
-const searchValue = computed(() => route.query.q || '');
+const searchValue = computed(() => (route.query.q || '').toLowerCase());
 
-const statistic = computed(() => ({
-    filled: {
-        title: 'Filled',
-        list: Object.values(filledIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
-    },
-    outlined: {
-        title: 'Outlined',
-        list: Object.values(outlinedIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
-    },
-    twoTone: {
-        title: 'TwoTone',
-        list: Object.values(twoToneIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
-    },
-    colorful: {
-        title: 'Colorful',
-        list: Object.values(colorfulIcons).filter(v => v.displayName.toLowerCase().includes(searchValue.value.toLowerCase())),
-    },
-}));
+const getIconComponentNameByDigest = ({ key, theme }) => upperFirst(camelCase(`icon-${key}-${theme}`));
 
 useHead({
     title: '图标',
@@ -136,16 +128,16 @@ const copySvgComponentName = iconName => {
 };
 
 const currentIcon = ref({});
-const showDetailModal = (icon, iconName) => {
+const showDetailModal = iconName => {
     detailModalVisible.value = true;
-    currentIcon.value = { icon, iconName };
+    currentIcon.value = { icon: allIcons[iconName], iconName };
 };
 const currentTab = ref('Vue3');
 const codeTemplate = computed(() =>
     getHighlightCode(
         currentTab.value === 'HTML'
             ? `
-<i class="gupoIcon ${currentIcon.value.iconName}"></i>`
+<i class="gupoIcon ${currentIcon.value.icon.originName}"></i>`
             : `
 import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
 

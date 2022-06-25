@@ -24,9 +24,9 @@
                 <p class="docs-block-subtitle">常规图标通过 color 属性设置颜色，双色图标可以通过 primaryColor 或者 secondaryColor 属性设置主题色。</p>
                 <div class="docs-block-render">
                     <IconHomeOutlined color="#c03" />
-                    <IconSmileTwoTone />
-                    <IconCheckCircleTwoTone primaryColor="#3ba776" />
-                    <IconHeartTwoTone primaryColor="#c03" secondaryColor="#3ba776" />
+                    <IconSmileTwotone />
+                    <IconCheckCircleTwotone primaryColor="#3ba776" />
+                    <IconHeartTwotone primaryColor="#c03" secondaryColor="#3ba776" />
                 </div>
                 <div class="docs-block-code">
                     <CodeRender :code="colorCode" />
@@ -58,9 +58,9 @@ import {
     IconSettingFilled,
     IconSmileOutlined,
     IconSyncOutlined,
-    IconSmileTwoTone,
-    IconHeartTwoTone,
-    IconCheckCircleTwoTone,
+    IconSmileTwotone,
+    IconHeartTwotone,
+    IconCheckCircleTwotone,
     createFromIconfont,
 } from 'icon-vue3';
 import CodeRender from '../../components/CodeRender';
