@@ -24,6 +24,7 @@
         "@nuxt-modules/compression": "^0.1.0",
         "@types/formidable": "^2.0.5",
         "@types/highlight.js": "^10.1.0",
+        "@types/lodash.camelcase": "^4.3.7",
         "@types/markdown-it": "^12.2.3",
         "@types/markdown-it-container": "^2.0.5",
         "@types/shelljs": "^0.8.11",
@@ -43,7 +44,9 @@
     "dependencies": {
         "copy-to-clipboard": "^3.3.1",
         "formidable": "3.2.4",
-        "icon-vue3": "^0.0.31",
+        "icon-base": "^0.0.7",
+        "icon-vue3": "^0.0.34",
+        "lodash.camelcase": "^4.3.0",
         "shelljs": "^0.8.5"
     }
 }

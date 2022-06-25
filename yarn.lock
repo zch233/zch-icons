@@ -1549,6 +1549,13 @@
   dependencies:
     "@types/lodash" "*"
 
+"@types/lodash.camelcase@^4.3.7":
+  version "4.3.7"
+  resolved "https://registry.npmjs.org/@types/lodash.camelcase/-/lodash.camelcase-4.3.7.tgz#b0a06a216542335c0326c0d2fbad3f121b1f29a7"
+  integrity sha512-Nfi6jpo9vuEOSIJP+mpbTezKyEt75DQlbwjiDvs/JctWkbnHDoyQo5lWqdvgNiJmVUjcmkfvlrvSEgJYvurOKg==
+  dependencies:
+    "@types/lodash" "*"
+
 "@types/lodash@*", "@types/lodash@^4.14.181":
   version "4.14.182"
   resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.182.tgz#05301a4d5e62963227eaafe0ce04dd77c54ea5c2"
@@ -4163,18 +4170,23 @@ husky@^7.0.0:
   resolved "https://registry.npmmirror.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
   integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==
 
-icon-base@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.6.tgz#40ed411339f169d002dd44c53d2f178e4eded759"
-  integrity sha512-fA4TXDbv+kr9fQaRKj4nSBi3zC9C4jox8jA4l0IO+2vXzxL9xvyVh384bgHMDYQJa6Gf4vFOfKvaEvu0rLy4wQ==
+icon-base@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.7.tgz#87e32ab2f8a44421eb46184c4bee7b8dbe3ce828"
+  integrity sha512-pVjLeA8dPmKa5EKIPoYtjof2EpbnRmR620OfD/c0kUKBfx6J40azu5+PbLyc7U/lP0rP3KXP511EPU75Bd3fMw==
 
-icon-vue3@^0.0.31:
-  version "0.0.31"
-  resolved "https://registry.npmjs.org/icon-vue3/-/icon-vue3-0.0.31.tgz#24eab03504d7fa2f7a467711de07e30bf9886236"
-  integrity sha512-bCaDvCN4udzMZoqEAofvn8uwP4VMcgVfmwXn5Iu6B/H6g4Pd3LaF/gVeBrG/xJzshVSrf9/rGWoSawwJSI2pkQ==
+icon-base@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.8.tgz#6ec9d27dfcb21413b47dde43f37684f2888430cf"
+  integrity sha512-aCjIcb/MuuXZbMSr8oGE/4Cw47j7/B1coN75VnfHlOMKIxOIwuEvpm2K3mRBBkUb3dAhao9LMp3XXd31xHTLUw==
+
+icon-vue3@^0.0.34:
+  version "0.0.34"
+  resolved "https://registry.npmjs.org/icon-vue3/-/icon-vue3-0.0.34.tgz#d56761d037ebbaff2cc888ff506dd3ccb18dd987"
+  integrity sha512-oFRf0zZL5rrWnVr/wV76dj0BTzyNqMfZOais+0CD0sUOiGsVLnsKHe2ECPtdtmzUhD3m+YO/X+x/U8r46nV/Fw==
   dependencies:
     "@ant-design/colors" "^6.0.0"
-    icon-base "^0.0.6"
+    icon-base "^0.0.8"
     vue "3.2.33"
 
 iconv-lite@^0.4.24, iconv-lite@^0.4.4:
@@ -4902,6 +4914,11 @@ lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmmirror.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==
+
+lodash.camelcase@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+  integrity sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
