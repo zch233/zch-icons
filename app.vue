@@ -154,7 +154,7 @@ const formValue = reactive({
         design: '',
     },
     rules: {
-        theme: { required: true, message: '请选择分类', trigger: 'blur' },
+        theme: { required: true, message: '请选择分类', trigger: 'change' },
         design: { required: true, message: '请输入姓名缩写', trigger: 'blur' },
     },
 });
