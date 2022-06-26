@@ -2,14 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import shelljs from 'shelljs';
 
-export const getDigest = () => {
-    const digestPath = './svg/digest.json';
+export const getDigest = (filePath?: string) => {
+    const digestPath = `.${filePath || '/svg/digest.json'}`;
     createJsonFile(digestPath);
     return JSON.parse(fs.readFileSync(path.resolve(digestPath), 'utf8'));
 };
 
-export const setDigest = (digest: any) => {
-    fs.writeFileSync(path.resolve('./svg/digest.json'), JSON.stringify(digest, null, 4), 'utf8');
+export const setDigest = ({ filePath, digest }: { filePath?: string; digest: any }) => {
+    fs.writeFileSync(path.resolve(`.${filePath || '/svg/digest.json'}`), JSON.stringify(digest, null, 4), 'utf8');
 };
 
 export const gitCommitCode = (message: string) => {

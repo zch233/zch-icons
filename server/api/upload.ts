@@ -35,7 +35,7 @@ export default defineEventHandler(async event => {
                 digest[theme] = digest[theme] || {};
                 digest[theme][svgFilenameUnique] = { key: svgFilenameUnique, theme, name: '', version: '', status: isExistSvg ? 'error' : 'stage', design };
             });
-            setDigest(digest);
+            setDigest({ digest });
             Promise.allSettled(renameFileTasks)
                 .then(() => {
                     gitCommitCode(`add svg with ${theme}: ${svgFilenameCollect.join(',')}`);
