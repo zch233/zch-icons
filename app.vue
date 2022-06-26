@@ -148,7 +148,7 @@ onMounted(() => {
 const loading = ref(false);
 const uploadModalVisible = ref(false);
 const formRef = ref(null);
-const formValue = ref({
+const formValue = reactive({
     data: {
         theme: undefined,
         design: '',
@@ -164,8 +164,8 @@ const uploadSvg = () => {
         if (!errors) {
             if (fileList.value.length === 0) return;
             const formData = new FormData();
-            formData.append('theme', formValue.value.data.theme);
-            formData.append('design', formValue.value.data.design);
+            formData.append('theme', formValue.data.theme);
+            formData.append('design', formValue.data.design);
             fileList.value.map(v => formData.append('file', v.file));
             loading.value = true;
             await $fetch('/api/upload', {
