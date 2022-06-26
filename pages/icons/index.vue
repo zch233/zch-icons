@@ -20,7 +20,7 @@
                             @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
                         >
                             <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
-                            <p @click.stop="showDetailModal(getIconComponentNameByDigest(icon))">{{ icon.key }}</p>
+                            <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
                         </div>
                     </div>
                 </NTabPane>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="detailModal-main-content">
                         <div class="detailModal-main-content-left">
-                            <component :is="currentIcon.icon" />
+                            <component :is="currentIcon.component" />
                         </div>
                         <div class="detailModal-main-content-right">
                             <div class="codeBar">
@@ -128,16 +128,17 @@ const copySvgComponentName = iconName => {
 };
 
 const currentIcon = ref({});
-const showDetailModal = iconName => {
+const showDetailModal = icon => {
+    const iconName = getIconComponentNameByDigest(icon);
     detailModalVisible.value = true;
-    currentIcon.value = { icon: allIcons[iconName], iconName };
+    currentIcon.value = { ...icon, component: allIcons[iconName], iconName };
 };
 const currentTab = ref('Vue3');
 const codeTemplate = computed(() =>
     getHighlightCode(
         currentTab.value === 'HTML'
             ? `
-<i class="gupoIcon ${currentIcon.value.icon.originName}"></i>`
+<i class="gupoIcon ${currentIcon.value.key}-${currentIcon.value.theme}"></i>`
             : `
 import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
 
