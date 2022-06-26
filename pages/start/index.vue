@@ -34,12 +34,12 @@
                 <p class="start-main-title">安装</p>
                 <p class="start-main-subtitle">语义化的矢量图形。使用图标组件，你需要安装 gupo-icons 图标组件包：</p>
                 <pre class="start-main-code">
-            <code>
+            <code v-html="getHighlightCode(`
     yarn add gupo-icons-vue3
 
-    // or with npm
+    # or with npm
 
-    npm install --save gupo-icons-vue3</code>
+    npm install --save gupo-icons-vue3`, 'bash')" />
           </pre>
                 <p class="start-main-title" @click="startToDesign">设计师专属</p>
                 <p class="start-main-subtitle">
@@ -61,6 +61,7 @@
 
 <script setup>
 import { setPermission, permission } from '../../store';
+import { getHighlightCode } from '../../utils';
 
 const startToDesign = () => {
     setPermission('design', !permission.design);
