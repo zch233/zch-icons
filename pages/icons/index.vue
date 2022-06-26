@@ -83,7 +83,12 @@
                                             </NFormItemGi>
                                             <NFormItemGi :span="12">
                                                 <NSpace>
-                                                    <NButton attr-type="button" @click="handleDeleteClick" type="error">删除</NButton>
+                                                    <NPopconfirm @positive-click="handleDeleteClick">
+                                                        <span>确认要删除吗？</span>
+                                                        <template #trigger>
+                                                            <NButton attr-type="button" type="error">删除</NButton>
+                                                        </template>
+                                                    </NPopconfirm>
                                                     <NButton attr-type="button" @click="handleSaveClick">保存</NButton>
                                                 </NSpace>
                                             </NFormItemGi>
@@ -112,7 +117,7 @@ import { permission } from '../../store';
 import camelCase from 'lodash.camelcase';
 
 const { data: digest } = await useFetch('/api/getIconBaseDigest');
-console.log(digest);
+
 const message = useMessage();
 
 const route = useRoute();
@@ -166,7 +171,7 @@ const formValue = reactive({
         theme: {
             required: true,
             message: '请输入分类',
-            trigger: ['input'],
+            trigger: ['change'],
         },
         key: {
             required: true,
@@ -196,7 +201,16 @@ const handleSaveClick = () => {
         }
     });
 };
-const handleDeleteClick = () => {
+const handleDeleteClick = async () => {
+    formValue.loading = true;
+    const { component, iconName, ...originData } = currentIcon.value;
+    await $fetch('/api/deleteIcon', {
+        method: 'post',
+        body: { originData },
+    });
+    formValue.loading = false;
+    detailModal.visible = false;
+    delete digest.value[originData.theme][originData.key];
     message.success('删除成功 🎉');
 };
 </script>
