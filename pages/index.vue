@@ -15,8 +15,8 @@
                 <p>new icon in<br />simple</p>
             </div>
             <div class="home-statistics-item">
-                <b>{{ statistic.twoTone }}</b>
-                <p>new icon in<br />twoTone</p>
+                <b>{{ statistic.twotone }}</b>
+                <p>new icon in<br />twotone</p>
             </div>
             <div class="home-statistics-item">
                 <b>{{ statistic.colorful }}</b>
@@ -108,14 +108,14 @@ import {
 import * as allIcons from 'icon-vue3';
 import * as filledIcons from 'icon-vue3/es/icons/filled';
 import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
-import * as twoToneIcons from 'icon-vue3/es/icons/twotone';
+import * as twotoneIcons from 'icon-vue3/es/icons/twotone';
 import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 
 const router = useRouter();
 const statistic = computed(() => ({
     total: Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length,
     simple: Object.keys(filledIcons).length + Object.keys(outlinedIcons).length,
-    twoTone: Object.keys(twoToneIcons).length,
+    twotone: Object.keys(twotoneIcons).length,
     colorful: Object.keys(colorfulIcons).length,
 }));
 useHead({
