@@ -58,8 +58,8 @@
                     <div class="detailModal-main-top">
                         <p class="detailModal-main-top-title">{{ currentIcon.iconName }}</p>
                         <div class="detailModal-main-top-options">
-                            <img src="~/assets/icons/code.svg" alt="" />
-                            <img class="download" src="~/assets/icons/download.svg" alt="" />
+                            <img src="~/assets/icons/code.svg" alt="" @click="copySvg" />
+                            <img class="download" src="~/assets/icons/download.svg" @click="downloadSvg" alt="" />
                         </div>
                     </div>
                     <div class="detailModal-main-content">
@@ -139,7 +139,7 @@ import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
 import * as twotoneIcons from 'icon-vue3/es/icons/twotone';
 import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 import { useMessage } from 'naive-ui';
-import { getHighlightCode, upperFirst } from '../../utils';
+import { downloadFile, getHighlightCode, upperFirst } from '../../utils';
 import { permission } from '../../store';
 import camelCase from 'lodash.camelcase';
 
@@ -248,6 +248,24 @@ const handleDeleteClick = async () => {
     detailModal.visible = false;
     delete digest.value[originData.theme][originData.key];
     message.success('删除成功 🎉');
+};
+const copySvg = async () => {
+    const { theme, key } = currentIcon.value;
+    const current = digest.value[theme][key];
+    const { data } = await $fetch('/api/getSvg', {
+        params: current,
+    });
+    copy(data);
+    message.success(`复制成功 🎉`);
+};
+const downloadSvg = async () => {
+    const { theme, key } = currentIcon.value;
+    const current = digest.value[theme][key];
+    const data = await $fetch('/api/getSvg', {
+        responseType: 'blob',
+        params: { ...current, download: 1 },
+    });
+    downloadFile(data, `${key}-${theme}.svg`);
 };
 </script>
 
