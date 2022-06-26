@@ -5,25 +5,48 @@
         </div>
         <div class="icons-main">
             <NTabs type="segment">
-                <NTabPane
-                    v-for="(item, key) in digest"
-                    :key="key"
-                    :name="key"
-                    :tab="upperFirst(key) + (route.query.q ? `(${Object.values(item).filter(v => v.key.includes(searchValue)).length})` : '')"
-                >
-                    <h1 class="icons-main-title">{{ Object.values(item).filter(v => v.key.includes(searchValue)).length }} Icons</h1>
-                    <div class="icons-main-list">
-                        <div
-                            v-for="icon in Object.values(item).filter(v => v.key.includes(searchValue))"
-                            :key="icon.key"
-                            class="icons-main-list-item"
-                            @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
-                        >
-                            <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
-                            <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
+                <template v-if="permission.design">
+                    <NTabPane
+                        v-for="(item, key) in digest"
+                        :key="key"
+                        :name="key"
+                        :tab="upperFirst(key) + (route.query.q ? `(${Object.values(item).filter(v => v.key.includes(searchValue)).length})` : '')"
+                    >
+                        <h1 class="icons-main-title">{{ Object.values(item).filter(v => v.key.includes(searchValue)).length }} Icons</h1>
+                        <div class="icons-main-list">
+                            <div
+                                v-for="icon in Object.values(item).filter(v => v.key.includes(searchValue))"
+                                :key="icon.key"
+                                class="icons-main-list-item"
+                                @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
+                            >
+                                <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
+                                <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
+                            </div>
                         </div>
-                    </div>
-                </NTabPane>
+                    </NTabPane>
+                </template>
+                <template v-else>
+                    <NTabPane
+                        v-for="(item, key) in statistic"
+                        :key="key"
+                        :name="key"
+                        :tab="upperFirst(key) + (route.query.q ? `(${item.filter(v => v.originName.includes(searchValue)).length})` : '')"
+                    >
+                        <h1 class="icons-main-title">{{ item.filter(v => v.originName.includes(searchValue)).length }} Icons</h1>
+                        <div class="icons-main-list">
+                            <div
+                                v-for="icon in item.filter(v => v.originName.includes(searchValue))"
+                                :key="icon.key"
+                                class="icons-main-list-item"
+                                @click="copySvgComponentName(icon.displayName)"
+                            >
+                                <component :is="icon" />
+                                <p @click.stop="showDetailModal(icon)">{{ icon.originName }}</p>
+                            </div>
+                        </div>
+                    </NTabPane>
+                </template>
             </NTabs>
         </div>
         <NModal v-model:show="detailModal.visible" :closable="true">
@@ -111,12 +134,23 @@
 <script setup>
 import copy from 'copy-to-clipboard';
 import * as allIcons from 'icon-vue3';
+import * as filledIcons from 'icon-vue3/es/icons/filled';
+import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
+import * as twotoneIcons from 'icon-vue3/es/icons/twotone';
+import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 import { useMessage } from 'naive-ui';
 import { getHighlightCode, upperFirst } from '../../utils';
 import { permission } from '../../store';
 import camelCase from 'lodash.camelcase';
 
 const { data: digest } = await useFetch('/api/getIconBaseDigest');
+
+const statistic = computed(() => ({
+    filled: Object.values(filledIcons),
+    outlined: Object.values(outlinedIcons),
+    twotone: Object.values(twotoneIcons),
+    colorful: Object.values(colorfulIcons),
+}));
 
 const message = useMessage();
 
@@ -145,7 +179,9 @@ const currentIcon = ref({});
 const showDetailModal = icon => {
     const iconName = getIconComponentNameByDigest(icon);
     detailModal.visible = true;
-    currentIcon.value = { ...icon, component: allIcons[iconName], iconName };
+    currentIcon.value = permission.design
+        ? { ...icon, component: allIcons[iconName], iconName }
+        : { ...digest.value[icon.theme][icon.originName], component: icon, iconName: icon.displayName };
     formValue.data = icon;
 };
 const currentTab = ref('Vue3');
@@ -155,7 +191,7 @@ const codeTemplate = computed(() =>
             ? `
 <i class="gupoIcon ${currentIcon.value.key}-${currentIcon.value.theme}"></i>`
             : `
-import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
+import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value.toLowerCase()}';
 
 <${currentIcon.value.iconName} />`
     )
