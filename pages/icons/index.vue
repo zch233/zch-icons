@@ -26,10 +26,10 @@
                 </NTabPane>
             </NTabs>
         </div>
-        <NModal v-model:show="detailModalVisible" :closable="true">
+        <NModal v-model:show="detailModal.visible" :closable="true">
             <div class="detailModal">
                 <div class="detailModal-header">
-                    <img src="~/assets/icons/close.svg" @click="detailModalVisible = !detailModalVisible" alt="" />
+                    <img src="~/assets/icons/close.svg" @click="detailModal.visible = !detailModal.visible" alt="" />
                 </div>
                 <div class="detailModal-main">
                     <div class="detailModal-main-top">
@@ -60,36 +60,42 @@
                             </pre>
                             </div>
                             <div v-if="permission.design" class="editBar">
-                                <NForm ref="formRef" inline :label-width="80" :model="formValue.data" :rules="formValue.rules">
-                                    <NGrid :cols="24" :x-gap="24">
-                                        <NFormItemGi :span="12" label="分类" path="theme">
-                                            <NSelect
-                                                v-model:value="formValue.data.theme"
-                                                placeholder="请选择分类"
-                                                :options="[
-                                                    { label: '线框风格', value: 'filled' },
-                                                    { label: '实底风格', value: 'outlined' },
-                                                    { label: '双色风格', value: 'twotone' },
-                                                    { label: '彩色风格', value: 'colorful' },
-                                                ]"
-                                            />
-                                        </NFormItemGi>
-                                        <NFormItemGi :span="12" label="key" path="key">
-                                            <NInput v-model:value="formValue.data.key" placeholder="请输入英文名称（格式 yyy-xxx）" />
-                                        </NFormItemGi>
-                                        <NFormItemGi :span="12" label="名称" path="name">
-                                            <NInput v-model:value="formValue.data.name" placeholder="请输入中文名称" />
-                                        </NFormItemGi>
-                                        <NFormItemGi :span="12">
-                                            <NButton attr-type="button" @click="handleSaveClick">保存</NButton>
-                                        </NFormItemGi>
-                                    </NGrid>
-                                </NForm>
+                                <NSpin :show="detailModal.loading">
+                                    <NForm ref="formRef" inline :label-width="80" :model="formValue.data" :rules="formValue.rules">
+                                        <NGrid :cols="24" :x-gap="24">
+                                            <NFormItemGi :span="12" label="key" path="key">
+                                                <NInput disabled v-model:value="formValue.data.key" placeholder="请输入英文名称（格式 yyy-xxx）" />
+                                            </NFormItemGi>
+                                            <NFormItemGi :span="12" label="分类" path="theme">
+                                                <NSelect
+                                                    v-model:value="formValue.data.theme"
+                                                    placeholder="请选择分类"
+                                                    :options="[
+                                                        { label: '实底风格', value: 'filled' },
+                                                        { label: '线框风格', value: 'outlined' },
+                                                        { label: '双色风格', value: 'twotone' },
+                                                        { label: '彩色风格', value: 'colorful' },
+                                                    ]"
+                                                />
+                                            </NFormItemGi>
+                                            <NFormItemGi :span="12" label="名称" path="name">
+                                                <NInput v-model:value="formValue.data.name" placeholder="请输入中文名称" />
+                                            </NFormItemGi>
+                                            <NFormItemGi :span="12">
+                                                <NSpace>
+                                                    <NButton attr-type="button" @click="handleDeleteClick" type="error">删除</NButton>
+                                                    <NButton attr-type="button" @click="handleSaveClick">保存</NButton>
+                                                </NSpace>
+                                            </NFormItemGi>
+                                        </NGrid>
+                                    </NForm>
+                                </NSpin>
                             </div>
                         </div>
                     </div>
                     <div class="detailModal-main-bottom">
-                        <span>v1.0.0</span>
+                        <span>v{{ currentIcon.version }}</span>
+                        <span>{{ currentIcon.design }}</span>
                     </div>
                 </div>
             </div>
@@ -106,7 +112,7 @@ import { permission } from '../../store';
 import camelCase from 'lodash.camelcase';
 
 const { data: digest } = await useFetch('/api/getIconBaseDigest');
-
+console.log(digest);
 const message = useMessage();
 
 const route = useRoute();
@@ -119,7 +125,10 @@ useHead({
     title: '图标',
 });
 
-const detailModalVisible = ref(false);
+const detailModal = reactive({
+    visible: false,
+    loading: false,
+});
 
 const copySvgComponentName = iconName => {
     const content = `<${iconName} />`;
@@ -130,8 +139,9 @@ const copySvgComponentName = iconName => {
 const currentIcon = ref({});
 const showDetailModal = icon => {
     const iconName = getIconComponentNameByDigest(icon);
-    detailModalVisible.value = true;
+    detailModal.visible = true;
     currentIcon.value = { ...icon, component: allIcons[iconName], iconName };
+    formValue.data = icon;
 };
 const currentTab = ref('Vue3');
 const codeTemplate = computed(() =>
@@ -146,7 +156,7 @@ import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value}';
     )
 );
 
-const formValue = ref({
+const formValue = reactive({
     data: {
         theme: undefined,
         key: '',
@@ -170,8 +180,24 @@ const formValue = ref({
         },
     },
 });
+const formRef = ref(null);
 const handleSaveClick = () => {
-    message.success(`保存成功 🎉`);
+    formRef.value?.validate(async errors => {
+        if (!errors) {
+            formValue.loading = true;
+            const { component, iconName, ...originData } = currentIcon.value;
+            await $fetch('/api/saveIcon', {
+                method: 'post',
+                body: { formData: formValue.data, originData },
+            });
+            formValue.loading = false;
+            detailModal.visible = false;
+            message.success('保存成功 🎉');
+        }
+    });
+};
+const handleDeleteClick = () => {
+    message.success('删除成功 🎉');
 };
 </script>
 

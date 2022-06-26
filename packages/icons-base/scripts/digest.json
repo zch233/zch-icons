@@ -19,7 +19,7 @@
         "alipay-circle": {
             "key": "alipay-circle",
             "theme": "filled",
-            "name": "",
+            "name": "支付宝",
             "version": "1.0.0",
             "status": "publish",
             "design": "gupo"
@@ -27,7 +27,7 @@
         "alipay-square": {
             "key": "alipay-square",
             "theme": "filled",
-            "name": "",
+            "name": "支付宝",
             "version": "1.0.0",
             "status": "publish",
             "design": "gupo"
@@ -43,7 +43,7 @@
         "amazon-circle": {
             "key": "amazon-circle",
             "theme": "filled",
-            "name": "",
+            "name": "亚马逊",
             "version": "1.0.0",
             "status": "publish",
             "design": "gupo"
