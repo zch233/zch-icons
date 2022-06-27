@@ -4,6 +4,7 @@ import shelljs from 'shelljs';
 
 export const getDigest = (filePath?: string) => {
     const digestPath = `.${filePath || '/svg/digest.json'}`;
+    createDir('svg');
     createJsonFile(digestPath);
     return JSON.parse(fs.readFileSync(path.resolve(digestPath), 'utf8'));
 };
@@ -18,8 +19,17 @@ export const gitCommitCode = (message: string) => {
     // shelljs.exec('git push');
 };
 
-export const createJsonFile = (dir: string) => {
+export const createDir = (dir: string) => {
     const iconsDir = path.join('./', dir);
+    try {
+        fs.accessSync(iconsDir);
+    } catch (err) {
+        fs.mkdirSync(iconsDir);
+    }
+};
+
+export const createJsonFile = (dir: string) => {
+    const iconsDir = path.resolve(process.cwd(), dir);
     try {
         fs.accessSync(iconsDir);
     } catch (err) {
