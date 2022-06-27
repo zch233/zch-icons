@@ -43,4 +43,11 @@ export default defineNuxtConfig({
             },
         ],
     ],
+    // nitro: {
+    //     commonJS: {
+    //         dynamicRequireTargets: [
+    //           './src/cat',
+    //         ],
+    //     }
+    // }
 });
