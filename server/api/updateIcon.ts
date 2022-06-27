@@ -22,7 +22,9 @@ export default defineEventHandler(async event => {
         fs.renameSync(getFilePath(originData), getFilePath(formData));
     }
     setDigest({ filePath: digestPath, digest });
-    gitCommitCode(`update ${JSON.stringify(oldData)} => ${JSON.stringify(newData)}`);
+    setTimeout(() => {
+        gitCommitCode(`update ${JSON.stringify(oldData)} => ${JSON.stringify(newData)}`);
+    }, 1000);
     return { code: 200, message: 'success', data: null };
 });
 
