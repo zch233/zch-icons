@@ -4,62 +4,59 @@
             <IconSearcher />
         </div>
         <div class="icons-main">
-            <NTabs type="segment">
-                <template v-if="permission.design">
-                    <NTabPane
-                        v-for="(item, key) in baseDigest"
-                        :key="key"
-                        :name="key"
-                        :tab="upperFirst(key) + (route.query.q ? `(${Object.values(item).filter(v => v.key.includes(searchValue)).length})` : '')"
-                    >
-                        <h1 class="icons-main-title">{{ Object.values(item).filter(v => v.key.includes(searchValue)).length }} Icons</h1>
-                        <div class="icons-main-list">
-                            <div
-                                v-for="icon in Object.values(stageDigest[key] || {}).filter(v => v.key.includes(searchValue))"
-                                :key="icon.key"
-                                class="icons-main-list-item"
-                                :class="icon.status"
-                            >
-                                <allIcons.default v-html="icon.svgHTML" />
-                                <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
-                                <p>{{ icon.name }}</p>
-                            </div>
-
-                            <div
-                                v-for="icon in Object.values(item).filter(v => v.key.includes(searchValue))"
-                                :key="icon.key"
-                                class="icons-main-list-item"
-                                @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
-                            >
-                                <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
-                                <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
-                                <p>{{ icon.name }}</p>
-                            </div>
+            <NTabs type="segment" v-if="permission.design">
+                <NTabPane
+                    v-for="(item, key) in baseDigest"
+                    :key="key"
+                    :name="key"
+                    :tab="upperFirst(key) + (route.query.q ? `(${Object.values(item).filter(v => v.key.includes(searchValue)).length})` : '')"
+                >
+                    <h1 class="icons-main-title">{{ Object.values(item).filter(v => v.key.includes(searchValue)).length }} Icons</h1>
+                    <div class="icons-main-list">
+                        <div
+                            v-for="icon in Object.values(stageDigest[key] || {}).filter(v => v.key.includes(searchValue))"
+                            :key="icon.key"
+                            class="icons-main-list-item"
+                            :class="icon.status"
+                        >
+                            <allIcons.default v-html="icon.svgHTML" />
+                            <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
+                            <p>{{ icon.name }}</p>
                         </div>
-                    </NTabPane>
-                </template>
-                <template v-else>
-                    <NTabPane
-                        v-for="(item, key) in statistic"
-                        :key="key"
-                        :name="key"
-                        :tab="upperFirst(key) + (route.query.q ? `(${item.filter(v => v.originName.includes(searchValue)).length})` : '')"
-                    >
-                        <h1 class="icons-main-title">{{ item.filter(v => v.originName.includes(searchValue)).length }} Icons</h1>
-                        <div class="icons-main-list">
-                            <div
-                                v-for="icon in item.filter(v => v.originName.includes(searchValue))"
-                                :key="icon.key"
-                                class="icons-main-list-item"
-                                @click="copySvgComponentName(icon.displayName)"
-                            >
-                                <component :is="icon" />
-                                <p @click.stop="showDetailModal(icon)">{{ icon.originName }}</p>
-                                <p>{{ baseDigest[icon.theme][icon.originName].name }}</p>
-                            </div>
+                        <div
+                            v-for="icon in Object.values(item).filter(v => v.key.includes(searchValue))"
+                            :key="icon.key"
+                            class="icons-main-list-item"
+                            @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
+                        >
+                            <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
+                            <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
+                            <p>{{ icon.name }}</p>
                         </div>
-                    </NTabPane>
-                </template>
+                    </div>
+                </NTabPane>
+            </NTabs>
+            <NTabs type="segment" v-else>
+                <NTabPane
+                    v-for="(item, key) in statistic"
+                    :key="key"
+                    :name="key"
+                    :tab="upperFirst(key) + (route.query.q ? `(${item.filter(v => v.originName.includes(searchValue)).length})` : '')"
+                >
+                    <h1 class="icons-main-title">{{ item.filter(v => v.originName.includes(searchValue)).length }} Icons</h1>
+                    <div class="icons-main-list">
+                        <div
+                            v-for="icon in item.filter(v => v.originName.includes(searchValue))"
+                            :key="icon.key"
+                            class="icons-main-list-item"
+                            @click="copySvgComponentName(icon.displayName)"
+                        >
+                            <component :is="icon" />
+                            <p @click.stop="showDetailModal(icon)">{{ icon.originName }}</p>
+                            <p>{{ baseDigest[icon.theme][icon.originName].name }}</p>
+                        </div>
+                    </div>
+                </NTabPane>
             </NTabs>
         </div>
         <NModal v-model:show="detailModal.visible" :closable="true">
@@ -154,13 +151,14 @@ import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
 import * as twotoneIcons from 'icon-vue3/es/icons/twotone';
 import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
 import { useMessage } from 'naive-ui';
-import { downloadFile, getHighlightCode, upperFirst } from '../../utils';
-import { permission } from '../../store';
+import { downloadFile, getHighlightCode, upperFirst } from '~/utils';
+import { permission } from '~/store';
 import camelCase from 'lodash.camelcase';
+import baseDigestData from '~/packages/icons-base/scripts/digest.json';
+import stageDigestData from '~/svg/digest.json';
 
-const { data: baseDigest } = await useFetch('/api/getIconDigest');
-
-const { data: stageDigest } = await useFetch('/api/getIconDigest', { params: { type: 'temp' } });
+const baseDigest = ref(baseDigestData);
+const stageDigest = ref(stageDigestData);
 
 onMounted(() => {
     Object.values(stageDigest.value).map(async v => {
@@ -263,6 +261,9 @@ const handleUpdateClick = () => {
             });
             formValue.loading = false;
             detailModal.visible = false;
+            delete baseDigest.value[originData.theme][originData.key];
+            baseDigest.value[formData.data.theme] = baseDigest.value[formData.data.theme] || {};
+            baseDigest.value[formData.data.theme][formValue.data.key] = formValue.data;
             message.success('保存成功 🎉');
         }
     });
