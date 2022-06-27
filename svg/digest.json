@@ -1,3 +1,13 @@
 {
-    "colorful": {}
+    "colorful": {},
+    "filled": {
+        "1": {
+            "key": "1",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "万恶"
+        }
+    }
 }
