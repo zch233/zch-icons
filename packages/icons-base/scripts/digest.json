@@ -6321,7 +6321,7 @@
         "image": {
             "key": "image",
             "theme": "colorful",
-            "name": "",
+            "name": "示例",
             "version": "1.0.0",
             "status": "publish",
             "design": "gupo"
