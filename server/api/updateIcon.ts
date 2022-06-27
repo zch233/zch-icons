@@ -1,7 +1,6 @@
-import { createDir, getDigest, gitCommitCode, setDigest } from '~/server/utils';
+import { createDir, getDigest, gitCommitCode, setDigest, validate } from '~/server/utils';
 import fs from 'fs';
 import { Theme } from '~/server/types';
-import { theme } from '~/server/utils/dict';
 
 export default defineEventHandler(async event => {
     const { formData, originData } = await useBody(event);
@@ -22,15 +21,6 @@ export default defineEventHandler(async event => {
         fs.renameSync(getFilePath(originData), getFilePath(formData));
     }
     setDigest({ filePath: digestPath, digest });
-    setTimeout(() => {
-        gitCommitCode(`update ${JSON.stringify(oldData)} => ${JSON.stringify(newData)}`);
-    }, 1000);
+    gitCommitCode(`update ${JSON.stringify(oldData)} => ${JSON.stringify(newData)}`);
     return { code: 200, message: 'success', data: null };
 });
-
-const validate = ({ formData, originData }: any) => {
-    const themes = Object.keys(theme.label);
-    if (!themes.includes(formData.theme) || !themes.includes(originData.theme)) {
-        throw '主题错误';
-    }
-};

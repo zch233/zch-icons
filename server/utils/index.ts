@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import shelljs from 'shelljs';
+import { theme } from '~/server/utils/dict';
 
 export const getDigest = (filePath?: string) => {
     const digestPath = `.${filePath || '/svg/digest.json'}`;
@@ -34,5 +35,12 @@ export const createJsonFile = (dir: string) => {
         fs.accessSync(iconsDir);
     } catch (err) {
         fs.appendFileSync(iconsDir, '{}');
+    }
+};
+
+export const validate = ({ formData, originData }: any) => {
+    const themes = Object.keys(theme.label);
+    if (!themes.includes(formData.theme) || !themes.includes(originData.theme)) {
+        throw '主题错误';
     }
 };
