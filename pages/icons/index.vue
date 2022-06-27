@@ -7,7 +7,7 @@
             <NTabs type="segment">
                 <template v-if="permission.design">
                     <NTabPane
-                        v-for="(item, key) in digest"
+                        v-for="(item, key) in baseDigest"
                         :key="key"
                         :name="key"
                         :tab="upperFirst(key) + (route.query.q ? `(${Object.values(item).filter(v => v.key.includes(searchValue)).length})` : '')"
@@ -15,14 +15,25 @@
                         <h1 class="icons-main-title">{{ Object.values(item).filter(v => v.key.includes(searchValue)).length }} Icons</h1>
                         <div class="icons-main-list">
                             <div
+                                v-for="icon in Object.values(stageDigest[key] || {}).filter(v => v.key.includes(searchValue))"
+                                :key="icon.key"
+                                class="icons-main-list-item"
+                                :class="icon.status"
+                            >
+                                <allIcons.default v-html="icon.svgHTML" />
+                                <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
+                                <p>{{ icon.name }}</p>
+                            </div>
+
+                            <div
                                 v-for="icon in Object.values(item).filter(v => v.key.includes(searchValue))"
                                 :key="icon.key"
                                 class="icons-main-list-item"
                                 @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
                             >
                                 <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
-                                <p>{{ icon.name }}</p>
                                 <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
+                                <p>{{ icon.name }}</p>
                             </div>
                         </div>
                     </NTabPane>
@@ -44,7 +55,7 @@
                             >
                                 <component :is="icon" />
                                 <p @click.stop="showDetailModal(icon)">{{ icon.originName }}</p>
-                                <p>{{ digest[icon.theme][icon.originName].name }}</p>
+                                <p>{{ baseDigest[icon.theme][icon.originName].name }}</p>
                             </div>
                         </div>
                     </NTabPane>
@@ -67,7 +78,8 @@
                         </div>
                         <div class="detailModal-main-content">
                             <div class="detailModal-main-content-left">
-                                <component :is="currentIcon.component" />
+                                <allIcons.default v-if="currentIcon.svgHTML" v-html="currentIcon.svgHTML" />
+                                <component :is="currentIcon.component" v-else />
                             </div>
                             <div class="detailModal-main-content-right">
                                 <div class="codeBar">
@@ -94,6 +106,7 @@
                                             <NFormItemGi :span="12" label="分类" path="theme">
                                                 <NSelect
                                                     v-model:value="formValue.data.theme"
+                                                    disabled
                                                     placeholder="请选择分类"
                                                     :options="[
                                                         { label: '实底风格', value: 'filled' },
@@ -114,7 +127,7 @@
                                                             <NButton attr-type="button" type="error">删除</NButton>
                                                         </template>
                                                     </NPopconfirm>
-                                                    <NButton attr-type="button" @click="handleSaveClick">保存</NButton>
+                                                    <NButton attr-type="button" @click="handleUpdateClick">保存</NButton>
                                                 </NSpace>
                                             </NFormItemGi>
                                         </NGrid>
@@ -145,7 +158,22 @@ import { downloadFile, getHighlightCode, upperFirst } from '../../utils';
 import { permission } from '../../store';
 import camelCase from 'lodash.camelcase';
 
-const { data: digest } = await useFetch('/api/getIconBaseDigest');
+const { data: baseDigest } = await useFetch('/api/getIconDigest');
+
+const { data: stageDigest } = await useFetch('/api/getIconDigest', { params: { type: 'temp' } });
+
+onMounted(() => {
+    Object.values(stageDigest.value).map(async v => {
+        const current = Object.values(v)[0];
+        if (current) {
+            const { data } = await $fetch('/api/getSvg', {
+                params: current,
+            });
+            current.svgHTML = data;
+        }
+        return v;
+    });
+});
 
 const statistic = computed(() => ({
     filled: Object.values(filledIcons),
@@ -183,7 +211,7 @@ const showDetailModal = icon => {
     detailModal.visible = true;
     currentIcon.value = permission.design
         ? { ...icon, component: allIcons[iconName], iconName }
-        : { ...digest.value[icon.theme][icon.originName], component: icon, iconName: icon.displayName };
+        : { ...baseDigest.value[icon.theme][icon.originName], component: icon, iconName: icon.displayName };
     formValue.data = icon;
 };
 const currentTab = ref('Vue3');
@@ -224,7 +252,7 @@ const formValue = reactive({
     },
 });
 const formRef = ref(null);
-const handleSaveClick = () => {
+const handleUpdateClick = () => {
     formRef.value?.validate(async errors => {
         if (!errors) {
             formValue.loading = true;
@@ -248,7 +276,7 @@ const handleDeleteClick = async () => {
     });
     formValue.loading = false;
     detailModal.visible = false;
-    delete digest.value[originData.theme][originData.key];
+    delete baseDigest.value[originData.theme][originData.key];
     message.success('删除成功 🎉');
 };
 
@@ -268,7 +296,7 @@ const getSvg = async type => {
         },
     };
     const currentOption = optionMap[type];
-    const current = digest.value[theme][key];
+    const current = baseDigest.value[theme][key];
     const data = await $fetch('/api/getSvg', {
         params: { ...current, ...currentOption.params },
         ...currentOption.requestConfig,
@@ -347,6 +375,12 @@ const getSvg = async type => {
                 padding: calc(1em * 1.5) calc(1em * 12 / 16) 1em;
                 transition: all 0.25s;
                 text-align: center;
+                &.stage {
+                    background-color: #ffe7ba;
+                }
+                &.error {
+                    background-color: #ffccc7;
+                }
                 &:hover {
                     background-color: #ffd43b;
                 }
