@@ -1,5 +1,14 @@
 {
-    "colorful": {},
+    "colorful": {
+        "1": {
+            "key": "1",
+            "theme": "colorful",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "zc"
+        }
+    },
     "filled": {
         "1": {
             "key": "1",
