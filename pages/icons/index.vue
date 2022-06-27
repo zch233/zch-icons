@@ -51,39 +51,39 @@
         </div>
         <NModal v-model:show="detailModal.visible" :closable="true">
             <div class="detailModal">
-                <div class="detailModal-header">
-                    <img src="~/assets/icons/close.svg" @click="detailModal.visible = !detailModal.visible" alt="" />
-                </div>
-                <div class="detailModal-main">
-                    <div class="detailModal-main-top">
-                        <p class="detailModal-main-top-title">{{ currentIcon.iconName }}</p>
-                        <div class="detailModal-main-top-options">
-                            <img src="~/assets/icons/code.svg" alt="" @click="copySvg" />
-                            <img class="download" src="~/assets/icons/download.svg" @click="downloadSvg" alt="" />
-                        </div>
+                <NSpin :show="detailModal.loading">
+                    <div class="detailModal-header">
+                        <img src="~/assets/icons/close.svg" @click="detailModal.visible = !detailModal.visible" alt="" />
                     </div>
-                    <div class="detailModal-main-content">
-                        <div class="detailModal-main-content-left">
-                            <component :is="currentIcon.component" />
+                    <div class="detailModal-main">
+                        <div class="detailModal-main-top">
+                            <p class="detailModal-main-top-title">{{ currentIcon.iconName }}</p>
+                            <div class="detailModal-main-top-options">
+                                <img src="~/assets/icons/code.svg" alt="" @click="getSvg('code')" />
+                                <img class="download" src="~/assets/icons/download.svg" @click="getSvg('download')" alt="" />
+                            </div>
                         </div>
-                        <div class="detailModal-main-content-right">
-                            <div class="codeBar">
-                                <ul>
-                                    <li
-                                        v-for="item in ['Vue3', 'React', 'HTML']"
-                                        :class="{ active: currentTab === item }"
-                                        @click="currentTab = item"
-                                        :key="item"
-                                    >
-                                        {{ item }}
-                                    </li>
-                                </ul>
-                                <pre>
+                        <div class="detailModal-main-content">
+                            <div class="detailModal-main-content-left">
+                                <component :is="currentIcon.component" />
+                            </div>
+                            <div class="detailModal-main-content-right">
+                                <div class="codeBar">
+                                    <ul>
+                                        <li
+                                            v-for="item in ['Vue3', 'React', 'HTML']"
+                                            :class="{ active: currentTab === item }"
+                                            @click="currentTab = item"
+                                            :key="item"
+                                        >
+                                            {{ item }}
+                                        </li>
+                                    </ul>
+                                    <pre>
                               <code v-html="codeTemplate" />
                             </pre>
-                            </div>
-                            <div v-if="permission.design" class="editBar">
-                                <NSpin :show="detailModal.loading">
+                                </div>
+                                <div v-if="permission.design" class="editBar">
                                     <NForm ref="formRef" inline :label-width="80" :model="formValue.data" :rules="formValue.rules">
                                         <NGrid :cols="24" :x-gap="24">
                                             <NFormItemGi :span="12" label="key" path="key">
@@ -117,15 +117,15 @@
                                             </NFormItemGi>
                                         </NGrid>
                                     </NForm>
-                                </NSpin>
+                                </div>
                             </div>
                         </div>
+                        <div class="detailModal-main-bottom">
+                            <span>v{{ currentIcon.version }}</span>
+                            <span>{{ currentIcon.design }}</span>
+                        </div>
                     </div>
-                    <div class="detailModal-main-bottom">
-                        <span>v{{ currentIcon.version }}</span>
-                        <span>{{ currentIcon.design }}</span>
-                    </div>
-                </div>
+                </NSpin>
             </div>
         </NModal>
     </div>
@@ -249,23 +249,30 @@ const handleDeleteClick = async () => {
     delete digest.value[originData.theme][originData.key];
     message.success('删除成功 🎉');
 };
-const copySvg = async () => {
+
+const getSvg = async type => {
+    detailModal.loading = true;
     const { theme, key } = currentIcon.value;
-    const current = digest.value[theme][key];
-    const { data } = await $fetch('/api/getSvg', {
-        params: current,
-    });
-    copy(data);
-    message.success(`复制成功 🎉`);
-};
-const downloadSvg = async () => {
-    const { theme, key } = currentIcon.value;
+    const optionMap = {
+        download: {
+            title: '下载',
+            option: data => downloadFile(data, `${key}-${theme}.svg`),
+            params: { download: 1 },
+            requestConfig: { responseType: 'blob' },
+        },
+        code: {
+            title: '复制',
+            option: data => copy(data.data),
+        },
+    };
+    const currentOption = optionMap[type];
     const current = digest.value[theme][key];
     const data = await $fetch('/api/getSvg', {
-        responseType: 'blob',
-        params: { ...current, download: 1 },
-    });
-    downloadFile(data, `${key}-${theme}.svg`);
+        params: { ...current, ...currentOption.params },
+        ...currentOption.requestConfig,
+    }).finally(() => (detailModal.loading = false));
+    currentOption.option(data);
+    message.success(`${currentOption.title}成功 🎉`);
 };
 </script>
 
