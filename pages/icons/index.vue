@@ -19,7 +19,7 @@
                             class="icons-main-list-item"
                             :class="icon.status"
                         >
-                            <allIcons.default v-html="icon.svgHTML" />
+                            <img width="30" :src="getImageUrl(`${icon.theme}/${icon.key}`)" alt="" />
                             <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
                             <p>{{ icon.name }}</p>
                         </div>
@@ -75,8 +75,8 @@
                         </div>
                         <div class="detailModal-main-content">
                             <div class="detailModal-main-content-left">
-                                <allIcons.default v-if="currentIcon.svgHTML" v-html="currentIcon.svgHTML" />
-                                <component :is="currentIcon.component" v-else />
+                                <component v-if="currentIcon.status === 'publish'" :is="currentIcon.component" />
+                                <img v-else width="30" :src="getImageUrl(`${currentIcon.theme}/${currentIcon.key}`)" alt="" />
                             </div>
                             <div class="detailModal-main-content-right">
                                 <div class="codeBar">
@@ -155,23 +155,10 @@ import { downloadFile, getHighlightCode, upperFirst } from '~/utils';
 import { permission } from '~/store';
 import camelCase from 'lodash.camelcase';
 import baseDigestData from '~/packages/icons-base/scripts/digest.json';
-import stageDigestData from '~/svg/digest.json';
+import { stageDigest } from '~/store';
 
 const baseDigest = ref(baseDigestData);
-const stageDigest = ref(stageDigestData);
-
-onMounted(() => {
-    Object.values(stageDigest.value).map(async v => {
-        const current = Object.values(v)[0];
-        if (current) {
-            const { data } = await $fetch('/api/getSvg', {
-                params: current,
-            });
-            current.svgHTML = data;
-        }
-        return v;
-    });
-});
+const getImageUrl = path => new URL(`../../svg/${path}.svg`, import.meta.url).href;
 
 const statistic = computed(() => ({
     filled: Object.values(filledIcons),
@@ -253,29 +240,26 @@ const formRef = ref(null);
 const handleUpdateClick = () => {
     formRef.value?.validate(async errors => {
         if (!errors) {
-            formValue.loading = true;
+            detailModal.loading = true;
             const { component, iconName, ...originData } = currentIcon.value;
             await $fetch('/api/updateIcon', {
                 method: 'post',
                 body: { formData: formValue.data, originData },
             });
-            formValue.loading = false;
+            detailModal.loading = false;
             detailModal.visible = false;
-            delete baseDigest.value[originData.theme][originData.key];
-            baseDigest.value[formData.data.theme] = baseDigest.value[formData.data.theme] || {};
-            baseDigest.value[formData.data.theme][formValue.data.key] = formValue.data;
             message.success('保存成功 🎉');
         }
     });
 };
 const handleDeleteClick = async () => {
-    formValue.loading = true;
+    detailModal.loading = true;
     const { component, iconName, ...originData } = currentIcon.value;
     await $fetch('/api/deleteIcon', {
         method: 'post',
         body: { originData },
     });
-    formValue.loading = false;
+    detailModal.loading = false;
     detailModal.visible = false;
     delete baseDigest.value[originData.theme][originData.key];
     message.success('删除成功 🎉');
@@ -385,6 +369,10 @@ const getSvg = async type => {
                 &:hover {
                     background-color: #ffd43b;
                 }
+                img {
+                    width: 30px;
+                    margin-bottom: 8px;
+                }
                 .gupoIcon {
                     font-size: 30px;
                     transition: all 0.25s;
@@ -448,6 +436,9 @@ const getSvg = async type => {
                 border-radius: 12px;
                 padding: 28px 40px;
                 font-size: 184px;
+                img {
+                    width: 184px;
+                }
             }
             &-right {
                 flex: 1;
