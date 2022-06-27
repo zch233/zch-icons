@@ -7,6 +7,14 @@
             "version": "",
             "status": "stage",
             "design": "zc"
+        },
+        "1-copy": {
+            "key": "1-copy",
+            "theme": "colorful",
+            "name": "",
+            "version": "",
+            "status": "error",
+            "design": "zc"
         }
     },
     "filled": {
