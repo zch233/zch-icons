@@ -1,4 +1,4 @@
-import { getDigest, setDigest } from '~/server/utils';
+import { getDigest, gitCommitCode, setDigest } from '~/server/utils';
 import fs from 'fs';
 
 export default defineEventHandler(async event => {
@@ -11,5 +11,6 @@ export default defineEventHandler(async event => {
     digest[theme][key] = undefined;
     fs.rmSync(filePath);
     setDigest({ filePath: digestPath, digest });
+    gitCommitCode(`delete ${originData.key}.svg`);
     return { code: 200, message: 'success', data: null };
 });

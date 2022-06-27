@@ -227,7 +227,7 @@ const handleSaveClick = () => {
         if (!errors) {
             formValue.loading = true;
             const { component, iconName, ...originData } = currentIcon.value;
-            await $fetch('/api/saveIcon', {
+            await $fetch('/api/updateIcon', {
                 method: 'post',
                 body: { formData: formValue.data, originData },
             });

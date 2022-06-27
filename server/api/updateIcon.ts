@@ -1,4 +1,4 @@
-import { getDigest, setDigest } from '~/server/utils';
+import { getDigest, gitCommitCode, setDigest } from '~/server/utils';
 import fs from 'fs';
 import { Theme } from '~/server/types';
 import { theme } from '~/server/utils/dict';
@@ -18,6 +18,7 @@ export default defineEventHandler(async event => {
         fs.renameSync(getFilePath(originData), getFilePath(formData));
     }
     setDigest({ filePath: digestPath, digest });
+    gitCommitCode(`update ${JSON.stringify(originData)} => ${JSON.stringify(formData)}`);
     return { code: 200, message: 'success', data: null };
 });
 
