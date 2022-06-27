@@ -63,7 +63,7 @@ import {
     IconCheckCircleTwotone,
     createFromIconfont,
 } from 'icon-vue3';
-import CodeRender from '../../components/CodeRender';
+import CodeRender from '~/components/CodeRender';
 
 useHead({
     title: '文档',

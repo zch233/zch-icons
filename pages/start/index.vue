@@ -60,8 +60,8 @@
 </template>
 
 <script setup>
-import { setPermission, permission } from '../../store';
-import { getHighlightCode } from '../../utils';
+import { setPermission, permission } from '~/store';
+import { getHighlightCode } from '~/utils';
 
 const startToDesign = () => {
     setPermission('design', !permission.design);

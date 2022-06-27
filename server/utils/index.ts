@@ -15,7 +15,7 @@ export const setDigest = ({ filePath, digest }: { filePath?: string; digest: any
 };
 
 export const gitCommitCode = (message: string) => {
-    shelljs.exec('git add .');
+    shelljs.exec('git add ./svg ./packages');
     shelljs.exec(`git commit -m "feat(auto): ${message}"`);
     // shelljs.exec('git push');
 };
