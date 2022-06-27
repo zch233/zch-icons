@@ -1,4 +1,4 @@
-import { getDigest, gitCommitCode, setDigest } from '~/server/utils';
+import { createDir, getDigest, gitCommitCode, setDigest } from '~/server/utils';
 import fs from 'fs';
 import { Theme } from '~/server/types';
 import { theme } from '~/server/utils/dict';
@@ -11,14 +11,18 @@ export default defineEventHandler(async event => {
     const digest = getDigest(digestPath);
     const getFilePath = ({ theme, key }: { theme: Theme; key: string }) =>
         isPublishedIcon ? `./packages/icons-base/svg/${theme}/${key}.svg` : `./svg/${theme}/${key}.svg`;
-    const newData = { ...digest[originData.theme][originData.key], ...formData };
+    digest[originData.theme] = digest[originData.theme] || {};
+    digest[formData.theme] = digest[formData.theme] || {};
+    const oldData = { ...digest[originData.theme][originData.key] };
+    const newData = { ...oldData, name: formData.name, theme: formData.theme };
     digest[originData.theme][originData.key] = undefined;
     digest[formData.theme][originData.key] = newData;
     if (originData.theme !== formData.theme) {
+        createDir(getFilePath(formData).replace(`${formData.key}.svg`, ''));
         fs.renameSync(getFilePath(originData), getFilePath(formData));
     }
     setDigest({ filePath: digestPath, digest });
-    gitCommitCode(`update ${JSON.stringify(originData)} => ${JSON.stringify(formData)}`);
+    gitCommitCode(`update ${JSON.stringify(oldData)} => ${JSON.stringify(newData)}`);
     return { code: 200, message: 'success', data: null };
 });
 
