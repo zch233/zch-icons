@@ -21,6 +21,7 @@
                                 @click="copySvgComponentName(getIconComponentNameByDigest(icon))"
                             >
                                 <component :is="allIcons[getIconComponentNameByDigest(icon)]" />
+                                <p>{{ icon.name }}</p>
                                 <p @click.stop="showDetailModal(icon)">{{ icon.key }}</p>
                             </div>
                         </div>
@@ -43,6 +44,7 @@
                             >
                                 <component :is="icon" />
                                 <p @click.stop="showDetailModal(icon)">{{ icon.originName }}</p>
+                                <p>{{ digest[icon.theme][icon.originName].name }}</p>
                             </div>
                         </div>
                     </NTabPane>
@@ -121,8 +123,8 @@
                             </div>
                         </div>
                         <div class="detailModal-main-bottom">
-                            <span>v{{ currentIcon.version }}</span>
-                            <span>{{ currentIcon.design }}</span>
+                            <span v-if="currentIcon.version">v{{ currentIcon.version }}</span>
+                            <span v-if="currentIcon.design">{{ currentIcon.design }}</span>
                         </div>
                     </div>
                 </NSpin>
@@ -351,10 +353,10 @@ const getSvg = async type => {
                 .gupoIcon {
                     font-size: 30px;
                     transition: all 0.25s;
+                    margin-bottom: 8px;
                 }
                 > p {
                     width: 100%;
-                    margin-top: 0.7em;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
