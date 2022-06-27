@@ -137,7 +137,7 @@
     </div>
 </template>
 <script setup>
-import { permission, setPermission } from './store';
+import { permission, setPermission, setStageDigest } from '~/store';
 import Icon from 'icon-vue3';
 
 onMounted(() => {
@@ -168,12 +168,13 @@ const uploadSvg = () => {
             formData.append('design', formValue.data.design);
             fileList.value.map(v => formData.append('file', v.file));
             loading.value = true;
-            await $fetch('/api/upload', {
+            const { data } = await $fetch('/api/upload', {
                 method: 'post',
                 body: formData,
             }).finally(() => (loading.value = false));
             fileList.value = [];
             uploadModalVisible.value = false;
+            setStageDigest(data);
         }
     });
 };

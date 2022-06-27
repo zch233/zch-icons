@@ -9,6 +9,7 @@ const form = formidable({ multiples: true, uploadDir: svgDir, keepExtensions: tr
 
 export default defineEventHandler(async event => {
     createDir(svgDir);
+    const digest = getDigest();
     await new Promise((resolve, reject) => {
         form.parse(event.event.req, async (err, fields, files) => {
             if (err) throw err;
@@ -19,7 +20,6 @@ export default defineEventHandler(async event => {
             const generatePath = (fileName: string, themeDir?: string) => path.resolve('./svg', themeDir || '', fileName);
             const renameFileTasks: Promise<string>[] = [];
             const svgFilenameCollect: string[] = [];
-            const digest = getDigest();
             svgFiles.map(({ originalFilename, newFilename }) => {
                 const svgFilename = (originalFilename?.toLowerCase() || 'unknown-file.svg').replace('.svg', '');
                 const isExistSvg = !!digest[theme]?.[svgFilename];
@@ -46,5 +46,5 @@ export default defineEventHandler(async event => {
             resolve({ theme: fields.theme, svgFiles });
         });
     });
-    return { code: 200, message: 'success', data: null };
+    return { code: 200, message: 'success', data: digest };
 });
