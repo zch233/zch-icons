@@ -9,7 +9,9 @@
                     type="text"
                 />
             </div>
-            <div class="iconSearcher-tips">Try <em>date</em>，<em>date</em>，<em>date</em>，<em>date</em>，<em>date</em>，<em>date</em></div>
+            <div class="iconSearcher-tips">
+                Try <em v-for="item in hotSearch" :key="item" @click="handleHotSearchClick(item)">{{ item }}，</em>
+            </div>
         </div>
     </div>
 </template>
@@ -24,6 +26,13 @@ const route = useRoute();
 const searchValue = ref(route.query.q || '');
 
 const total = computed(() => Object.keys(allIcons).filter(v => v.indexOf('Icon') === 0).length);
+
+const hotSearch = ref(['alert', 'zhihu', 'book', 'apple', 'left', 'right']);
+
+const handleHotSearchClick = item => {
+    router.push({ path: '/icons', query: { q: item } });
+    searchValue.value = item;
+};
 </script>
 
 <style scoped lang="less">
@@ -64,6 +73,7 @@ const total = computed(() => Object.keys(allIcons).filter(v => v.indexOf('Icon')
                 font-size: 14px;
                 color: #74c0fc;
                 font-style: normal;
+                cursor: pointer;
             }
         }
     }
