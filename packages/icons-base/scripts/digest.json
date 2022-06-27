@@ -11,7 +11,7 @@
         "alert": {
             "key": "alert",
             "theme": "filled",
-            "name": "",
+            "name": "警报",
             "version": "1.0.0",
             "status": "publish",
             "design": "gupo"
