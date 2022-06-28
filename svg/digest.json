@@ -8,22 +8,6 @@
             "version": "",
             "status": "stage",
             "design": "万恶"
-        },
-        "2": {
-            "key": "2",
-            "theme": "filled",
-            "name": "+++++",
-            "version": "",
-            "status": "stage",
-            "design": "zc"
-        },
-        "1-copy": {
-            "key": "1-copy",
-            "theme": "filled",
-            "name": "f55",
-            "version": "",
-            "status": "error",
-            "design": "zc"
         }
     }
 }
