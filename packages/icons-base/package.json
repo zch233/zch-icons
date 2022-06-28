@@ -10,7 +10,8 @@
         "lib",
         "es",
         "inline-svg",
-        "inline-namespaced-svg"
+        "inline-namespaced-svg",
+        "scripts/digest.json"
     ],
     "scripts": {
         "generate": "cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
