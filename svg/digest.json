@@ -1,13 +1,4 @@
 {
     "colorful": {},
-    "filled": {
-        "1": {
-            "key": "1",
-            "theme": "filled",
-            "name": "dfg ",
-            "version": "",
-            "status": "stage",
-            "design": "万恶"
-        }
-    }
+    "filled": {}
 }
