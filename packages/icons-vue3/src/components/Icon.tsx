@@ -4,9 +4,9 @@ import { generateSvgNode, useInsertStyles } from '../utils';
 import { generate as generateColor } from '@ant-design/colors';
 
 export interface IconProps extends HTMLAttributes {
-    spin?: boolean;
+    spin?: boolean | string;
     rotate?: number;
-    size?: number;
+    size?: number | string;
     color?: string;
     icon?: IconDefinition;
     name?: string;
@@ -20,7 +20,7 @@ const Icon: FunctionalComponent<IconProps> = (props, context) => {
     const children = slots.default && slots.default();
     const classResult = {
         gupoIcon: true,
-        'gupoIcon-spin': spin,
+        'gupoIcon-spin': spin === '' || !!spin,
         [`gupoIcon-svg-${name}`]: !!name,
     };
 
@@ -33,7 +33,7 @@ const Icon: FunctionalComponent<IconProps> = (props, context) => {
             : undefined),
         ...(size
             ? {
-                  fontSize: `${size}px`,
+                  fontSize: size.toString().includes('px') ? size : `${size}px`,
               }
             : undefined),
         ...(color
