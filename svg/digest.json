@@ -8,6 +8,14 @@
             "version": "",
             "status": "stage",
             "design": "万恶"
+        },
+        "account-book-filled": {
+            "key": "account-book-filled",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "tst"
         }
     }
 }
