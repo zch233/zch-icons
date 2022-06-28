@@ -261,7 +261,7 @@ const handleDeleteClick = async () => {
     });
     detailModal.loading = false;
     detailModal.visible = false;
-    delete baseDigest.value[originData.theme][originData.key];
+    delete (originData.status === 'publish' ? baseDigest : stageDigest).value[originData.theme][originData.key];
     message.success('删除成功 🎉');
 };
 
