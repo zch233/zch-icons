@@ -3,29 +3,26 @@
         <div class="container start-header">
             <div class="start-header-top">
                 <div>
-                    <h1>Get Started with Gupo Icons</h1>
-                    <p>
-                        The easiest way to get icons on your website. It's your very own custom version of Gupo Icons, all bundled up with only the icons,
-                        tools, and settings you need.
-                    </p>
+                    <h1>开始使用 Gupo Icons</h1>
+                    <p>在您的网站上获取图标的最简单方法。这是您自己的 Gupo Icons 的自定义版本，所有版本都仅捆绑了您需要的图标，工具和设置。</p>
                 </div>
                 <img src="~/assets/start/start-illustration.svg" alt="" />
             </div>
             <ul class="start-header-step">
                 <li class="start-header-step-item">
                     <b>1</b>
-                    <p>Setup Gupo Icons</p>
-                    <span>Use package tools creating, then import Icon unique code into your page.</span>
+                    <p>安装</p>
+                    <span>使用 npm 或者 yarn 包工具创建。</span>
                 </li>
                 <li class="start-header-step-item">
                     <b>2</b>
-                    <p>Add Icons</p>
-                    <span>Start placing icons in your project using our <NuxtLink to="/docs">simple syntax</NuxtLink>.</span>
+                    <p>使用</p>
+                    <span>开始使用我们的 <NuxtLink to="/docs">简单语法</NuxtLink> 在项目中放置图标。</span>
                 </li>
                 <li class="start-header-step-item">
                     <b>3</b>
-                    <p>Make it Awesome</p>
-                    <span>It's time to rock and roll! Color, size & rotate icons with ease!</span>
+                    <p>完成</p>
+                    <span>是时候使用 color, size & rotate 等属性定制你的图标!</span>
                 </li>
             </ul>
         </div>

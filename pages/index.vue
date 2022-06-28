@@ -60,7 +60,7 @@
                 <p>medium-square</p>
             </div>
             <button class="home-example-button" @click="router.push('/icons')">
-                View All Icons
+                查看所有图标
                 <IconDashboardFilled />
             </button>
         </div>

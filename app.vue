@@ -8,16 +8,19 @@
             </NuxtLink>
             <ul class="nav">
                 <li class="nav-item">
-                    <NuxtLink to="/start">Start</NuxtLink>
+                    <NuxtLink to="/start">开始</NuxtLink>
                 </li>
                 <li class="nav-item">
-                    <NuxtLink to="/design">Design</NuxtLink>
+                    <NuxtLink to="/design">设计</NuxtLink>
                 </li>
                 <li class="nav-item">
-                    <NuxtLink to="/docs">Docs</NuxtLink>
+                    <NuxtLink to="/docs">文档</NuxtLink>
                 </li>
                 <li class="nav-item">
-                    <NuxtLink to="/icons">Icons</NuxtLink>
+                    <NuxtLink to="/icons">图标</NuxtLink>
+                </li>
+                <li class="nav-item">
+                    <NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">日志</NuxtLink>
                 </li>
                 <li class="nav-item">
                     <NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">Codeup</NuxtLink>
@@ -57,8 +60,8 @@
                                     v-model:value="formValue.data.theme"
                                     placeholder="请选择分类"
                                     :options="[
-                                        { label: '线框风格', value: 'filled' },
-                                        { label: '实底风格', value: 'outlined' },
+                                        { label: '实底风格', value: 'filled' },
+                                        { label: '线框风格', value: 'outlined' },
                                         { label: '双色风格', value: 'twotone' },
                                         { label: '彩色风格', value: 'colorful' },
                                     ]"
