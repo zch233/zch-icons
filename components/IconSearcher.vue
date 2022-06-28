@@ -5,6 +5,7 @@
                 <IconSearchOutlined /><input
                     :placeholder="`Search ${total} icons`"
                     v-model="searchValue"
+                    @input="router.push({ path: '/icons', query: { q: searchValue } })"
                     @keydown.enter="router.push({ path: '/icons', query: { q: searchValue } })"
                     type="text"
                 />
