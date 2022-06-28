@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CopyTwoToneSvg from 'icon-base/es/asn/CopyTwoTone';
+import CopyTwotoneSvg from 'gupo-icons-base/es/asn/CopyTwotone';
 
-export interface CopyTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CopyTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCopyTwoTone: CopyTwoToneIconType = (props, context) => <Icon name='CopyTwoTone' {...{ ...props, ...context.attrs }} icon={CopyTwoToneSvg} />;
+const IconCopyTwotone: CopyTwotoneIconType = (props, context) => <Icon name='CopyTwotone' {...{ ...props, ...context.attrs }} icon={CopyTwotoneSvg} />;
 
-IconCopyTwoTone.displayName = 'IconCopyTwoTone';
+IconCopyTwotone.displayName = 'IconCopyTwotone';
+IconCopyTwotone.theme = 'twotone';
+IconCopyTwotone.originName = 'copy';
 
-export default IconCopyTwoTone;
+export default IconCopyTwotone;

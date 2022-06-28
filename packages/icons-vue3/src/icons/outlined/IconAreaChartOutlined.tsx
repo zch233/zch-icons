@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AreaChartOutlinedSvg from 'icon-base/es/asn/AreaChartOutlined';
+import AreaChartOutlinedSvg from 'gupo-icons-base/es/asn/AreaChartOutlined';
 
 export interface AreaChartOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAreaChartOutlined: AreaChartOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAreaChartOutlined: AreaChartOutlinedIconType = (props, context) => (
 );
 
 IconAreaChartOutlined.displayName = 'IconAreaChartOutlined';
+IconAreaChartOutlined.theme = 'outlined';
+IconAreaChartOutlined.originName = 'area-chart';
 
 export default IconAreaChartOutlined;

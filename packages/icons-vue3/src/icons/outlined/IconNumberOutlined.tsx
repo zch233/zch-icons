@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import NumberOutlinedSvg from 'icon-base/es/asn/NumberOutlined';
+import NumberOutlinedSvg from 'gupo-icons-base/es/asn/NumberOutlined';
 
 export interface NumberOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconNumberOutlined: NumberOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconNumberOutlined: NumberOutlinedIconType = (props, context) => (
 );
 
 IconNumberOutlined.displayName = 'IconNumberOutlined';
+IconNumberOutlined.theme = 'outlined';
+IconNumberOutlined.originName = 'number';
 
 export default IconNumberOutlined;

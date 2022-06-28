@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlertTwoToneSvg from 'icon-base/es/asn/AlertTwoTone';
+import AlertTwotoneSvg from 'gupo-icons-base/es/asn/AlertTwotone';
 
-export interface AlertTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface AlertTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconAlertTwoTone: AlertTwoToneIconType = (props, context) => <Icon name='AlertTwoTone' {...{ ...props, ...context.attrs }} icon={AlertTwoToneSvg} />;
+const IconAlertTwotone: AlertTwotoneIconType = (props, context) => <Icon name='AlertTwotone' {...{ ...props, ...context.attrs }} icon={AlertTwotoneSvg} />;
 
-IconAlertTwoTone.displayName = 'IconAlertTwoTone';
+IconAlertTwotone.displayName = 'IconAlertTwotone';
+IconAlertTwotone.theme = 'twotone';
+IconAlertTwotone.originName = 'alert';
 
-export default IconAlertTwoTone;
+export default IconAlertTwotone;

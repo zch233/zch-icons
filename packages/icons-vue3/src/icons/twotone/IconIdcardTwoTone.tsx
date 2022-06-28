@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import IdcardTwoToneSvg from 'icon-base/es/asn/IdcardTwoTone';
+import IdcardTwotoneSvg from 'gupo-icons-base/es/asn/IdcardTwotone';
 
-export interface IdcardTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface IdcardTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconIdcardTwoTone: IdcardTwoToneIconType = (props, context) => <Icon name='IdcardTwoTone' {...{ ...props, ...context.attrs }} icon={IdcardTwoToneSvg} />;
+const IconIdcardTwotone: IdcardTwotoneIconType = (props, context) => <Icon name='IdcardTwotone' {...{ ...props, ...context.attrs }} icon={IdcardTwotoneSvg} />;
 
-IconIdcardTwoTone.displayName = 'IconIdcardTwoTone';
+IconIdcardTwotone.displayName = 'IconIdcardTwotone';
+IconIdcardTwotone.theme = 'twotone';
+IconIdcardTwotone.originName = 'idcard';
 
-export default IconIdcardTwoTone;
+export default IconIdcardTwotone;

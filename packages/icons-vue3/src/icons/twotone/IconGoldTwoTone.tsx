@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GoldTwoToneSvg from 'icon-base/es/asn/GoldTwoTone';
+import GoldTwotoneSvg from 'gupo-icons-base/es/asn/GoldTwotone';
 
-export interface GoldTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface GoldTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconGoldTwoTone: GoldTwoToneIconType = (props, context) => <Icon name='GoldTwoTone' {...{ ...props, ...context.attrs }} icon={GoldTwoToneSvg} />;
+const IconGoldTwotone: GoldTwotoneIconType = (props, context) => <Icon name='GoldTwotone' {...{ ...props, ...context.attrs }} icon={GoldTwotoneSvg} />;
 
-IconGoldTwoTone.displayName = 'IconGoldTwoTone';
+IconGoldTwotone.displayName = 'IconGoldTwotone';
+IconGoldTwotone.theme = 'twotone';
+IconGoldTwotone.originName = 'gold';
 
-export default IconGoldTwoTone;
+export default IconGoldTwotone;

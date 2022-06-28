@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MobileOutlinedSvg from 'icon-base/es/asn/MobileOutlined';
+import MobileOutlinedSvg from 'gupo-icons-base/es/asn/MobileOutlined';
 
 export interface MobileOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMobileOutlined: MobileOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMobileOutlined: MobileOutlinedIconType = (props, context) => (
 );
 
 IconMobileOutlined.displayName = 'IconMobileOutlined';
+IconMobileOutlined.theme = 'outlined';
+IconMobileOutlined.originName = 'mobile';
 
 export default IconMobileOutlined;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExperimentTwoToneSvg from 'icon-base/es/asn/ExperimentTwoTone';
+import ExperimentTwotoneSvg from 'gupo-icons-base/es/asn/ExperimentTwotone';
 
-export interface ExperimentTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ExperimentTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconExperimentTwoTone: ExperimentTwoToneIconType = (props, context) => (
-    <Icon name='ExperimentTwoTone' {...{ ...props, ...context.attrs }} icon={ExperimentTwoToneSvg} />
+const IconExperimentTwotone: ExperimentTwotoneIconType = (props, context) => (
+    <Icon name='ExperimentTwotone' {...{ ...props, ...context.attrs }} icon={ExperimentTwotoneSvg} />
 );
 
-IconExperimentTwoTone.displayName = 'IconExperimentTwoTone';
+IconExperimentTwotone.displayName = 'IconExperimentTwotone';
+IconExperimentTwotone.theme = 'twotone';
+IconExperimentTwotone.originName = 'experiment';
 
-export default IconExperimentTwoTone;
+export default IconExperimentTwotone;

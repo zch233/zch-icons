@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BorderlessTableOutlinedSvg from 'icon-base/es/asn/BorderlessTableOutlined';
+import BorderlessTableOutlinedSvg from 'gupo-icons-base/es/asn/BorderlessTableOutlined';
 
 export interface BorderlessTableOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBorderlessTableOutlined: BorderlessTableOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBorderlessTableOutlined: BorderlessTableOutlinedIconType = (props, con
 );
 
 IconBorderlessTableOutlined.displayName = 'IconBorderlessTableOutlined';
+IconBorderlessTableOutlined.theme = 'outlined';
+IconBorderlessTableOutlined.originName = 'borderless-table';
 
 export default IconBorderlessTableOutlined;

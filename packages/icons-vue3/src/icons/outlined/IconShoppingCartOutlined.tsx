@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ShoppingCartOutlinedSvg from 'icon-base/es/asn/ShoppingCartOutlined';
+import ShoppingCartOutlinedSvg from 'gupo-icons-base/es/asn/ShoppingCartOutlined';
 
 export interface ShoppingCartOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconShoppingCartOutlined: ShoppingCartOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconShoppingCartOutlined: ShoppingCartOutlinedIconType = (props, context) 
 );
 
 IconShoppingCartOutlined.displayName = 'IconShoppingCartOutlined';
+IconShoppingCartOutlined.theme = 'outlined';
+IconShoppingCartOutlined.originName = 'shopping-cart';
 
 export default IconShoppingCartOutlined;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExcelTwoToneSvg from 'icon-base/es/asn/FileExcelTwoTone';
+import FileExcelTwotoneSvg from 'gupo-icons-base/es/asn/FileExcelTwotone';
 
-export interface FileExcelTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileExcelTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileExcelTwoTone: FileExcelTwoToneIconType = (props, context) => (
-    <Icon name='FileExcelTwoTone' {...{ ...props, ...context.attrs }} icon={FileExcelTwoToneSvg} />
+const IconFileExcelTwotone: FileExcelTwotoneIconType = (props, context) => (
+    <Icon name='FileExcelTwotone' {...{ ...props, ...context.attrs }} icon={FileExcelTwotoneSvg} />
 );
 
-IconFileExcelTwoTone.displayName = 'IconFileExcelTwoTone';
+IconFileExcelTwotone.displayName = 'IconFileExcelTwotone';
+IconFileExcelTwotone.theme = 'twotone';
+IconFileExcelTwotone.originName = 'file-excel';
 
-export default IconFileExcelTwoTone;
+export default IconFileExcelTwotone;

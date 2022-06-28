@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PlayCircleTwoToneSvg from 'icon-base/es/asn/PlayCircleTwoTone';
+import PlayCircleTwotoneSvg from 'gupo-icons-base/es/asn/PlayCircleTwotone';
 
-export interface PlayCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PlayCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPlayCircleTwoTone: PlayCircleTwoToneIconType = (props, context) => (
-    <Icon name='PlayCircleTwoTone' {...{ ...props, ...context.attrs }} icon={PlayCircleTwoToneSvg} />
+const IconPlayCircleTwotone: PlayCircleTwotoneIconType = (props, context) => (
+    <Icon name='PlayCircleTwotone' {...{ ...props, ...context.attrs }} icon={PlayCircleTwotoneSvg} />
 );
 
-IconPlayCircleTwoTone.displayName = 'IconPlayCircleTwoTone';
+IconPlayCircleTwotone.displayName = 'IconPlayCircleTwotone';
+IconPlayCircleTwotone.theme = 'twotone';
+IconPlayCircleTwotone.originName = 'play-circle';
 
-export default IconPlayCircleTwoTone;
+export default IconPlayCircleTwotone;

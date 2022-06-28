@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FilePdfOutlinedSvg from 'icon-base/es/asn/FilePdfOutlined';
+import FilePdfOutlinedSvg from 'gupo-icons-base/es/asn/FilePdfOutlined';
 
 export interface FilePdfOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFilePdfOutlined: FilePdfOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFilePdfOutlined: FilePdfOutlinedIconType = (props, context) => (
 );
 
 IconFilePdfOutlined.displayName = 'IconFilePdfOutlined';
+IconFilePdfOutlined.theme = 'outlined';
+IconFilePdfOutlined.originName = 'file-pdf';
 
 export default IconFilePdfOutlined;

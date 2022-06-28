@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CompassOutlinedSvg from 'icon-base/es/asn/CompassOutlined';
+import CompassOutlinedSvg from 'gupo-icons-base/es/asn/CompassOutlined';
 
 export interface CompassOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCompassOutlined: CompassOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCompassOutlined: CompassOutlinedIconType = (props, context) => (
 );
 
 IconCompassOutlined.displayName = 'IconCompassOutlined';
+IconCompassOutlined.theme = 'outlined';
+IconCompassOutlined.originName = 'compass';
 
 export default IconCompassOutlined;

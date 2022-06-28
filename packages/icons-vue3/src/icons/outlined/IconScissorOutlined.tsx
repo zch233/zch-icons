@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ScissorOutlinedSvg from 'icon-base/es/asn/ScissorOutlined';
+import ScissorOutlinedSvg from 'gupo-icons-base/es/asn/ScissorOutlined';
 
 export interface ScissorOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconScissorOutlined: ScissorOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconScissorOutlined: ScissorOutlinedIconType = (props, context) => (
 );
 
 IconScissorOutlined.displayName = 'IconScissorOutlined';
+IconScissorOutlined.theme = 'outlined';
+IconScissorOutlined.originName = 'scissor';
 
 export default IconScissorOutlined;

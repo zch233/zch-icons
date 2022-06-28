@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FolderOpenFilledSvg from 'icon-base/es/asn/FolderOpenFilled';
+import FolderOpenFilledSvg from 'gupo-icons-base/es/asn/FolderOpenFilled';
 
 export interface FolderOpenFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFolderOpenFilled: FolderOpenFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFolderOpenFilled: FolderOpenFilledIconType = (props, context) => (
 );
 
 IconFolderOpenFilled.displayName = 'IconFolderOpenFilled';
+IconFolderOpenFilled.theme = 'filled';
+IconFolderOpenFilled.originName = 'folder-open';
 
 export default IconFolderOpenFilled;

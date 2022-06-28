@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FacebookFilledSvg from 'icon-base/es/asn/FacebookFilled';
+import FacebookFilledSvg from 'gupo-icons-base/es/asn/FacebookFilled';
 
 export interface FacebookFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFacebookFilled: FacebookFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFacebookFilled: FacebookFilledIconType = (props, context) => (
 );
 
 IconFacebookFilled.displayName = 'IconFacebookFilled';
+IconFacebookFilled.theme = 'filled';
+IconFacebookFilled.originName = 'facebook';
 
 export default IconFacebookFilled;

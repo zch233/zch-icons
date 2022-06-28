@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LoadingOutlinedSvg from 'icon-base/es/asn/LoadingOutlined';
+import LoadingOutlinedSvg from 'gupo-icons-base/es/asn/LoadingOutlined';
 
 export interface LoadingOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLoadingOutlined: LoadingOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLoadingOutlined: LoadingOutlinedIconType = (props, context) => (
 );
 
 IconLoadingOutlined.displayName = 'IconLoadingOutlined';
+IconLoadingOutlined.theme = 'outlined';
+IconLoadingOutlined.originName = 'loading';
 
 export default IconLoadingOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RightSquareFilledSvg from 'icon-base/es/asn/RightSquareFilled';
+import RightSquareFilledSvg from 'gupo-icons-base/es/asn/RightSquareFilled';
 
 export interface RightSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconRightSquareFilled: RightSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconRightSquareFilled: RightSquareFilledIconType = (props, context) => (
 );
 
 IconRightSquareFilled.displayName = 'IconRightSquareFilled';
+IconRightSquareFilled.theme = 'filled';
+IconRightSquareFilled.originName = 'right-square';
 
 export default IconRightSquareFilled;

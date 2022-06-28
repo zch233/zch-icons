@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FolderAddTwoToneSvg from 'icon-base/es/asn/FolderAddTwoTone';
+import FolderAddTwotoneSvg from 'gupo-icons-base/es/asn/FolderAddTwotone';
 
-export interface FolderAddTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FolderAddTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFolderAddTwoTone: FolderAddTwoToneIconType = (props, context) => (
-    <Icon name='FolderAddTwoTone' {...{ ...props, ...context.attrs }} icon={FolderAddTwoToneSvg} />
+const IconFolderAddTwotone: FolderAddTwotoneIconType = (props, context) => (
+    <Icon name='FolderAddTwotone' {...{ ...props, ...context.attrs }} icon={FolderAddTwotoneSvg} />
 );
 
-IconFolderAddTwoTone.displayName = 'IconFolderAddTwoTone';
+IconFolderAddTwotone.displayName = 'IconFolderAddTwotone';
+IconFolderAddTwotone.theme = 'twotone';
+IconFolderAddTwotone.originName = 'folder-add';
 
-export default IconFolderAddTwoTone;
+export default IconFolderAddTwotone;

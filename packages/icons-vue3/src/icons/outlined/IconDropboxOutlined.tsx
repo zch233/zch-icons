@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DropboxOutlinedSvg from 'icon-base/es/asn/DropboxOutlined';
+import DropboxOutlinedSvg from 'gupo-icons-base/es/asn/DropboxOutlined';
 
 export interface DropboxOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDropboxOutlined: DropboxOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDropboxOutlined: DropboxOutlinedIconType = (props, context) => (
 );
 
 IconDropboxOutlined.displayName = 'IconDropboxOutlined';
+IconDropboxOutlined.theme = 'outlined';
+IconDropboxOutlined.originName = 'dropbox';
 
 export default IconDropboxOutlined;

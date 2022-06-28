@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WarningFilledSvg from 'icon-base/es/asn/WarningFilled';
+import WarningFilledSvg from 'gupo-icons-base/es/asn/WarningFilled';
 
 export interface WarningFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconWarningFilled: WarningFilledIconType = (props, context) => <Icon name='WarningFilled' {...{ ...props, ...context.attrs }} icon={WarningFilledSvg} />;
 
 IconWarningFilled.displayName = 'IconWarningFilled';
+IconWarningFilled.theme = 'filled';
+IconWarningFilled.originName = 'warning';
 
 export default IconWarningFilled;

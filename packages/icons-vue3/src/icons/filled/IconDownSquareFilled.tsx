@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownSquareFilledSvg from 'icon-base/es/asn/DownSquareFilled';
+import DownSquareFilledSvg from 'gupo-icons-base/es/asn/DownSquareFilled';
 
 export interface DownSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDownSquareFilled: DownSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDownSquareFilled: DownSquareFilledIconType = (props, context) => (
 );
 
 IconDownSquareFilled.displayName = 'IconDownSquareFilled';
+IconDownSquareFilled.theme = 'filled';
+IconDownSquareFilled.originName = 'down-square';
 
 export default IconDownSquareFilled;

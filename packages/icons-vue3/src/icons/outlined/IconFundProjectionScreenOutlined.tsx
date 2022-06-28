@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FundProjectionScreenOutlinedSvg from 'icon-base/es/asn/FundProjectionScreenOutlined';
+import FundProjectionScreenOutlinedSvg from 'gupo-icons-base/es/asn/FundProjectionScreenOutlined';
 
 export interface FundProjectionScreenOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFundProjectionScreenOutlined: FundProjectionScreenOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFundProjectionScreenOutlined: FundProjectionScreenOutlinedIconType = (
 );
 
 IconFundProjectionScreenOutlined.displayName = 'IconFundProjectionScreenOutlined';
+IconFundProjectionScreenOutlined.theme = 'outlined';
+IconFundProjectionScreenOutlined.originName = 'fund-projection-screen';
 
 export default IconFundProjectionScreenOutlined;

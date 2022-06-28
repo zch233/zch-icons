@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import NodeIndexOutlinedSvg from 'icon-base/es/asn/NodeIndexOutlined';
+import NodeIndexOutlinedSvg from 'gupo-icons-base/es/asn/NodeIndexOutlined';
 
 export interface NodeIndexOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconNodeIndexOutlined: NodeIndexOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconNodeIndexOutlined: NodeIndexOutlinedIconType = (props, context) => (
 );
 
 IconNodeIndexOutlined.displayName = 'IconNodeIndexOutlined';
+IconNodeIndexOutlined.theme = 'outlined';
+IconNodeIndexOutlined.originName = 'node-index';
 
 export default IconNodeIndexOutlined;

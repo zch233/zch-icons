@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloudUploadOutlinedSvg from 'icon-base/es/asn/CloudUploadOutlined';
+import CloudUploadOutlinedSvg from 'gupo-icons-base/es/asn/CloudUploadOutlined';
 
 export interface CloudUploadOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCloudUploadOutlined: CloudUploadOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCloudUploadOutlined: CloudUploadOutlinedIconType = (props, context) =>
 );
 
 IconCloudUploadOutlined.displayName = 'IconCloudUploadOutlined';
+IconCloudUploadOutlined.theme = 'outlined';
+IconCloudUploadOutlined.originName = 'cloud-upload';
 
 export default IconCloudUploadOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExcelFilledSvg from 'icon-base/es/asn/FileExcelFilled';
+import FileExcelFilledSvg from 'gupo-icons-base/es/asn/FileExcelFilled';
 
 export interface FileExcelFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileExcelFilled: FileExcelFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileExcelFilled: FileExcelFilledIconType = (props, context) => (
 );
 
 IconFileExcelFilled.displayName = 'IconFileExcelFilled';
+IconFileExcelFilled.theme = 'filled';
+IconFileExcelFilled.originName = 'file-excel';
 
 export default IconFileExcelFilled;

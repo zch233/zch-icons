@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StepForwardFilledSvg from 'icon-base/es/asn/StepForwardFilled';
+import StepForwardFilledSvg from 'gupo-icons-base/es/asn/StepForwardFilled';
 
 export interface StepForwardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconStepForwardFilled: StepForwardFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconStepForwardFilled: StepForwardFilledIconType = (props, context) => (
 );
 
 IconStepForwardFilled.displayName = 'IconStepForwardFilled';
+IconStepForwardFilled.theme = 'filled';
+IconStepForwardFilled.originName = 'step-forward';
 
 export default IconStepForwardFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WeiboSquareFilledSvg from 'icon-base/es/asn/WeiboSquareFilled';
+import WeiboSquareFilledSvg from 'gupo-icons-base/es/asn/WeiboSquareFilled';
 
 export interface WeiboSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconWeiboSquareFilled: WeiboSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconWeiboSquareFilled: WeiboSquareFilledIconType = (props, context) => (
 );
 
 IconWeiboSquareFilled.displayName = 'IconWeiboSquareFilled';
+IconWeiboSquareFilled.theme = 'filled';
+IconWeiboSquareFilled.originName = 'weibo-square';
 
 export default IconWeiboSquareFilled;

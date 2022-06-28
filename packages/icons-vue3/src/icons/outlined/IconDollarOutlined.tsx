@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DollarOutlinedSvg from 'icon-base/es/asn/DollarOutlined';
+import DollarOutlinedSvg from 'gupo-icons-base/es/asn/DollarOutlined';
 
 export interface DollarOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDollarOutlined: DollarOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDollarOutlined: DollarOutlinedIconType = (props, context) => (
 );
 
 IconDollarOutlined.displayName = 'IconDollarOutlined';
+IconDollarOutlined.theme = 'outlined';
+IconDollarOutlined.originName = 'dollar';
 
 export default IconDollarOutlined;

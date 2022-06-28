@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BehanceSquareFilledSvg from 'icon-base/es/asn/BehanceSquareFilled';
+import BehanceSquareFilledSvg from 'gupo-icons-base/es/asn/BehanceSquareFilled';
 
 export interface BehanceSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBehanceSquareFilled: BehanceSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBehanceSquareFilled: BehanceSquareFilledIconType = (props, context) =>
 );
 
 IconBehanceSquareFilled.displayName = 'IconBehanceSquareFilled';
+IconBehanceSquareFilled.theme = 'filled';
+IconBehanceSquareFilled.originName = 'behance-square';
 
 export default IconBehanceSquareFilled;

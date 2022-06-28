@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedditOutlinedSvg from 'icon-base/es/asn/RedditOutlined';
+import RedditOutlinedSvg from 'gupo-icons-base/es/asn/RedditOutlined';
 
 export interface RedditOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconRedditOutlined: RedditOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconRedditOutlined: RedditOutlinedIconType = (props, context) => (
 );
 
 IconRedditOutlined.displayName = 'IconRedditOutlined';
+IconRedditOutlined.theme = 'outlined';
+IconRedditOutlined.originName = 'reddit';
 
 export default IconRedditOutlined;

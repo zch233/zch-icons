@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SlidersFilledSvg from 'icon-base/es/asn/SlidersFilled';
+import SlidersFilledSvg from 'gupo-icons-base/es/asn/SlidersFilled';
 
 export interface SlidersFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSlidersFilled: SlidersFilledIconType = (props, context) => <Icon name='SlidersFilled' {...{ ...props, ...context.attrs }} icon={SlidersFilledSvg} />;
 
 IconSlidersFilled.displayName = 'IconSlidersFilled';
+IconSlidersFilled.theme = 'filled';
+IconSlidersFilled.originName = 'sliders';
 
 export default IconSlidersFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RotateLeftOutlinedSvg from 'icon-base/es/asn/RotateLeftOutlined';
+import RotateLeftOutlinedSvg from 'gupo-icons-base/es/asn/RotateLeftOutlined';
 
 export interface RotateLeftOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconRotateLeftOutlined: RotateLeftOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconRotateLeftOutlined: RotateLeftOutlinedIconType = (props, context) => (
 );
 
 IconRotateLeftOutlined.displayName = 'IconRotateLeftOutlined';
+IconRotateLeftOutlined.theme = 'outlined';
+IconRotateLeftOutlined.originName = 'rotate-left';
 
 export default IconRotateLeftOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsertRowAboveOutlinedSvg from 'icon-base/es/asn/InsertRowAboveOutlined';
+import InsertRowAboveOutlinedSvg from 'gupo-icons-base/es/asn/InsertRowAboveOutlined';
 
 export interface InsertRowAboveOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconInsertRowAboveOutlined: InsertRowAboveOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconInsertRowAboveOutlined: InsertRowAboveOutlinedIconType = (props, conte
 );
 
 IconInsertRowAboveOutlined.displayName = 'IconInsertRowAboveOutlined';
+IconInsertRowAboveOutlined.theme = 'outlined';
+IconInsertRowAboveOutlined.originName = 'insert-row-above';
 
 export default IconInsertRowAboveOutlined;

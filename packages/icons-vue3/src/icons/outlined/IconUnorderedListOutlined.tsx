@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UnorderedListOutlinedSvg from 'icon-base/es/asn/UnorderedListOutlined';
+import UnorderedListOutlinedSvg from 'gupo-icons-base/es/asn/UnorderedListOutlined';
 
 export interface UnorderedListOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconUnorderedListOutlined: UnorderedListOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconUnorderedListOutlined: UnorderedListOutlinedIconType = (props, context
 );
 
 IconUnorderedListOutlined.displayName = 'IconUnorderedListOutlined';
+IconUnorderedListOutlined.theme = 'outlined';
+IconUnorderedListOutlined.originName = 'unordered-list';
 
 export default IconUnorderedListOutlined;

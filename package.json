@@ -44,8 +44,8 @@
     "dependencies": {
         "copy-to-clipboard": "^3.3.1",
         "formidable": "3.2.4",
-        "icon-base": "^0.0.7",
-        "icon-vue3": "^0.0.34",
+        "gupo-icons-base": "^0.0.2",
+        "gupo-icons-vue3": "^0.0.3",
         "lodash.camelcase": "^4.3.0",
         "shelljs": "^0.8.5"
     }

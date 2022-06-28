@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SlidersOutlinedSvg from 'icon-base/es/asn/SlidersOutlined';
+import SlidersOutlinedSvg from 'gupo-icons-base/es/asn/SlidersOutlined';
 
 export interface SlidersOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSlidersOutlined: SlidersOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSlidersOutlined: SlidersOutlinedIconType = (props, context) => (
 );
 
 IconSlidersOutlined.displayName = 'IconSlidersOutlined';
+IconSlidersOutlined.theme = 'outlined';
+IconSlidersOutlined.originName = 'sliders';
 
 export default IconSlidersOutlined;

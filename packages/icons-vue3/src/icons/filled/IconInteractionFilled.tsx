@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InteractionFilledSvg from 'icon-base/es/asn/InteractionFilled';
+import InteractionFilledSvg from 'gupo-icons-base/es/asn/InteractionFilled';
 
 export interface InteractionFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconInteractionFilled: InteractionFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconInteractionFilled: InteractionFilledIconType = (props, context) => (
 );
 
 IconInteractionFilled.displayName = 'IconInteractionFilled';
+IconInteractionFilled.theme = 'filled';
+IconInteractionFilled.originName = 'interaction';
 
 export default IconInteractionFilled;

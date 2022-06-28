@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MoneyCollectTwoToneSvg from 'icon-base/es/asn/MoneyCollectTwoTone';
+import MoneyCollectTwotoneSvg from 'gupo-icons-base/es/asn/MoneyCollectTwotone';
 
-export interface MoneyCollectTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface MoneyCollectTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconMoneyCollectTwoTone: MoneyCollectTwoToneIconType = (props, context) => (
-    <Icon name='MoneyCollectTwoTone' {...{ ...props, ...context.attrs }} icon={MoneyCollectTwoToneSvg} />
+const IconMoneyCollectTwotone: MoneyCollectTwotoneIconType = (props, context) => (
+    <Icon name='MoneyCollectTwotone' {...{ ...props, ...context.attrs }} icon={MoneyCollectTwotoneSvg} />
 );
 
-IconMoneyCollectTwoTone.displayName = 'IconMoneyCollectTwoTone';
+IconMoneyCollectTwotone.displayName = 'IconMoneyCollectTwotone';
+IconMoneyCollectTwotone.theme = 'twotone';
+IconMoneyCollectTwotone.originName = 'money-collect';
 
-export default IconMoneyCollectTwoTone;
+export default IconMoneyCollectTwotone;

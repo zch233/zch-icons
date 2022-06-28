@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileTextOutlinedSvg from 'icon-base/es/asn/FileTextOutlined';
+import FileTextOutlinedSvg from 'gupo-icons-base/es/asn/FileTextOutlined';
 
 export interface FileTextOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileTextOutlined: FileTextOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileTextOutlined: FileTextOutlinedIconType = (props, context) => (
 );
 
 IconFileTextOutlined.displayName = 'IconFileTextOutlined';
+IconFileTextOutlined.theme = 'outlined';
+IconFileTextOutlined.originName = 'file-text';
 
 export default IconFileTextOutlined;

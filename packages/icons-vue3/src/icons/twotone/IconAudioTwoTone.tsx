@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AudioTwoToneSvg from 'icon-base/es/asn/AudioTwoTone';
+import AudioTwotoneSvg from 'gupo-icons-base/es/asn/AudioTwotone';
 
-export interface AudioTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface AudioTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconAudioTwoTone: AudioTwoToneIconType = (props, context) => <Icon name='AudioTwoTone' {...{ ...props, ...context.attrs }} icon={AudioTwoToneSvg} />;
+const IconAudioTwotone: AudioTwotoneIconType = (props, context) => <Icon name='AudioTwotone' {...{ ...props, ...context.attrs }} icon={AudioTwotoneSvg} />;
 
-IconAudioTwoTone.displayName = 'IconAudioTwoTone';
+IconAudioTwotone.displayName = 'IconAudioTwotone';
+IconAudioTwotone.theme = 'twotone';
+IconAudioTwotone.originName = 'audio';
 
-export default IconAudioTwoTone;
+export default IconAudioTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import NotificationFilledSvg from 'icon-base/es/asn/NotificationFilled';
+import NotificationFilledSvg from 'gupo-icons-base/es/asn/NotificationFilled';
 
 export interface NotificationFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconNotificationFilled: NotificationFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconNotificationFilled: NotificationFilledIconType = (props, context) => (
 );
 
 IconNotificationFilled.displayName = 'IconNotificationFilled';
+IconNotificationFilled.theme = 'filled';
+IconNotificationFilled.originName = 'notification';
 
 export default IconNotificationFilled;

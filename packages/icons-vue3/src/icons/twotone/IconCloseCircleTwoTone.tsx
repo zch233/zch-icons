@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloseCircleTwoToneSvg from 'icon-base/es/asn/CloseCircleTwoTone';
+import CloseCircleTwotoneSvg from 'gupo-icons-base/es/asn/CloseCircleTwotone';
 
-export interface CloseCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CloseCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCloseCircleTwoTone: CloseCircleTwoToneIconType = (props, context) => (
-    <Icon name='CloseCircleTwoTone' {...{ ...props, ...context.attrs }} icon={CloseCircleTwoToneSvg} />
+const IconCloseCircleTwotone: CloseCircleTwotoneIconType = (props, context) => (
+    <Icon name='CloseCircleTwotone' {...{ ...props, ...context.attrs }} icon={CloseCircleTwotoneSvg} />
 );
 
-IconCloseCircleTwoTone.displayName = 'IconCloseCircleTwoTone';
+IconCloseCircleTwotone.displayName = 'IconCloseCircleTwotone';
+IconCloseCircleTwotone.theme = 'twotone';
+IconCloseCircleTwotone.originName = 'close-circle';
 
-export default IconCloseCircleTwoTone;
+export default IconCloseCircleTwotone;

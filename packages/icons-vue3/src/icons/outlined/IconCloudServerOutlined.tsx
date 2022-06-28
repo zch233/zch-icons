@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloudServerOutlinedSvg from 'icon-base/es/asn/CloudServerOutlined';
+import CloudServerOutlinedSvg from 'gupo-icons-base/es/asn/CloudServerOutlined';
 
 export interface CloudServerOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCloudServerOutlined: CloudServerOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCloudServerOutlined: CloudServerOutlinedIconType = (props, context) =>
 );
 
 IconCloudServerOutlined.displayName = 'IconCloudServerOutlined';
+IconCloudServerOutlined.theme = 'outlined';
+IconCloudServerOutlined.originName = 'cloud-server';
 
 export default IconCloudServerOutlined;

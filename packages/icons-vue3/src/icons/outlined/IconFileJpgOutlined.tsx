@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileJpgOutlinedSvg from 'icon-base/es/asn/FileJpgOutlined';
+import FileJpgOutlinedSvg from 'gupo-icons-base/es/asn/FileJpgOutlined';
 
 export interface FileJpgOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileJpgOutlined: FileJpgOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileJpgOutlined: FileJpgOutlinedIconType = (props, context) => (
 );
 
 IconFileJpgOutlined.displayName = 'IconFileJpgOutlined';
+IconFileJpgOutlined.theme = 'outlined';
+IconFileJpgOutlined.originName = 'file-jpg';
 
 export default IconFileJpgOutlined;

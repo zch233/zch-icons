@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PlayCircleOutlinedSvg from 'icon-base/es/asn/PlayCircleOutlined';
+import PlayCircleOutlinedSvg from 'gupo-icons-base/es/asn/PlayCircleOutlined';
 
 export interface PlayCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPlayCircleOutlined: PlayCircleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPlayCircleOutlined: PlayCircleOutlinedIconType = (props, context) => (
 );
 
 IconPlayCircleOutlined.displayName = 'IconPlayCircleOutlined';
+IconPlayCircleOutlined.theme = 'outlined';
+IconPlayCircleOutlined.originName = 'play-circle';
 
 export default IconPlayCircleOutlined;

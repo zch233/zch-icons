@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PlusCircleTwoToneSvg from 'icon-base/es/asn/PlusCircleTwoTone';
+import PlusCircleTwotoneSvg from 'gupo-icons-base/es/asn/PlusCircleTwotone';
 
-export interface PlusCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PlusCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPlusCircleTwoTone: PlusCircleTwoToneIconType = (props, context) => (
-    <Icon name='PlusCircleTwoTone' {...{ ...props, ...context.attrs }} icon={PlusCircleTwoToneSvg} />
+const IconPlusCircleTwotone: PlusCircleTwotoneIconType = (props, context) => (
+    <Icon name='PlusCircleTwotone' {...{ ...props, ...context.attrs }} icon={PlusCircleTwotoneSvg} />
 );
 
-IconPlusCircleTwoTone.displayName = 'IconPlusCircleTwoTone';
+IconPlusCircleTwotone.displayName = 'IconPlusCircleTwotone';
+IconPlusCircleTwotone.theme = 'twotone';
+IconPlusCircleTwotone.originName = 'plus-circle';
 
-export default IconPlusCircleTwoTone;
+export default IconPlusCircleTwotone;

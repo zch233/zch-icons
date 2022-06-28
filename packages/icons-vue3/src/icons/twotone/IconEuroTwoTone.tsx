@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EuroTwoToneSvg from 'icon-base/es/asn/EuroTwoTone';
+import EuroTwotoneSvg from 'gupo-icons-base/es/asn/EuroTwotone';
 
-export interface EuroTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface EuroTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconEuroTwoTone: EuroTwoToneIconType = (props, context) => <Icon name='EuroTwoTone' {...{ ...props, ...context.attrs }} icon={EuroTwoToneSvg} />;
+const IconEuroTwotone: EuroTwotoneIconType = (props, context) => <Icon name='EuroTwotone' {...{ ...props, ...context.attrs }} icon={EuroTwotoneSvg} />;
 
-IconEuroTwoTone.displayName = 'IconEuroTwoTone';
+IconEuroTwotone.displayName = 'IconEuroTwotone';
+IconEuroTwotone.theme = 'twotone';
+IconEuroTwotone.originName = 'euro';
 
-export default IconEuroTwoTone;
+export default IconEuroTwotone;

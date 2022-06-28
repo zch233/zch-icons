@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MinusSquareFilledSvg from 'icon-base/es/asn/MinusSquareFilled';
+import MinusSquareFilledSvg from 'gupo-icons-base/es/asn/MinusSquareFilled';
 
 export interface MinusSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMinusSquareFilled: MinusSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMinusSquareFilled: MinusSquareFilledIconType = (props, context) => (
 );
 
 IconMinusSquareFilled.displayName = 'IconMinusSquareFilled';
+IconMinusSquareFilled.theme = 'filled';
+IconMinusSquareFilled.originName = 'minus-square';
 
 export default IconMinusSquareFilled;

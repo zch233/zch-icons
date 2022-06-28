@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MinusSquareOutlinedSvg from 'icon-base/es/asn/MinusSquareOutlined';
+import MinusSquareOutlinedSvg from 'gupo-icons-base/es/asn/MinusSquareOutlined';
 
 export interface MinusSquareOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMinusSquareOutlined: MinusSquareOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMinusSquareOutlined: MinusSquareOutlinedIconType = (props, context) =>
 );
 
 IconMinusSquareOutlined.displayName = 'IconMinusSquareOutlined';
+IconMinusSquareOutlined.theme = 'outlined';
+IconMinusSquareOutlined.originName = 'minus-square';
 
 export default IconMinusSquareOutlined;

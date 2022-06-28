@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FolderOutlinedSvg from 'icon-base/es/asn/FolderOutlined';
+import FolderOutlinedSvg from 'gupo-icons-base/es/asn/FolderOutlined';
 
 export interface FolderOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFolderOutlined: FolderOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFolderOutlined: FolderOutlinedIconType = (props, context) => (
 );
 
 IconFolderOutlined.displayName = 'IconFolderOutlined';
+IconFolderOutlined.theme = 'outlined';
+IconFolderOutlined.originName = 'folder';
 
 export default IconFolderOutlined;

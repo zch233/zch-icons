@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AmazonOutlinedSvg from 'icon-base/es/asn/AmazonOutlined';
+import AmazonOutlinedSvg from 'gupo-icons-base/es/asn/AmazonOutlined';
 
 export interface AmazonOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAmazonOutlined: AmazonOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAmazonOutlined: AmazonOutlinedIconType = (props, context) => (
 );
 
 IconAmazonOutlined.displayName = 'IconAmazonOutlined';
+IconAmazonOutlined.theme = 'outlined';
+IconAmazonOutlined.originName = 'amazon';
 
 export default IconAmazonOutlined;

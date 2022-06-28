@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DeploymentUnitOutlinedSvg from 'icon-base/es/asn/DeploymentUnitOutlined';
+import DeploymentUnitOutlinedSvg from 'gupo-icons-base/es/asn/DeploymentUnitOutlined';
 
 export interface DeploymentUnitOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDeploymentUnitOutlined: DeploymentUnitOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDeploymentUnitOutlined: DeploymentUnitOutlinedIconType = (props, conte
 );
 
 IconDeploymentUnitOutlined.displayName = 'IconDeploymentUnitOutlined';
+IconDeploymentUnitOutlined.theme = 'outlined';
+IconDeploymentUnitOutlined.originName = 'deployment-unit';
 
 export default IconDeploymentUnitOutlined;

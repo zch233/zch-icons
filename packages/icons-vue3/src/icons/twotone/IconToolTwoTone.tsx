@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ToolTwoToneSvg from 'icon-base/es/asn/ToolTwoTone';
+import ToolTwotoneSvg from 'gupo-icons-base/es/asn/ToolTwotone';
 
-export interface ToolTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ToolTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconToolTwoTone: ToolTwoToneIconType = (props, context) => <Icon name='ToolTwoTone' {...{ ...props, ...context.attrs }} icon={ToolTwoToneSvg} />;
+const IconToolTwotone: ToolTwotoneIconType = (props, context) => <Icon name='ToolTwotone' {...{ ...props, ...context.attrs }} icon={ToolTwotoneSvg} />;
 
-IconToolTwoTone.displayName = 'IconToolTwoTone';
+IconToolTwotone.displayName = 'IconToolTwotone';
+IconToolTwotone.theme = 'twotone';
+IconToolTwotone.originName = 'tool';
 
-export default IconToolTwoTone;
+export default IconToolTwotone;

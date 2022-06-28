@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ContactsTwoToneSvg from 'icon-base/es/asn/ContactsTwoTone';
+import ContactsTwotoneSvg from 'gupo-icons-base/es/asn/ContactsTwotone';
 
-export interface ContactsTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ContactsTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconContactsTwoTone: ContactsTwoToneIconType = (props, context) => (
-    <Icon name='ContactsTwoTone' {...{ ...props, ...context.attrs }} icon={ContactsTwoToneSvg} />
+const IconContactsTwotone: ContactsTwotoneIconType = (props, context) => (
+    <Icon name='ContactsTwotone' {...{ ...props, ...context.attrs }} icon={ContactsTwotoneSvg} />
 );
 
-IconContactsTwoTone.displayName = 'IconContactsTwoTone';
+IconContactsTwotone.displayName = 'IconContactsTwotone';
+IconContactsTwotone.theme = 'twotone';
+IconContactsTwotone.originName = 'contacts';
 
-export default IconContactsTwoTone;
+export default IconContactsTwotone;

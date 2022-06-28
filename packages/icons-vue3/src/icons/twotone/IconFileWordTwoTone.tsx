@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileWordTwoToneSvg from 'icon-base/es/asn/FileWordTwoTone';
+import FileWordTwotoneSvg from 'gupo-icons-base/es/asn/FileWordTwotone';
 
-export interface FileWordTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileWordTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileWordTwoTone: FileWordTwoToneIconType = (props, context) => (
-    <Icon name='FileWordTwoTone' {...{ ...props, ...context.attrs }} icon={FileWordTwoToneSvg} />
+const IconFileWordTwotone: FileWordTwotoneIconType = (props, context) => (
+    <Icon name='FileWordTwotone' {...{ ...props, ...context.attrs }} icon={FileWordTwotoneSvg} />
 );
 
-IconFileWordTwoTone.displayName = 'IconFileWordTwoTone';
+IconFileWordTwotone.displayName = 'IconFileWordTwotone';
+IconFileWordTwotone.theme = 'twotone';
+IconFileWordTwotone.originName = 'file-word';
 
-export default IconFileWordTwoTone;
+export default IconFileWordTwotone;

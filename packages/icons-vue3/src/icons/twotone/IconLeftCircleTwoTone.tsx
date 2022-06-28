@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LeftCircleTwoToneSvg from 'icon-base/es/asn/LeftCircleTwoTone';
+import LeftCircleTwotoneSvg from 'gupo-icons-base/es/asn/LeftCircleTwotone';
 
-export interface LeftCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface LeftCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconLeftCircleTwoTone: LeftCircleTwoToneIconType = (props, context) => (
-    <Icon name='LeftCircleTwoTone' {...{ ...props, ...context.attrs }} icon={LeftCircleTwoToneSvg} />
+const IconLeftCircleTwotone: LeftCircleTwotoneIconType = (props, context) => (
+    <Icon name='LeftCircleTwotone' {...{ ...props, ...context.attrs }} icon={LeftCircleTwotoneSvg} />
 );
 
-IconLeftCircleTwoTone.displayName = 'IconLeftCircleTwoTone';
+IconLeftCircleTwotone.displayName = 'IconLeftCircleTwotone';
+IconLeftCircleTwotone.theme = 'twotone';
+IconLeftCircleTwotone.originName = 'left-circle';
 
-export default IconLeftCircleTwoTone;
+export default IconLeftCircleTwotone;

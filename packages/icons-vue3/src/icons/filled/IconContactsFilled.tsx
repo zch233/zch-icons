@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ContactsFilledSvg from 'icon-base/es/asn/ContactsFilled';
+import ContactsFilledSvg from 'gupo-icons-base/es/asn/ContactsFilled';
 
 export interface ContactsFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconContactsFilled: ContactsFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconContactsFilled: ContactsFilledIconType = (props, context) => (
 );
 
 IconContactsFilled.displayName = 'IconContactsFilled';
+IconContactsFilled.theme = 'filled';
+IconContactsFilled.originName = 'contacts';
 
 export default IconContactsFilled;

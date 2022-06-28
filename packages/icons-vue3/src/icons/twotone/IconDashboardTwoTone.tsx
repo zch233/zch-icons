@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DashboardTwoToneSvg from 'icon-base/es/asn/DashboardTwoTone';
+import DashboardTwotoneSvg from 'gupo-icons-base/es/asn/DashboardTwotone';
 
-export interface DashboardTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DashboardTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDashboardTwoTone: DashboardTwoToneIconType = (props, context) => (
-    <Icon name='DashboardTwoTone' {...{ ...props, ...context.attrs }} icon={DashboardTwoToneSvg} />
+const IconDashboardTwotone: DashboardTwotoneIconType = (props, context) => (
+    <Icon name='DashboardTwotone' {...{ ...props, ...context.attrs }} icon={DashboardTwotoneSvg} />
 );
 
-IconDashboardTwoTone.displayName = 'IconDashboardTwoTone';
+IconDashboardTwotone.displayName = 'IconDashboardTwotone';
+IconDashboardTwotone.theme = 'twotone';
+IconDashboardTwotone.originName = 'dashboard';
 
-export default IconDashboardTwoTone;
+export default IconDashboardTwotone;

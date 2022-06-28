@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CameraTwoToneSvg from 'icon-base/es/asn/CameraTwoTone';
+import CameraTwotoneSvg from 'gupo-icons-base/es/asn/CameraTwotone';
 
-export interface CameraTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CameraTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCameraTwoTone: CameraTwoToneIconType = (props, context) => <Icon name='CameraTwoTone' {...{ ...props, ...context.attrs }} icon={CameraTwoToneSvg} />;
+const IconCameraTwotone: CameraTwotoneIconType = (props, context) => <Icon name='CameraTwotone' {...{ ...props, ...context.attrs }} icon={CameraTwotoneSvg} />;
 
-IconCameraTwoTone.displayName = 'IconCameraTwoTone';
+IconCameraTwotone.displayName = 'IconCameraTwotone';
+IconCameraTwotone.theme = 'twotone';
+IconCameraTwotone.originName = 'camera';
 
-export default IconCameraTwoTone;
+export default IconCameraTwotone;

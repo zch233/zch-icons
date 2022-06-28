@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DiffTwoToneSvg from 'icon-base/es/asn/DiffTwoTone';
+import DiffTwotoneSvg from 'gupo-icons-base/es/asn/DiffTwotone';
 
-export interface DiffTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DiffTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDiffTwoTone: DiffTwoToneIconType = (props, context) => <Icon name='DiffTwoTone' {...{ ...props, ...context.attrs }} icon={DiffTwoToneSvg} />;
+const IconDiffTwotone: DiffTwotoneIconType = (props, context) => <Icon name='DiffTwotone' {...{ ...props, ...context.attrs }} icon={DiffTwotoneSvg} />;
 
-IconDiffTwoTone.displayName = 'IconDiffTwoTone';
+IconDiffTwotone.displayName = 'IconDiffTwotone';
+IconDiffTwotone.theme = 'twotone';
+IconDiffTwotone.originName = 'diff';
 
-export default IconDiffTwoTone;
+export default IconDiffTwotone;

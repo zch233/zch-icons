@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LogoutOutlinedSvg from 'icon-base/es/asn/LogoutOutlined';
+import LogoutOutlinedSvg from 'gupo-icons-base/es/asn/LogoutOutlined';
 
 export interface LogoutOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLogoutOutlined: LogoutOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLogoutOutlined: LogoutOutlinedIconType = (props, context) => (
 );
 
 IconLogoutOutlined.displayName = 'IconLogoutOutlined';
+IconLogoutOutlined.theme = 'outlined';
+IconLogoutOutlined.originName = 'logout';
 
 export default IconLogoutOutlined;

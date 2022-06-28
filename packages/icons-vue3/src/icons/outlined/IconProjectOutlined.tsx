@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ProjectOutlinedSvg from 'icon-base/es/asn/ProjectOutlined';
+import ProjectOutlinedSvg from 'gupo-icons-base/es/asn/ProjectOutlined';
 
 export interface ProjectOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconProjectOutlined: ProjectOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconProjectOutlined: ProjectOutlinedIconType = (props, context) => (
 );
 
 IconProjectOutlined.displayName = 'IconProjectOutlined';
+IconProjectOutlined.theme = 'outlined';
+IconProjectOutlined.originName = 'project';
 
 export default IconProjectOutlined;

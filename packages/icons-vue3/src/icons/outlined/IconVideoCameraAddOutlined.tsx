@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VideoCameraAddOutlinedSvg from 'icon-base/es/asn/VideoCameraAddOutlined';
+import VideoCameraAddOutlinedSvg from 'gupo-icons-base/es/asn/VideoCameraAddOutlined';
 
 export interface VideoCameraAddOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconVideoCameraAddOutlined: VideoCameraAddOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconVideoCameraAddOutlined: VideoCameraAddOutlinedIconType = (props, conte
 );
 
 IconVideoCameraAddOutlined.displayName = 'IconVideoCameraAddOutlined';
+IconVideoCameraAddOutlined.theme = 'outlined';
+IconVideoCameraAddOutlined.originName = 'video-camera-add';
 
 export default IconVideoCameraAddOutlined;

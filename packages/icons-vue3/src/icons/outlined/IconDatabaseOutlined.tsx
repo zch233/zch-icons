@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DatabaseOutlinedSvg from 'icon-base/es/asn/DatabaseOutlined';
+import DatabaseOutlinedSvg from 'gupo-icons-base/es/asn/DatabaseOutlined';
 
 export interface DatabaseOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDatabaseOutlined: DatabaseOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDatabaseOutlined: DatabaseOutlinedIconType = (props, context) => (
 );
 
 IconDatabaseOutlined.displayName = 'IconDatabaseOutlined';
+IconDatabaseOutlined.theme = 'outlined';
+IconDatabaseOutlined.originName = 'database';
 
 export default IconDatabaseOutlined;

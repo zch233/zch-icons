@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HighlightFilledSvg from 'icon-base/es/asn/HighlightFilled';
+import HighlightFilledSvg from 'gupo-icons-base/es/asn/HighlightFilled';
 
 export interface HighlightFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconHighlightFilled: HighlightFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconHighlightFilled: HighlightFilledIconType = (props, context) => (
 );
 
 IconHighlightFilled.displayName = 'IconHighlightFilled';
+IconHighlightFilled.theme = 'filled';
+IconHighlightFilled.originName = 'highlight';
 
 export default IconHighlightFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CaretLeftFilledSvg from 'icon-base/es/asn/CaretLeftFilled';
+import CaretLeftFilledSvg from 'gupo-icons-base/es/asn/CaretLeftFilled';
 
 export interface CaretLeftFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCaretLeftFilled: CaretLeftFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCaretLeftFilled: CaretLeftFilledIconType = (props, context) => (
 );
 
 IconCaretLeftFilled.displayName = 'IconCaretLeftFilled';
+IconCaretLeftFilled.theme = 'filled';
+IconCaretLeftFilled.originName = 'caret-left';
 
 export default IconCaretLeftFilled;

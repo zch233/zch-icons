@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BugTwoToneSvg from 'icon-base/es/asn/BugTwoTone';
+import BugTwotoneSvg from 'gupo-icons-base/es/asn/BugTwotone';
 
-export interface BugTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface BugTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconBugTwoTone: BugTwoToneIconType = (props, context) => <Icon name='BugTwoTone' {...{ ...props, ...context.attrs }} icon={BugTwoToneSvg} />;
+const IconBugTwotone: BugTwotoneIconType = (props, context) => <Icon name='BugTwotone' {...{ ...props, ...context.attrs }} icon={BugTwotoneSvg} />;
 
-IconBugTwoTone.displayName = 'IconBugTwoTone';
+IconBugTwotone.displayName = 'IconBugTwotone';
+IconBugTwotone.theme = 'twotone';
+IconBugTwotone.originName = 'bug';
 
-export default IconBugTwoTone;
+export default IconBugTwotone;

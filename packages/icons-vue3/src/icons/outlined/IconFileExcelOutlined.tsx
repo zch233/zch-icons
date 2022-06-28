@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExcelOutlinedSvg from 'icon-base/es/asn/FileExcelOutlined';
+import FileExcelOutlinedSvg from 'gupo-icons-base/es/asn/FileExcelOutlined';
 
 export interface FileExcelOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileExcelOutlined: FileExcelOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileExcelOutlined: FileExcelOutlinedIconType = (props, context) => (
 );
 
 IconFileExcelOutlined.displayName = 'IconFileExcelOutlined';
+IconFileExcelOutlined.theme = 'outlined';
+IconFileExcelOutlined.originName = 'file-excel';
 
 export default IconFileExcelOutlined;

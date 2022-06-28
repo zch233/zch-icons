@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LeftCircleFilledSvg from 'icon-base/es/asn/LeftCircleFilled';
+import LeftCircleFilledSvg from 'gupo-icons-base/es/asn/LeftCircleFilled';
 
 export interface LeftCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLeftCircleFilled: LeftCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLeftCircleFilled: LeftCircleFilledIconType = (props, context) => (
 );
 
 IconLeftCircleFilled.displayName = 'IconLeftCircleFilled';
+IconLeftCircleFilled.theme = 'filled';
+IconLeftCircleFilled.originName = 'left-circle';
 
 export default IconLeftCircleFilled;

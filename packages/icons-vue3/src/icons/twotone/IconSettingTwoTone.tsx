@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SettingTwoToneSvg from 'icon-base/es/asn/SettingTwoTone';
+import SettingTwotoneSvg from 'gupo-icons-base/es/asn/SettingTwotone';
 
-export interface SettingTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SettingTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSettingTwoTone: SettingTwoToneIconType = (props, context) => (
-    <Icon name='SettingTwoTone' {...{ ...props, ...context.attrs }} icon={SettingTwoToneSvg} />
+const IconSettingTwotone: SettingTwotoneIconType = (props, context) => (
+    <Icon name='SettingTwotone' {...{ ...props, ...context.attrs }} icon={SettingTwotoneSvg} />
 );
 
-IconSettingTwoTone.displayName = 'IconSettingTwoTone';
+IconSettingTwotone.displayName = 'IconSettingTwotone';
+IconSettingTwotone.theme = 'twotone';
+IconSettingTwotone.originName = 'setting';
 
-export default IconSettingTwoTone;
+export default IconSettingTwotone;

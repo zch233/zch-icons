@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PropertySafetyTwoToneSvg from 'icon-base/es/asn/PropertySafetyTwoTone';
+import PropertySafetyTwotoneSvg from 'gupo-icons-base/es/asn/PropertySafetyTwotone';
 
-export interface PropertySafetyTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PropertySafetyTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPropertySafetyTwoTone: PropertySafetyTwoToneIconType = (props, context) => (
-    <Icon name='PropertySafetyTwoTone' {...{ ...props, ...context.attrs }} icon={PropertySafetyTwoToneSvg} />
+const IconPropertySafetyTwotone: PropertySafetyTwotoneIconType = (props, context) => (
+    <Icon name='PropertySafetyTwotone' {...{ ...props, ...context.attrs }} icon={PropertySafetyTwotoneSvg} />
 );
 
-IconPropertySafetyTwoTone.displayName = 'IconPropertySafetyTwoTone';
+IconPropertySafetyTwotone.displayName = 'IconPropertySafetyTwotone';
+IconPropertySafetyTwotone.theme = 'twotone';
+IconPropertySafetyTwotone.originName = 'property-safety';
 
-export default IconPropertySafetyTwoTone;
+export default IconPropertySafetyTwotone;

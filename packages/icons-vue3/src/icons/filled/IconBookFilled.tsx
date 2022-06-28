@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BookFilledSvg from 'icon-base/es/asn/BookFilled';
+import BookFilledSvg from 'gupo-icons-base/es/asn/BookFilled';
 
 export interface BookFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBookFilled: BookFilledIconType = (props, context) => <Icon name='BookFilled' {...{ ...props, ...context.attrs }} icon={BookFilledSvg} />;
 
 IconBookFilled.displayName = 'IconBookFilled';
+IconBookFilled.theme = 'filled';
+IconBookFilled.originName = 'book';
 
 export default IconBookFilled;

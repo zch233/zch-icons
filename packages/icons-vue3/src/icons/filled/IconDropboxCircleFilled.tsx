@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DropboxCircleFilledSvg from 'icon-base/es/asn/DropboxCircleFilled';
+import DropboxCircleFilledSvg from 'gupo-icons-base/es/asn/DropboxCircleFilled';
 
 export interface DropboxCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDropboxCircleFilled: DropboxCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDropboxCircleFilled: DropboxCircleFilledIconType = (props, context) =>
 );
 
 IconDropboxCircleFilled.displayName = 'IconDropboxCircleFilled';
+IconDropboxCircleFilled.theme = 'filled';
+IconDropboxCircleFilled.originName = 'dropbox-circle';
 
 export default IconDropboxCircleFilled;

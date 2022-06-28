@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PartitionOutlinedSvg from 'icon-base/es/asn/PartitionOutlined';
+import PartitionOutlinedSvg from 'gupo-icons-base/es/asn/PartitionOutlined';
 
 export interface PartitionOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPartitionOutlined: PartitionOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPartitionOutlined: PartitionOutlinedIconType = (props, context) => (
 );
 
 IconPartitionOutlined.displayName = 'IconPartitionOutlined';
+IconPartitionOutlined.theme = 'outlined';
+IconPartitionOutlined.originName = 'partition';
 
 export default IconPartitionOutlined;

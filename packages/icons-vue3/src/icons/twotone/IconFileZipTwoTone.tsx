@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileZipTwoToneSvg from 'icon-base/es/asn/FileZipTwoTone';
+import FileZipTwotoneSvg from 'gupo-icons-base/es/asn/FileZipTwotone';
 
-export interface FileZipTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileZipTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileZipTwoTone: FileZipTwoToneIconType = (props, context) => (
-    <Icon name='FileZipTwoTone' {...{ ...props, ...context.attrs }} icon={FileZipTwoToneSvg} />
+const IconFileZipTwotone: FileZipTwotoneIconType = (props, context) => (
+    <Icon name='FileZipTwotone' {...{ ...props, ...context.attrs }} icon={FileZipTwotoneSvg} />
 );
 
-IconFileZipTwoTone.displayName = 'IconFileZipTwoTone';
+IconFileZipTwotone.displayName = 'IconFileZipTwotone';
+IconFileZipTwotone.theme = 'twotone';
+IconFileZipTwotone.originName = 'file-zip';
 
-export default IconFileZipTwoTone;
+export default IconFileZipTwotone;

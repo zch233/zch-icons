@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExclamationFilledSvg from 'icon-base/es/asn/FileExclamationFilled';
+import FileExclamationFilledSvg from 'gupo-icons-base/es/asn/FileExclamationFilled';
 
 export interface FileExclamationFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileExclamationFilled: FileExclamationFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileExclamationFilled: FileExclamationFilledIconType = (props, context
 );
 
 IconFileExclamationFilled.displayName = 'IconFileExclamationFilled';
+IconFileExclamationFilled.theme = 'filled';
+IconFileExclamationFilled.originName = 'file-exclamation';
 
 export default IconFileExclamationFilled;

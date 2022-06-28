@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HeartTwoToneSvg from 'icon-base/es/asn/HeartTwoTone';
+import HeartTwotoneSvg from 'gupo-icons-base/es/asn/HeartTwotone';
 
-export interface HeartTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface HeartTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconHeartTwoTone: HeartTwoToneIconType = (props, context) => <Icon name='HeartTwoTone' {...{ ...props, ...context.attrs }} icon={HeartTwoToneSvg} />;
+const IconHeartTwotone: HeartTwotoneIconType = (props, context) => <Icon name='HeartTwotone' {...{ ...props, ...context.attrs }} icon={HeartTwotoneSvg} />;
 
-IconHeartTwoTone.displayName = 'IconHeartTwoTone';
+IconHeartTwotone.displayName = 'IconHeartTwotone';
+IconHeartTwotone.theme = 'twotone';
+IconHeartTwotone.originName = 'heart';
 
-export default IconHeartTwoTone;
+export default IconHeartTwotone;

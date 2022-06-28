@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StarTwoToneSvg from 'icon-base/es/asn/StarTwoTone';
+import StarTwotoneSvg from 'gupo-icons-base/es/asn/StarTwotone';
 
-export interface StarTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface StarTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconStarTwoTone: StarTwoToneIconType = (props, context) => <Icon name='StarTwoTone' {...{ ...props, ...context.attrs }} icon={StarTwoToneSvg} />;
+const IconStarTwotone: StarTwotoneIconType = (props, context) => <Icon name='StarTwotone' {...{ ...props, ...context.attrs }} icon={StarTwotoneSvg} />;
 
-IconStarTwoTone.displayName = 'IconStarTwoTone';
+IconStarTwotone.displayName = 'IconStarTwotone';
+IconStarTwotone.theme = 'twotone';
+IconStarTwotone.originName = 'star';
 
-export default IconStarTwoTone;
+export default IconStarTwotone;

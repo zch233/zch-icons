@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ClockCircleTwoToneSvg from 'icon-base/es/asn/ClockCircleTwoTone';
+import ClockCircleTwotoneSvg from 'gupo-icons-base/es/asn/ClockCircleTwotone';
 
-export interface ClockCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ClockCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconClockCircleTwoTone: ClockCircleTwoToneIconType = (props, context) => (
-    <Icon name='ClockCircleTwoTone' {...{ ...props, ...context.attrs }} icon={ClockCircleTwoToneSvg} />
+const IconClockCircleTwotone: ClockCircleTwotoneIconType = (props, context) => (
+    <Icon name='ClockCircleTwotone' {...{ ...props, ...context.attrs }} icon={ClockCircleTwotoneSvg} />
 );
 
-IconClockCircleTwoTone.displayName = 'IconClockCircleTwoTone';
+IconClockCircleTwotone.displayName = 'IconClockCircleTwotone';
+IconClockCircleTwotone.theme = 'twotone';
+IconClockCircleTwotone.originName = 'clock-circle';
 
-export default IconClockCircleTwoTone;
+export default IconClockCircleTwotone;

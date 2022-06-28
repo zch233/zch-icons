@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DingtalkCircleFilledSvg from 'icon-base/es/asn/DingtalkCircleFilled';
+import DingtalkCircleFilledSvg from 'gupo-icons-base/es/asn/DingtalkCircleFilled';
 
 export interface DingtalkCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDingtalkCircleFilled: DingtalkCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDingtalkCircleFilled: DingtalkCircleFilledIconType = (props, context) 
 );
 
 IconDingtalkCircleFilled.displayName = 'IconDingtalkCircleFilled';
+IconDingtalkCircleFilled.theme = 'filled';
+IconDingtalkCircleFilled.originName = 'dingtalk-circle';
 
 export default IconDingtalkCircleFilled;

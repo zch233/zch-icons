@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ProjectTwoToneSvg from 'icon-base/es/asn/ProjectTwoTone';
+import ProjectTwotoneSvg from 'gupo-icons-base/es/asn/ProjectTwotone';
 
-export interface ProjectTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ProjectTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconProjectTwoTone: ProjectTwoToneIconType = (props, context) => (
-    <Icon name='ProjectTwoTone' {...{ ...props, ...context.attrs }} icon={ProjectTwoToneSvg} />
+const IconProjectTwotone: ProjectTwotoneIconType = (props, context) => (
+    <Icon name='ProjectTwotone' {...{ ...props, ...context.attrs }} icon={ProjectTwotoneSvg} />
 );
 
-IconProjectTwoTone.displayName = 'IconProjectTwoTone';
+IconProjectTwotone.displayName = 'IconProjectTwotone';
+IconProjectTwotone.theme = 'twotone';
+IconProjectTwotone.originName = 'project';
 
-export default IconProjectTwoTone;
+export default IconProjectTwotone;

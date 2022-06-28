@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TrademarkOutlinedSvg from 'icon-base/es/asn/TrademarkOutlined';
+import TrademarkOutlinedSvg from 'gupo-icons-base/es/asn/TrademarkOutlined';
 
 export interface TrademarkOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTrademarkOutlined: TrademarkOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTrademarkOutlined: TrademarkOutlinedIconType = (props, context) => (
 );
 
 IconTrademarkOutlined.displayName = 'IconTrademarkOutlined';
+IconTrademarkOutlined.theme = 'outlined';
+IconTrademarkOutlined.originName = 'trademark';
 
 export default IconTrademarkOutlined;

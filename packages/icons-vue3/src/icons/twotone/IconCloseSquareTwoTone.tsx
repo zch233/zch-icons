@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloseSquareTwoToneSvg from 'icon-base/es/asn/CloseSquareTwoTone';
+import CloseSquareTwotoneSvg from 'gupo-icons-base/es/asn/CloseSquareTwotone';
 
-export interface CloseSquareTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CloseSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCloseSquareTwoTone: CloseSquareTwoToneIconType = (props, context) => (
-    <Icon name='CloseSquareTwoTone' {...{ ...props, ...context.attrs }} icon={CloseSquareTwoToneSvg} />
+const IconCloseSquareTwotone: CloseSquareTwotoneIconType = (props, context) => (
+    <Icon name='CloseSquareTwotone' {...{ ...props, ...context.attrs }} icon={CloseSquareTwotoneSvg} />
 );
 
-IconCloseSquareTwoTone.displayName = 'IconCloseSquareTwoTone';
+IconCloseSquareTwotone.displayName = 'IconCloseSquareTwotone';
+IconCloseSquareTwotone.theme = 'twotone';
+IconCloseSquareTwotone.originName = 'close-square';
 
-export default IconCloseSquareTwoTone;
+export default IconCloseSquareTwotone;

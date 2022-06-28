@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         ],
         // @ts-expect-error: Missing ssr key
         ssr: {
-            noExternal: ['moment', 'icon-vue3', 'naive-ui', '@juggle/resize-observer', '@css-render/vue3-ssr'],
+            noExternal: ['moment', 'gupo-icons-vue3', 'naive-ui', '@juggle/resize-observer', '@css-render/vue3-ssr'],
         },
         optimizeDeps: {
             include: ['date-fns-tz/esm/formatInTimeZone'],

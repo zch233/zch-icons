@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlignLeftOutlinedSvg from 'icon-base/es/asn/AlignLeftOutlined';
+import AlignLeftOutlinedSvg from 'gupo-icons-base/es/asn/AlignLeftOutlined';
 
 export interface AlignLeftOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAlignLeftOutlined: AlignLeftOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAlignLeftOutlined: AlignLeftOutlinedIconType = (props, context) => (
 );
 
 IconAlignLeftOutlined.displayName = 'IconAlignLeftOutlined';
+IconAlignLeftOutlined.theme = 'outlined';
+IconAlignLeftOutlined.originName = 'align-left';
 
 export default IconAlignLeftOutlined;

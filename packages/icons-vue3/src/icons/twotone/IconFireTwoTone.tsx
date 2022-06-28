@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FireTwoToneSvg from 'icon-base/es/asn/FireTwoTone';
+import FireTwotoneSvg from 'gupo-icons-base/es/asn/FireTwotone';
 
-export interface FireTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FireTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFireTwoTone: FireTwoToneIconType = (props, context) => <Icon name='FireTwoTone' {...{ ...props, ...context.attrs }} icon={FireTwoToneSvg} />;
+const IconFireTwotone: FireTwotoneIconType = (props, context) => <Icon name='FireTwotone' {...{ ...props, ...context.attrs }} icon={FireTwotoneSvg} />;
 
-IconFireTwoTone.displayName = 'IconFireTwoTone';
+IconFireTwotone.displayName = 'IconFireTwotone';
+IconFireTwotone.theme = 'twotone';
+IconFireTwotone.originName = 'fire';
 
-export default IconFireTwoTone;
+export default IconFireTwotone;

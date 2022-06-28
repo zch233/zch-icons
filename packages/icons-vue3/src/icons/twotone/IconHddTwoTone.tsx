@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HddTwoToneSvg from 'icon-base/es/asn/HddTwoTone';
+import HddTwotoneSvg from 'gupo-icons-base/es/asn/HddTwotone';
 
-export interface HddTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface HddTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconHddTwoTone: HddTwoToneIconType = (props, context) => <Icon name='HddTwoTone' {...{ ...props, ...context.attrs }} icon={HddTwoToneSvg} />;
+const IconHddTwotone: HddTwotoneIconType = (props, context) => <Icon name='HddTwotone' {...{ ...props, ...context.attrs }} icon={HddTwotoneSvg} />;
 
-IconHddTwoTone.displayName = 'IconHddTwoTone';
+IconHddTwotone.displayName = 'IconHddTwotone';
+IconHddTwotone.theme = 'twotone';
+IconHddTwotone.originName = 'hdd';
 
-export default IconHddTwoTone;
+export default IconHddTwotone;

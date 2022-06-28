@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CompassTwoToneSvg from 'icon-base/es/asn/CompassTwoTone';
+import CompassTwotoneSvg from 'gupo-icons-base/es/asn/CompassTwotone';
 
-export interface CompassTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CompassTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCompassTwoTone: CompassTwoToneIconType = (props, context) => (
-    <Icon name='CompassTwoTone' {...{ ...props, ...context.attrs }} icon={CompassTwoToneSvg} />
+const IconCompassTwotone: CompassTwotoneIconType = (props, context) => (
+    <Icon name='CompassTwotone' {...{ ...props, ...context.attrs }} icon={CompassTwotoneSvg} />
 );
 
-IconCompassTwoTone.displayName = 'IconCompassTwoTone';
+IconCompassTwotone.displayName = 'IconCompassTwotone';
+IconCompassTwotone.theme = 'twotone';
+IconCompassTwotone.originName = 'compass';
 
-export default IconCompassTwoTone;
+export default IconCompassTwotone;

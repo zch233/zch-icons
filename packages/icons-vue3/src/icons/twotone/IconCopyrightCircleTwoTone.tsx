@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CopyrightCircleTwoToneSvg from 'icon-base/es/asn/CopyrightCircleTwoTone';
+import CopyrightCircleTwotoneSvg from 'gupo-icons-base/es/asn/CopyrightCircleTwotone';
 
-export interface CopyrightCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CopyrightCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCopyrightCircleTwoTone: CopyrightCircleTwoToneIconType = (props, context) => (
-    <Icon name='CopyrightCircleTwoTone' {...{ ...props, ...context.attrs }} icon={CopyrightCircleTwoToneSvg} />
+const IconCopyrightCircleTwotone: CopyrightCircleTwotoneIconType = (props, context) => (
+    <Icon name='CopyrightCircleTwotone' {...{ ...props, ...context.attrs }} icon={CopyrightCircleTwotoneSvg} />
 );
 
-IconCopyrightCircleTwoTone.displayName = 'IconCopyrightCircleTwoTone';
+IconCopyrightCircleTwotone.displayName = 'IconCopyrightCircleTwotone';
+IconCopyrightCircleTwotone.theme = 'twotone';
+IconCopyrightCircleTwotone.originName = 'copyright-circle';
 
-export default IconCopyrightCircleTwoTone;
+export default IconCopyrightCircleTwotone;

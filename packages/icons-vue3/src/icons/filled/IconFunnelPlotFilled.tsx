@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FunnelPlotFilledSvg from 'icon-base/es/asn/FunnelPlotFilled';
+import FunnelPlotFilledSvg from 'gupo-icons-base/es/asn/FunnelPlotFilled';
 
 export interface FunnelPlotFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFunnelPlotFilled: FunnelPlotFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFunnelPlotFilled: FunnelPlotFilledIconType = (props, context) => (
 );
 
 IconFunnelPlotFilled.displayName = 'IconFunnelPlotFilled';
+IconFunnelPlotFilled.theme = 'filled';
+IconFunnelPlotFilled.originName = 'funnel-plot';
 
 export default IconFunnelPlotFilled;

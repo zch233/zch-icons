@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ThunderboltOutlinedSvg from 'icon-base/es/asn/ThunderboltOutlined';
+import ThunderboltOutlinedSvg from 'gupo-icons-base/es/asn/ThunderboltOutlined';
 
 export interface ThunderboltOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconThunderboltOutlined: ThunderboltOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconThunderboltOutlined: ThunderboltOutlinedIconType = (props, context) =>
 );
 
 IconThunderboltOutlined.displayName = 'IconThunderboltOutlined';
+IconThunderboltOutlined.theme = 'outlined';
+IconThunderboltOutlined.originName = 'thunderbolt';
 
 export default IconThunderboltOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RadiusBottomrightOutlinedSvg from 'icon-base/es/asn/RadiusBottomrightOutlined';
+import RadiusBottomrightOutlinedSvg from 'gupo-icons-base/es/asn/RadiusBottomrightOutlined';
 
 export interface RadiusBottomrightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconRadiusBottomrightOutlined: RadiusBottomrightOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconRadiusBottomrightOutlined: RadiusBottomrightOutlinedIconType = (props,
 );
 
 IconRadiusBottomrightOutlined.displayName = 'IconRadiusBottomrightOutlined';
+IconRadiusBottomrightOutlined.theme = 'outlined';
+IconRadiusBottomrightOutlined.originName = 'radius-bottomright';
 
 export default IconRadiusBottomrightOutlined;

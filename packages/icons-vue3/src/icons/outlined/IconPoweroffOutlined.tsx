@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PoweroffOutlinedSvg from 'icon-base/es/asn/PoweroffOutlined';
+import PoweroffOutlinedSvg from 'gupo-icons-base/es/asn/PoweroffOutlined';
 
 export interface PoweroffOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPoweroffOutlined: PoweroffOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPoweroffOutlined: PoweroffOutlinedIconType = (props, context) => (
 );
 
 IconPoweroffOutlined.displayName = 'IconPoweroffOutlined';
+IconPoweroffOutlined.theme = 'outlined';
+IconPoweroffOutlined.originName = 'poweroff';
 
 export default IconPoweroffOutlined;

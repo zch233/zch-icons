@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CreditCardTwoToneSvg from 'icon-base/es/asn/CreditCardTwoTone';
+import CreditCardTwotoneSvg from 'gupo-icons-base/es/asn/CreditCardTwotone';
 
-export interface CreditCardTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CreditCardTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCreditCardTwoTone: CreditCardTwoToneIconType = (props, context) => (
-    <Icon name='CreditCardTwoTone' {...{ ...props, ...context.attrs }} icon={CreditCardTwoToneSvg} />
+const IconCreditCardTwotone: CreditCardTwotoneIconType = (props, context) => (
+    <Icon name='CreditCardTwotone' {...{ ...props, ...context.attrs }} icon={CreditCardTwotoneSvg} />
 );
 
-IconCreditCardTwoTone.displayName = 'IconCreditCardTwoTone';
+IconCreditCardTwotone.displayName = 'IconCreditCardTwotone';
+IconCreditCardTwotone.theme = 'twotone';
+IconCreditCardTwotone.originName = 'credit-card';
 
-export default IconCreditCardTwoTone;
+export default IconCreditCardTwotone;

@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MobileTwoToneSvg from 'icon-base/es/asn/MobileTwoTone';
+import MobileTwotoneSvg from 'gupo-icons-base/es/asn/MobileTwotone';
 
-export interface MobileTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface MobileTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconMobileTwoTone: MobileTwoToneIconType = (props, context) => <Icon name='MobileTwoTone' {...{ ...props, ...context.attrs }} icon={MobileTwoToneSvg} />;
+const IconMobileTwotone: MobileTwotoneIconType = (props, context) => <Icon name='MobileTwotone' {...{ ...props, ...context.attrs }} icon={MobileTwotoneSvg} />;
 
-IconMobileTwoTone.displayName = 'IconMobileTwoTone';
+IconMobileTwotone.displayName = 'IconMobileTwotone';
+IconMobileTwotone.theme = 'twotone';
+IconMobileTwotone.originName = 'mobile';
 
-export default IconMobileTwoTone;
+export default IconMobileTwotone;

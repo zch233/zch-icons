@@ -1,6 +1,6 @@
 {
     "name": "gupo-icons-vue3",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "author": "zhangchao <529743595@qq.com>",
     "license": "MIT",
     "sideEffects": false,
@@ -33,7 +33,7 @@
     },
     "dependencies": {
         "@ant-design/colors": "^6.0.0",
-        "icon-base": "^0.0.6",
+        "gupo-icons-base": "^0.0.2",
         "vue": "3.2.33"
     },
     "devDependencies": {
@@ -90,6 +90,9 @@
                 "./src/index.ts"
             ]
         }
+    },
+    "publishConfig": {
+        "registry": "https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/"
     },
     "resolutions": {
         "bin-wrapper": "npm:bin-wrapper-china"

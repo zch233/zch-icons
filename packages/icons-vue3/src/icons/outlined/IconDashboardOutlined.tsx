@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DashboardOutlinedSvg from 'icon-base/es/asn/DashboardOutlined';
+import DashboardOutlinedSvg from 'gupo-icons-base/es/asn/DashboardOutlined';
 
 export interface DashboardOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDashboardOutlined: DashboardOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDashboardOutlined: DashboardOutlinedIconType = (props, context) => (
 );
 
 IconDashboardOutlined.displayName = 'IconDashboardOutlined';
+IconDashboardOutlined.theme = 'outlined';
+IconDashboardOutlined.originName = 'dashboard';
 
 export default IconDashboardOutlined;

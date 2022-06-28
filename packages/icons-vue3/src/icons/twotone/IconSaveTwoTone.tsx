@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SaveTwoToneSvg from 'icon-base/es/asn/SaveTwoTone';
+import SaveTwotoneSvg from 'gupo-icons-base/es/asn/SaveTwotone';
 
-export interface SaveTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SaveTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSaveTwoTone: SaveTwoToneIconType = (props, context) => <Icon name='SaveTwoTone' {...{ ...props, ...context.attrs }} icon={SaveTwoToneSvg} />;
+const IconSaveTwotone: SaveTwotoneIconType = (props, context) => <Icon name='SaveTwotone' {...{ ...props, ...context.attrs }} icon={SaveTwotoneSvg} />;
 
-IconSaveTwoTone.displayName = 'IconSaveTwoTone';
+IconSaveTwotone.displayName = 'IconSaveTwotone';
+IconSaveTwotone.theme = 'twotone';
+IconSaveTwotone.originName = 'save';
 
-export default IconSaveTwoTone;
+export default IconSaveTwotone;

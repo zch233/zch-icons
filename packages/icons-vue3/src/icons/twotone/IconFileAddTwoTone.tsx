@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileAddTwoToneSvg from 'icon-base/es/asn/FileAddTwoTone';
+import FileAddTwotoneSvg from 'gupo-icons-base/es/asn/FileAddTwotone';
 
-export interface FileAddTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileAddTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileAddTwoTone: FileAddTwoToneIconType = (props, context) => (
-    <Icon name='FileAddTwoTone' {...{ ...props, ...context.attrs }} icon={FileAddTwoToneSvg} />
+const IconFileAddTwotone: FileAddTwotoneIconType = (props, context) => (
+    <Icon name='FileAddTwotone' {...{ ...props, ...context.attrs }} icon={FileAddTwotoneSvg} />
 );
 
-IconFileAddTwoTone.displayName = 'IconFileAddTwoTone';
+IconFileAddTwotone.displayName = 'IconFileAddTwotone';
+IconFileAddTwotone.theme = 'twotone';
+IconFileAddTwotone.originName = 'file-add';
 
-export default IconFileAddTwoTone;
+export default IconFileAddTwotone;

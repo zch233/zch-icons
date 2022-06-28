@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SmallDashOutlinedSvg from 'icon-base/es/asn/SmallDashOutlined';
+import SmallDashOutlinedSvg from 'gupo-icons-base/es/asn/SmallDashOutlined';
 
 export interface SmallDashOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSmallDashOutlined: SmallDashOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSmallDashOutlined: SmallDashOutlinedIconType = (props, context) => (
 );
 
 IconSmallDashOutlined.displayName = 'IconSmallDashOutlined';
+IconSmallDashOutlined.theme = 'outlined';
+IconSmallDashOutlined.originName = 'small-dash';
 
 export default IconSmallDashOutlined;

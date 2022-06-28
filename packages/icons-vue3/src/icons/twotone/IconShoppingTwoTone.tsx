@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ShoppingTwoToneSvg from 'icon-base/es/asn/ShoppingTwoTone';
+import ShoppingTwotoneSvg from 'gupo-icons-base/es/asn/ShoppingTwotone';
 
-export interface ShoppingTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ShoppingTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconShoppingTwoTone: ShoppingTwoToneIconType = (props, context) => (
-    <Icon name='ShoppingTwoTone' {...{ ...props, ...context.attrs }} icon={ShoppingTwoToneSvg} />
+const IconShoppingTwotone: ShoppingTwotoneIconType = (props, context) => (
+    <Icon name='ShoppingTwotone' {...{ ...props, ...context.attrs }} icon={ShoppingTwotoneSvg} />
 );
 
-IconShoppingTwoTone.displayName = 'IconShoppingTwoTone';
+IconShoppingTwotone.displayName = 'IconShoppingTwotone';
+IconShoppingTwotone.theme = 'twotone';
+IconShoppingTwotone.originName = 'shopping';
 
-export default IconShoppingTwoTone;
+export default IconShoppingTwotone;

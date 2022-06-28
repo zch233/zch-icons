@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ClockCircleOutlinedSvg from 'icon-base/es/asn/ClockCircleOutlined';
+import ClockCircleOutlinedSvg from 'gupo-icons-base/es/asn/ClockCircleOutlined';
 
 export interface ClockCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconClockCircleOutlined: ClockCircleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconClockCircleOutlined: ClockCircleOutlinedIconType = (props, context) =>
 );
 
 IconClockCircleOutlined.displayName = 'IconClockCircleOutlined';
+IconClockCircleOutlined.theme = 'outlined';
+IconClockCircleOutlined.originName = 'clock-circle';
 
 export default IconClockCircleOutlined;

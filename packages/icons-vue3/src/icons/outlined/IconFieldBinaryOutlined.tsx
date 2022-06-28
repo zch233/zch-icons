@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FieldBinaryOutlinedSvg from 'icon-base/es/asn/FieldBinaryOutlined';
+import FieldBinaryOutlinedSvg from 'gupo-icons-base/es/asn/FieldBinaryOutlined';
 
 export interface FieldBinaryOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFieldBinaryOutlined: FieldBinaryOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFieldBinaryOutlined: FieldBinaryOutlinedIconType = (props, context) =>
 );
 
 IconFieldBinaryOutlined.displayName = 'IconFieldBinaryOutlined';
+IconFieldBinaryOutlined.theme = 'outlined';
+IconFieldBinaryOutlined.originName = 'field-binary';
 
 export default IconFieldBinaryOutlined;

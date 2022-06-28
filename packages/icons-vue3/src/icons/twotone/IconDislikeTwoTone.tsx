@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DislikeTwoToneSvg from 'icon-base/es/asn/DislikeTwoTone';
+import DislikeTwotoneSvg from 'gupo-icons-base/es/asn/DislikeTwotone';
 
-export interface DislikeTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DislikeTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDislikeTwoTone: DislikeTwoToneIconType = (props, context) => (
-    <Icon name='DislikeTwoTone' {...{ ...props, ...context.attrs }} icon={DislikeTwoToneSvg} />
+const IconDislikeTwotone: DislikeTwotoneIconType = (props, context) => (
+    <Icon name='DislikeTwotone' {...{ ...props, ...context.attrs }} icon={DislikeTwotoneSvg} />
 );
 
-IconDislikeTwoTone.displayName = 'IconDislikeTwoTone';
+IconDislikeTwotone.displayName = 'IconDislikeTwotone';
+IconDislikeTwotone.theme = 'twotone';
+IconDislikeTwotone.originName = 'dislike';
 
-export default IconDislikeTwoTone;
+export default IconDislikeTwotone;

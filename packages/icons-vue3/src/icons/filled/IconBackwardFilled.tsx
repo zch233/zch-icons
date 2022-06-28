@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BackwardFilledSvg from 'icon-base/es/asn/BackwardFilled';
+import BackwardFilledSvg from 'gupo-icons-base/es/asn/BackwardFilled';
 
 export interface BackwardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBackwardFilled: BackwardFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBackwardFilled: BackwardFilledIconType = (props, context) => (
 );
 
 IconBackwardFilled.displayName = 'IconBackwardFilled';
+IconBackwardFilled.theme = 'filled';
+IconBackwardFilled.originName = 'backward';
 
 export default IconBackwardFilled;

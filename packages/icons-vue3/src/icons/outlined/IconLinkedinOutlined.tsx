@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LinkedinOutlinedSvg from 'icon-base/es/asn/LinkedinOutlined';
+import LinkedinOutlinedSvg from 'gupo-icons-base/es/asn/LinkedinOutlined';
 
 export interface LinkedinOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLinkedinOutlined: LinkedinOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLinkedinOutlined: LinkedinOutlinedIconType = (props, context) => (
 );
 
 IconLinkedinOutlined.displayName = 'IconLinkedinOutlined';
+IconLinkedinOutlined.theme = 'outlined';
+IconLinkedinOutlined.originName = 'linkedin';
 
 export default IconLinkedinOutlined;

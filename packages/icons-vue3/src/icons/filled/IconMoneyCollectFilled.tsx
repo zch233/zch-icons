@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MoneyCollectFilledSvg from 'icon-base/es/asn/MoneyCollectFilled';
+import MoneyCollectFilledSvg from 'gupo-icons-base/es/asn/MoneyCollectFilled';
 
 export interface MoneyCollectFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMoneyCollectFilled: MoneyCollectFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMoneyCollectFilled: MoneyCollectFilledIconType = (props, context) => (
 );
 
 IconMoneyCollectFilled.displayName = 'IconMoneyCollectFilled';
+IconMoneyCollectFilled.theme = 'filled';
+IconMoneyCollectFilled.originName = 'money-collect';
 
 export default IconMoneyCollectFilled;

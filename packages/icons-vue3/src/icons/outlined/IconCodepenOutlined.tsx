@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CodepenOutlinedSvg from 'icon-base/es/asn/CodepenOutlined';
+import CodepenOutlinedSvg from 'gupo-icons-base/es/asn/CodepenOutlined';
 
 export interface CodepenOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCodepenOutlined: CodepenOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCodepenOutlined: CodepenOutlinedIconType = (props, context) => (
 );
 
 IconCodepenOutlined.displayName = 'IconCodepenOutlined';
+IconCodepenOutlined.theme = 'outlined';
+IconCodepenOutlined.originName = 'codepen';
 
 export default IconCodepenOutlined;

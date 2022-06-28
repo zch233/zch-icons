@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BarcodeOutlinedSvg from 'icon-base/es/asn/BarcodeOutlined';
+import BarcodeOutlinedSvg from 'gupo-icons-base/es/asn/BarcodeOutlined';
 
 export interface BarcodeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBarcodeOutlined: BarcodeOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBarcodeOutlined: BarcodeOutlinedIconType = (props, context) => (
 );
 
 IconBarcodeOutlined.displayName = 'IconBarcodeOutlined';
+IconBarcodeOutlined.theme = 'outlined';
+IconBarcodeOutlined.originName = 'barcode';
 
 export default IconBarcodeOutlined;

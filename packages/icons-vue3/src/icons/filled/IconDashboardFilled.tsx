@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DashboardFilledSvg from 'icon-base/es/asn/DashboardFilled';
+import DashboardFilledSvg from 'gupo-icons-base/es/asn/DashboardFilled';
 
 export interface DashboardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDashboardFilled: DashboardFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDashboardFilled: DashboardFilledIconType = (props, context) => (
 );
 
 IconDashboardFilled.displayName = 'IconDashboardFilled';
+IconDashboardFilled.theme = 'filled';
+IconDashboardFilled.originName = 'dashboard';
 
 export default IconDashboardFilled;

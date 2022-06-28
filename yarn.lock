@@ -3962,6 +3962,20 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npmmirror.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
+gupo-icons-base@^0.0.2:
+  version "0.0.2"
+  resolved "https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/gupo-icons-base/-/gupo-icons-base-0.0.2.tgz#906dea28e588e0ee751a692614ae2d7e28a461e9"
+  integrity sha512-uH8ztLJR7gTe5rjBbyrCkJXRP8hgvqwsT6aJLnFzgltQvW4FhLfcTEK9MYsHoWG9Ycmg96bZbGMHlY3zsAU1Ng==
+
+gupo-icons-vue3@^0.0.3:
+  version "0.0.3"
+  resolved "https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/gupo-icons-vue3/-/gupo-icons-vue3-0.0.3.tgz#c0379d9d028763f969cdef4190023fca3ab158c9"
+  integrity sha512-Ddk6d2vwJWTw4fPeVx1zPGByhJtdd9RDVmJiF3GJcMRx1VirG/tMhMZiDgSwN1UVR6TY8wTdknkFk/Dyh1qT7g==
+  dependencies:
+    "@ant-design/colors" "^6.0.0"
+    gupo-icons-base "^0.0.2"
+    vue "3.2.33"
+
 gzip-size@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmmirror.com/gzip-size/-/gzip-size-7.0.0.tgz#9f9644251f15bc78460fccef4055ae5a5562ac60"
@@ -4169,25 +4183,6 @@ husky@^7.0.0:
   version "7.0.4"
   resolved "https://registry.npmmirror.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
   integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==
-
-icon-base@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.7.tgz#87e32ab2f8a44421eb46184c4bee7b8dbe3ce828"
-  integrity sha512-pVjLeA8dPmKa5EKIPoYtjof2EpbnRmR620OfD/c0kUKBfx6J40azu5+PbLyc7U/lP0rP3KXP511EPU75Bd3fMw==
-
-icon-base@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.8.tgz#6ec9d27dfcb21413b47dde43f37684f2888430cf"
-  integrity sha512-aCjIcb/MuuXZbMSr8oGE/4Cw47j7/B1coN75VnfHlOMKIxOIwuEvpm2K3mRBBkUb3dAhao9LMp3XXd31xHTLUw==
-
-icon-vue3@^0.0.34:
-  version "0.0.34"
-  resolved "https://registry.npmjs.org/icon-vue3/-/icon-vue3-0.0.34.tgz#d56761d037ebbaff2cc888ff506dd3ccb18dd987"
-  integrity sha512-oFRf0zZL5rrWnVr/wV76dj0BTzyNqMfZOais+0CD0sUOiGsVLnsKHe2ECPtdtmzUhD3m+YO/X+x/U8r46nV/Fw==
-  dependencies:
-    "@ant-design/colors" "^6.0.0"
-    icon-base "^0.0.8"
-    vue "3.2.33"
 
 iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"

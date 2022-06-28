@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ProfileTwoToneSvg from 'icon-base/es/asn/ProfileTwoTone';
+import ProfileTwotoneSvg from 'gupo-icons-base/es/asn/ProfileTwotone';
 
-export interface ProfileTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ProfileTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconProfileTwoTone: ProfileTwoToneIconType = (props, context) => (
-    <Icon name='ProfileTwoTone' {...{ ...props, ...context.attrs }} icon={ProfileTwoToneSvg} />
+const IconProfileTwotone: ProfileTwotoneIconType = (props, context) => (
+    <Icon name='ProfileTwotone' {...{ ...props, ...context.attrs }} icon={ProfileTwotoneSvg} />
 );
 
-IconProfileTwoTone.displayName = 'IconProfileTwoTone';
+IconProfileTwotone.displayName = 'IconProfileTwotone';
+IconProfileTwotone.theme = 'twotone';
+IconProfileTwotone.originName = 'profile';
 
-export default IconProfileTwoTone;
+export default IconProfileTwotone;

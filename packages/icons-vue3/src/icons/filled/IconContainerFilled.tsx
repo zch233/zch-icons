@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ContainerFilledSvg from 'icon-base/es/asn/ContainerFilled';
+import ContainerFilledSvg from 'gupo-icons-base/es/asn/ContainerFilled';
 
 export interface ContainerFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconContainerFilled: ContainerFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconContainerFilled: ContainerFilledIconType = (props, context) => (
 );
 
 IconContainerFilled.displayName = 'IconContainerFilled';
+IconContainerFilled.theme = 'filled';
+IconContainerFilled.originName = 'container';
 
 export default IconContainerFilled;

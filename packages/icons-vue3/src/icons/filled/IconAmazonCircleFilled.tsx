@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AmazonCircleFilledSvg from 'icon-base/es/asn/AmazonCircleFilled';
+import AmazonCircleFilledSvg from 'gupo-icons-base/es/asn/AmazonCircleFilled';
 
 export interface AmazonCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAmazonCircleFilled: AmazonCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAmazonCircleFilled: AmazonCircleFilledIconType = (props, context) => (
 );
 
 IconAmazonCircleFilled.displayName = 'IconAmazonCircleFilled';
+IconAmazonCircleFilled.theme = 'filled';
+IconAmazonCircleFilled.originName = 'amazon-circle';
 
 export default IconAmazonCircleFilled;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FilePdfTwoToneSvg from 'icon-base/es/asn/FilePdfTwoTone';
+import FilePdfTwotoneSvg from 'gupo-icons-base/es/asn/FilePdfTwotone';
 
-export interface FilePdfTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FilePdfTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFilePdfTwoTone: FilePdfTwoToneIconType = (props, context) => (
-    <Icon name='FilePdfTwoTone' {...{ ...props, ...context.attrs }} icon={FilePdfTwoToneSvg} />
+const IconFilePdfTwotone: FilePdfTwotoneIconType = (props, context) => (
+    <Icon name='FilePdfTwotone' {...{ ...props, ...context.attrs }} icon={FilePdfTwotoneSvg} />
 );
 
-IconFilePdfTwoTone.displayName = 'IconFilePdfTwoTone';
+IconFilePdfTwotone.displayName = 'IconFilePdfTwotone';
+IconFilePdfTwotone.theme = 'twotone';
+IconFilePdfTwotone.originName = 'file-pdf';
 
-export default IconFilePdfTwoTone;
+export default IconFilePdfTwotone;

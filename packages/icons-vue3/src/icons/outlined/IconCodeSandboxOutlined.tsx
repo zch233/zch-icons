@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CodeSandboxOutlinedSvg from 'icon-base/es/asn/CodeSandboxOutlined';
+import CodeSandboxOutlinedSvg from 'gupo-icons-base/es/asn/CodeSandboxOutlined';
 
 export interface CodeSandboxOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCodeSandboxOutlined: CodeSandboxOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCodeSandboxOutlined: CodeSandboxOutlinedIconType = (props, context) =>
 );
 
 IconCodeSandboxOutlined.displayName = 'IconCodeSandboxOutlined';
+IconCodeSandboxOutlined.theme = 'outlined';
+IconCodeSandboxOutlined.originName = 'code-sandbox';
 
 export default IconCodeSandboxOutlined;

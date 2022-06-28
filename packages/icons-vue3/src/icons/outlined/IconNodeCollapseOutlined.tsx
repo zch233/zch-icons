@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import NodeCollapseOutlinedSvg from 'icon-base/es/asn/NodeCollapseOutlined';
+import NodeCollapseOutlinedSvg from 'gupo-icons-base/es/asn/NodeCollapseOutlined';
 
 export interface NodeCollapseOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconNodeCollapseOutlined: NodeCollapseOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconNodeCollapseOutlined: NodeCollapseOutlinedIconType = (props, context) 
 );
 
 IconNodeCollapseOutlined.displayName = 'IconNodeCollapseOutlined';
+IconNodeCollapseOutlined.theme = 'outlined';
+IconNodeCollapseOutlined.originName = 'node-collapse';
 
 export default IconNodeCollapseOutlined;

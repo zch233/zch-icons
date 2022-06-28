@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LayoutTwoToneSvg from 'icon-base/es/asn/LayoutTwoTone';
+import LayoutTwotoneSvg from 'gupo-icons-base/es/asn/LayoutTwotone';
 
-export interface LayoutTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface LayoutTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconLayoutTwoTone: LayoutTwoToneIconType = (props, context) => <Icon name='LayoutTwoTone' {...{ ...props, ...context.attrs }} icon={LayoutTwoToneSvg} />;
+const IconLayoutTwotone: LayoutTwotoneIconType = (props, context) => <Icon name='LayoutTwotone' {...{ ...props, ...context.attrs }} icon={LayoutTwotoneSvg} />;
 
-IconLayoutTwoTone.displayName = 'IconLayoutTwoTone';
+IconLayoutTwotone.displayName = 'IconLayoutTwotone';
+IconLayoutTwotone.theme = 'twotone';
+IconLayoutTwotone.originName = 'layout';
 
-export default IconLayoutTwoTone;
+export default IconLayoutTwotone;

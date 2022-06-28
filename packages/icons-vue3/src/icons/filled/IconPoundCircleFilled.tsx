@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PoundCircleFilledSvg from 'icon-base/es/asn/PoundCircleFilled';
+import PoundCircleFilledSvg from 'gupo-icons-base/es/asn/PoundCircleFilled';
 
 export interface PoundCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPoundCircleFilled: PoundCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPoundCircleFilled: PoundCircleFilledIconType = (props, context) => (
 );
 
 IconPoundCircleFilled.displayName = 'IconPoundCircleFilled';
+IconPoundCircleFilled.theme = 'filled';
+IconPoundCircleFilled.originName = 'pound-circle';
 
 export default IconPoundCircleFilled;

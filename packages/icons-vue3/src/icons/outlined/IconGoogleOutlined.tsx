@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GoogleOutlinedSvg from 'icon-base/es/asn/GoogleOutlined';
+import GoogleOutlinedSvg from 'gupo-icons-base/es/asn/GoogleOutlined';
 
 export interface GoogleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGoogleOutlined: GoogleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconGoogleOutlined: GoogleOutlinedIconType = (props, context) => (
 );
 
 IconGoogleOutlined.displayName = 'IconGoogleOutlined';
+IconGoogleOutlined.theme = 'outlined';
+IconGoogleOutlined.originName = 'google';
 
 export default IconGoogleOutlined;

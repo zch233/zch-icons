@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UsbTwoToneSvg from 'icon-base/es/asn/UsbTwoTone';
+import UsbTwotoneSvg from 'gupo-icons-base/es/asn/UsbTwotone';
 
-export interface UsbTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface UsbTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconUsbTwoTone: UsbTwoToneIconType = (props, context) => <Icon name='UsbTwoTone' {...{ ...props, ...context.attrs }} icon={UsbTwoToneSvg} />;
+const IconUsbTwotone: UsbTwotoneIconType = (props, context) => <Icon name='UsbTwotone' {...{ ...props, ...context.attrs }} icon={UsbTwotoneSvg} />;
 
-IconUsbTwoTone.displayName = 'IconUsbTwoTone';
+IconUsbTwotone.displayName = 'IconUsbTwotone';
+IconUsbTwotone.theme = 'twotone';
+IconUsbTwotone.originName = 'usb';
 
-export default IconUsbTwoTone;
+export default IconUsbTwotone;

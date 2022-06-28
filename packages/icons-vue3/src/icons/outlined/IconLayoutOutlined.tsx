@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LayoutOutlinedSvg from 'icon-base/es/asn/LayoutOutlined';
+import LayoutOutlinedSvg from 'gupo-icons-base/es/asn/LayoutOutlined';
 
 export interface LayoutOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLayoutOutlined: LayoutOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLayoutOutlined: LayoutOutlinedIconType = (props, context) => (
 );
 
 IconLayoutOutlined.displayName = 'IconLayoutOutlined';
+IconLayoutOutlined.theme = 'outlined';
+IconLayoutOutlined.originName = 'layout';
 
 export default IconLayoutOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SwitcherOutlinedSvg from 'icon-base/es/asn/SwitcherOutlined';
+import SwitcherOutlinedSvg from 'gupo-icons-base/es/asn/SwitcherOutlined';
 
 export interface SwitcherOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSwitcherOutlined: SwitcherOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSwitcherOutlined: SwitcherOutlinedIconType = (props, context) => (
 );
 
 IconSwitcherOutlined.displayName = 'IconSwitcherOutlined';
+IconSwitcherOutlined.theme = 'outlined';
+IconSwitcherOutlined.originName = 'switcher';
 
 export default IconSwitcherOutlined;

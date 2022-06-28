@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownCircleOutlinedSvg from 'icon-base/es/asn/DownCircleOutlined';
+import DownCircleOutlinedSvg from 'gupo-icons-base/es/asn/DownCircleOutlined';
 
 export interface DownCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDownCircleOutlined: DownCircleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDownCircleOutlined: DownCircleOutlinedIconType = (props, context) => (
 );
 
 IconDownCircleOutlined.displayName = 'IconDownCircleOutlined';
+IconDownCircleOutlined.theme = 'outlined';
+IconDownCircleOutlined.originName = 'down-circle';
 
 export default IconDownCircleOutlined;

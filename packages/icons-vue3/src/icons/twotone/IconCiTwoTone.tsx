@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CiTwoToneSvg from 'icon-base/es/asn/CiTwoTone';
+import CiTwotoneSvg from 'gupo-icons-base/es/asn/CiTwotone';
 
-export interface CiTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CiTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCiTwoTone: CiTwoToneIconType = (props, context) => <Icon name='CiTwoTone' {...{ ...props, ...context.attrs }} icon={CiTwoToneSvg} />;
+const IconCiTwotone: CiTwotoneIconType = (props, context) => <Icon name='CiTwotone' {...{ ...props, ...context.attrs }} icon={CiTwotoneSvg} />;
 
-IconCiTwoTone.displayName = 'IconCiTwoTone';
+IconCiTwotone.displayName = 'IconCiTwotone';
+IconCiTwotone.theme = 'twotone';
+IconCiTwotone.originName = 'ci';
 
-export default IconCiTwoTone;
+export default IconCiTwotone;

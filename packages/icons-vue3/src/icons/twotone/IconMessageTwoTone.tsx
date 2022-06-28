@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MessageTwoToneSvg from 'icon-base/es/asn/MessageTwoTone';
+import MessageTwotoneSvg from 'gupo-icons-base/es/asn/MessageTwotone';
 
-export interface MessageTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface MessageTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconMessageTwoTone: MessageTwoToneIconType = (props, context) => (
-    <Icon name='MessageTwoTone' {...{ ...props, ...context.attrs }} icon={MessageTwoToneSvg} />
+const IconMessageTwotone: MessageTwotoneIconType = (props, context) => (
+    <Icon name='MessageTwotone' {...{ ...props, ...context.attrs }} icon={MessageTwotoneSvg} />
 );
 
-IconMessageTwoTone.displayName = 'IconMessageTwoTone';
+IconMessageTwotone.displayName = 'IconMessageTwotone';
+IconMessageTwotone.theme = 'twotone';
+IconMessageTwotone.originName = 'message';
 
-export default IconMessageTwoTone;
+export default IconMessageTwotone;

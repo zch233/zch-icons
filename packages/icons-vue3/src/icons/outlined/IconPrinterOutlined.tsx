@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PrinterOutlinedSvg from 'icon-base/es/asn/PrinterOutlined';
+import PrinterOutlinedSvg from 'gupo-icons-base/es/asn/PrinterOutlined';
 
 export interface PrinterOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPrinterOutlined: PrinterOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPrinterOutlined: PrinterOutlinedIconType = (props, context) => (
 );
 
 IconPrinterOutlined.displayName = 'IconPrinterOutlined';
+IconPrinterOutlined.theme = 'outlined';
+IconPrinterOutlined.originName = 'printer';
 
 export default IconPrinterOutlined;

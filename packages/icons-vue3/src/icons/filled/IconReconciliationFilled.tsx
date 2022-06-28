@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ReconciliationFilledSvg from 'icon-base/es/asn/ReconciliationFilled';
+import ReconciliationFilledSvg from 'gupo-icons-base/es/asn/ReconciliationFilled';
 
 export interface ReconciliationFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconReconciliationFilled: ReconciliationFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconReconciliationFilled: ReconciliationFilledIconType = (props, context) 
 );
 
 IconReconciliationFilled.displayName = 'IconReconciliationFilled';
+IconReconciliationFilled.theme = 'filled';
+IconReconciliationFilled.originName = 'reconciliation';
 
 export default IconReconciliationFilled;

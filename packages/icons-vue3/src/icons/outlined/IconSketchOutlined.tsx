@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SketchOutlinedSvg from 'icon-base/es/asn/SketchOutlined';
+import SketchOutlinedSvg from 'gupo-icons-base/es/asn/SketchOutlined';
 
 export interface SketchOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSketchOutlined: SketchOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSketchOutlined: SketchOutlinedIconType = (props, context) => (
 );
 
 IconSketchOutlined.displayName = 'IconSketchOutlined';
+IconSketchOutlined.theme = 'outlined';
+IconSketchOutlined.originName = 'sketch';
 
 export default IconSketchOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DislikeOutlinedSvg from 'icon-base/es/asn/DislikeOutlined';
+import DislikeOutlinedSvg from 'gupo-icons-base/es/asn/DislikeOutlined';
 
 export interface DislikeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDislikeOutlined: DislikeOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDislikeOutlined: DislikeOutlinedIconType = (props, context) => (
 );
 
 IconDislikeOutlined.displayName = 'IconDislikeOutlined';
+IconDislikeOutlined.theme = 'outlined';
+IconDislikeOutlined.originName = 'dislike';
 
 export default IconDislikeOutlined;

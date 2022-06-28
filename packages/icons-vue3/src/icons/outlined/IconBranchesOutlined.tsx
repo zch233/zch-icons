@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BranchesOutlinedSvg from 'icon-base/es/asn/BranchesOutlined';
+import BranchesOutlinedSvg from 'gupo-icons-base/es/asn/BranchesOutlined';
 
 export interface BranchesOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBranchesOutlined: BranchesOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBranchesOutlined: BranchesOutlinedIconType = (props, context) => (
 );
 
 IconBranchesOutlined.displayName = 'IconBranchesOutlined';
+IconBranchesOutlined.theme = 'outlined';
+IconBranchesOutlined.originName = 'branches';
 
 export default IconBranchesOutlined;

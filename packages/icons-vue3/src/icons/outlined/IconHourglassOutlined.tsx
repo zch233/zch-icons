@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HourglassOutlinedSvg from 'icon-base/es/asn/HourglassOutlined';
+import HourglassOutlinedSvg from 'gupo-icons-base/es/asn/HourglassOutlined';
 
 export interface HourglassOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconHourglassOutlined: HourglassOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconHourglassOutlined: HourglassOutlinedIconType = (props, context) => (
 );
 
 IconHourglassOutlined.displayName = 'IconHourglassOutlined';
+IconHourglassOutlined.theme = 'outlined';
+IconHourglassOutlined.originName = 'hourglass';
 
 export default IconHourglassOutlined;

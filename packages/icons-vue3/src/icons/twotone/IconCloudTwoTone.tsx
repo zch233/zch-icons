@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloudTwoToneSvg from 'icon-base/es/asn/CloudTwoTone';
+import CloudTwotoneSvg from 'gupo-icons-base/es/asn/CloudTwotone';
 
-export interface CloudTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CloudTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCloudTwoTone: CloudTwoToneIconType = (props, context) => <Icon name='CloudTwoTone' {...{ ...props, ...context.attrs }} icon={CloudTwoToneSvg} />;
+const IconCloudTwotone: CloudTwotoneIconType = (props, context) => <Icon name='CloudTwotone' {...{ ...props, ...context.attrs }} icon={CloudTwotoneSvg} />;
 
-IconCloudTwoTone.displayName = 'IconCloudTwoTone';
+IconCloudTwotone.displayName = 'IconCloudTwotone';
+IconCloudTwotone.theme = 'twotone';
+IconCloudTwotone.originName = 'cloud';
 
-export default IconCloudTwoTone;
+export default IconCloudTwotone;

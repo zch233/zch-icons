@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UserSwitchOutlinedSvg from 'icon-base/es/asn/UserSwitchOutlined';
+import UserSwitchOutlinedSvg from 'gupo-icons-base/es/asn/UserSwitchOutlined';
 
 export interface UserSwitchOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconUserSwitchOutlined: UserSwitchOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconUserSwitchOutlined: UserSwitchOutlinedIconType = (props, context) => (
 );
 
 IconUserSwitchOutlined.displayName = 'IconUserSwitchOutlined';
+IconUserSwitchOutlined.theme = 'outlined';
+IconUserSwitchOutlined.originName = 'user-switch';
 
 export default IconUserSwitchOutlined;

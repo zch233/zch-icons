@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SecurityScanTwoToneSvg from 'icon-base/es/asn/SecurityScanTwoTone';
+import SecurityScanTwotoneSvg from 'gupo-icons-base/es/asn/SecurityScanTwotone';
 
-export interface SecurityScanTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SecurityScanTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSecurityScanTwoTone: SecurityScanTwoToneIconType = (props, context) => (
-    <Icon name='SecurityScanTwoTone' {...{ ...props, ...context.attrs }} icon={SecurityScanTwoToneSvg} />
+const IconSecurityScanTwotone: SecurityScanTwotoneIconType = (props, context) => (
+    <Icon name='SecurityScanTwotone' {...{ ...props, ...context.attrs }} icon={SecurityScanTwotoneSvg} />
 );
 
-IconSecurityScanTwoTone.displayName = 'IconSecurityScanTwoTone';
+IconSecurityScanTwotone.displayName = 'IconSecurityScanTwotone';
+IconSecurityScanTwotone.theme = 'twotone';
+IconSecurityScanTwotone.originName = 'security-scan';
 
-export default IconSecurityScanTwoTone;
+export default IconSecurityScanTwotone;

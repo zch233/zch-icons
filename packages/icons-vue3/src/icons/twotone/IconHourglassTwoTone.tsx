@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HourglassTwoToneSvg from 'icon-base/es/asn/HourglassTwoTone';
+import HourglassTwotoneSvg from 'gupo-icons-base/es/asn/HourglassTwotone';
 
-export interface HourglassTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface HourglassTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconHourglassTwoTone: HourglassTwoToneIconType = (props, context) => (
-    <Icon name='HourglassTwoTone' {...{ ...props, ...context.attrs }} icon={HourglassTwoToneSvg} />
+const IconHourglassTwotone: HourglassTwotoneIconType = (props, context) => (
+    <Icon name='HourglassTwotone' {...{ ...props, ...context.attrs }} icon={HourglassTwotoneSvg} />
 );
 
-IconHourglassTwoTone.displayName = 'IconHourglassTwoTone';
+IconHourglassTwotone.displayName = 'IconHourglassTwotone';
+IconHourglassTwotone.theme = 'twotone';
+IconHourglassTwotone.originName = 'hourglass';
 
-export default IconHourglassTwoTone;
+export default IconHourglassTwotone;

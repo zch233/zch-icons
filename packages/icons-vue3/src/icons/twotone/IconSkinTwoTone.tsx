@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SkinTwoToneSvg from 'icon-base/es/asn/SkinTwoTone';
+import SkinTwotoneSvg from 'gupo-icons-base/es/asn/SkinTwotone';
 
-export interface SkinTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SkinTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSkinTwoTone: SkinTwoToneIconType = (props, context) => <Icon name='SkinTwoTone' {...{ ...props, ...context.attrs }} icon={SkinTwoToneSvg} />;
+const IconSkinTwotone: SkinTwotoneIconType = (props, context) => <Icon name='SkinTwotone' {...{ ...props, ...context.attrs }} icon={SkinTwotoneSvg} />;
 
-IconSkinTwoTone.displayName = 'IconSkinTwoTone';
+IconSkinTwotone.displayName = 'IconSkinTwotone';
+IconSkinTwotone.theme = 'twotone';
+IconSkinTwotone.originName = 'skin';
 
-export default IconSkinTwoTone;
+export default IconSkinTwotone;

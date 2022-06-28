@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloseSquareFilledSvg from 'icon-base/es/asn/CloseSquareFilled';
+import CloseSquareFilledSvg from 'gupo-icons-base/es/asn/CloseSquareFilled';
 
 export interface CloseSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCloseSquareFilled: CloseSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCloseSquareFilled: CloseSquareFilledIconType = (props, context) => (
 );
 
 IconCloseSquareFilled.displayName = 'IconCloseSquareFilled';
+IconCloseSquareFilled.theme = 'filled';
+IconCloseSquareFilled.originName = 'close-square';
 
 export default IconCloseSquareFilled;

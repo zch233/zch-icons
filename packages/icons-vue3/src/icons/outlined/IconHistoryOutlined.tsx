@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HistoryOutlinedSvg from 'icon-base/es/asn/HistoryOutlined';
+import HistoryOutlinedSvg from 'gupo-icons-base/es/asn/HistoryOutlined';
 
 export interface HistoryOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconHistoryOutlined: HistoryOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconHistoryOutlined: HistoryOutlinedIconType = (props, context) => (
 );
 
 IconHistoryOutlined.displayName = 'IconHistoryOutlined';
+IconHistoryOutlined.theme = 'outlined';
+IconHistoryOutlined.originName = 'history';
 
 export default IconHistoryOutlined;

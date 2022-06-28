@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BellTwoToneSvg from 'icon-base/es/asn/BellTwoTone';
+import BellTwotoneSvg from 'gupo-icons-base/es/asn/BellTwotone';
 
-export interface BellTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface BellTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconBellTwoTone: BellTwoToneIconType = (props, context) => <Icon name='BellTwoTone' {...{ ...props, ...context.attrs }} icon={BellTwoToneSvg} />;
+const IconBellTwotone: BellTwotoneIconType = (props, context) => <Icon name='BellTwotone' {...{ ...props, ...context.attrs }} icon={BellTwotoneSvg} />;
 
-IconBellTwoTone.displayName = 'IconBellTwoTone';
+IconBellTwotone.displayName = 'IconBellTwotone';
+IconBellTwotone.theme = 'twotone';
+IconBellTwotone.originName = 'bell';
 
-export default IconBellTwoTone;
+export default IconBellTwotone;

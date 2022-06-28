@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CodepenSquareFilledSvg from 'icon-base/es/asn/CodepenSquareFilled';
+import CodepenSquareFilledSvg from 'gupo-icons-base/es/asn/CodepenSquareFilled';
 
 export interface CodepenSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCodepenSquareFilled: CodepenSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCodepenSquareFilled: CodepenSquareFilledIconType = (props, context) =>
 );
 
 IconCodepenSquareFilled.displayName = 'IconCodepenSquareFilled';
+IconCodepenSquareFilled.theme = 'filled';
+IconCodepenSquareFilled.originName = 'codepen-square';
 
 export default IconCodepenSquareFilled;

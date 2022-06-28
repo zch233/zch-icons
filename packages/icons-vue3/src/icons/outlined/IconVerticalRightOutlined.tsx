@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VerticalRightOutlinedSvg from 'icon-base/es/asn/VerticalRightOutlined';
+import VerticalRightOutlinedSvg from 'gupo-icons-base/es/asn/VerticalRightOutlined';
 
 export interface VerticalRightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconVerticalRightOutlined: VerticalRightOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconVerticalRightOutlined: VerticalRightOutlinedIconType = (props, context
 );
 
 IconVerticalRightOutlined.displayName = 'IconVerticalRightOutlined';
+IconVerticalRightOutlined.theme = 'outlined';
+IconVerticalRightOutlined.originName = 'vertical-right';
 
 export default IconVerticalRightOutlined;

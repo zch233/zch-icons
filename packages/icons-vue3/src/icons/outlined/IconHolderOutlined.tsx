@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HolderOutlinedSvg from 'icon-base/es/asn/HolderOutlined';
+import HolderOutlinedSvg from 'gupo-icons-base/es/asn/HolderOutlined';
 
 export interface HolderOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconHolderOutlined: HolderOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconHolderOutlined: HolderOutlinedIconType = (props, context) => (
 );
 
 IconHolderOutlined.displayName = 'IconHolderOutlined';
+IconHolderOutlined.theme = 'outlined';
+IconHolderOutlined.originName = 'holder';
 
 export default IconHolderOutlined;

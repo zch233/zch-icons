@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VerticalAlignBottomOutlinedSvg from 'icon-base/es/asn/VerticalAlignBottomOutlined';
+import VerticalAlignBottomOutlinedSvg from 'gupo-icons-base/es/asn/VerticalAlignBottomOutlined';
 
 export interface VerticalAlignBottomOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconVerticalAlignBottomOutlined: VerticalAlignBottomOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconVerticalAlignBottomOutlined: VerticalAlignBottomOutlinedIconType = (pr
 );
 
 IconVerticalAlignBottomOutlined.displayName = 'IconVerticalAlignBottomOutlined';
+IconVerticalAlignBottomOutlined.theme = 'outlined';
+IconVerticalAlignBottomOutlined.originName = 'vertical-align-bottom';
 
 export default IconVerticalAlignBottomOutlined;

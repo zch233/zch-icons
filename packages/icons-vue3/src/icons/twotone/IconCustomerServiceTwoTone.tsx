@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CustomerServiceTwoToneSvg from 'icon-base/es/asn/CustomerServiceTwoTone';
+import CustomerServiceTwotoneSvg from 'gupo-icons-base/es/asn/CustomerServiceTwotone';
 
-export interface CustomerServiceTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CustomerServiceTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCustomerServiceTwoTone: CustomerServiceTwoToneIconType = (props, context) => (
-    <Icon name='CustomerServiceTwoTone' {...{ ...props, ...context.attrs }} icon={CustomerServiceTwoToneSvg} />
+const IconCustomerServiceTwotone: CustomerServiceTwotoneIconType = (props, context) => (
+    <Icon name='CustomerServiceTwotone' {...{ ...props, ...context.attrs }} icon={CustomerServiceTwotoneSvg} />
 );
 
-IconCustomerServiceTwoTone.displayName = 'IconCustomerServiceTwoTone';
+IconCustomerServiceTwotone.displayName = 'IconCustomerServiceTwotone';
+IconCustomerServiceTwotone.theme = 'twotone';
+IconCustomerServiceTwotone.originName = 'customer-service';
 
-export default IconCustomerServiceTwoTone;
+export default IconCustomerServiceTwotone;

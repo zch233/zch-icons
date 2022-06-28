@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BoxPlotTwoToneSvg from 'icon-base/es/asn/BoxPlotTwoTone';
+import BoxPlotTwotoneSvg from 'gupo-icons-base/es/asn/BoxPlotTwotone';
 
-export interface BoxPlotTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface BoxPlotTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconBoxPlotTwoTone: BoxPlotTwoToneIconType = (props, context) => (
-    <Icon name='BoxPlotTwoTone' {...{ ...props, ...context.attrs }} icon={BoxPlotTwoToneSvg} />
+const IconBoxPlotTwotone: BoxPlotTwotoneIconType = (props, context) => (
+    <Icon name='BoxPlotTwotone' {...{ ...props, ...context.attrs }} icon={BoxPlotTwotoneSvg} />
 );
 
-IconBoxPlotTwoTone.displayName = 'IconBoxPlotTwoTone';
+IconBoxPlotTwotone.displayName = 'IconBoxPlotTwotone';
+IconBoxPlotTwotone.theme = 'twotone';
+IconBoxPlotTwotone.originName = 'box-plot';
 
-export default IconBoxPlotTwoTone;
+export default IconBoxPlotTwotone;

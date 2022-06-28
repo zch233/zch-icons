@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MedicineBoxOutlinedSvg from 'icon-base/es/asn/MedicineBoxOutlined';
+import MedicineBoxOutlinedSvg from 'gupo-icons-base/es/asn/MedicineBoxOutlined';
 
 export interface MedicineBoxOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMedicineBoxOutlined: MedicineBoxOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMedicineBoxOutlined: MedicineBoxOutlinedIconType = (props, context) =>
 );
 
 IconMedicineBoxOutlined.displayName = 'IconMedicineBoxOutlined';
+IconMedicineBoxOutlined.theme = 'outlined';
+IconMedicineBoxOutlined.originName = 'medicine-box';
 
 export default IconMedicineBoxOutlined;

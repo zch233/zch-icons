@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AppstoreFilledSvg from 'icon-base/es/asn/AppstoreFilled';
+import AppstoreFilledSvg from 'gupo-icons-base/es/asn/AppstoreFilled';
 
 export interface AppstoreFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAppstoreFilled: AppstoreFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAppstoreFilled: AppstoreFilledIconType = (props, context) => (
 );
 
 IconAppstoreFilled.displayName = 'IconAppstoreFilled';
+IconAppstoreFilled.theme = 'filled';
+IconAppstoreFilled.originName = 'appstore';
 
 export default IconAppstoreFilled;

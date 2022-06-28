@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownCircleFilledSvg from 'icon-base/es/asn/DownCircleFilled';
+import DownCircleFilledSvg from 'gupo-icons-base/es/asn/DownCircleFilled';
 
 export interface DownCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDownCircleFilled: DownCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDownCircleFilled: DownCircleFilledIconType = (props, context) => (
 );
 
 IconDownCircleFilled.displayName = 'IconDownCircleFilled';
+IconDownCircleFilled.theme = 'filled';
+IconDownCircleFilled.originName = 'down-circle';
 
 export default IconDownCircleFilled;

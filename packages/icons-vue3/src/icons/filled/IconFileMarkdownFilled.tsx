@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileMarkdownFilledSvg from 'icon-base/es/asn/FileMarkdownFilled';
+import FileMarkdownFilledSvg from 'gupo-icons-base/es/asn/FileMarkdownFilled';
 
 export interface FileMarkdownFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileMarkdownFilled: FileMarkdownFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileMarkdownFilled: FileMarkdownFilledIconType = (props, context) => (
 );
 
 IconFileMarkdownFilled.displayName = 'IconFileMarkdownFilled';
+IconFileMarkdownFilled.theme = 'filled';
+IconFileMarkdownFilled.originName = 'file-markdown';
 
 export default IconFileMarkdownFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileTextFilledSvg from 'icon-base/es/asn/FileTextFilled';
+import FileTextFilledSvg from 'gupo-icons-base/es/asn/FileTextFilled';
 
 export interface FileTextFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileTextFilled: FileTextFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileTextFilled: FileTextFilledIconType = (props, context) => (
 );
 
 IconFileTextFilled.displayName = 'IconFileTextFilled';
+IconFileTextFilled.theme = 'filled';
+IconFileTextFilled.originName = 'file-text';
 
 export default IconFileTextFilled;

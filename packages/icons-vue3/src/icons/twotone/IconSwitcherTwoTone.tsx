@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SwitcherTwoToneSvg from 'icon-base/es/asn/SwitcherTwoTone';
+import SwitcherTwotoneSvg from 'gupo-icons-base/es/asn/SwitcherTwotone';
 
-export interface SwitcherTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SwitcherTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSwitcherTwoTone: SwitcherTwoToneIconType = (props, context) => (
-    <Icon name='SwitcherTwoTone' {...{ ...props, ...context.attrs }} icon={SwitcherTwoToneSvg} />
+const IconSwitcherTwotone: SwitcherTwotoneIconType = (props, context) => (
+    <Icon name='SwitcherTwotone' {...{ ...props, ...context.attrs }} icon={SwitcherTwotoneSvg} />
 );
 
-IconSwitcherTwoTone.displayName = 'IconSwitcherTwoTone';
+IconSwitcherTwotone.displayName = 'IconSwitcherTwotone';
+IconSwitcherTwotone.theme = 'twotone';
+IconSwitcherTwotone.originName = 'switcher';
 
-export default IconSwitcherTwoTone;
+export default IconSwitcherTwotone;

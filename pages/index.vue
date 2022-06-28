@@ -104,12 +104,12 @@ import {
     IconQqSquareFilled,
     IconMediumSquareFilled,
     IconDashboardFilled,
-} from 'icon-vue3';
-import * as allIcons from 'icon-vue3';
-import * as filledIcons from 'icon-vue3/es/icons/filled';
-import * as outlinedIcons from 'icon-vue3/es/icons/outlined';
-import * as twotoneIcons from 'icon-vue3/es/icons/twotone';
-import * as colorfulIcons from 'icon-vue3/es/icons/colorful';
+} from 'gupo-icons-vue3';
+import * as allIcons from 'gupo-icons-vue3';
+import * as filledIcons from 'gupo-icons-vue3/es/icons/filled';
+import * as outlinedIcons from 'gupo-icons-vue3/es/icons/outlined';
+import * as twotoneIcons from 'gupo-icons-vue3/es/icons/twotone';
+import * as colorfulIcons from 'gupo-icons-vue3/es/icons/colorful';
 
 const router = useRouter();
 const statistic = computed(() => ({

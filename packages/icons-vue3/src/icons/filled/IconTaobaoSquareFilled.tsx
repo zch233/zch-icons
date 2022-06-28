@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TaobaoSquareFilledSvg from 'icon-base/es/asn/TaobaoSquareFilled';
+import TaobaoSquareFilledSvg from 'gupo-icons-base/es/asn/TaobaoSquareFilled';
 
 export interface TaobaoSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTaobaoSquareFilled: TaobaoSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTaobaoSquareFilled: TaobaoSquareFilledIconType = (props, context) => (
 );
 
 IconTaobaoSquareFilled.displayName = 'IconTaobaoSquareFilled';
+IconTaobaoSquareFilled.theme = 'filled';
+IconTaobaoSquareFilled.originName = 'taobao-square';
 
 export default IconTaobaoSquareFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsuranceFilledSvg from 'icon-base/es/asn/InsuranceFilled';
+import InsuranceFilledSvg from 'gupo-icons-base/es/asn/InsuranceFilled';
 
 export interface InsuranceFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconInsuranceFilled: InsuranceFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconInsuranceFilled: InsuranceFilledIconType = (props, context) => (
 );
 
 IconInsuranceFilled.displayName = 'IconInsuranceFilled';
+IconInsuranceFilled.theme = 'filled';
+IconInsuranceFilled.originName = 'insurance';
 
 export default IconInsuranceFilled;

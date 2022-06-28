@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DoubleLeftOutlinedSvg from 'icon-base/es/asn/DoubleLeftOutlined';
+import DoubleLeftOutlinedSvg from 'gupo-icons-base/es/asn/DoubleLeftOutlined';
 
 export interface DoubleLeftOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDoubleLeftOutlined: DoubleLeftOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDoubleLeftOutlined: DoubleLeftOutlinedIconType = (props, context) => (
 );
 
 IconDoubleLeftOutlined.displayName = 'IconDoubleLeftOutlined';
+IconDoubleLeftOutlined.theme = 'outlined';
+IconDoubleLeftOutlined.originName = 'double-left';
 
 export default IconDoubleLeftOutlined;

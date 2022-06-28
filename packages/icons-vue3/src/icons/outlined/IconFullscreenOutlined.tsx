@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FullscreenOutlinedSvg from 'icon-base/es/asn/FullscreenOutlined';
+import FullscreenOutlinedSvg from 'gupo-icons-base/es/asn/FullscreenOutlined';
 
 export interface FullscreenOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFullscreenOutlined: FullscreenOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFullscreenOutlined: FullscreenOutlinedIconType = (props, context) => (
 );
 
 IconFullscreenOutlined.displayName = 'IconFullscreenOutlined';
+IconFullscreenOutlined.theme = 'outlined';
+IconFullscreenOutlined.originName = 'fullscreen';
 
 export default IconFullscreenOutlined;

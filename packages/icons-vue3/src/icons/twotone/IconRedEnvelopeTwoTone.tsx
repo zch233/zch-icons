@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedEnvelopeTwoToneSvg from 'icon-base/es/asn/RedEnvelopeTwoTone';
+import RedEnvelopeTwotoneSvg from 'gupo-icons-base/es/asn/RedEnvelopeTwotone';
 
-export interface RedEnvelopeTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface RedEnvelopeTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconRedEnvelopeTwoTone: RedEnvelopeTwoToneIconType = (props, context) => (
-    <Icon name='RedEnvelopeTwoTone' {...{ ...props, ...context.attrs }} icon={RedEnvelopeTwoToneSvg} />
+const IconRedEnvelopeTwotone: RedEnvelopeTwotoneIconType = (props, context) => (
+    <Icon name='RedEnvelopeTwotone' {...{ ...props, ...context.attrs }} icon={RedEnvelopeTwotoneSvg} />
 );
 
-IconRedEnvelopeTwoTone.displayName = 'IconRedEnvelopeTwoTone';
+IconRedEnvelopeTwotone.displayName = 'IconRedEnvelopeTwotone';
+IconRedEnvelopeTwotone.theme = 'twotone';
+IconRedEnvelopeTwotone.originName = 'red-envelope';
 
-export default IconRedEnvelopeTwoTone;
+export default IconRedEnvelopeTwotone;

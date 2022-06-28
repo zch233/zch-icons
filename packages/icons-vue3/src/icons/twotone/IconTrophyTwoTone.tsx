@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TrophyTwoToneSvg from 'icon-base/es/asn/TrophyTwoTone';
+import TrophyTwotoneSvg from 'gupo-icons-base/es/asn/TrophyTwotone';
 
-export interface TrophyTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface TrophyTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconTrophyTwoTone: TrophyTwoToneIconType = (props, context) => <Icon name='TrophyTwoTone' {...{ ...props, ...context.attrs }} icon={TrophyTwoToneSvg} />;
+const IconTrophyTwotone: TrophyTwotoneIconType = (props, context) => <Icon name='TrophyTwotone' {...{ ...props, ...context.attrs }} icon={TrophyTwotoneSvg} />;
 
-IconTrophyTwoTone.displayName = 'IconTrophyTwoTone';
+IconTrophyTwotone.displayName = 'IconTrophyTwotone';
+IconTrophyTwotone.theme = 'twotone';
+IconTrophyTwotone.originName = 'trophy';
 
-export default IconTrophyTwoTone;
+export default IconTrophyTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CompressOutlinedSvg from 'icon-base/es/asn/CompressOutlined';
+import CompressOutlinedSvg from 'gupo-icons-base/es/asn/CompressOutlined';
 
 export interface CompressOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCompressOutlined: CompressOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCompressOutlined: CompressOutlinedIconType = (props, context) => (
 );
 
 IconCompressOutlined.displayName = 'IconCompressOutlined';
+IconCompressOutlined.theme = 'outlined';
+IconCompressOutlined.originName = 'compress';
 
 export default IconCompressOutlined;

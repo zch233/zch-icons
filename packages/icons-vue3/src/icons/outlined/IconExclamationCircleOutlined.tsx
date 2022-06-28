@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExclamationCircleOutlinedSvg from 'icon-base/es/asn/ExclamationCircleOutlined';
+import ExclamationCircleOutlinedSvg from 'gupo-icons-base/es/asn/ExclamationCircleOutlined';
 
 export interface ExclamationCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconExclamationCircleOutlined: ExclamationCircleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconExclamationCircleOutlined: ExclamationCircleOutlinedIconType = (props,
 );
 
 IconExclamationCircleOutlined.displayName = 'IconExclamationCircleOutlined';
+IconExclamationCircleOutlined.theme = 'outlined';
+IconExclamationCircleOutlined.originName = 'exclamation-circle';
 
 export default IconExclamationCircleOutlined;

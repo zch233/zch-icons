@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MacCommandOutlinedSvg from 'icon-base/es/asn/MacCommandOutlined';
+import MacCommandOutlinedSvg from 'gupo-icons-base/es/asn/MacCommandOutlined';
 
 export interface MacCommandOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMacCommandOutlined: MacCommandOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMacCommandOutlined: MacCommandOutlinedIconType = (props, context) => (
 );
 
 IconMacCommandOutlined.displayName = 'IconMacCommandOutlined';
+IconMacCommandOutlined.theme = 'outlined';
+IconMacCommandOutlined.originName = 'mac-command';
 
 export default IconMacCommandOutlined;

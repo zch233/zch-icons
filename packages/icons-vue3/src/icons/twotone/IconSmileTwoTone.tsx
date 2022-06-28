@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SmileTwoToneSvg from 'icon-base/es/asn/SmileTwoTone';
+import SmileTwotoneSvg from 'gupo-icons-base/es/asn/SmileTwotone';
 
-export interface SmileTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SmileTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSmileTwoTone: SmileTwoToneIconType = (props, context) => <Icon name='SmileTwoTone' {...{ ...props, ...context.attrs }} icon={SmileTwoToneSvg} />;
+const IconSmileTwotone: SmileTwotoneIconType = (props, context) => <Icon name='SmileTwotone' {...{ ...props, ...context.attrs }} icon={SmileTwotoneSvg} />;
 
-IconSmileTwoTone.displayName = 'IconSmileTwoTone';
+IconSmileTwotone.displayName = 'IconSmileTwotone';
+IconSmileTwotone.theme = 'twotone';
+IconSmileTwotone.originName = 'smile';
 
-export default IconSmileTwoTone;
+export default IconSmileTwotone;

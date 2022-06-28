@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PayCircleFilledSvg from 'icon-base/es/asn/PayCircleFilled';
+import PayCircleFilledSvg from 'gupo-icons-base/es/asn/PayCircleFilled';
 
 export interface PayCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPayCircleFilled: PayCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPayCircleFilled: PayCircleFilledIconType = (props, context) => (
 );
 
 IconPayCircleFilled.displayName = 'IconPayCircleFilled';
+IconPayCircleFilled.theme = 'filled';
+IconPayCircleFilled.originName = 'pay-circle';
 
 export default IconPayCircleFilled;

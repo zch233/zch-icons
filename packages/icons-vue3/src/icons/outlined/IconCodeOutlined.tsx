@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CodeOutlinedSvg from 'icon-base/es/asn/CodeOutlined';
+import CodeOutlinedSvg from 'gupo-icons-base/es/asn/CodeOutlined';
 
 export interface CodeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCodeOutlined: CodeOutlinedIconType = (props, context) => <Icon name='CodeOutlined' {...{ ...props, ...context.attrs }} icon={CodeOutlinedSvg} />;
 
 IconCodeOutlined.displayName = 'IconCodeOutlined';
+IconCodeOutlined.theme = 'outlined';
+IconCodeOutlined.originName = 'code';
 
 export default IconCodeOutlined;

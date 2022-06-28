@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SnippetsTwoToneSvg from 'icon-base/es/asn/SnippetsTwoTone';
+import SnippetsTwotoneSvg from 'gupo-icons-base/es/asn/SnippetsTwotone';
 
-export interface SnippetsTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SnippetsTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSnippetsTwoTone: SnippetsTwoToneIconType = (props, context) => (
-    <Icon name='SnippetsTwoTone' {...{ ...props, ...context.attrs }} icon={SnippetsTwoToneSvg} />
+const IconSnippetsTwotone: SnippetsTwotoneIconType = (props, context) => (
+    <Icon name='SnippetsTwotone' {...{ ...props, ...context.attrs }} icon={SnippetsTwotoneSvg} />
 );
 
-IconSnippetsTwoTone.displayName = 'IconSnippetsTwoTone';
+IconSnippetsTwotone.displayName = 'IconSnippetsTwotone';
+IconSnippetsTwotone.theme = 'twotone';
+IconSnippetsTwotone.originName = 'snippets';
 
-export default IconSnippetsTwoTone;
+export default IconSnippetsTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExceptionOutlinedSvg from 'icon-base/es/asn/ExceptionOutlined';
+import ExceptionOutlinedSvg from 'gupo-icons-base/es/asn/ExceptionOutlined';
 
 export interface ExceptionOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconExceptionOutlined: ExceptionOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconExceptionOutlined: ExceptionOutlinedIconType = (props, context) => (
 );
 
 IconExceptionOutlined.displayName = 'IconExceptionOutlined';
+IconExceptionOutlined.theme = 'outlined';
+IconExceptionOutlined.originName = 'exception';
 
 export default IconExceptionOutlined;

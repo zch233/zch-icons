@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FormatPainterFilledSvg from 'icon-base/es/asn/FormatPainterFilled';
+import FormatPainterFilledSvg from 'gupo-icons-base/es/asn/FormatPainterFilled';
 
 export interface FormatPainterFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFormatPainterFilled: FormatPainterFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFormatPainterFilled: FormatPainterFilledIconType = (props, context) =>
 );
 
 IconFormatPainterFilled.displayName = 'IconFormatPainterFilled';
+IconFormatPainterFilled.theme = 'filled';
+IconFormatPainterFilled.originName = 'format-painter';
 
 export default IconFormatPainterFilled;

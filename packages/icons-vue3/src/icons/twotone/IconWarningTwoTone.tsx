@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WarningTwoToneSvg from 'icon-base/es/asn/WarningTwoTone';
+import WarningTwotoneSvg from 'gupo-icons-base/es/asn/WarningTwotone';
 
-export interface WarningTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface WarningTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconWarningTwoTone: WarningTwoToneIconType = (props, context) => (
-    <Icon name='WarningTwoTone' {...{ ...props, ...context.attrs }} icon={WarningTwoToneSvg} />
+const IconWarningTwotone: WarningTwotoneIconType = (props, context) => (
+    <Icon name='WarningTwotone' {...{ ...props, ...context.attrs }} icon={WarningTwotoneSvg} />
 );
 
-IconWarningTwoTone.displayName = 'IconWarningTwoTone';
+IconWarningTwotone.displayName = 'IconWarningTwotone';
+IconWarningTwotone.theme = 'twotone';
+IconWarningTwotone.originName = 'warning';
 
-export default IconWarningTwoTone;
+export default IconWarningTwotone;

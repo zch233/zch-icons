@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CopyrightOutlinedSvg from 'icon-base/es/asn/CopyrightOutlined';
+import CopyrightOutlinedSvg from 'gupo-icons-base/es/asn/CopyrightOutlined';
 
 export interface CopyrightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCopyrightOutlined: CopyrightOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCopyrightOutlined: CopyrightOutlinedIconType = (props, context) => (
 );
 
 IconCopyrightOutlined.displayName = 'IconCopyrightOutlined';
+IconCopyrightOutlined.theme = 'outlined';
+IconCopyrightOutlined.originName = 'copyright';
 
 export default IconCopyrightOutlined;

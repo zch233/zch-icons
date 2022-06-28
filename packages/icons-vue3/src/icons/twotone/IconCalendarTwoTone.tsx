@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CalendarTwoToneSvg from 'icon-base/es/asn/CalendarTwoTone';
+import CalendarTwotoneSvg from 'gupo-icons-base/es/asn/CalendarTwotone';
 
-export interface CalendarTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CalendarTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCalendarTwoTone: CalendarTwoToneIconType = (props, context) => (
-    <Icon name='CalendarTwoTone' {...{ ...props, ...context.attrs }} icon={CalendarTwoToneSvg} />
+const IconCalendarTwotone: CalendarTwotoneIconType = (props, context) => (
+    <Icon name='CalendarTwotone' {...{ ...props, ...context.attrs }} icon={CalendarTwotoneSvg} />
 );
 
-IconCalendarTwoTone.displayName = 'IconCalendarTwoTone';
+IconCalendarTwotone.displayName = 'IconCalendarTwotone';
+IconCalendarTwotone.theme = 'twotone';
+IconCalendarTwotone.originName = 'calendar';
 
-export default IconCalendarTwoTone;
+export default IconCalendarTwotone;

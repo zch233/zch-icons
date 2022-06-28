@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LaptopOutlinedSvg from 'icon-base/es/asn/LaptopOutlined';
+import LaptopOutlinedSvg from 'gupo-icons-base/es/asn/LaptopOutlined';
 
 export interface LaptopOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLaptopOutlined: LaptopOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLaptopOutlined: LaptopOutlinedIconType = (props, context) => (
 );
 
 IconLaptopOutlined.displayName = 'IconLaptopOutlined';
+IconLaptopOutlined.theme = 'outlined';
+IconLaptopOutlined.originName = 'laptop';
 
 export default IconLaptopOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsertRowLeftOutlinedSvg from 'icon-base/es/asn/InsertRowLeftOutlined';
+import InsertRowLeftOutlinedSvg from 'gupo-icons-base/es/asn/InsertRowLeftOutlined';
 
 export interface InsertRowLeftOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconInsertRowLeftOutlined: InsertRowLeftOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconInsertRowLeftOutlined: InsertRowLeftOutlinedIconType = (props, context
 );
 
 IconInsertRowLeftOutlined.displayName = 'IconInsertRowLeftOutlined';
+IconInsertRowLeftOutlined.theme = 'outlined';
+IconInsertRowLeftOutlined.originName = 'insert-row-left';
 
 export default IconInsertRowLeftOutlined;

@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BookTwoToneSvg from 'icon-base/es/asn/BookTwoTone';
+import BookTwotoneSvg from 'gupo-icons-base/es/asn/BookTwotone';
 
-export interface BookTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface BookTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconBookTwoTone: BookTwoToneIconType = (props, context) => <Icon name='BookTwoTone' {...{ ...props, ...context.attrs }} icon={BookTwoToneSvg} />;
+const IconBookTwotone: BookTwotoneIconType = (props, context) => <Icon name='BookTwotone' {...{ ...props, ...context.attrs }} icon={BookTwotoneSvg} />;
 
-IconBookTwoTone.displayName = 'IconBookTwoTone';
+IconBookTwotone.displayName = 'IconBookTwotone';
+IconBookTwotone.theme = 'twotone';
+IconBookTwotone.originName = 'book';
 
-export default IconBookTwoTone;
+export default IconBookTwotone;

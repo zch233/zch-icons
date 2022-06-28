@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import NotificationOutlinedSvg from 'icon-base/es/asn/NotificationOutlined';
+import NotificationOutlinedSvg from 'gupo-icons-base/es/asn/NotificationOutlined';
 
 export interface NotificationOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconNotificationOutlined: NotificationOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconNotificationOutlined: NotificationOutlinedIconType = (props, context) 
 );
 
 IconNotificationOutlined.displayName = 'IconNotificationOutlined';
+IconNotificationOutlined.theme = 'outlined';
+IconNotificationOutlined.originName = 'notification';
 
 export default IconNotificationOutlined;

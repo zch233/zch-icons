@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EnvironmentTwoToneSvg from 'icon-base/es/asn/EnvironmentTwoTone';
+import EnvironmentTwotoneSvg from 'gupo-icons-base/es/asn/EnvironmentTwotone';
 
-export interface EnvironmentTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface EnvironmentTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconEnvironmentTwoTone: EnvironmentTwoToneIconType = (props, context) => (
-    <Icon name='EnvironmentTwoTone' {...{ ...props, ...context.attrs }} icon={EnvironmentTwoToneSvg} />
+const IconEnvironmentTwotone: EnvironmentTwotoneIconType = (props, context) => (
+    <Icon name='EnvironmentTwotone' {...{ ...props, ...context.attrs }} icon={EnvironmentTwotoneSvg} />
 );
 
-IconEnvironmentTwoTone.displayName = 'IconEnvironmentTwoTone';
+IconEnvironmentTwotone.displayName = 'IconEnvironmentTwotone';
+IconEnvironmentTwotone.theme = 'twotone';
+IconEnvironmentTwotone.originName = 'environment';
 
-export default IconEnvironmentTwoTone;
+export default IconEnvironmentTwotone;

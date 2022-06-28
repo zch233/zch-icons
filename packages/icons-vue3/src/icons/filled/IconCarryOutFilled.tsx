@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CarryOutFilledSvg from 'icon-base/es/asn/CarryOutFilled';
+import CarryOutFilledSvg from 'gupo-icons-base/es/asn/CarryOutFilled';
 
 export interface CarryOutFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCarryOutFilled: CarryOutFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCarryOutFilled: CarryOutFilledIconType = (props, context) => (
 );
 
 IconCarryOutFilled.displayName = 'IconCarryOutFilled';
+IconCarryOutFilled.theme = 'filled';
+IconCarryOutFilled.originName = 'carry-out';
 
 export default IconCarryOutFilled;

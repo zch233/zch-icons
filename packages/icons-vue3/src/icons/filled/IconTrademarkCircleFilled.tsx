@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TrademarkCircleFilledSvg from 'icon-base/es/asn/TrademarkCircleFilled';
+import TrademarkCircleFilledSvg from 'gupo-icons-base/es/asn/TrademarkCircleFilled';
 
 export interface TrademarkCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTrademarkCircleFilled: TrademarkCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTrademarkCircleFilled: TrademarkCircleFilledIconType = (props, context
 );
 
 IconTrademarkCircleFilled.displayName = 'IconTrademarkCircleFilled';
+IconTrademarkCircleFilled.theme = 'filled';
+IconTrademarkCircleFilled.originName = 'trademark-circle';
 
 export default IconTrademarkCircleFilled;

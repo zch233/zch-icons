@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ReconciliationTwoToneSvg from 'icon-base/es/asn/ReconciliationTwoTone';
+import ReconciliationTwotoneSvg from 'gupo-icons-base/es/asn/ReconciliationTwotone';
 
-export interface ReconciliationTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ReconciliationTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconReconciliationTwoTone: ReconciliationTwoToneIconType = (props, context) => (
-    <Icon name='ReconciliationTwoTone' {...{ ...props, ...context.attrs }} icon={ReconciliationTwoToneSvg} />
+const IconReconciliationTwotone: ReconciliationTwotoneIconType = (props, context) => (
+    <Icon name='ReconciliationTwotone' {...{ ...props, ...context.attrs }} icon={ReconciliationTwotoneSvg} />
 );
 
-IconReconciliationTwoTone.displayName = 'IconReconciliationTwoTone';
+IconReconciliationTwotone.displayName = 'IconReconciliationTwotone';
+IconReconciliationTwotone.theme = 'twotone';
+IconReconciliationTwotone.originName = 'reconciliation';
 
-export default IconReconciliationTwoTone;
+export default IconReconciliationTwotone;

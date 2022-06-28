@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WalletTwoToneSvg from 'icon-base/es/asn/WalletTwoTone';
+import WalletTwotoneSvg from 'gupo-icons-base/es/asn/WalletTwotone';
 
-export interface WalletTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface WalletTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconWalletTwoTone: WalletTwoToneIconType = (props, context) => <Icon name='WalletTwoTone' {...{ ...props, ...context.attrs }} icon={WalletTwoToneSvg} />;
+const IconWalletTwotone: WalletTwotoneIconType = (props, context) => <Icon name='WalletTwotone' {...{ ...props, ...context.attrs }} icon={WalletTwotoneSvg} />;
 
-IconWalletTwoTone.displayName = 'IconWalletTwoTone';
+IconWalletTwotone.displayName = 'IconWalletTwotone';
+IconWalletTwotone.theme = 'twotone';
+IconWalletTwotone.originName = 'wallet';
 
-export default IconWalletTwoTone;
+export default IconWalletTwotone;

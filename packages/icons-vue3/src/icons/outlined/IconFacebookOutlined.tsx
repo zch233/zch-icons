@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FacebookOutlinedSvg from 'icon-base/es/asn/FacebookOutlined';
+import FacebookOutlinedSvg from 'gupo-icons-base/es/asn/FacebookOutlined';
 
 export interface FacebookOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFacebookOutlined: FacebookOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFacebookOutlined: FacebookOutlinedIconType = (props, context) => (
 );
 
 IconFacebookOutlined.displayName = 'IconFacebookOutlined';
+IconFacebookOutlined.theme = 'outlined';
+IconFacebookOutlined.originName = 'facebook';
 
 export default IconFacebookOutlined;

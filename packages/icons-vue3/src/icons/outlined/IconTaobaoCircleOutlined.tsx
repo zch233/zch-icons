@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TaobaoCircleOutlinedSvg from 'icon-base/es/asn/TaobaoCircleOutlined';
+import TaobaoCircleOutlinedSvg from 'gupo-icons-base/es/asn/TaobaoCircleOutlined';
 
 export interface TaobaoCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTaobaoCircleOutlined: TaobaoCircleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTaobaoCircleOutlined: TaobaoCircleOutlinedIconType = (props, context) 
 );
 
 IconTaobaoCircleOutlined.displayName = 'IconTaobaoCircleOutlined';
+IconTaobaoCircleOutlined.theme = 'outlined';
+IconTaobaoCircleOutlined.originName = 'taobao-circle';
 
 export default IconTaobaoCircleOutlined;

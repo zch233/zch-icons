@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import IeOutlinedSvg from 'icon-base/es/asn/IeOutlined';
+import IeOutlinedSvg from 'gupo-icons-base/es/asn/IeOutlined';
 
 export interface IeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconIeOutlined: IeOutlinedIconType = (props, context) => <Icon name='IeOutlined' {...{ ...props, ...context.attrs }} icon={IeOutlinedSvg} />;
 
 IconIeOutlined.displayName = 'IconIeOutlined';
+IconIeOutlined.theme = 'outlined';
+IconIeOutlined.originName = 'ie';
 
 export default IconIeOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DeliveredProcedureOutlinedSvg from 'icon-base/es/asn/DeliveredProcedureOutlined';
+import DeliveredProcedureOutlinedSvg from 'gupo-icons-base/es/asn/DeliveredProcedureOutlined';
 
 export interface DeliveredProcedureOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDeliveredProcedureOutlined: DeliveredProcedureOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDeliveredProcedureOutlined: DeliveredProcedureOutlinedIconType = (prop
 );
 
 IconDeliveredProcedureOutlined.displayName = 'IconDeliveredProcedureOutlined';
+IconDeliveredProcedureOutlined.theme = 'outlined';
+IconDeliveredProcedureOutlined.originName = 'delivered-procedure';
 
 export default IconDeliveredProcedureOutlined;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsuranceTwoToneSvg from 'icon-base/es/asn/InsuranceTwoTone';
+import InsuranceTwotoneSvg from 'gupo-icons-base/es/asn/InsuranceTwotone';
 
-export interface InsuranceTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface InsuranceTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconInsuranceTwoTone: InsuranceTwoToneIconType = (props, context) => (
-    <Icon name='InsuranceTwoTone' {...{ ...props, ...context.attrs }} icon={InsuranceTwoToneSvg} />
+const IconInsuranceTwotone: InsuranceTwotoneIconType = (props, context) => (
+    <Icon name='InsuranceTwotone' {...{ ...props, ...context.attrs }} icon={InsuranceTwotoneSvg} />
 );
 
-IconInsuranceTwoTone.displayName = 'IconInsuranceTwoTone';
+IconInsuranceTwotone.displayName = 'IconInsuranceTwotone';
+IconInsuranceTwotone.theme = 'twotone';
+IconInsuranceTwotone.originName = 'insurance';
 
-export default IconInsuranceTwoTone;
+export default IconInsuranceTwotone;

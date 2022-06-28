@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FastForwardOutlinedSvg from 'icon-base/es/asn/FastForwardOutlined';
+import FastForwardOutlinedSvg from 'gupo-icons-base/es/asn/FastForwardOutlined';
 
 export interface FastForwardOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFastForwardOutlined: FastForwardOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFastForwardOutlined: FastForwardOutlinedIconType = (props, context) =>
 );
 
 IconFastForwardOutlined.displayName = 'IconFastForwardOutlined';
+IconFastForwardOutlined.theme = 'outlined';
+IconFastForwardOutlined.originName = 'fast-forward';
 
 export default IconFastForwardOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TranslationOutlinedSvg from 'icon-base/es/asn/TranslationOutlined';
+import TranslationOutlinedSvg from 'gupo-icons-base/es/asn/TranslationOutlined';
 
 export interface TranslationOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTranslationOutlined: TranslationOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTranslationOutlined: TranslationOutlinedIconType = (props, context) =>
 );
 
 IconTranslationOutlined.displayName = 'IconTranslationOutlined';
+IconTranslationOutlined.theme = 'outlined';
+IconTranslationOutlined.originName = 'translation';
 
 export default IconTranslationOutlined;

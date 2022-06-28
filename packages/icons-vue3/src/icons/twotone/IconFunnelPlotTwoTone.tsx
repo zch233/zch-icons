@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FunnelPlotTwoToneSvg from 'icon-base/es/asn/FunnelPlotTwoTone';
+import FunnelPlotTwotoneSvg from 'gupo-icons-base/es/asn/FunnelPlotTwotone';
 
-export interface FunnelPlotTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FunnelPlotTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFunnelPlotTwoTone: FunnelPlotTwoToneIconType = (props, context) => (
-    <Icon name='FunnelPlotTwoTone' {...{ ...props, ...context.attrs }} icon={FunnelPlotTwoToneSvg} />
+const IconFunnelPlotTwotone: FunnelPlotTwotoneIconType = (props, context) => (
+    <Icon name='FunnelPlotTwotone' {...{ ...props, ...context.attrs }} icon={FunnelPlotTwotoneSvg} />
 );
 
-IconFunnelPlotTwoTone.displayName = 'IconFunnelPlotTwoTone';
+IconFunnelPlotTwotone.displayName = 'IconFunnelPlotTwotone';
+IconFunnelPlotTwotone.theme = 'twotone';
+IconFunnelPlotTwotone.originName = 'funnel-plot';
 
-export default IconFunnelPlotTwoTone;
+export default IconFunnelPlotTwotone;

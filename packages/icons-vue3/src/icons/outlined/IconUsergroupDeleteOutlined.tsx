@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UsergroupDeleteOutlinedSvg from 'icon-base/es/asn/UsergroupDeleteOutlined';
+import UsergroupDeleteOutlinedSvg from 'gupo-icons-base/es/asn/UsergroupDeleteOutlined';
 
 export interface UsergroupDeleteOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconUsergroupDeleteOutlined: UsergroupDeleteOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconUsergroupDeleteOutlined: UsergroupDeleteOutlinedIconType = (props, con
 );
 
 IconUsergroupDeleteOutlined.displayName = 'IconUsergroupDeleteOutlined';
+IconUsergroupDeleteOutlined.theme = 'outlined';
+IconUsergroupDeleteOutlined.originName = 'usergroup-delete';
 
 export default IconUsergroupDeleteOutlined;

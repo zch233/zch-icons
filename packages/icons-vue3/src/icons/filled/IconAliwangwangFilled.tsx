@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AliwangwangFilledSvg from 'icon-base/es/asn/AliwangwangFilled';
+import AliwangwangFilledSvg from 'gupo-icons-base/es/asn/AliwangwangFilled';
 
 export interface AliwangwangFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAliwangwangFilled: AliwangwangFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAliwangwangFilled: AliwangwangFilledIconType = (props, context) => (
 );
 
 IconAliwangwangFilled.displayName = 'IconAliwangwangFilled';
+IconAliwangwangFilled.theme = 'filled';
+IconAliwangwangFilled.originName = 'aliwangwang';
 
 export default IconAliwangwangFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PicCenterOutlinedSvg from 'icon-base/es/asn/PicCenterOutlined';
+import PicCenterOutlinedSvg from 'gupo-icons-base/es/asn/PicCenterOutlined';
 
 export interface PicCenterOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPicCenterOutlined: PicCenterOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPicCenterOutlined: PicCenterOutlinedIconType = (props, context) => (
 );
 
 IconPicCenterOutlined.displayName = 'IconPicCenterOutlined';
+IconPicCenterOutlined.theme = 'outlined';
+IconPicCenterOutlined.originName = 'pic-center';
 
 export default IconPicCenterOutlined;

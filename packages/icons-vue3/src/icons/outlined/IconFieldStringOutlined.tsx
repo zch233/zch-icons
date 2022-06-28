@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FieldStringOutlinedSvg from 'icon-base/es/asn/FieldStringOutlined';
+import FieldStringOutlinedSvg from 'gupo-icons-base/es/asn/FieldStringOutlined';
 
 export interface FieldStringOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFieldStringOutlined: FieldStringOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFieldStringOutlined: FieldStringOutlinedIconType = (props, context) =>
 );
 
 IconFieldStringOutlined.displayName = 'IconFieldStringOutlined';
+IconFieldStringOutlined.theme = 'outlined';
+IconFieldStringOutlined.originName = 'field-string';
 
 export default IconFieldStringOutlined;

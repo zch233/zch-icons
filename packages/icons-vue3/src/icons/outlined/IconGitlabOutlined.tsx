@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GitlabOutlinedSvg from 'icon-base/es/asn/GitlabOutlined';
+import GitlabOutlinedSvg from 'gupo-icons-base/es/asn/GitlabOutlined';
 
 export interface GitlabOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGitlabOutlined: GitlabOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconGitlabOutlined: GitlabOutlinedIconType = (props, context) => (
 );
 
 IconGitlabOutlined.displayName = 'IconGitlabOutlined';
+IconGitlabOutlined.theme = 'outlined';
+IconGitlabOutlined.originName = 'gitlab';
 
 export default IconGitlabOutlined;

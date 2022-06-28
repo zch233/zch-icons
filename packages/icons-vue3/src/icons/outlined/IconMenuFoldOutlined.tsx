@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MenuFoldOutlinedSvg from 'icon-base/es/asn/MenuFoldOutlined';
+import MenuFoldOutlinedSvg from 'gupo-icons-base/es/asn/MenuFoldOutlined';
 
 export interface MenuFoldOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMenuFoldOutlined: MenuFoldOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMenuFoldOutlined: MenuFoldOutlinedIconType = (props, context) => (
 );
 
 IconMenuFoldOutlined.displayName = 'IconMenuFoldOutlined';
+IconMenuFoldOutlined.theme = 'outlined';
+IconMenuFoldOutlined.originName = 'menu-fold';
 
 export default IconMenuFoldOutlined;

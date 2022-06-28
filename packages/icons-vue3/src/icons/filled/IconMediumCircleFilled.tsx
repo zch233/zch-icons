@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MediumCircleFilledSvg from 'icon-base/es/asn/MediumCircleFilled';
+import MediumCircleFilledSvg from 'gupo-icons-base/es/asn/MediumCircleFilled';
 
 export interface MediumCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMediumCircleFilled: MediumCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMediumCircleFilled: MediumCircleFilledIconType = (props, context) => (
 );
 
 IconMediumCircleFilled.displayName = 'IconMediumCircleFilled';
+IconMediumCircleFilled.theme = 'filled';
+IconMediumCircleFilled.originName = 'medium-circle';
 
 export default IconMediumCircleFilled;

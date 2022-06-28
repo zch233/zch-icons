@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TrademarkCircleTwoToneSvg from 'icon-base/es/asn/TrademarkCircleTwoTone';
+import TrademarkCircleTwotoneSvg from 'gupo-icons-base/es/asn/TrademarkCircleTwotone';
 
-export interface TrademarkCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface TrademarkCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconTrademarkCircleTwoTone: TrademarkCircleTwoToneIconType = (props, context) => (
-    <Icon name='TrademarkCircleTwoTone' {...{ ...props, ...context.attrs }} icon={TrademarkCircleTwoToneSvg} />
+const IconTrademarkCircleTwotone: TrademarkCircleTwotoneIconType = (props, context) => (
+    <Icon name='TrademarkCircleTwotone' {...{ ...props, ...context.attrs }} icon={TrademarkCircleTwotoneSvg} />
 );
 
-IconTrademarkCircleTwoTone.displayName = 'IconTrademarkCircleTwoTone';
+IconTrademarkCircleTwotone.displayName = 'IconTrademarkCircleTwotone';
+IconTrademarkCircleTwotone.theme = 'twotone';
+IconTrademarkCircleTwotone.originName = 'trademark-circle';
 
-export default IconTrademarkCircleTwoTone;
+export default IconTrademarkCircleTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CalendarFilledSvg from 'icon-base/es/asn/CalendarFilled';
+import CalendarFilledSvg from 'gupo-icons-base/es/asn/CalendarFilled';
 
 export interface CalendarFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCalendarFilled: CalendarFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCalendarFilled: CalendarFilledIconType = (props, context) => (
 );
 
 IconCalendarFilled.displayName = 'IconCalendarFilled';
+IconCalendarFilled.theme = 'filled';
+IconCalendarFilled.originName = 'calendar';
 
 export default IconCalendarFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedEnvelopeFilledSvg from 'icon-base/es/asn/RedEnvelopeFilled';
+import RedEnvelopeFilledSvg from 'gupo-icons-base/es/asn/RedEnvelopeFilled';
 
 export interface RedEnvelopeFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconRedEnvelopeFilled: RedEnvelopeFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconRedEnvelopeFilled: RedEnvelopeFilledIconType = (props, context) => (
 );
 
 IconRedEnvelopeFilled.displayName = 'IconRedEnvelopeFilled';
+IconRedEnvelopeFilled.theme = 'filled';
+IconRedEnvelopeFilled.originName = 'red-envelope';
 
 export default IconRedEnvelopeFilled;

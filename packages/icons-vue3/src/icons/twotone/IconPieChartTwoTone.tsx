@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PieChartTwoToneSvg from 'icon-base/es/asn/PieChartTwoTone';
+import PieChartTwotoneSvg from 'gupo-icons-base/es/asn/PieChartTwotone';
 
-export interface PieChartTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PieChartTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPieChartTwoTone: PieChartTwoToneIconType = (props, context) => (
-    <Icon name='PieChartTwoTone' {...{ ...props, ...context.attrs }} icon={PieChartTwoToneSvg} />
+const IconPieChartTwotone: PieChartTwotoneIconType = (props, context) => (
+    <Icon name='PieChartTwotone' {...{ ...props, ...context.attrs }} icon={PieChartTwotoneSvg} />
 );
 
-IconPieChartTwoTone.displayName = 'IconPieChartTwoTone';
+IconPieChartTwotone.displayName = 'IconPieChartTwotone';
+IconPieChartTwotone.theme = 'twotone';
+IconPieChartTwotone.originName = 'pie-chart';
 
-export default IconPieChartTwoTone;
+export default IconPieChartTwotone;

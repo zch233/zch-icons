@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CheckSquareOutlinedSvg from 'icon-base/es/asn/CheckSquareOutlined';
+import CheckSquareOutlinedSvg from 'gupo-icons-base/es/asn/CheckSquareOutlined';
 
 export interface CheckSquareOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCheckSquareOutlined: CheckSquareOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCheckSquareOutlined: CheckSquareOutlinedIconType = (props, context) =>
 );
 
 IconCheckSquareOutlined.displayName = 'IconCheckSquareOutlined';
+IconCheckSquareOutlined.theme = 'outlined';
+IconCheckSquareOutlined.originName = 'check-square';
 
 export default IconCheckSquareOutlined;

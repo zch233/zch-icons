@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MonitorOutlinedSvg from 'icon-base/es/asn/MonitorOutlined';
+import MonitorOutlinedSvg from 'gupo-icons-base/es/asn/MonitorOutlined';
 
 export interface MonitorOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMonitorOutlined: MonitorOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMonitorOutlined: MonitorOutlinedIconType = (props, context) => (
 );
 
 IconMonitorOutlined.displayName = 'IconMonitorOutlined';
+IconMonitorOutlined.theme = 'outlined';
+IconMonitorOutlined.originName = 'monitor';
 
 export default IconMonitorOutlined;

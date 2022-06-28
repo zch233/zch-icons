@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FontSizeOutlinedSvg from 'icon-base/es/asn/FontSizeOutlined';
+import FontSizeOutlinedSvg from 'gupo-icons-base/es/asn/FontSizeOutlined';
 
 export interface FontSizeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFontSizeOutlined: FontSizeOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFontSizeOutlined: FontSizeOutlinedIconType = (props, context) => (
 );
 
 IconFontSizeOutlined.displayName = 'IconFontSizeOutlined';
+IconFontSizeOutlined.theme = 'outlined';
+IconFontSizeOutlined.originName = 'font-size';
 
 export default IconFontSizeOutlined;

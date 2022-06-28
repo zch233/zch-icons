@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ThunderboltTwoToneSvg from 'icon-base/es/asn/ThunderboltTwoTone';
+import ThunderboltTwotoneSvg from 'gupo-icons-base/es/asn/ThunderboltTwotone';
 
-export interface ThunderboltTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ThunderboltTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconThunderboltTwoTone: ThunderboltTwoToneIconType = (props, context) => (
-    <Icon name='ThunderboltTwoTone' {...{ ...props, ...context.attrs }} icon={ThunderboltTwoToneSvg} />
+const IconThunderboltTwotone: ThunderboltTwotoneIconType = (props, context) => (
+    <Icon name='ThunderboltTwotone' {...{ ...props, ...context.attrs }} icon={ThunderboltTwotoneSvg} />
 );
 
-IconThunderboltTwoTone.displayName = 'IconThunderboltTwoTone';
+IconThunderboltTwotone.displayName = 'IconThunderboltTwotone';
+IconThunderboltTwotone.theme = 'twotone';
+IconThunderboltTwotone.originName = 'thunderbolt';
 
-export default IconThunderboltTwoTone;
+export default IconThunderboltTwotone;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExclamationTwoToneSvg from 'icon-base/es/asn/FileExclamationTwoTone';
+import FileExclamationTwotoneSvg from 'gupo-icons-base/es/asn/FileExclamationTwotone';
 
-export interface FileExclamationTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileExclamationTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileExclamationTwoTone: FileExclamationTwoToneIconType = (props, context) => (
-    <Icon name='FileExclamationTwoTone' {...{ ...props, ...context.attrs }} icon={FileExclamationTwoToneSvg} />
+const IconFileExclamationTwotone: FileExclamationTwotoneIconType = (props, context) => (
+    <Icon name='FileExclamationTwotone' {...{ ...props, ...context.attrs }} icon={FileExclamationTwotoneSvg} />
 );
 
-IconFileExclamationTwoTone.displayName = 'IconFileExclamationTwoTone';
+IconFileExclamationTwotone.displayName = 'IconFileExclamationTwotone';
+IconFileExclamationTwotone.theme = 'twotone';
+IconFileExclamationTwotone.originName = 'file-exclamation';
 
-export default IconFileExclamationTwoTone;
+export default IconFileExclamationTwotone;

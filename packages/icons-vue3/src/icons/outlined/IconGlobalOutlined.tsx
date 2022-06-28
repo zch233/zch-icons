@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GlobalOutlinedSvg from 'icon-base/es/asn/GlobalOutlined';
+import GlobalOutlinedSvg from 'gupo-icons-base/es/asn/GlobalOutlined';
 
 export interface GlobalOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGlobalOutlined: GlobalOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconGlobalOutlined: GlobalOutlinedIconType = (props, context) => (
 );
 
 IconGlobalOutlined.displayName = 'IconGlobalOutlined';
+IconGlobalOutlined.theme = 'outlined';
+IconGlobalOutlined.originName = 'global';
 
 export default IconGlobalOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PaperClipOutlinedSvg from 'icon-base/es/asn/PaperClipOutlined';
+import PaperClipOutlinedSvg from 'gupo-icons-base/es/asn/PaperClipOutlined';
 
 export interface PaperClipOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPaperClipOutlined: PaperClipOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPaperClipOutlined: PaperClipOutlinedIconType = (props, context) => (
 );
 
 IconPaperClipOutlined.displayName = 'IconPaperClipOutlined';
+IconPaperClipOutlined.theme = 'outlined';
+IconPaperClipOutlined.originName = 'paper-clip';
 
 export default IconPaperClipOutlined;

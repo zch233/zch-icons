@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MedicineBoxTwoToneSvg from 'icon-base/es/asn/MedicineBoxTwoTone';
+import MedicineBoxTwotoneSvg from 'gupo-icons-base/es/asn/MedicineBoxTwotone';
 
-export interface MedicineBoxTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface MedicineBoxTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconMedicineBoxTwoTone: MedicineBoxTwoToneIconType = (props, context) => (
-    <Icon name='MedicineBoxTwoTone' {...{ ...props, ...context.attrs }} icon={MedicineBoxTwoToneSvg} />
+const IconMedicineBoxTwotone: MedicineBoxTwotoneIconType = (props, context) => (
+    <Icon name='MedicineBoxTwotone' {...{ ...props, ...context.attrs }} icon={MedicineBoxTwotoneSvg} />
 );
 
-IconMedicineBoxTwoTone.displayName = 'IconMedicineBoxTwoTone';
+IconMedicineBoxTwotone.displayName = 'IconMedicineBoxTwotone';
+IconMedicineBoxTwotone.theme = 'twotone';
+IconMedicineBoxTwotone.originName = 'medicine-box';
 
-export default IconMedicineBoxTwoTone;
+export default IconMedicineBoxTwotone;

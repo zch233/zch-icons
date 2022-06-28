@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SettingOutlinedSvg from 'icon-base/es/asn/SettingOutlined';
+import SettingOutlinedSvg from 'gupo-icons-base/es/asn/SettingOutlined';
 
 export interface SettingOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSettingOutlined: SettingOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSettingOutlined: SettingOutlinedIconType = (props, context) => (
 );
 
 IconSettingOutlined.displayName = 'IconSettingOutlined';
+IconSettingOutlined.theme = 'outlined';
+IconSettingOutlined.originName = 'setting';
 
 export default IconSettingOutlined;

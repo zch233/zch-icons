@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UnlockTwoToneSvg from 'icon-base/es/asn/UnlockTwoTone';
+import UnlockTwotoneSvg from 'gupo-icons-base/es/asn/UnlockTwotone';
 
-export interface UnlockTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface UnlockTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconUnlockTwoTone: UnlockTwoToneIconType = (props, context) => <Icon name='UnlockTwoTone' {...{ ...props, ...context.attrs }} icon={UnlockTwoToneSvg} />;
+const IconUnlockTwotone: UnlockTwotoneIconType = (props, context) => <Icon name='UnlockTwotone' {...{ ...props, ...context.attrs }} icon={UnlockTwotoneSvg} />;
 
-IconUnlockTwoTone.displayName = 'IconUnlockTwoTone';
+IconUnlockTwotone.displayName = 'IconUnlockTwotone';
+IconUnlockTwotone.theme = 'twotone';
+IconUnlockTwotone.originName = 'unlock';
 
-export default IconUnlockTwoTone;
+export default IconUnlockTwotone;

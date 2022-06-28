@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownloadOutlinedSvg from 'icon-base/es/asn/DownloadOutlined';
+import DownloadOutlinedSvg from 'gupo-icons-base/es/asn/DownloadOutlined';
 
 export interface DownloadOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDownloadOutlined: DownloadOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDownloadOutlined: DownloadOutlinedIconType = (props, context) => (
 );
 
 IconDownloadOutlined.displayName = 'IconDownloadOutlined';
+IconDownloadOutlined.theme = 'outlined';
+IconDownloadOutlined.originName = 'download';
 
 export default IconDownloadOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CodepenCircleFilledSvg from 'icon-base/es/asn/CodepenCircleFilled';
+import CodepenCircleFilledSvg from 'gupo-icons-base/es/asn/CodepenCircleFilled';
 
 export interface CodepenCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCodepenCircleFilled: CodepenCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCodepenCircleFilled: CodepenCircleFilledIconType = (props, context) =>
 );
 
 IconCodepenCircleFilled.displayName = 'IconCodepenCircleFilled';
+IconCodepenCircleFilled.theme = 'filled';
+IconCodepenCircleFilled.originName = 'codepen-circle';
 
 export default IconCodepenCircleFilled;

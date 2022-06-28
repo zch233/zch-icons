@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InteractionTwoToneSvg from 'icon-base/es/asn/InteractionTwoTone';
+import InteractionTwotoneSvg from 'gupo-icons-base/es/asn/InteractionTwotone';
 
-export interface InteractionTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface InteractionTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconInteractionTwoTone: InteractionTwoToneIconType = (props, context) => (
-    <Icon name='InteractionTwoTone' {...{ ...props, ...context.attrs }} icon={InteractionTwoToneSvg} />
+const IconInteractionTwotone: InteractionTwotoneIconType = (props, context) => (
+    <Icon name='InteractionTwotone' {...{ ...props, ...context.attrs }} icon={InteractionTwotoneSvg} />
 );
 
-IconInteractionTwoTone.displayName = 'IconInteractionTwoTone';
+IconInteractionTwotone.displayName = 'IconInteractionTwotone';
+IconInteractionTwotone.theme = 'twotone';
+IconInteractionTwotone.originName = 'interaction';
 
-export default IconInteractionTwoTone;
+export default IconInteractionTwotone;

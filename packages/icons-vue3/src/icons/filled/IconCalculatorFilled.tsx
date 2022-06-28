@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CalculatorFilledSvg from 'icon-base/es/asn/CalculatorFilled';
+import CalculatorFilledSvg from 'gupo-icons-base/es/asn/CalculatorFilled';
 
 export interface CalculatorFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCalculatorFilled: CalculatorFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCalculatorFilled: CalculatorFilledIconType = (props, context) => (
 );
 
 IconCalculatorFilled.displayName = 'IconCalculatorFilled';
+IconCalculatorFilled.theme = 'filled';
+IconCalculatorFilled.originName = 'calculator';
 
 export default IconCalculatorFilled;

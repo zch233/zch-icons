@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SecurityScanOutlinedSvg from 'icon-base/es/asn/SecurityScanOutlined';
+import SecurityScanOutlinedSvg from 'gupo-icons-base/es/asn/SecurityScanOutlined';
 
 export interface SecurityScanOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSecurityScanOutlined: SecurityScanOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSecurityScanOutlined: SecurityScanOutlinedIconType = (props, context) 
 );
 
 IconSecurityScanOutlined.displayName = 'IconSecurityScanOutlined';
+IconSecurityScanOutlined.theme = 'outlined';
+IconSecurityScanOutlined.originName = 'security-scan';
 
 export default IconSecurityScanOutlined;

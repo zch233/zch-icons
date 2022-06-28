@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileMarkdownOutlinedSvg from 'icon-base/es/asn/FileMarkdownOutlined';
+import FileMarkdownOutlinedSvg from 'gupo-icons-base/es/asn/FileMarkdownOutlined';
 
 export interface FileMarkdownOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileMarkdownOutlined: FileMarkdownOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileMarkdownOutlined: FileMarkdownOutlinedIconType = (props, context) 
 );
 
 IconFileMarkdownOutlined.displayName = 'IconFileMarkdownOutlined';
+IconFileMarkdownOutlined.theme = 'outlined';
+IconFileMarkdownOutlined.originName = 'file-markdown';
 
 export default IconFileMarkdownOutlined;

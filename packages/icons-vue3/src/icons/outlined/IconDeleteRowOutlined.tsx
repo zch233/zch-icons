@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DeleteRowOutlinedSvg from 'icon-base/es/asn/DeleteRowOutlined';
+import DeleteRowOutlinedSvg from 'gupo-icons-base/es/asn/DeleteRowOutlined';
 
 export interface DeleteRowOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDeleteRowOutlined: DeleteRowOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDeleteRowOutlined: DeleteRowOutlinedIconType = (props, context) => (
 );
 
 IconDeleteRowOutlined.displayName = 'IconDeleteRowOutlined';
+IconDeleteRowOutlined.theme = 'outlined';
+IconDeleteRowOutlined.originName = 'delete-row';
 
 export default IconDeleteRowOutlined;

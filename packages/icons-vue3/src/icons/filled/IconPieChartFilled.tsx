@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PieChartFilledSvg from 'icon-base/es/asn/PieChartFilled';
+import PieChartFilledSvg from 'gupo-icons-base/es/asn/PieChartFilled';
 
 export interface PieChartFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPieChartFilled: PieChartFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPieChartFilled: PieChartFilledIconType = (props, context) => (
 );
 
 IconPieChartFilled.displayName = 'IconPieChartFilled';
+IconPieChartFilled.theme = 'filled';
+IconPieChartFilled.originName = 'pie-chart';
 
 export default IconPieChartFilled;

@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CrownTwoToneSvg from 'icon-base/es/asn/CrownTwoTone';
+import CrownTwotoneSvg from 'gupo-icons-base/es/asn/CrownTwotone';
 
-export interface CrownTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CrownTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCrownTwoTone: CrownTwoToneIconType = (props, context) => <Icon name='CrownTwoTone' {...{ ...props, ...context.attrs }} icon={CrownTwoToneSvg} />;
+const IconCrownTwotone: CrownTwotoneIconType = (props, context) => <Icon name='CrownTwotone' {...{ ...props, ...context.attrs }} icon={CrownTwotoneSvg} />;
 
-IconCrownTwoTone.displayName = 'IconCrownTwoTone';
+IconCrownTwotone.displayName = 'IconCrownTwotone';
+IconCrownTwotone.theme = 'twotone';
+IconCrownTwotone.originName = 'crown';
 
-export default IconCrownTwoTone;
+export default IconCrownTwotone;

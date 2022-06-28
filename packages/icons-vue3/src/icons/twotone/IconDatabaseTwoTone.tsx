@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DatabaseTwoToneSvg from 'icon-base/es/asn/DatabaseTwoTone';
+import DatabaseTwotoneSvg from 'gupo-icons-base/es/asn/DatabaseTwotone';
 
-export interface DatabaseTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DatabaseTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDatabaseTwoTone: DatabaseTwoToneIconType = (props, context) => (
-    <Icon name='DatabaseTwoTone' {...{ ...props, ...context.attrs }} icon={DatabaseTwoToneSvg} />
+const IconDatabaseTwotone: DatabaseTwotoneIconType = (props, context) => (
+    <Icon name='DatabaseTwotone' {...{ ...props, ...context.attrs }} icon={DatabaseTwotoneSvg} />
 );
 
-IconDatabaseTwoTone.displayName = 'IconDatabaseTwoTone';
+IconDatabaseTwotone.displayName = 'IconDatabaseTwotone';
+IconDatabaseTwotone.theme = 'twotone';
+IconDatabaseTwotone.originName = 'database';
 
-export default IconDatabaseTwoTone;
+export default IconDatabaseTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SwitcherFilledSvg from 'icon-base/es/asn/SwitcherFilled';
+import SwitcherFilledSvg from 'gupo-icons-base/es/asn/SwitcherFilled';
 
 export interface SwitcherFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSwitcherFilled: SwitcherFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSwitcherFilled: SwitcherFilledIconType = (props, context) => (
 );
 
 IconSwitcherFilled.displayName = 'IconSwitcherFilled';
+IconSwitcherFilled.theme = 'filled';
+IconSwitcherFilled.originName = 'switcher';
 
 export default IconSwitcherFilled;

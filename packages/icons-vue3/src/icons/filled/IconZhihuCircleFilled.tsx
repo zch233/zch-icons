@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ZhihuCircleFilledSvg from 'icon-base/es/asn/ZhihuCircleFilled';
+import ZhihuCircleFilledSvg from 'gupo-icons-base/es/asn/ZhihuCircleFilled';
 
 export interface ZhihuCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconZhihuCircleFilled: ZhihuCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconZhihuCircleFilled: ZhihuCircleFilledIconType = (props, context) => (
 );
 
 IconZhihuCircleFilled.displayName = 'IconZhihuCircleFilled';
+IconZhihuCircleFilled.theme = 'filled';
+IconZhihuCircleFilled.originName = 'zhihu-circle';
 
 export default IconZhihuCircleFilled;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExpandAltOutlinedSvg from 'icon-base/es/asn/ExpandAltOutlined';
+import ExpandAltOutlinedSvg from 'gupo-icons-base/es/asn/ExpandAltOutlined';
 
 export interface ExpandAltOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconExpandAltOutlined: ExpandAltOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconExpandAltOutlined: ExpandAltOutlinedIconType = (props, context) => (
 );
 
 IconExpandAltOutlined.displayName = 'IconExpandAltOutlined';
+IconExpandAltOutlined.theme = 'outlined';
+IconExpandAltOutlined.originName = 'expand-alt';
 
 export default IconExpandAltOutlined;

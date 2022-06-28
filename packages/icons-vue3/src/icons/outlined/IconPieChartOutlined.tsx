@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PieChartOutlinedSvg from 'icon-base/es/asn/PieChartOutlined';
+import PieChartOutlinedSvg from 'gupo-icons-base/es/asn/PieChartOutlined';
 
 export interface PieChartOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPieChartOutlined: PieChartOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPieChartOutlined: PieChartOutlinedIconType = (props, context) => (
 );
 
 IconPieChartOutlined.displayName = 'IconPieChartOutlined';
+IconPieChartOutlined.theme = 'outlined';
+IconPieChartOutlined.originName = 'pie-chart';
 
 export default IconPieChartOutlined;

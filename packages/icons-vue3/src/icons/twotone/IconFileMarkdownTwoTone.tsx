@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileMarkdownTwoToneSvg from 'icon-base/es/asn/FileMarkdownTwoTone';
+import FileMarkdownTwotoneSvg from 'gupo-icons-base/es/asn/FileMarkdownTwotone';
 
-export interface FileMarkdownTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileMarkdownTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileMarkdownTwoTone: FileMarkdownTwoToneIconType = (props, context) => (
-    <Icon name='FileMarkdownTwoTone' {...{ ...props, ...context.attrs }} icon={FileMarkdownTwoToneSvg} />
+const IconFileMarkdownTwotone: FileMarkdownTwotoneIconType = (props, context) => (
+    <Icon name='FileMarkdownTwotone' {...{ ...props, ...context.attrs }} icon={FileMarkdownTwotoneSvg} />
 );
 
-IconFileMarkdownTwoTone.displayName = 'IconFileMarkdownTwoTone';
+IconFileMarkdownTwotone.displayName = 'IconFileMarkdownTwotone';
+IconFileMarkdownTwotone.theme = 'twotone';
+IconFileMarkdownTwotone.originName = 'file-markdown';
 
-export default IconFileMarkdownTwoTone;
+export default IconFileMarkdownTwotone;

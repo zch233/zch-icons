@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CalculatorTwoToneSvg from 'icon-base/es/asn/CalculatorTwoTone';
+import CalculatorTwotoneSvg from 'gupo-icons-base/es/asn/CalculatorTwotone';
 
-export interface CalculatorTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CalculatorTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCalculatorTwoTone: CalculatorTwoToneIconType = (props, context) => (
-    <Icon name='CalculatorTwoTone' {...{ ...props, ...context.attrs }} icon={CalculatorTwoToneSvg} />
+const IconCalculatorTwotone: CalculatorTwotoneIconType = (props, context) => (
+    <Icon name='CalculatorTwotone' {...{ ...props, ...context.attrs }} icon={CalculatorTwotoneSvg} />
 );
 
-IconCalculatorTwoTone.displayName = 'IconCalculatorTwoTone';
+IconCalculatorTwotone.displayName = 'IconCalculatorTwotone';
+IconCalculatorTwotone.theme = 'twotone';
+IconCalculatorTwotone.originName = 'calculator';
 
-export default IconCalculatorTwoTone;
+export default IconCalculatorTwotone;

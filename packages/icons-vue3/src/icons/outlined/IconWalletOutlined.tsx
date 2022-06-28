@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WalletOutlinedSvg from 'icon-base/es/asn/WalletOutlined';
+import WalletOutlinedSvg from 'gupo-icons-base/es/asn/WalletOutlined';
 
 export interface WalletOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconWalletOutlined: WalletOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconWalletOutlined: WalletOutlinedIconType = (props, context) => (
 );
 
 IconWalletOutlined.displayName = 'IconWalletOutlined';
+IconWalletOutlined.theme = 'outlined';
+IconWalletOutlined.originName = 'wallet';
 
 export default IconWalletOutlined;

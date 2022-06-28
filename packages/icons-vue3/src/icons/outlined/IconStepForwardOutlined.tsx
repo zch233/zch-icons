@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StepForwardOutlinedSvg from 'icon-base/es/asn/StepForwardOutlined';
+import StepForwardOutlinedSvg from 'gupo-icons-base/es/asn/StepForwardOutlined';
 
 export interface StepForwardOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconStepForwardOutlined: StepForwardOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconStepForwardOutlined: StepForwardOutlinedIconType = (props, context) =>
 );
 
 IconStepForwardOutlined.displayName = 'IconStepForwardOutlined';
+IconStepForwardOutlined.theme = 'outlined';
+IconStepForwardOutlined.originName = 'step-forward';
 
 export default IconStepForwardOutlined;

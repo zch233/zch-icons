@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DeleteTwoToneSvg from 'icon-base/es/asn/DeleteTwoTone';
+import DeleteTwotoneSvg from 'gupo-icons-base/es/asn/DeleteTwotone';
 
-export interface DeleteTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DeleteTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDeleteTwoTone: DeleteTwoToneIconType = (props, context) => <Icon name='DeleteTwoTone' {...{ ...props, ...context.attrs }} icon={DeleteTwoToneSvg} />;
+const IconDeleteTwotone: DeleteTwotoneIconType = (props, context) => <Icon name='DeleteTwotone' {...{ ...props, ...context.attrs }} icon={DeleteTwotoneSvg} />;
 
-IconDeleteTwoTone.displayName = 'IconDeleteTwoTone';
+IconDeleteTwotone.displayName = 'IconDeleteTwotone';
+IconDeleteTwotone.theme = 'twotone';
+IconDeleteTwotone.originName = 'delete';
 
-export default IconDeleteTwoTone;
+export default IconDeleteTwotone;

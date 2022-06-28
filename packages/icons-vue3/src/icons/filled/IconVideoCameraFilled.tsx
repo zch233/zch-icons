@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VideoCameraFilledSvg from 'icon-base/es/asn/VideoCameraFilled';
+import VideoCameraFilledSvg from 'gupo-icons-base/es/asn/VideoCameraFilled';
 
 export interface VideoCameraFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconVideoCameraFilled: VideoCameraFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconVideoCameraFilled: VideoCameraFilledIconType = (props, context) => (
 );
 
 IconVideoCameraFilled.displayName = 'IconVideoCameraFilled';
+IconVideoCameraFilled.theme = 'filled';
+IconVideoCameraFilled.originName = 'video-camera';
 
 export default IconVideoCameraFilled;

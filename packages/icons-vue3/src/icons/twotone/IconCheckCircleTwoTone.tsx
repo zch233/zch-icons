@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CheckCircleTwoToneSvg from 'icon-base/es/asn/CheckCircleTwoTone';
+import CheckCircleTwotoneSvg from 'gupo-icons-base/es/asn/CheckCircleTwotone';
 
-export interface CheckCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CheckCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCheckCircleTwoTone: CheckCircleTwoToneIconType = (props, context) => (
-    <Icon name='CheckCircleTwoTone' {...{ ...props, ...context.attrs }} icon={CheckCircleTwoToneSvg} />
+const IconCheckCircleTwotone: CheckCircleTwotoneIconType = (props, context) => (
+    <Icon name='CheckCircleTwotone' {...{ ...props, ...context.attrs }} icon={CheckCircleTwotoneSvg} />
 );
 
-IconCheckCircleTwoTone.displayName = 'IconCheckCircleTwoTone';
+IconCheckCircleTwotone.displayName = 'IconCheckCircleTwotone';
+IconCheckCircleTwotone.theme = 'twotone';
+IconCheckCircleTwotone.originName = 'check-circle';
 
-export default IconCheckCircleTwoTone;
+export default IconCheckCircleTwotone;

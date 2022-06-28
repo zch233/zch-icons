@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FilterTwoToneSvg from 'icon-base/es/asn/FilterTwoTone';
+import FilterTwotoneSvg from 'gupo-icons-base/es/asn/FilterTwotone';
 
-export interface FilterTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FilterTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFilterTwoTone: FilterTwoToneIconType = (props, context) => <Icon name='FilterTwoTone' {...{ ...props, ...context.attrs }} icon={FilterTwoToneSvg} />;
+const IconFilterTwotone: FilterTwotoneIconType = (props, context) => <Icon name='FilterTwotone' {...{ ...props, ...context.attrs }} icon={FilterTwotoneSvg} />;
 
-IconFilterTwoTone.displayName = 'IconFilterTwoTone';
+IconFilterTwotone.displayName = 'IconFilterTwotone';
+IconFilterTwotone.theme = 'twotone';
+IconFilterTwotone.originName = 'filter';
 
-export default IconFilterTwoTone;
+export default IconFilterTwotone;

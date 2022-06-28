@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StopTwoToneSvg from 'icon-base/es/asn/StopTwoTone';
+import StopTwotoneSvg from 'gupo-icons-base/es/asn/StopTwotone';
 
-export interface StopTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface StopTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconStopTwoTone: StopTwoToneIconType = (props, context) => <Icon name='StopTwoTone' {...{ ...props, ...context.attrs }} icon={StopTwoToneSvg} />;
+const IconStopTwotone: StopTwotoneIconType = (props, context) => <Icon name='StopTwotone' {...{ ...props, ...context.attrs }} icon={StopTwotoneSvg} />;
 
-IconStopTwoTone.displayName = 'IconStopTwoTone';
+IconStopTwotone.displayName = 'IconStopTwotone';
+IconStopTwotone.theme = 'twotone';
+IconStopTwotone.originName = 'stop';
 
-export default IconStopTwoTone;
+export default IconStopTwotone;

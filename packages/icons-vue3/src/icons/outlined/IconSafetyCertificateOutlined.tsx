@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SafetyCertificateOutlinedSvg from 'icon-base/es/asn/SafetyCertificateOutlined';
+import SafetyCertificateOutlinedSvg from 'gupo-icons-base/es/asn/SafetyCertificateOutlined';
 
 export interface SafetyCertificateOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSafetyCertificateOutlined: SafetyCertificateOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSafetyCertificateOutlined: SafetyCertificateOutlinedIconType = (props,
 );
 
 IconSafetyCertificateOutlined.displayName = 'IconSafetyCertificateOutlined';
+IconSafetyCertificateOutlined.theme = 'outlined';
+IconSafetyCertificateOutlined.originName = 'safety-certificate';
 
 export default IconSafetyCertificateOutlined;

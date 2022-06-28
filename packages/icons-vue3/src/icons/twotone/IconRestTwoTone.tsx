@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RestTwoToneSvg from 'icon-base/es/asn/RestTwoTone';
+import RestTwotoneSvg from 'gupo-icons-base/es/asn/RestTwotone';
 
-export interface RestTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface RestTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconRestTwoTone: RestTwoToneIconType = (props, context) => <Icon name='RestTwoTone' {...{ ...props, ...context.attrs }} icon={RestTwoToneSvg} />;
+const IconRestTwotone: RestTwotoneIconType = (props, context) => <Icon name='RestTwotone' {...{ ...props, ...context.attrs }} icon={RestTwotoneSvg} />;
 
-IconRestTwoTone.displayName = 'IconRestTwoTone';
+IconRestTwotone.displayName = 'IconRestTwotone';
+IconRestTwotone.theme = 'twotone';
+IconRestTwotone.originName = 'rest';
 
-export default IconRestTwoTone;
+export default IconRestTwotone;

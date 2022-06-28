@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FilePptTwoToneSvg from 'icon-base/es/asn/FilePptTwoTone';
+import FilePptTwotoneSvg from 'gupo-icons-base/es/asn/FilePptTwotone';
 
-export interface FilePptTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FilePptTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFilePptTwoTone: FilePptTwoToneIconType = (props, context) => (
-    <Icon name='FilePptTwoTone' {...{ ...props, ...context.attrs }} icon={FilePptTwoToneSvg} />
+const IconFilePptTwotone: FilePptTwotoneIconType = (props, context) => (
+    <Icon name='FilePptTwotone' {...{ ...props, ...context.attrs }} icon={FilePptTwotoneSvg} />
 );
 
-IconFilePptTwoTone.displayName = 'IconFilePptTwoTone';
+IconFilePptTwotone.displayName = 'IconFilePptTwotone';
+IconFilePptTwotone.theme = 'twotone';
+IconFilePptTwotone.originName = 'file-ppt';
 
-export default IconFilePptTwoTone;
+export default IconFilePptTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AndroidOutlinedSvg from 'icon-base/es/asn/AndroidOutlined';
+import AndroidOutlinedSvg from 'gupo-icons-base/es/asn/AndroidOutlined';
 
 export interface AndroidOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAndroidOutlined: AndroidOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAndroidOutlined: AndroidOutlinedIconType = (props, context) => (
 );
 
 IconAndroidOutlined.displayName = 'IconAndroidOutlined';
+IconAndroidOutlined.theme = 'outlined';
+IconAndroidOutlined.originName = 'android';
 
 export default IconAndroidOutlined;

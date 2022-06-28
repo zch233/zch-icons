@@ -62,7 +62,7 @@ import {
     IconHeartTwotone,
     IconCheckCircleTwotone,
     createFromIconfont,
-} from 'icon-vue3';
+} from 'gupo-icons-vue3';
 import CodeRender from '~/components/CodeRender';
 
 useHead({
@@ -80,7 +80,7 @@ const baseCode = `
     IconSettingFilled,
     IconSmileOutlined,
     IconSyncOutlined,
-  } from 'icon-vue3';
+  } from 'gupo-icons-vue3';
 
   <IconHomeOutlined />
   <IconLoadingOutlined :spin="true" />
@@ -93,7 +93,7 @@ const colorCode = `
     IconSmileTwoTone,
     IconHeartTwoTone,
     IconCheckCircleTwoTone,
-  } from 'icon-vue3';
+  } from 'gupo-icons-vue3';
 
   <IconHomeOutlined color="#c03" />
   <IconSmileTwoTone />
@@ -106,7 +106,7 @@ const iconfontCode = `
       <IconFont icon="twitter" />
   </template>
 
-  import { createFromIconfont } from 'icon-vue3';
+  import { createFromIconfont } from 'gupo-icons-vue3';
 
   const IconFont = createFromIconfont({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',

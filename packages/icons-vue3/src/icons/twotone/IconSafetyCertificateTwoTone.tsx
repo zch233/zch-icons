@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SafetyCertificateTwoToneSvg from 'icon-base/es/asn/SafetyCertificateTwoTone';
+import SafetyCertificateTwotoneSvg from 'gupo-icons-base/es/asn/SafetyCertificateTwotone';
 
-export interface SafetyCertificateTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SafetyCertificateTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSafetyCertificateTwoTone: SafetyCertificateTwoToneIconType = (props, context) => (
-    <Icon name='SafetyCertificateTwoTone' {...{ ...props, ...context.attrs }} icon={SafetyCertificateTwoToneSvg} />
+const IconSafetyCertificateTwotone: SafetyCertificateTwotoneIconType = (props, context) => (
+    <Icon name='SafetyCertificateTwotone' {...{ ...props, ...context.attrs }} icon={SafetyCertificateTwotoneSvg} />
 );
 
-IconSafetyCertificateTwoTone.displayName = 'IconSafetyCertificateTwoTone';
+IconSafetyCertificateTwotone.displayName = 'IconSafetyCertificateTwotone';
+IconSafetyCertificateTwotone.theme = 'twotone';
+IconSafetyCertificateTwotone.originName = 'safety-certificate';
 
-export default IconSafetyCertificateTwoTone;
+export default IconSafetyCertificateTwotone;

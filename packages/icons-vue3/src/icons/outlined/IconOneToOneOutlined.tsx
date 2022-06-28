@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import OneToOneOutlinedSvg from 'icon-base/es/asn/OneToOneOutlined';
+import OneToOneOutlinedSvg from 'gupo-icons-base/es/asn/OneToOneOutlined';
 
 export interface OneToOneOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconOneToOneOutlined: OneToOneOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconOneToOneOutlined: OneToOneOutlinedIconType = (props, context) => (
 );
 
 IconOneToOneOutlined.displayName = 'IconOneToOneOutlined';
+IconOneToOneOutlined.theme = 'outlined';
+IconOneToOneOutlined.originName = 'one-to-one';
 
 export default IconOneToOneOutlined;

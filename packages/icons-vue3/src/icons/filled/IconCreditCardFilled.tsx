@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CreditCardFilledSvg from 'icon-base/es/asn/CreditCardFilled';
+import CreditCardFilledSvg from 'gupo-icons-base/es/asn/CreditCardFilled';
 
 export interface CreditCardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCreditCardFilled: CreditCardFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCreditCardFilled: CreditCardFilledIconType = (props, context) => (
 );
 
 IconCreditCardFilled.displayName = 'IconCreditCardFilled';
+IconCreditCardFilled.theme = 'filled';
+IconCreditCardFilled.originName = 'credit-card';
 
 export default IconCreditCardFilled;

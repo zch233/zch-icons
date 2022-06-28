@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LikeTwoToneSvg from 'icon-base/es/asn/LikeTwoTone';
+import LikeTwotoneSvg from 'gupo-icons-base/es/asn/LikeTwotone';
 
-export interface LikeTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface LikeTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconLikeTwoTone: LikeTwoToneIconType = (props, context) => <Icon name='LikeTwoTone' {...{ ...props, ...context.attrs }} icon={LikeTwoToneSvg} />;
+const IconLikeTwotone: LikeTwotoneIconType = (props, context) => <Icon name='LikeTwotone' {...{ ...props, ...context.attrs }} icon={LikeTwotoneSvg} />;
 
-IconLikeTwoTone.displayName = 'IconLikeTwoTone';
+IconLikeTwotone.displayName = 'IconLikeTwotone';
+IconLikeTwotone.theme = 'twotone';
+IconLikeTwotone.originName = 'like';
 
-export default IconLikeTwoTone;
+export default IconLikeTwotone;

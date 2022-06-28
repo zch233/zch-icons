@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CommentOutlinedSvg from 'icon-base/es/asn/CommentOutlined';
+import CommentOutlinedSvg from 'gupo-icons-base/es/asn/CommentOutlined';
 
 export interface CommentOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCommentOutlined: CommentOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCommentOutlined: CommentOutlinedIconType = (props, context) => (
 );
 
 IconCommentOutlined.displayName = 'IconCommentOutlined';
+IconCommentOutlined.theme = 'outlined';
+IconCommentOutlined.originName = 'comment';
 
 export default IconCommentOutlined;

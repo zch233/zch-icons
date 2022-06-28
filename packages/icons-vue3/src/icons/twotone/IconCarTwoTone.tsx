@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CarTwoToneSvg from 'icon-base/es/asn/CarTwoTone';
+import CarTwotoneSvg from 'gupo-icons-base/es/asn/CarTwotone';
 
-export interface CarTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CarTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCarTwoTone: CarTwoToneIconType = (props, context) => <Icon name='CarTwoTone' {...{ ...props, ...context.attrs }} icon={CarTwoToneSvg} />;
+const IconCarTwotone: CarTwotoneIconType = (props, context) => <Icon name='CarTwotone' {...{ ...props, ...context.attrs }} icon={CarTwotoneSvg} />;
 
-IconCarTwoTone.displayName = 'IconCarTwoTone';
+IconCarTwotone.displayName = 'IconCarTwotone';
+IconCarTwotone.theme = 'twotone';
+IconCarTwotone.originName = 'car';
 
-export default IconCarTwoTone;
+export default IconCarTwotone;

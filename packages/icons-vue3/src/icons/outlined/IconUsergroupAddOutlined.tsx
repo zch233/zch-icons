@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UsergroupAddOutlinedSvg from 'icon-base/es/asn/UsergroupAddOutlined';
+import UsergroupAddOutlinedSvg from 'gupo-icons-base/es/asn/UsergroupAddOutlined';
 
 export interface UsergroupAddOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconUsergroupAddOutlined: UsergroupAddOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconUsergroupAddOutlined: UsergroupAddOutlinedIconType = (props, context) 
 );
 
 IconUsergroupAddOutlined.displayName = 'IconUsergroupAddOutlined';
+IconUsergroupAddOutlined.theme = 'outlined';
+IconUsergroupAddOutlined.originName = 'usergroup-add';
 
 export default IconUsergroupAddOutlined;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InfoCircleTwoToneSvg from 'icon-base/es/asn/InfoCircleTwoTone';
+import InfoCircleTwotoneSvg from 'gupo-icons-base/es/asn/InfoCircleTwotone';
 
-export interface InfoCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface InfoCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconInfoCircleTwoTone: InfoCircleTwoToneIconType = (props, context) => (
-    <Icon name='InfoCircleTwoTone' {...{ ...props, ...context.attrs }} icon={InfoCircleTwoToneSvg} />
+const IconInfoCircleTwotone: InfoCircleTwotoneIconType = (props, context) => (
+    <Icon name='InfoCircleTwotone' {...{ ...props, ...context.attrs }} icon={InfoCircleTwotoneSvg} />
 );
 
-IconInfoCircleTwoTone.displayName = 'IconInfoCircleTwoTone';
+IconInfoCircleTwotone.displayName = 'IconInfoCircleTwotone';
+IconInfoCircleTwotone.theme = 'twotone';
+IconInfoCircleTwotone.originName = 'info-circle';
 
-export default IconInfoCircleTwoTone;
+export default IconInfoCircleTwotone;

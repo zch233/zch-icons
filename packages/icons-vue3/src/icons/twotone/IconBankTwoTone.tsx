@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BankTwoToneSvg from 'icon-base/es/asn/BankTwoTone';
+import BankTwotoneSvg from 'gupo-icons-base/es/asn/BankTwotone';
 
-export interface BankTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface BankTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconBankTwoTone: BankTwoToneIconType = (props, context) => <Icon name='BankTwoTone' {...{ ...props, ...context.attrs }} icon={BankTwoToneSvg} />;
+const IconBankTwotone: BankTwotoneIconType = (props, context) => <Icon name='BankTwotone' {...{ ...props, ...context.attrs }} icon={BankTwotoneSvg} />;
 
-IconBankTwoTone.displayName = 'IconBankTwoTone';
+IconBankTwotone.displayName = 'IconBankTwotone';
+IconBankTwotone.theme = 'twotone';
+IconBankTwotone.originName = 'bank';
 
-export default IconBankTwoTone;
+export default IconBankTwotone;

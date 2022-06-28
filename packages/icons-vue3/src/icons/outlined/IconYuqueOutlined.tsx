@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import YuqueOutlinedSvg from 'icon-base/es/asn/YuqueOutlined';
+import YuqueOutlinedSvg from 'gupo-icons-base/es/asn/YuqueOutlined';
 
 export interface YuqueOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconYuqueOutlined: YuqueOutlinedIconType = (props, context) => <Icon name='YuqueOutlined' {...{ ...props, ...context.attrs }} icon={YuqueOutlinedSvg} />;
 
 IconYuqueOutlined.displayName = 'IconYuqueOutlined';
+IconYuqueOutlined.theme = 'outlined';
+IconYuqueOutlined.originName = 'yuque';
 
 export default IconYuqueOutlined;

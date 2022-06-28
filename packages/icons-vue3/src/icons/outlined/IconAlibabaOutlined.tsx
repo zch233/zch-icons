@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlibabaOutlinedSvg from 'icon-base/es/asn/AlibabaOutlined';
+import AlibabaOutlinedSvg from 'gupo-icons-base/es/asn/AlibabaOutlined';
 
 export interface AlibabaOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAlibabaOutlined: AlibabaOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAlibabaOutlined: AlibabaOutlinedIconType = (props, context) => (
 );
 
 IconAlibabaOutlined.displayName = 'IconAlibabaOutlined';
+IconAlibabaOutlined.theme = 'outlined';
+IconAlibabaOutlined.originName = 'alibaba';
 
 export default IconAlibabaOutlined;

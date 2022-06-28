@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LinkedinFilledSvg from 'icon-base/es/asn/LinkedinFilled';
+import LinkedinFilledSvg from 'gupo-icons-base/es/asn/LinkedinFilled';
 
 export interface LinkedinFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLinkedinFilled: LinkedinFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLinkedinFilled: LinkedinFilledIconType = (props, context) => (
 );
 
 IconLinkedinFilled.displayName = 'IconLinkedinFilled';
+IconLinkedinFilled.theme = 'filled';
+IconLinkedinFilled.originName = 'linkedin';
 
 export default IconLinkedinFilled;

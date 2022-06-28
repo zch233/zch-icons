@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EllipsisOutlinedSvg from 'icon-base/es/asn/EllipsisOutlined';
+import EllipsisOutlinedSvg from 'gupo-icons-base/es/asn/EllipsisOutlined';
 
 export interface EllipsisOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconEllipsisOutlined: EllipsisOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconEllipsisOutlined: EllipsisOutlinedIconType = (props, context) => (
 );
 
 IconEllipsisOutlined.displayName = 'IconEllipsisOutlined';
+IconEllipsisOutlined.theme = 'outlined';
+IconEllipsisOutlined.originName = 'ellipsis';
 
 export default IconEllipsisOutlined;

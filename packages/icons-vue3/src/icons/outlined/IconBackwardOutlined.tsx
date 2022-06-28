@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BackwardOutlinedSvg from 'icon-base/es/asn/BackwardOutlined';
+import BackwardOutlinedSvg from 'gupo-icons-base/es/asn/BackwardOutlined';
 
 export interface BackwardOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBackwardOutlined: BackwardOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBackwardOutlined: BackwardOutlinedIconType = (props, context) => (
 );
 
 IconBackwardOutlined.displayName = 'IconBackwardOutlined';
+IconBackwardOutlined.theme = 'outlined';
+IconBackwardOutlined.originName = 'backward';
 
 export default IconBackwardOutlined;

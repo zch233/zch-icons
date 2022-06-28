@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PhoneTwoToneSvg from 'icon-base/es/asn/PhoneTwoTone';
+import PhoneTwotoneSvg from 'gupo-icons-base/es/asn/PhoneTwotone';
 
-export interface PhoneTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PhoneTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPhoneTwoTone: PhoneTwoToneIconType = (props, context) => <Icon name='PhoneTwoTone' {...{ ...props, ...context.attrs }} icon={PhoneTwoToneSvg} />;
+const IconPhoneTwotone: PhoneTwotoneIconType = (props, context) => <Icon name='PhoneTwotone' {...{ ...props, ...context.attrs }} icon={PhoneTwotoneSvg} />;
 
-IconPhoneTwoTone.displayName = 'IconPhoneTwoTone';
+IconPhoneTwotone.displayName = 'IconPhoneTwotone';
+IconPhoneTwotone.theme = 'twotone';
+IconPhoneTwotone.originName = 'phone';
 
-export default IconPhoneTwoTone;
+export default IconPhoneTwotone;

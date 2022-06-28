@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ChromeOutlinedSvg from 'icon-base/es/asn/ChromeOutlined';
+import ChromeOutlinedSvg from 'gupo-icons-base/es/asn/ChromeOutlined';
 
 export interface ChromeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconChromeOutlined: ChromeOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconChromeOutlined: ChromeOutlinedIconType = (props, context) => (
 );
 
 IconChromeOutlined.displayName = 'IconChromeOutlined';
+IconChromeOutlined.theme = 'outlined';
+IconChromeOutlined.originName = 'chrome';
 
 export default IconChromeOutlined;

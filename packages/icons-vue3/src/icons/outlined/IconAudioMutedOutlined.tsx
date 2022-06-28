@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AudioMutedOutlinedSvg from 'icon-base/es/asn/AudioMutedOutlined';
+import AudioMutedOutlinedSvg from 'gupo-icons-base/es/asn/AudioMutedOutlined';
 
 export interface AudioMutedOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAudioMutedOutlined: AudioMutedOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAudioMutedOutlined: AudioMutedOutlinedIconType = (props, context) => (
 );
 
 IconAudioMutedOutlined.displayName = 'IconAudioMutedOutlined';
+IconAudioMutedOutlined.theme = 'outlined';
+IconAudioMutedOutlined.originName = 'audio-muted';
 
 export default IconAudioMutedOutlined;

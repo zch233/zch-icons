@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FolderOpenTwoToneSvg from 'icon-base/es/asn/FolderOpenTwoTone';
+import FolderOpenTwotoneSvg from 'gupo-icons-base/es/asn/FolderOpenTwotone';
 
-export interface FolderOpenTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FolderOpenTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFolderOpenTwoTone: FolderOpenTwoToneIconType = (props, context) => (
-    <Icon name='FolderOpenTwoTone' {...{ ...props, ...context.attrs }} icon={FolderOpenTwoToneSvg} />
+const IconFolderOpenTwotone: FolderOpenTwotoneIconType = (props, context) => (
+    <Icon name='FolderOpenTwotone' {...{ ...props, ...context.attrs }} icon={FolderOpenTwotoneSvg} />
 );
 
-IconFolderOpenTwoTone.displayName = 'IconFolderOpenTwoTone';
+IconFolderOpenTwotone.displayName = 'IconFolderOpenTwotone';
+IconFolderOpenTwotone.theme = 'twotone';
+IconFolderOpenTwotone.originName = 'folder-open';
 
-export default IconFolderOpenTwoTone;
+export default IconFolderOpenTwotone;

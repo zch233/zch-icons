@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BehanceOutlinedSvg from 'icon-base/es/asn/BehanceOutlined';
+import BehanceOutlinedSvg from 'gupo-icons-base/es/asn/BehanceOutlined';
 
 export interface BehanceOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBehanceOutlined: BehanceOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBehanceOutlined: BehanceOutlinedIconType = (props, context) => (
 );
 
 IconBehanceOutlined.displayName = 'IconBehanceOutlined';
+IconBehanceOutlined.theme = 'outlined';
+IconBehanceOutlined.originName = 'behance';
 
 export default IconBehanceOutlined;

@@ -1,1 +1,1 @@
-# icon-vue3
+# gupo-icons-vue3

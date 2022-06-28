@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MailTwoToneSvg from 'icon-base/es/asn/MailTwoTone';
+import MailTwotoneSvg from 'gupo-icons-base/es/asn/MailTwotone';
 
-export interface MailTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface MailTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconMailTwoTone: MailTwoToneIconType = (props, context) => <Icon name='MailTwoTone' {...{ ...props, ...context.attrs }} icon={MailTwoToneSvg} />;
+const IconMailTwotone: MailTwotoneIconType = (props, context) => <Icon name='MailTwotone' {...{ ...props, ...context.attrs }} icon={MailTwotoneSvg} />;
 
-IconMailTwoTone.displayName = 'IconMailTwoTone';
+IconMailTwotone.displayName = 'IconMailTwotone';
+IconMailTwotone.theme = 'twotone';
+IconMailTwotone.originName = 'mail';
 
-export default IconMailTwoTone;
+export default IconMailTwotone;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ReloadOutlinedSvg from 'icon-base/es/asn/ReloadOutlined';
+import ReloadOutlinedSvg from 'gupo-icons-base/es/asn/ReloadOutlined';
 
 export interface ReloadOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconReloadOutlined: ReloadOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconReloadOutlined: ReloadOutlinedIconType = (props, context) => (
 );
 
 IconReloadOutlined.displayName = 'IconReloadOutlined';
+IconReloadOutlined.theme = 'outlined';
+IconReloadOutlined.originName = 'reload';
 
 export default IconReloadOutlined;

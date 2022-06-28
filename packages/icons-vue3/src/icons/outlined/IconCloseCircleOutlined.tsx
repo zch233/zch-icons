@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloseCircleOutlinedSvg from 'icon-base/es/asn/CloseCircleOutlined';
+import CloseCircleOutlinedSvg from 'gupo-icons-base/es/asn/CloseCircleOutlined';
 
 export interface CloseCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCloseCircleOutlined: CloseCircleOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCloseCircleOutlined: CloseCircleOutlinedIconType = (props, context) =>
 );
 
 IconCloseCircleOutlined.displayName = 'IconCloseCircleOutlined';
+IconCloseCircleOutlined.theme = 'outlined';
+IconCloseCircleOutlined.originName = 'close-circle';
 
 export default IconCloseCircleOutlined;

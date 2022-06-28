@@ -141,7 +141,7 @@
 </template>
 <script setup>
 import { permission, setPermission, setStageDigest } from '~/store';
-import Icon from 'icon-vue3';
+import Icon from 'gupo-icons-vue3';
 
 onMounted(() => {
     setPermission('design', window.localStorage.getItem('permissionDesign') === '1');

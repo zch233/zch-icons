@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EuroCircleFilledSvg from 'icon-base/es/asn/EuroCircleFilled';
+import EuroCircleFilledSvg from 'gupo-icons-base/es/asn/EuroCircleFilled';
 
 export interface EuroCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconEuroCircleFilled: EuroCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconEuroCircleFilled: EuroCircleFilledIconType = (props, context) => (
 );
 
 IconEuroCircleFilled.displayName = 'IconEuroCircleFilled';
+IconEuroCircleFilled.theme = 'filled';
+IconEuroCircleFilled.originName = 'euro-circle';
 
 export default IconEuroCircleFilled;

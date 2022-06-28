@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileSearchOutlinedSvg from 'icon-base/es/asn/FileSearchOutlined';
+import FileSearchOutlinedSvg from 'gupo-icons-base/es/asn/FileSearchOutlined';
 
 export interface FileSearchOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFileSearchOutlined: FileSearchOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFileSearchOutlined: FileSearchOutlinedIconType = (props, context) => (
 );
 
 IconFileSearchOutlined.displayName = 'IconFileSearchOutlined';
+IconFileSearchOutlined.theme = 'outlined';
+IconFileSearchOutlined.originName = 'file-search';
 
 export default IconFileSearchOutlined;

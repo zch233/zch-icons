@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DiffFilledSvg from 'icon-base/es/asn/DiffFilled';
+import DiffFilledSvg from 'gupo-icons-base/es/asn/DiffFilled';
 
 export interface DiffFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDiffFilled: DiffFilledIconType = (props, context) => <Icon name='DiffFilled' {...{ ...props, ...context.attrs }} icon={DiffFilledSvg} />;
 
 IconDiffFilled.displayName = 'IconDiffFilled';
+IconDiffFilled.theme = 'filled';
+IconDiffFilled.originName = 'diff';
 
 export default IconDiffFilled;

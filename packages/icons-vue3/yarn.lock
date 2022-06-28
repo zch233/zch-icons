@@ -7849,6 +7849,11 @@ gupo-deploy@1.0.9:
   resolved "https://registry.npmjs.org/gupo-deploy/-/gupo-deploy-1.0.9.tgz#07e092626e1006b23946ed3ea9c5a10d8abe4c34"
   integrity sha512-UZUmSZdVpB8K076IbXQh7oIfer0dPPI+viMQCpFFfYASEYgsf4j7MGIybczd5ocorIeQzd/VimiPY6CYZFze3g==
 
+gupo-icons-base@^0.0.2:
+  version "0.0.2"
+  resolved "https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/gupo-icons-base/-/gupo-icons-base-0.0.2.tgz#906dea28e588e0ee751a692614ae2d7e28a461e9"
+  integrity sha512-uH8ztLJR7gTe5rjBbyrCkJXRP8hgvqwsT6aJLnFzgltQvW4FhLfcTEK9MYsHoWG9Ycmg96bZbGMHlY3zsAU1Ng==
+
 gzip-size@^5.0.0:
   version "5.1.1"
   resolved "https://registry.npmmirror.com/gzip-size/-/gzip-size-5.1.1.tgz#cb9bee692f87c0612b232840a873904e4c135274"
@@ -8257,11 +8262,6 @@ husky@7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/husky/-/husky-7.0.0.tgz#3dbd5d28e76234689ee29bb41e048f28e3e46616"
   integrity sha512-xK7lO0EtSzfFPiw+oQncQVy/XqV7UVVjxBByc+Iv5iK3yhW9boDoWgvZy3OGo48QKg/hUtZkzz0hi2HXa0kn7w==
-
-icon-base@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/icon-base/-/icon-base-0.0.6.tgz#40ed411339f169d002dd44c53d2f178e4eded759"
-  integrity sha512-fA4TXDbv+kr9fQaRKj4nSBi3zC9C4jox8jA4l0IO+2vXzxL9xvyVh384bgHMDYQJa6Gf4vFOfKvaEvu0rLy4wQ==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"

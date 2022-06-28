@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ArrowDownOutlinedSvg from 'icon-base/es/asn/ArrowDownOutlined';
+import ArrowDownOutlinedSvg from 'gupo-icons-base/es/asn/ArrowDownOutlined';
 
 export interface ArrowDownOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconArrowDownOutlined: ArrowDownOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconArrowDownOutlined: ArrowDownOutlinedIconType = (props, context) => (
 );
 
 IconArrowDownOutlined.displayName = 'IconArrowDownOutlined';
+IconArrowDownOutlined.theme = 'outlined';
+IconArrowDownOutlined.originName = 'arrow-down';
 
 export default IconArrowDownOutlined;

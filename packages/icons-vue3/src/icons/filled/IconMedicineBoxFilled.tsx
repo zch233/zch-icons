@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MedicineBoxFilledSvg from 'icon-base/es/asn/MedicineBoxFilled';
+import MedicineBoxFilledSvg from 'gupo-icons-base/es/asn/MedicineBoxFilled';
 
 export interface MedicineBoxFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMedicineBoxFilled: MedicineBoxFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMedicineBoxFilled: MedicineBoxFilledIconType = (props, context) => (
 );
 
 IconMedicineBoxFilled.displayName = 'IconMedicineBoxFilled';
+IconMedicineBoxFilled.theme = 'filled';
+IconMedicineBoxFilled.originName = 'medicine-box';
 
 export default IconMedicineBoxFilled;

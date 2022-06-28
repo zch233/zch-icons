@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DropboxSquareFilledSvg from 'icon-base/es/asn/DropboxSquareFilled';
+import DropboxSquareFilledSvg from 'gupo-icons-base/es/asn/DropboxSquareFilled';
 
 export interface DropboxSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDropboxSquareFilled: DropboxSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDropboxSquareFilled: DropboxSquareFilledIconType = (props, context) =>
 );
 
 IconDropboxSquareFilled.displayName = 'IconDropboxSquareFilled';
+IconDropboxSquareFilled.theme = 'filled';
+IconDropboxSquareFilled.originName = 'dropbox-square';
 
 export default IconDropboxSquareFilled;

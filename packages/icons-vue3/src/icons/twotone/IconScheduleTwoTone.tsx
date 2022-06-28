@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ScheduleTwoToneSvg from 'icon-base/es/asn/ScheduleTwoTone';
+import ScheduleTwotoneSvg from 'gupo-icons-base/es/asn/ScheduleTwotone';
 
-export interface ScheduleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ScheduleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconScheduleTwoTone: ScheduleTwoToneIconType = (props, context) => (
-    <Icon name='ScheduleTwoTone' {...{ ...props, ...context.attrs }} icon={ScheduleTwoToneSvg} />
+const IconScheduleTwotone: ScheduleTwotoneIconType = (props, context) => (
+    <Icon name='ScheduleTwotone' {...{ ...props, ...context.attrs }} icon={ScheduleTwotoneSvg} />
 );
 
-IconScheduleTwoTone.displayName = 'IconScheduleTwoTone';
+IconScheduleTwotone.displayName = 'IconScheduleTwotone';
+IconScheduleTwotone.theme = 'twotone';
+IconScheduleTwotone.originName = 'schedule';
 
-export default IconScheduleTwoTone;
+export default IconScheduleTwotone;

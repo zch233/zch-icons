@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PushpinTwoToneSvg from 'icon-base/es/asn/PushpinTwoTone';
+import PushpinTwotoneSvg from 'gupo-icons-base/es/asn/PushpinTwotone';
 
-export interface PushpinTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PushpinTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPushpinTwoTone: PushpinTwoToneIconType = (props, context) => (
-    <Icon name='PushpinTwoTone' {...{ ...props, ...context.attrs }} icon={PushpinTwoToneSvg} />
+const IconPushpinTwotone: PushpinTwotoneIconType = (props, context) => (
+    <Icon name='PushpinTwotone' {...{ ...props, ...context.attrs }} icon={PushpinTwotoneSvg} />
 );
 
-IconPushpinTwoTone.displayName = 'IconPushpinTwoTone';
+IconPushpinTwotone.displayName = 'IconPushpinTwotone';
+IconPushpinTwotone.theme = 'twotone';
+IconPushpinTwotone.originName = 'pushpin';
 
-export default IconPushpinTwoTone;
+export default IconPushpinTwotone;

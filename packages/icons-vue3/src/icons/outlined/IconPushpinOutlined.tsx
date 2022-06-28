@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PushpinOutlinedSvg from 'icon-base/es/asn/PushpinOutlined';
+import PushpinOutlinedSvg from 'gupo-icons-base/es/asn/PushpinOutlined';
 
 export interface PushpinOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPushpinOutlined: PushpinOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPushpinOutlined: PushpinOutlinedIconType = (props, context) => (
 );
 
 IconPushpinOutlined.displayName = 'IconPushpinOutlined';
+IconPushpinOutlined.theme = 'outlined';
+IconPushpinOutlined.originName = 'pushpin';
 
 export default IconPushpinOutlined;

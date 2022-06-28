@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ToolOutlinedSvg from 'icon-base/es/asn/ToolOutlined';
+import ToolOutlinedSvg from 'gupo-icons-base/es/asn/ToolOutlined';
 
 export interface ToolOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconToolOutlined: ToolOutlinedIconType = (props, context) => <Icon name='ToolOutlined' {...{ ...props, ...context.attrs }} icon={ToolOutlinedSvg} />;
 
 IconToolOutlined.displayName = 'IconToolOutlined';
+IconToolOutlined.theme = 'outlined';
+IconToolOutlined.originName = 'tool';
 
 export default IconToolOutlined;

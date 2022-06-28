@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CopyrightTwoToneSvg from 'icon-base/es/asn/CopyrightTwoTone';
+import CopyrightTwotoneSvg from 'gupo-icons-base/es/asn/CopyrightTwotone';
 
-export interface CopyrightTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CopyrightTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCopyrightTwoTone: CopyrightTwoToneIconType = (props, context) => (
-    <Icon name='CopyrightTwoTone' {...{ ...props, ...context.attrs }} icon={CopyrightTwoToneSvg} />
+const IconCopyrightTwotone: CopyrightTwotoneIconType = (props, context) => (
+    <Icon name='CopyrightTwotone' {...{ ...props, ...context.attrs }} icon={CopyrightTwotoneSvg} />
 );
 
-IconCopyrightTwoTone.displayName = 'IconCopyrightTwoTone';
+IconCopyrightTwotone.displayName = 'IconCopyrightTwotone';
+IconCopyrightTwotone.theme = 'twotone';
+IconCopyrightTwotone.originName = 'copyright';
 
-export default IconCopyrightTwoTone;
+export default IconCopyrightTwotone;

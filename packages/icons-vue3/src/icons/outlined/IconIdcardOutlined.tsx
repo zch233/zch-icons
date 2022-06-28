@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import IdcardOutlinedSvg from 'icon-base/es/asn/IdcardOutlined';
+import IdcardOutlinedSvg from 'gupo-icons-base/es/asn/IdcardOutlined';
 
 export interface IdcardOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconIdcardOutlined: IdcardOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconIdcardOutlined: IdcardOutlinedIconType = (props, context) => (
 );
 
 IconIdcardOutlined.displayName = 'IconIdcardOutlined';
+IconIdcardOutlined.theme = 'outlined';
+IconIdcardOutlined.originName = 'idcard';
 
 export default IconIdcardOutlined;

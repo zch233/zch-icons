@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlignCenterOutlinedSvg from 'icon-base/es/asn/AlignCenterOutlined';
+import AlignCenterOutlinedSvg from 'gupo-icons-base/es/asn/AlignCenterOutlined';
 
 export interface AlignCenterOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAlignCenterOutlined: AlignCenterOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAlignCenterOutlined: AlignCenterOutlinedIconType = (props, context) =>
 );
 
 IconAlignCenterOutlined.displayName = 'IconAlignCenterOutlined';
+IconAlignCenterOutlined.theme = 'outlined';
+IconAlignCenterOutlined.originName = 'align-center';
 
 export default IconAlignCenterOutlined;

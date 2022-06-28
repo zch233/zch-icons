@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CarryOutTwoToneSvg from 'icon-base/es/asn/CarryOutTwoTone';
+import CarryOutTwotoneSvg from 'gupo-icons-base/es/asn/CarryOutTwotone';
 
-export interface CarryOutTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CarryOutTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCarryOutTwoTone: CarryOutTwoToneIconType = (props, context) => (
-    <Icon name='CarryOutTwoTone' {...{ ...props, ...context.attrs }} icon={CarryOutTwoToneSvg} />
+const IconCarryOutTwotone: CarryOutTwotoneIconType = (props, context) => (
+    <Icon name='CarryOutTwotone' {...{ ...props, ...context.attrs }} icon={CarryOutTwotoneSvg} />
 );
 
-IconCarryOutTwoTone.displayName = 'IconCarryOutTwoTone';
+IconCarryOutTwotone.displayName = 'IconCarryOutTwotone';
+IconCarryOutTwotone.theme = 'twotone';
+IconCarryOutTwotone.originName = 'carry-out';
 
-export default IconCarryOutTwoTone;
+export default IconCarryOutTwotone;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HighlightTwoToneSvg from 'icon-base/es/asn/HighlightTwoTone';
+import HighlightTwotoneSvg from 'gupo-icons-base/es/asn/HighlightTwotone';
 
-export interface HighlightTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface HighlightTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconHighlightTwoTone: HighlightTwoToneIconType = (props, context) => (
-    <Icon name='HighlightTwoTone' {...{ ...props, ...context.attrs }} icon={HighlightTwoToneSvg} />
+const IconHighlightTwotone: HighlightTwotoneIconType = (props, context) => (
+    <Icon name='HighlightTwotone' {...{ ...props, ...context.attrs }} icon={HighlightTwotoneSvg} />
 );
 
-IconHighlightTwoTone.displayName = 'IconHighlightTwoTone';
+IconHighlightTwotone.displayName = 'IconHighlightTwotone';
+IconHighlightTwotone.theme = 'twotone';
+IconHighlightTwotone.originName = 'highlight';
 
-export default IconHighlightTwoTone;
+export default IconHighlightTwotone;

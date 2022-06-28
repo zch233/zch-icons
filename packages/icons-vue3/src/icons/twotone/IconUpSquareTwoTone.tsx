@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UpSquareTwoToneSvg from 'icon-base/es/asn/UpSquareTwoTone';
+import UpSquareTwotoneSvg from 'gupo-icons-base/es/asn/UpSquareTwotone';
 
-export interface UpSquareTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface UpSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconUpSquareTwoTone: UpSquareTwoToneIconType = (props, context) => (
-    <Icon name='UpSquareTwoTone' {...{ ...props, ...context.attrs }} icon={UpSquareTwoToneSvg} />
+const IconUpSquareTwotone: UpSquareTwotoneIconType = (props, context) => (
+    <Icon name='UpSquareTwotone' {...{ ...props, ...context.attrs }} icon={UpSquareTwotoneSvg} />
 );
 
-IconUpSquareTwoTone.displayName = 'IconUpSquareTwoTone';
+IconUpSquareTwotone.displayName = 'IconUpSquareTwotone';
+IconUpSquareTwotone.theme = 'twotone';
+IconUpSquareTwotone.originName = 'up-square';
 
-export default IconUpSquareTwoTone;
+export default IconUpSquareTwotone;

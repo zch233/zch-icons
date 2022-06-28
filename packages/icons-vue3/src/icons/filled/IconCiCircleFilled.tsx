@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CiCircleFilledSvg from 'icon-base/es/asn/CiCircleFilled';
+import CiCircleFilledSvg from 'gupo-icons-base/es/asn/CiCircleFilled';
 
 export interface CiCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCiCircleFilled: CiCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCiCircleFilled: CiCircleFilledIconType = (props, context) => (
 );
 
 IconCiCircleFilled.displayName = 'IconCiCircleFilled';
+IconCiCircleFilled.theme = 'filled';
+IconCiCircleFilled.originName = 'ci-circle';
 
 export default IconCiCircleFilled;

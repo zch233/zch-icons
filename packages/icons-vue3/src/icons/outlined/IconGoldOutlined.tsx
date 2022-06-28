@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GoldOutlinedSvg from 'icon-base/es/asn/GoldOutlined';
+import GoldOutlinedSvg from 'gupo-icons-base/es/asn/GoldOutlined';
 
 export interface GoldOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGoldOutlined: GoldOutlinedIconType = (props, context) => <Icon name='GoldOutlined' {...{ ...props, ...context.attrs }} icon={GoldOutlinedSvg} />;
 
 IconGoldOutlined.displayName = 'IconGoldOutlined';
+IconGoldOutlined.theme = 'outlined';
+IconGoldOutlined.originName = 'gold';
 
 export default IconGoldOutlined;

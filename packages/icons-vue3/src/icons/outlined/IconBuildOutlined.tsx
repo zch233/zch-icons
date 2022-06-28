@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BuildOutlinedSvg from 'icon-base/es/asn/BuildOutlined';
+import BuildOutlinedSvg from 'gupo-icons-base/es/asn/BuildOutlined';
 
 export interface BuildOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBuildOutlined: BuildOutlinedIconType = (props, context) => <Icon name='BuildOutlined' {...{ ...props, ...context.attrs }} icon={BuildOutlinedSvg} />;
 
 IconBuildOutlined.displayName = 'IconBuildOutlined';
+IconBuildOutlined.theme = 'outlined';
+IconBuildOutlined.originName = 'build';
 
 export default IconBuildOutlined;

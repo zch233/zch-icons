@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RocketTwoToneSvg from 'icon-base/es/asn/RocketTwoTone';
+import RocketTwotoneSvg from 'gupo-icons-base/es/asn/RocketTwotone';
 
-export interface RocketTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface RocketTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconRocketTwoTone: RocketTwoToneIconType = (props, context) => <Icon name='RocketTwoTone' {...{ ...props, ...context.attrs }} icon={RocketTwoToneSvg} />;
+const IconRocketTwotone: RocketTwotoneIconType = (props, context) => <Icon name='RocketTwotone' {...{ ...props, ...context.attrs }} icon={RocketTwotoneSvg} />;
 
-IconRocketTwoTone.displayName = 'IconRocketTwoTone';
+IconRocketTwotone.displayName = 'IconRocketTwotone';
+IconRocketTwotone.theme = 'twotone';
+IconRocketTwotone.originName = 'rocket';
 
-export default IconRocketTwoTone;
+export default IconRocketTwotone;

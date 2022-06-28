@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CalendarOutlinedSvg from 'icon-base/es/asn/CalendarOutlined';
+import CalendarOutlinedSvg from 'gupo-icons-base/es/asn/CalendarOutlined';
 
 export interface CalendarOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCalendarOutlined: CalendarOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCalendarOutlined: CalendarOutlinedIconType = (props, context) => (
 );
 
 IconCalendarOutlined.displayName = 'IconCalendarOutlined';
+IconCalendarOutlined.theme = 'outlined';
+IconCalendarOutlined.originName = 'calendar';
 
 export default IconCalendarOutlined;

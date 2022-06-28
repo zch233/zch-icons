@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FilePptOutlinedSvg from 'icon-base/es/asn/FilePptOutlined';
+import FilePptOutlinedSvg from 'gupo-icons-base/es/asn/FilePptOutlined';
 
 export interface FilePptOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFilePptOutlined: FilePptOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFilePptOutlined: FilePptOutlinedIconType = (props, context) => (
 );
 
 IconFilePptOutlined.displayName = 'IconFilePptOutlined';
+IconFilePptOutlined.theme = 'outlined';
+IconFilePptOutlined.originName = 'file-ppt';
 
 export default IconFilePptOutlined;

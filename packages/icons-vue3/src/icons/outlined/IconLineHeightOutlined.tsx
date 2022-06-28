@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LineHeightOutlinedSvg from 'icon-base/es/asn/LineHeightOutlined';
+import LineHeightOutlinedSvg from 'gupo-icons-base/es/asn/LineHeightOutlined';
 
 export interface LineHeightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconLineHeightOutlined: LineHeightOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconLineHeightOutlined: LineHeightOutlinedIconType = (props, context) => (
 );
 
 IconLineHeightOutlined.displayName = 'IconLineHeightOutlined';
+IconLineHeightOutlined.theme = 'outlined';
+IconLineHeightOutlined.originName = 'line-height';
 
 export default IconLineHeightOutlined;

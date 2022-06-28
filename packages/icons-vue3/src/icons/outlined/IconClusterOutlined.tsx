@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ClusterOutlinedSvg from 'icon-base/es/asn/ClusterOutlined';
+import ClusterOutlinedSvg from 'gupo-icons-base/es/asn/ClusterOutlined';
 
 export interface ClusterOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconClusterOutlined: ClusterOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconClusterOutlined: ClusterOutlinedIconType = (props, context) => (
 );
 
 IconClusterOutlined.displayName = 'IconClusterOutlined';
+IconClusterOutlined.theme = 'outlined';
+IconClusterOutlined.originName = 'cluster';
 
 export default IconClusterOutlined;

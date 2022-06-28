@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownSquareTwoToneSvg from 'icon-base/es/asn/DownSquareTwoTone';
+import DownSquareTwotoneSvg from 'gupo-icons-base/es/asn/DownSquareTwotone';
 
-export interface DownSquareTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DownSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDownSquareTwoTone: DownSquareTwoToneIconType = (props, context) => (
-    <Icon name='DownSquareTwoTone' {...{ ...props, ...context.attrs }} icon={DownSquareTwoToneSvg} />
+const IconDownSquareTwotone: DownSquareTwotoneIconType = (props, context) => (
+    <Icon name='DownSquareTwotone' {...{ ...props, ...context.attrs }} icon={DownSquareTwotoneSvg} />
 );
 
-IconDownSquareTwoTone.displayName = 'IconDownSquareTwoTone';
+IconDownSquareTwotone.displayName = 'IconDownSquareTwotone';
+IconDownSquareTwotone.theme = 'twotone';
+IconDownSquareTwotone.originName = 'down-square';
 
-export default IconDownSquareTwoTone;
+export default IconDownSquareTwotone;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EyeInvisibleTwoToneSvg from 'icon-base/es/asn/EyeInvisibleTwoTone';
+import EyeInvisibleTwotoneSvg from 'gupo-icons-base/es/asn/EyeInvisibleTwotone';
 
-export interface EyeInvisibleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface EyeInvisibleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconEyeInvisibleTwoTone: EyeInvisibleTwoToneIconType = (props, context) => (
-    <Icon name='EyeInvisibleTwoTone' {...{ ...props, ...context.attrs }} icon={EyeInvisibleTwoToneSvg} />
+const IconEyeInvisibleTwotone: EyeInvisibleTwotoneIconType = (props, context) => (
+    <Icon name='EyeInvisibleTwotone' {...{ ...props, ...context.attrs }} icon={EyeInvisibleTwotoneSvg} />
 );
 
-IconEyeInvisibleTwoTone.displayName = 'IconEyeInvisibleTwoTone';
+IconEyeInvisibleTwotone.displayName = 'IconEyeInvisibleTwotone';
+IconEyeInvisibleTwotone.theme = 'twotone';
+IconEyeInvisibleTwotone.originName = 'eye-invisible';
 
-export default IconEyeInvisibleTwoTone;
+export default IconEyeInvisibleTwotone;

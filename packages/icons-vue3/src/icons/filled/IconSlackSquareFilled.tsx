@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SlackSquareFilledSvg from 'icon-base/es/asn/SlackSquareFilled';
+import SlackSquareFilledSvg from 'gupo-icons-base/es/asn/SlackSquareFilled';
 
 export interface SlackSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSlackSquareFilled: SlackSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSlackSquareFilled: SlackSquareFilledIconType = (props, context) => (
 );
 
 IconSlackSquareFilled.displayName = 'IconSlackSquareFilled';
+IconSlackSquareFilled.theme = 'filled';
+IconSlackSquareFilled.originName = 'slack-square';
 
 export default IconSlackSquareFilled;

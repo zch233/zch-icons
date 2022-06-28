@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HeatMapOutlinedSvg from 'icon-base/es/asn/HeatMapOutlined';
+import HeatMapOutlinedSvg from 'gupo-icons-base/es/asn/HeatMapOutlined';
 
 export interface HeatMapOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconHeatMapOutlined: HeatMapOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconHeatMapOutlined: HeatMapOutlinedIconType = (props, context) => (
 );
 
 IconHeatMapOutlined.displayName = 'IconHeatMapOutlined';
+IconHeatMapOutlined.theme = 'outlined';
+IconHeatMapOutlined.originName = 'heat-map';
 
 export default IconHeatMapOutlined;

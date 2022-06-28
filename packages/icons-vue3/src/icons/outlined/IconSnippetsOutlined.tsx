@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SnippetsOutlinedSvg from 'icon-base/es/asn/SnippetsOutlined';
+import SnippetsOutlinedSvg from 'gupo-icons-base/es/asn/SnippetsOutlined';
 
 export interface SnippetsOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSnippetsOutlined: SnippetsOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSnippetsOutlined: SnippetsOutlinedIconType = (props, context) => (
 );
 
 IconSnippetsOutlined.displayName = 'IconSnippetsOutlined';
+IconSnippetsOutlined.theme = 'outlined';
+IconSnippetsOutlined.originName = 'snippets';
 
 export default IconSnippetsOutlined;

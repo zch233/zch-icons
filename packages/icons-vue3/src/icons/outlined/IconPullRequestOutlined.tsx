@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PullRequestOutlinedSvg from 'icon-base/es/asn/PullRequestOutlined';
+import PullRequestOutlinedSvg from 'gupo-icons-base/es/asn/PullRequestOutlined';
 
 export interface PullRequestOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPullRequestOutlined: PullRequestOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPullRequestOutlined: PullRequestOutlinedIconType = (props, context) =>
 );
 
 IconPullRequestOutlined.displayName = 'IconPullRequestOutlined';
+IconPullRequestOutlined.theme = 'outlined';
+IconPullRequestOutlined.originName = 'pull-request';
 
 export default IconPullRequestOutlined;

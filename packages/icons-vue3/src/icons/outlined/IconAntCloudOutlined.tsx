@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AntCloudOutlinedSvg from 'icon-base/es/asn/AntCloudOutlined';
+import AntCloudOutlinedSvg from 'gupo-icons-base/es/asn/AntCloudOutlined';
 
 export interface AntCloudOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAntCloudOutlined: AntCloudOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAntCloudOutlined: AntCloudOutlinedIconType = (props, context) => (
 );
 
 IconAntCloudOutlined.displayName = 'IconAntCloudOutlined';
+IconAntCloudOutlined.theme = 'outlined';
+IconAntCloudOutlined.originName = 'ant-cloud';
 
 export default IconAntCloudOutlined;

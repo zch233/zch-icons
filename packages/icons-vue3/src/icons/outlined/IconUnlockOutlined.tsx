@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UnlockOutlinedSvg from 'icon-base/es/asn/UnlockOutlined';
+import UnlockOutlinedSvg from 'gupo-icons-base/es/asn/UnlockOutlined';
 
 export interface UnlockOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconUnlockOutlined: UnlockOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconUnlockOutlined: UnlockOutlinedIconType = (props, context) => (
 );
 
 IconUnlockOutlined.displayName = 'IconUnlockOutlined';
+IconUnlockOutlined.theme = 'outlined';
+IconUnlockOutlined.originName = 'unlock';
 
 export default IconUnlockOutlined;

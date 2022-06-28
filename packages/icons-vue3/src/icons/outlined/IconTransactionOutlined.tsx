@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TransactionOutlinedSvg from 'icon-base/es/asn/TransactionOutlined';
+import TransactionOutlinedSvg from 'gupo-icons-base/es/asn/TransactionOutlined';
 
 export interface TransactionOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTransactionOutlined: TransactionOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTransactionOutlined: TransactionOutlinedIconType = (props, context) =>
 );
 
 IconTransactionOutlined.displayName = 'IconTransactionOutlined';
+IconTransactionOutlined.theme = 'outlined';
+IconTransactionOutlined.originName = 'transaction';
 
 export default IconTransactionOutlined;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EuroCircleTwoToneSvg from 'icon-base/es/asn/EuroCircleTwoTone';
+import EuroCircleTwotoneSvg from 'gupo-icons-base/es/asn/EuroCircleTwotone';
 
-export interface EuroCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface EuroCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconEuroCircleTwoTone: EuroCircleTwoToneIconType = (props, context) => (
-    <Icon name='EuroCircleTwoTone' {...{ ...props, ...context.attrs }} icon={EuroCircleTwoToneSvg} />
+const IconEuroCircleTwotone: EuroCircleTwotoneIconType = (props, context) => (
+    <Icon name='EuroCircleTwotone' {...{ ...props, ...context.attrs }} icon={EuroCircleTwotoneSvg} />
 );
 
-IconEuroCircleTwoTone.displayName = 'IconEuroCircleTwoTone';
+IconEuroCircleTwotone.displayName = 'IconEuroCircleTwotone';
+IconEuroCircleTwotone.theme = 'twotone';
+IconEuroCircleTwotone.originName = 'euro-circle';
 
-export default IconEuroCircleTwoTone;
+export default IconEuroCircleTwotone;

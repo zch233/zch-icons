@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TabletOutlinedSvg from 'icon-base/es/asn/TabletOutlined';
+import TabletOutlinedSvg from 'gupo-icons-base/es/asn/TabletOutlined';
 
 export interface TabletOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTabletOutlined: TabletOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTabletOutlined: TabletOutlinedIconType = (props, context) => (
 );
 
 IconTabletOutlined.displayName = 'IconTabletOutlined';
+IconTabletOutlined.theme = 'outlined';
+IconTabletOutlined.originName = 'tablet';
 
 export default IconTabletOutlined;

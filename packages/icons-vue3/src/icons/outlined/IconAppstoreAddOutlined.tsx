@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AppstoreAddOutlinedSvg from 'icon-base/es/asn/AppstoreAddOutlined';
+import AppstoreAddOutlinedSvg from 'gupo-icons-base/es/asn/AppstoreAddOutlined';
 
 export interface AppstoreAddOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAppstoreAddOutlined: AppstoreAddOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAppstoreAddOutlined: AppstoreAddOutlinedIconType = (props, context) =>
 );
 
 IconAppstoreAddOutlined.displayName = 'IconAppstoreAddOutlined';
+IconAppstoreAddOutlined.theme = 'outlined';
+IconAppstoreAddOutlined.originName = 'appstore-add';
 
 export default IconAppstoreAddOutlined;

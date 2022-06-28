@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SlidersTwoToneSvg from 'icon-base/es/asn/SlidersTwoTone';
+import SlidersTwotoneSvg from 'gupo-icons-base/es/asn/SlidersTwotone';
 
-export interface SlidersTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface SlidersTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconSlidersTwoTone: SlidersTwoToneIconType = (props, context) => (
-    <Icon name='SlidersTwoTone' {...{ ...props, ...context.attrs }} icon={SlidersTwoToneSvg} />
+const IconSlidersTwotone: SlidersTwotoneIconType = (props, context) => (
+    <Icon name='SlidersTwotone' {...{ ...props, ...context.attrs }} icon={SlidersTwotoneSvg} />
 );
 
-IconSlidersTwoTone.displayName = 'IconSlidersTwoTone';
+IconSlidersTwotone.displayName = 'IconSlidersTwotone';
+IconSlidersTwotone.theme = 'twotone';
+IconSlidersTwotone.originName = 'sliders';
 
-export default IconSlidersTwoTone;
+export default IconSlidersTwotone;

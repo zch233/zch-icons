@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GithubOutlinedSvg from 'icon-base/es/asn/GithubOutlined';
+import GithubOutlinedSvg from 'gupo-icons-base/es/asn/GithubOutlined';
 
 export interface GithubOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGithubOutlined: GithubOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconGithubOutlined: GithubOutlinedIconType = (props, context) => (
 );
 
 IconGithubOutlined.displayName = 'IconGithubOutlined';
+IconGithubOutlined.theme = 'outlined';
+IconGithubOutlined.originName = 'github';
 
 export default IconGithubOutlined;

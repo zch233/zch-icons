@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SortAscendingOutlinedSvg from 'icon-base/es/asn/SortAscendingOutlined';
+import SortAscendingOutlinedSvg from 'gupo-icons-base/es/asn/SortAscendingOutlined';
 
 export interface SortAscendingOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSortAscendingOutlined: SortAscendingOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSortAscendingOutlined: SortAscendingOutlinedIconType = (props, context
 );
 
 IconSortAscendingOutlined.displayName = 'IconSortAscendingOutlined';
+IconSortAscendingOutlined.theme = 'outlined';
+IconSortAscendingOutlined.originName = 'sort-ascending';
 
 export default IconSortAscendingOutlined;

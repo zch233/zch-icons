@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FundTwoToneSvg from 'icon-base/es/asn/FundTwoTone';
+import FundTwotoneSvg from 'gupo-icons-base/es/asn/FundTwotone';
 
-export interface FundTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FundTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFundTwoTone: FundTwoToneIconType = (props, context) => <Icon name='FundTwoTone' {...{ ...props, ...context.attrs }} icon={FundTwoToneSvg} />;
+const IconFundTwotone: FundTwotoneIconType = (props, context) => <Icon name='FundTwotone' {...{ ...props, ...context.attrs }} icon={FundTwotoneSvg} />;
 
-IconFundTwoTone.displayName = 'IconFundTwoTone';
+IconFundTwotone.displayName = 'IconFundTwotone';
+IconFundTwotone.theme = 'twotone';
+IconFundTwotone.originName = 'fund';
 
-export default IconFundTwoTone;
+export default IconFundTwotone;

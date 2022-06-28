@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RocketOutlinedSvg from 'icon-base/es/asn/RocketOutlined';
+import RocketOutlinedSvg from 'gupo-icons-base/es/asn/RocketOutlined';
 
 export interface RocketOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconRocketOutlined: RocketOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconRocketOutlined: RocketOutlinedIconType = (props, context) => (
 );
 
 IconRocketOutlined.displayName = 'IconRocketOutlined';
+IconRocketOutlined.theme = 'outlined';
+IconRocketOutlined.originName = 'rocket';
 
 export default IconRocketOutlined;

@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsuranceOutlinedSvg from 'icon-base/es/asn/InsuranceOutlined';
+import InsuranceOutlinedSvg from 'gupo-icons-base/es/asn/InsuranceOutlined';
 
 export interface InsuranceOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconInsuranceOutlined: InsuranceOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconInsuranceOutlined: InsuranceOutlinedIconType = (props, context) => (
 );
 
 IconInsuranceOutlined.displayName = 'IconInsuranceOutlined';
+IconInsuranceOutlined.theme = 'outlined';
+IconInsuranceOutlined.originName = 'insurance';
 
 export default IconInsuranceOutlined;

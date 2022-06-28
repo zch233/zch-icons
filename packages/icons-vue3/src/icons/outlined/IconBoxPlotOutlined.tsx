@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BoxPlotOutlinedSvg from 'icon-base/es/asn/BoxPlotOutlined';
+import BoxPlotOutlinedSvg from 'gupo-icons-base/es/asn/BoxPlotOutlined';
 
 export interface BoxPlotOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBoxPlotOutlined: BoxPlotOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBoxPlotOutlined: BoxPlotOutlinedIconType = (props, context) => (
 );
 
 IconBoxPlotOutlined.displayName = 'IconBoxPlotOutlined';
+IconBoxPlotOutlined.theme = 'outlined';
+IconBoxPlotOutlined.originName = 'box-plot';
 
 export default IconBoxPlotOutlined;

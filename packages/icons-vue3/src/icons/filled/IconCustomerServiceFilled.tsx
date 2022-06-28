@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CustomerServiceFilledSvg from 'icon-base/es/asn/CustomerServiceFilled';
+import CustomerServiceFilledSvg from 'gupo-icons-base/es/asn/CustomerServiceFilled';
 
 export interface CustomerServiceFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCustomerServiceFilled: CustomerServiceFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCustomerServiceFilled: CustomerServiceFilledIconType = (props, context
 );
 
 IconCustomerServiceFilled.displayName = 'IconCustomerServiceFilled';
+IconCustomerServiceFilled.theme = 'filled';
+IconCustomerServiceFilled.originName = 'customer-service';
 
 export default IconCustomerServiceFilled;

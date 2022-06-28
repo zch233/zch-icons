@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VerifiedOutlinedSvg from 'icon-base/es/asn/VerifiedOutlined';
+import VerifiedOutlinedSvg from 'gupo-icons-base/es/asn/VerifiedOutlined';
 
 export interface VerifiedOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconVerifiedOutlined: VerifiedOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconVerifiedOutlined: VerifiedOutlinedIconType = (props, context) => (
 );
 
 IconVerifiedOutlined.displayName = 'IconVerifiedOutlined';
+IconVerifiedOutlined.theme = 'outlined';
+IconVerifiedOutlined.originName = 'verified';
 
 export default IconVerifiedOutlined;

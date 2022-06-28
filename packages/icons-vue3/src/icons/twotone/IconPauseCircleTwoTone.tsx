@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PauseCircleTwoToneSvg from 'icon-base/es/asn/PauseCircleTwoTone';
+import PauseCircleTwotoneSvg from 'gupo-icons-base/es/asn/PauseCircleTwotone';
 
-export interface PauseCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PauseCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPauseCircleTwoTone: PauseCircleTwoToneIconType = (props, context) => (
-    <Icon name='PauseCircleTwoTone' {...{ ...props, ...context.attrs }} icon={PauseCircleTwoToneSvg} />
+const IconPauseCircleTwotone: PauseCircleTwotoneIconType = (props, context) => (
+    <Icon name='PauseCircleTwotone' {...{ ...props, ...context.attrs }} icon={PauseCircleTwotoneSvg} />
 );
 
-IconPauseCircleTwoTone.displayName = 'IconPauseCircleTwoTone';
+IconPauseCircleTwotone.displayName = 'IconPauseCircleTwotone';
+IconPauseCircleTwotone.theme = 'twotone';
+IconPauseCircleTwotone.originName = 'pause-circle';
 
-export default IconPauseCircleTwoTone;
+export default IconPauseCircleTwotone;

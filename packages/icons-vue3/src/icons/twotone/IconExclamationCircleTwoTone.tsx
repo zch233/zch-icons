@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExclamationCircleTwoToneSvg from 'icon-base/es/asn/ExclamationCircleTwoTone';
+import ExclamationCircleTwotoneSvg from 'gupo-icons-base/es/asn/ExclamationCircleTwotone';
 
-export interface ExclamationCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ExclamationCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconExclamationCircleTwoTone: ExclamationCircleTwoToneIconType = (props, context) => (
-    <Icon name='ExclamationCircleTwoTone' {...{ ...props, ...context.attrs }} icon={ExclamationCircleTwoToneSvg} />
+const IconExclamationCircleTwotone: ExclamationCircleTwotoneIconType = (props, context) => (
+    <Icon name='ExclamationCircleTwotone' {...{ ...props, ...context.attrs }} icon={ExclamationCircleTwotoneSvg} />
 );
 
-IconExclamationCircleTwoTone.displayName = 'IconExclamationCircleTwoTone';
+IconExclamationCircleTwotone.displayName = 'IconExclamationCircleTwotone';
+IconExclamationCircleTwotone.theme = 'twotone';
+IconExclamationCircleTwotone.originName = 'exclamation-circle';
 
-export default IconExclamationCircleTwoTone;
+export default IconExclamationCircleTwotone;

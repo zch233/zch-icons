@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DribbbleSquareFilledSvg from 'icon-base/es/asn/DribbbleSquareFilled';
+import DribbbleSquareFilledSvg from 'gupo-icons-base/es/asn/DribbbleSquareFilled';
 
 export interface DribbbleSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconDribbbleSquareFilled: DribbbleSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconDribbbleSquareFilled: DribbbleSquareFilledIconType = (props, context) 
 );
 
 IconDribbbleSquareFilled.displayName = 'IconDribbbleSquareFilled';
+IconDribbbleSquareFilled.theme = 'filled';
+IconDribbbleSquareFilled.originName = 'dribbble-square';
 
 export default IconDribbbleSquareFilled;

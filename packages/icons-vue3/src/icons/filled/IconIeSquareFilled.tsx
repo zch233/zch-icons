@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import IeSquareFilledSvg from 'icon-base/es/asn/IeSquareFilled';
+import IeSquareFilledSvg from 'gupo-icons-base/es/asn/IeSquareFilled';
 
 export interface IeSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconIeSquareFilled: IeSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconIeSquareFilled: IeSquareFilledIconType = (props, context) => (
 );
 
 IconIeSquareFilled.displayName = 'IconIeSquareFilled';
+IconIeSquareFilled.theme = 'filled';
+IconIeSquareFilled.originName = 'ie-square';
 
 export default IconIeSquareFilled;

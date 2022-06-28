@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CalculatorOutlinedSvg from 'icon-base/es/asn/CalculatorOutlined';
+import CalculatorOutlinedSvg from 'gupo-icons-base/es/asn/CalculatorOutlined';
 
 export interface CalculatorOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCalculatorOutlined: CalculatorOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCalculatorOutlined: CalculatorOutlinedIconType = (props, context) => (
 );
 
 IconCalculatorOutlined.displayName = 'IconCalculatorOutlined';
+IconCalculatorOutlined.theme = 'outlined';
+IconCalculatorOutlined.originName = 'calculator';
 
 export default IconCalculatorOutlined;

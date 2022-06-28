@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PoundCircleTwoToneSvg from 'icon-base/es/asn/PoundCircleTwoTone';
+import PoundCircleTwotoneSvg from 'gupo-icons-base/es/asn/PoundCircleTwotone';
 
-export interface PoundCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface PoundCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconPoundCircleTwoTone: PoundCircleTwoToneIconType = (props, context) => (
-    <Icon name='PoundCircleTwoTone' {...{ ...props, ...context.attrs }} icon={PoundCircleTwoToneSvg} />
+const IconPoundCircleTwotone: PoundCircleTwotoneIconType = (props, context) => (
+    <Icon name='PoundCircleTwotone' {...{ ...props, ...context.attrs }} icon={PoundCircleTwotoneSvg} />
 );
 
-IconPoundCircleTwoTone.displayName = 'IconPoundCircleTwoTone';
+IconPoundCircleTwotone.displayName = 'IconPoundCircleTwotone';
+IconPoundCircleTwotone.theme = 'twotone';
+IconPoundCircleTwotone.originName = 'pound-circle';
 
-export default IconPoundCircleTwoTone;
+export default IconPoundCircleTwotone;

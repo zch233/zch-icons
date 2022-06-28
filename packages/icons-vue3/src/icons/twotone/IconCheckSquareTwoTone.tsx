@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CheckSquareTwoToneSvg from 'icon-base/es/asn/CheckSquareTwoTone';
+import CheckSquareTwotoneSvg from 'gupo-icons-base/es/asn/CheckSquareTwotone';
 
-export interface CheckSquareTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface CheckSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconCheckSquareTwoTone: CheckSquareTwoToneIconType = (props, context) => (
-    <Icon name='CheckSquareTwoTone' {...{ ...props, ...context.attrs }} icon={CheckSquareTwoToneSvg} />
+const IconCheckSquareTwotone: CheckSquareTwotoneIconType = (props, context) => (
+    <Icon name='CheckSquareTwotone' {...{ ...props, ...context.attrs }} icon={CheckSquareTwotoneSvg} />
 );
 
-IconCheckSquareTwoTone.displayName = 'IconCheckSquareTwoTone';
+IconCheckSquareTwotone.displayName = 'IconCheckSquareTwotone';
+IconCheckSquareTwotone.theme = 'twotone';
+IconCheckSquareTwotone.originName = 'check-square';
 
-export default IconCheckSquareTwoTone;
+export default IconCheckSquareTwotone;

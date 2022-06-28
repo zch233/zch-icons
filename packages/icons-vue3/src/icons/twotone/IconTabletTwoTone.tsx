@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TabletTwoToneSvg from 'icon-base/es/asn/TabletTwoTone';
+import TabletTwotoneSvg from 'gupo-icons-base/es/asn/TabletTwotone';
 
-export interface TabletTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface TabletTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconTabletTwoTone: TabletTwoToneIconType = (props, context) => <Icon name='TabletTwoTone' {...{ ...props, ...context.attrs }} icon={TabletTwoToneSvg} />;
+const IconTabletTwotone: TabletTwotoneIconType = (props, context) => <Icon name='TabletTwotone' {...{ ...props, ...context.attrs }} icon={TabletTwotoneSvg} />;
 
-IconTabletTwoTone.displayName = 'IconTabletTwoTone';
+IconTabletTwotone.displayName = 'IconTabletTwotone';
+IconTabletTwotone.theme = 'twotone';
+IconTabletTwotone.originName = 'tablet';
 
-export default IconTabletTwoTone;
+export default IconTabletTwotone;

@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EditTwoToneSvg from 'icon-base/es/asn/EditTwoTone';
+import EditTwotoneSvg from 'gupo-icons-base/es/asn/EditTwotone';
 
-export interface EditTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface EditTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconEditTwoTone: EditTwoToneIconType = (props, context) => <Icon name='EditTwoTone' {...{ ...props, ...context.attrs }} icon={EditTwoToneSvg} />;
+const IconEditTwotone: EditTwotoneIconType = (props, context) => <Icon name='EditTwotone' {...{ ...props, ...context.attrs }} icon={EditTwotoneSvg} />;
 
-IconEditTwoTone.displayName = 'IconEditTwoTone';
+IconEditTwotone.displayName = 'IconEditTwotone';
+IconEditTwotone.theme = 'twotone';
+IconEditTwotone.originName = 'edit';
 
-export default IconEditTwoTone;
+export default IconEditTwotone;

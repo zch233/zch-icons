@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SecurityScanFilledSvg from 'icon-base/es/asn/SecurityScanFilled';
+import SecurityScanFilledSvg from 'gupo-icons-base/es/asn/SecurityScanFilled';
 
 export interface SecurityScanFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconSecurityScanFilled: SecurityScanFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconSecurityScanFilled: SecurityScanFilledIconType = (props, context) => (
 );
 
 IconSecurityScanFilled.displayName = 'IconSecurityScanFilled';
+IconSecurityScanFilled.theme = 'filled';
+IconSecurityScanFilled.originName = 'security-scan';
 
 export default IconSecurityScanFilled;

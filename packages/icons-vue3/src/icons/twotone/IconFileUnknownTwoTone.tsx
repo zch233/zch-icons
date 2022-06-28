@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileUnknownTwoToneSvg from 'icon-base/es/asn/FileUnknownTwoTone';
+import FileUnknownTwotoneSvg from 'gupo-icons-base/es/asn/FileUnknownTwotone';
 
-export interface FileUnknownTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface FileUnknownTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconFileUnknownTwoTone: FileUnknownTwoToneIconType = (props, context) => (
-    <Icon name='FileUnknownTwoTone' {...{ ...props, ...context.attrs }} icon={FileUnknownTwoToneSvg} />
+const IconFileUnknownTwotone: FileUnknownTwotoneIconType = (props, context) => (
+    <Icon name='FileUnknownTwotone' {...{ ...props, ...context.attrs }} icon={FileUnknownTwotoneSvg} />
 );
 
-IconFileUnknownTwoTone.displayName = 'IconFileUnknownTwoTone';
+IconFileUnknownTwotone.displayName = 'IconFileUnknownTwotone';
+IconFileUnknownTwotone.theme = 'twotone';
+IconFileUnknownTwotone.originName = 'file-unknown';
 
-export default IconFileUnknownTwoTone;
+export default IconFileUnknownTwotone;

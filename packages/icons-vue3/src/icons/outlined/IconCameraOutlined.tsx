@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CameraOutlinedSvg from 'icon-base/es/asn/CameraOutlined';
+import CameraOutlinedSvg from 'gupo-icons-base/es/asn/CameraOutlined';
 
 export interface CameraOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCameraOutlined: CameraOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCameraOutlined: CameraOutlinedIconType = (props, context) => (
 );
 
 IconCameraOutlined.displayName = 'IconCameraOutlined';
+IconCameraOutlined.theme = 'outlined';
+IconCameraOutlined.originName = 'camera';
 
 export default IconCameraOutlined;

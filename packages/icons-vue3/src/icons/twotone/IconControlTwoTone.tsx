@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ControlTwoToneSvg from 'icon-base/es/asn/ControlTwoTone';
+import ControlTwotoneSvg from 'gupo-icons-base/es/asn/ControlTwotone';
 
-export interface ControlTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface ControlTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconControlTwoTone: ControlTwoToneIconType = (props, context) => (
-    <Icon name='ControlTwoTone' {...{ ...props, ...context.attrs }} icon={ControlTwoToneSvg} />
+const IconControlTwotone: ControlTwotoneIconType = (props, context) => (
+    <Icon name='ControlTwotone' {...{ ...props, ...context.attrs }} icon={ControlTwotoneSvg} />
 );
 
-IconControlTwoTone.displayName = 'IconControlTwoTone';
+IconControlTwotone.displayName = 'IconControlTwotone';
+IconControlTwotone.theme = 'twotone';
+IconControlTwotone.originName = 'control';
 
-export default IconControlTwoTone;
+export default IconControlTwotone;

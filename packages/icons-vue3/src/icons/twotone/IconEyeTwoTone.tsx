@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EyeTwoToneSvg from 'icon-base/es/asn/EyeTwoTone';
+import EyeTwotoneSvg from 'gupo-icons-base/es/asn/EyeTwotone';
 
-export interface EyeTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface EyeTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconEyeTwoTone: EyeTwoToneIconType = (props, context) => <Icon name='EyeTwoTone' {...{ ...props, ...context.attrs }} icon={EyeTwoToneSvg} />;
+const IconEyeTwotone: EyeTwotoneIconType = (props, context) => <Icon name='EyeTwotone' {...{ ...props, ...context.attrs }} icon={EyeTwotoneSvg} />;
 
-IconEyeTwoTone.displayName = 'IconEyeTwoTone';
+IconEyeTwotone.displayName = 'IconEyeTwotone';
+IconEyeTwotone.theme = 'twotone';
+IconEyeTwotone.originName = 'eye';
 
-export default IconEyeTwoTone;
+export default IconEyeTwotone;

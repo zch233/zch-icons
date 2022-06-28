@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TwitterOutlinedSvg from 'icon-base/es/asn/TwitterOutlined';
+import TwitterOutlinedSvg from 'gupo-icons-base/es/asn/TwitterOutlined';
 
 export interface TwitterOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconTwitterOutlined: TwitterOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconTwitterOutlined: TwitterOutlinedIconType = (props, context) => (
 );
 
 IconTwitterOutlined.displayName = 'IconTwitterOutlined';
+IconTwitterOutlined.theme = 'outlined';
+IconTwitterOutlined.originName = 'twitter';
 
 export default IconTwitterOutlined;

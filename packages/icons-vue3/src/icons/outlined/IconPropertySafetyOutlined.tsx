@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PropertySafetyOutlinedSvg from 'icon-base/es/asn/PropertySafetyOutlined';
+import PropertySafetyOutlinedSvg from 'gupo-icons-base/es/asn/PropertySafetyOutlined';
 
 export interface PropertySafetyOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconPropertySafetyOutlined: PropertySafetyOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconPropertySafetyOutlined: PropertySafetyOutlinedIconType = (props, conte
 );
 
 IconPropertySafetyOutlined.displayName = 'IconPropertySafetyOutlined';
+IconPropertySafetyOutlined.theme = 'outlined';
+IconPropertySafetyOutlined.originName = 'property-safety';
 
 export default IconPropertySafetyOutlined;

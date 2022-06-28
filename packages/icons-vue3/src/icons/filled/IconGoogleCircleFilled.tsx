@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GoogleCircleFilledSvg from 'icon-base/es/asn/GoogleCircleFilled';
+import GoogleCircleFilledSvg from 'gupo-icons-base/es/asn/GoogleCircleFilled';
 
 export interface GoogleCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGoogleCircleFilled: GoogleCircleFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconGoogleCircleFilled: GoogleCircleFilledIconType = (props, context) => (
 );
 
 IconGoogleCircleFilled.displayName = 'IconGoogleCircleFilled';
+IconGoogleCircleFilled.theme = 'filled';
+IconGoogleCircleFilled.originName = 'google-circle';
 
 export default IconGoogleCircleFilled;

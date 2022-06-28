@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DollarCircleTwoToneSvg from 'icon-base/es/asn/DollarCircleTwoTone';
+import DollarCircleTwotoneSvg from 'gupo-icons-base/es/asn/DollarCircleTwotone';
 
-export interface DollarCircleTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface DollarCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconDollarCircleTwoTone: DollarCircleTwoToneIconType = (props, context) => (
-    <Icon name='DollarCircleTwoTone' {...{ ...props, ...context.attrs }} icon={DollarCircleTwoToneSvg} />
+const IconDollarCircleTwotone: DollarCircleTwotoneIconType = (props, context) => (
+    <Icon name='DollarCircleTwotone' {...{ ...props, ...context.attrs }} icon={DollarCircleTwotoneSvg} />
 );
 
-IconDollarCircleTwoTone.displayName = 'IconDollarCircleTwoTone';
+IconDollarCircleTwotone.displayName = 'IconDollarCircleTwotone';
+IconDollarCircleTwotone.theme = 'twotone';
+IconDollarCircleTwotone.originName = 'dollar-circle';
 
-export default IconDollarCircleTwoTone;
+export default IconDollarCircleTwotone;

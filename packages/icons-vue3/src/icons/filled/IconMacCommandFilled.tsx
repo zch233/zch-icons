@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MacCommandFilledSvg from 'icon-base/es/asn/MacCommandFilled';
+import MacCommandFilledSvg from 'gupo-icons-base/es/asn/MacCommandFilled';
 
 export interface MacCommandFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconMacCommandFilled: MacCommandFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconMacCommandFilled: MacCommandFilledIconType = (props, context) => (
 );
 
 IconMacCommandFilled.displayName = 'IconMacCommandFilled';
+IconMacCommandFilled.theme = 'filled';
+IconMacCommandFilled.originName = 'mac-command';
 
 export default IconMacCommandFilled;

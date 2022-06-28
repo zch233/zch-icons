@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlipaySquareFilledSvg from 'icon-base/es/asn/AlipaySquareFilled';
+import AlipaySquareFilledSvg from 'gupo-icons-base/es/asn/AlipaySquareFilled';
 
 export interface AlipaySquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconAlipaySquareFilled: AlipaySquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconAlipaySquareFilled: AlipaySquareFilledIconType = (props, context) => (
 );
 
 IconAlipaySquareFilled.displayName = 'IconAlipaySquareFilled';
+IconAlipaySquareFilled.theme = 'filled';
+IconAlipaySquareFilled.originName = 'alipay-square';
 
 export default IconAlipaySquareFilled;

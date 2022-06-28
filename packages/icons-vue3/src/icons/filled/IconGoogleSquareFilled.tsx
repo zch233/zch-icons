@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GoogleSquareFilledSvg from 'icon-base/es/asn/GoogleSquareFilled';
+import GoogleSquareFilledSvg from 'gupo-icons-base/es/asn/GoogleSquareFilled';
 
 export interface GoogleSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconGoogleSquareFilled: GoogleSquareFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconGoogleSquareFilled: GoogleSquareFilledIconType = (props, context) => (
 );
 
 IconGoogleSquareFilled.displayName = 'IconGoogleSquareFilled';
+IconGoogleSquareFilled.theme = 'filled';
+IconGoogleSquareFilled.originName = 'google-square';
 
 export default IconGoogleSquareFilled;

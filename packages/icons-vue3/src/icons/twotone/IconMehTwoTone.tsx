@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MehTwoToneSvg from 'icon-base/es/asn/MehTwoTone';
+import MehTwotoneSvg from 'gupo-icons-base/es/asn/MehTwotone';
 
-export interface MehTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface MehTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconMehTwoTone: MehTwoToneIconType = (props, context) => <Icon name='MehTwoTone' {...{ ...props, ...context.attrs }} icon={MehTwoToneSvg} />;
+const IconMehTwotone: MehTwotoneIconType = (props, context) => <Icon name='MehTwotone' {...{ ...props, ...context.attrs }} icon={MehTwotoneSvg} />;
 
-IconMehTwoTone.displayName = 'IconMehTwoTone';
+IconMehTwotone.displayName = 'IconMehTwotone';
+IconMehTwotone.theme = 'twotone';
+IconMehTwotone.originName = 'meh';
 
-export default IconMehTwoTone;
+export default IconMehTwotone;

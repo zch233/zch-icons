@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EnvironmentOutlinedSvg from 'icon-base/es/asn/EnvironmentOutlined';
+import EnvironmentOutlinedSvg from 'gupo-icons-base/es/asn/EnvironmentOutlined';
 
 export interface EnvironmentOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconEnvironmentOutlined: EnvironmentOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconEnvironmentOutlined: EnvironmentOutlinedIconType = (props, context) =>
 );
 
 IconEnvironmentOutlined.displayName = 'IconEnvironmentOutlined';
+IconEnvironmentOutlined.theme = 'outlined';
+IconEnvironmentOutlined.originName = 'environment';
 
 export default IconEnvironmentOutlined;

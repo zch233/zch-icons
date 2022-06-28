@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FastBackwardFilledSvg from 'icon-base/es/asn/FastBackwardFilled';
+import FastBackwardFilledSvg from 'gupo-icons-base/es/asn/FastBackwardFilled';
 
 export interface FastBackwardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconFastBackwardFilled: FastBackwardFilledIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconFastBackwardFilled: FastBackwardFilledIconType = (props, context) => (
 );
 
 IconFastBackwardFilled.displayName = 'IconFastBackwardFilled';
+IconFastBackwardFilled.theme = 'filled';
+IconFastBackwardFilled.originName = 'fast-backward';
 
 export default IconFastBackwardFilled;

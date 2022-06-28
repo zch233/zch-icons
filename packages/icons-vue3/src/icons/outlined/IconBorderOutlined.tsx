@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BorderOutlinedSvg from 'icon-base/es/asn/BorderOutlined';
+import BorderOutlinedSvg from 'gupo-icons-base/es/asn/BorderOutlined';
 
 export interface BorderOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconBorderOutlined: BorderOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconBorderOutlined: BorderOutlinedIconType = (props, context) => (
 );
 
 IconBorderOutlined.displayName = 'IconBorderOutlined';
+IconBorderOutlined.theme = 'outlined';
+IconBorderOutlined.originName = 'border';
 
 export default IconBorderOutlined;

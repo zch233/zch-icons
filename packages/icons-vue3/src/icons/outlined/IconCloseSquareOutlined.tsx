@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloseSquareOutlinedSvg from 'icon-base/es/asn/CloseSquareOutlined';
+import CloseSquareOutlinedSvg from 'gupo-icons-base/es/asn/CloseSquareOutlined';
 
 export interface CloseSquareOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconCloseSquareOutlined: CloseSquareOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconCloseSquareOutlined: CloseSquareOutlinedIconType = (props, context) =>
 );
 
 IconCloseSquareOutlined.displayName = 'IconCloseSquareOutlined';
+IconCloseSquareOutlined.theme = 'outlined';
+IconCloseSquareOutlined.originName = 'close-square';
 
 export default IconCloseSquareOutlined;

@@ -3,16 +3,20 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RightSquareTwoToneSvg from 'icon-base/es/asn/RightSquareTwoTone';
+import RightSquareTwotoneSvg from 'gupo-icons-base/es/asn/RightSquareTwotone';
 
-export interface RightSquareTwoToneIconType extends FunctionalComponent<IconProps> {
+export interface RightSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconRightSquareTwoTone: RightSquareTwoToneIconType = (props, context) => (
-    <Icon name='RightSquareTwoTone' {...{ ...props, ...context.attrs }} icon={RightSquareTwoToneSvg} />
+const IconRightSquareTwotone: RightSquareTwotoneIconType = (props, context) => (
+    <Icon name='RightSquareTwotone' {...{ ...props, ...context.attrs }} icon={RightSquareTwotoneSvg} />
 );
 
-IconRightSquareTwoTone.displayName = 'IconRightSquareTwoTone';
+IconRightSquareTwotone.displayName = 'IconRightSquareTwotone';
+IconRightSquareTwotone.theme = 'twotone';
+IconRightSquareTwotone.originName = 'right-square';
 
-export default IconRightSquareTwoTone;
+export default IconRightSquareTwotone;

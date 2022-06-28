@@ -3,10 +3,12 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ColumnWidthOutlinedSvg from 'icon-base/es/asn/ColumnWidthOutlined';
+import ColumnWidthOutlinedSvg from 'gupo-icons-base/es/asn/ColumnWidthOutlined';
 
 export interface ColumnWidthOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
 const IconColumnWidthOutlined: ColumnWidthOutlinedIconType = (props, context) => (
@@ -14,5 +16,7 @@ const IconColumnWidthOutlined: ColumnWidthOutlinedIconType = (props, context) =>
 );
 
 IconColumnWidthOutlined.displayName = 'IconColumnWidthOutlined';
+IconColumnWidthOutlined.theme = 'outlined';
+IconColumnWidthOutlined.originName = 'column-width';
 
 export default IconColumnWidthOutlined;

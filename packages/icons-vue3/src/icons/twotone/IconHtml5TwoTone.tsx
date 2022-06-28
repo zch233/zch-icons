@@ -3,14 +3,18 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import Html5TwoToneSvg from 'icon-base/es/asn/Html5TwoTone';
+import Html5TwotoneSvg from 'gupo-icons-base/es/asn/Html5Twotone';
 
-export interface Html5TwoToneIconType extends FunctionalComponent<IconProps> {
+export interface Html5TwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;
+    theme: string;
+    originName: string;
 }
 
-const IconHtml5TwoTone: Html5TwoToneIconType = (props, context) => <Icon name='Html5TwoTone' {...{ ...props, ...context.attrs }} icon={Html5TwoToneSvg} />;
+const IconHtml5Twotone: Html5TwotoneIconType = (props, context) => <Icon name='Html5Twotone' {...{ ...props, ...context.attrs }} icon={Html5TwotoneSvg} />;
 
-IconHtml5TwoTone.displayName = 'IconHtml5TwoTone';
+IconHtml5Twotone.displayName = 'IconHtml5Twotone';
+IconHtml5Twotone.theme = 'twotone';
+IconHtml5Twotone.originName = 'html5';
 
-export default IconHtml5TwoTone;
+export default IconHtml5Twotone;
