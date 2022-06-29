@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/compare/v0.0.6...v0.0.7) (2022-06-29)
+
+### Features
+
+-   add setTwoToneColor and getTwoToneColor export index ([5361efc](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/5361efc87373b6a0de8146dc75b8710f28ff8d24))
+
 ### [0.0.6](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/compare/v0.0.4...v0.0.6) (2022-06-29)
 
 ### Features
