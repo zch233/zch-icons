@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/compare/v0.0.7...v0.0.8) (2022-06-29)
+
+
+### Features
+
+* add lottie demo ([99a6fd6](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/99a6fd6066d45edb53aa71a75df73a1d2f88a89b))
+* **auto:** add svg with filled: 病案首页.svg,患者基本信息.svg,门诊就诊信息.svg,入院记录信息.svg ([7dfaf90](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/7dfaf90edbe6a51917b70f86eac9e10d005ef0e4))
+* **auto:** add svg with filled: account-book-filled-copy.svg ([ff7881f](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/ff7881f4c9cfad8537eaacfb711fdd263ebf9630))
+* **auto:** add svg with filled: account-book-filled.svg ([124859d](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/124859d18ffb11aa8006176fcdebfae9fe609685))
+* **auto:** update {'key':'account-book','theme':'filled','name':'','version':'1.0.0','status':'publish','design':'gupo'} => {'key':'account-book','theme':'filled','name':'xxx','version':'1.0.0','status':'publish','design':'gupo'} ([008e4b0](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/008e4b055b128d1c23f90ac064210d5170509cc6))
+* release ([0a7a264](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/0a7a264431e15ecb18886c60585677f5d38c12b0))
+
+
+### Bug Fixes
+
+* fix setTwoToneColors ([ee37a8f](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/ee37a8fa9fba341b37ff02c7a8a892733f7b4152))
+
 ### [0.0.7](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/compare/v0.0.6...v0.0.7) (2022-06-29)
 
 ### Features
