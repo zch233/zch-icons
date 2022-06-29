@@ -1,20 +1,62 @@
 import { FunctionalComponent, HTMLAttributes } from 'vue';
 import { AbstractNode, IconDefinition } from 'gupo-icons-base/es/types';
-import { generateSvgNode, useInsertStyles } from '../utils';
-import { generate as generateColor } from '@ant-design/colors';
+import { generateSvgNode, getSecondaryColor, useInsertStyles } from '../utils';
 
-export interface IconProps extends HTMLAttributes {
-    spin?: boolean | string;
-    rotate?: number;
-    size?: number | string;
-    color?: string;
-    icon?: IconDefinition;
-    name?: string;
+export interface TwoToneColor {
     primaryColor?: string; // only for two-tone
     secondaryColor?: string; // only for two-tone
 }
 
-const Icon: FunctionalComponent<IconProps> = (props, context) => {
+export interface IconProps extends TwoToneColor, HTMLAttributes {
+    spin?: boolean | string;
+    rotate?: number | string;
+    size?: number | string;
+    color?: string;
+    icon?: IconDefinition;
+    name?: string;
+}
+
+export interface TwoToneColorPaletteSetter {
+    primaryColor: string;
+    secondaryColor?: string;
+}
+
+export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
+    calculated?: boolean; // marker for calculation
+}
+
+interface Color {
+    getTwoToneColors: () => TwoToneColor;
+    setTwoToneColors: (twoToneColor: TwoToneColor) => void;
+}
+
+export interface GupoIconType extends Color, FunctionalComponent<IconProps> {
+    displayName: string;
+}
+
+export const defaultPrimaryColor = '#1890ff';
+
+const twoToneColorPalette: TwoToneColorPalette = {
+    primaryColor: '#333',
+    secondaryColor: '#E6E6E6',
+    calculated: false,
+};
+
+const setTwoToneColors = ({ primaryColor, secondaryColor }: TwoToneColor): void => {
+    twoToneColorPalette.primaryColor = primaryColor || defaultPrimaryColor;
+    twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(twoToneColorPalette.primaryColor);
+    twoToneColorPalette.calculated = !!secondaryColor;
+};
+
+const getTwoToneColors = (): TwoToneColorPalette => {
+    const { calculated, ...rest } = twoToneColorPalette;
+    return rest;
+};
+
+// Initial setting
+setTwoToneColors({});
+
+const Icon: GupoIconType = (props, context) => {
     const { attrs, slots } = context;
     const { spin, rotate, size, icon, name, color, primaryColor, secondaryColor, ...restProps } = { ...props, ...attrs };
     const children = slots.default && slots.default();
@@ -46,10 +88,9 @@ const Icon: FunctionalComponent<IconProps> = (props, context) => {
 
     let target = icon;
     if (target && typeof target.icon === 'function') {
-        const color = primaryColor || '#1890ff';
         target = {
             ...target,
-            icon: target.icon(color, secondaryColor || generateColor(color)[0]),
+            icon: target.icon(twoToneColorPalette.primaryColor, twoToneColorPalette.secondaryColor!),
         };
     }
     return target ? (
@@ -68,5 +109,9 @@ const Icon: FunctionalComponent<IconProps> = (props, context) => {
         </span>
     );
 };
+
+Icon.displayName = 'GupoIcon';
+Icon.getTwoToneColors = getTwoToneColors;
+Icon.setTwoToneColors = setTwoToneColors;
 
 export default Icon;

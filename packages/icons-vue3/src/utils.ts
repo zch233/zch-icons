@@ -1,6 +1,7 @@
 import { h, nextTick } from 'vue';
 import insertCss from './insert-css';
 import { AbstractNode } from 'gupo-icons-base/es/types';
+import { generate as generateColor } from '@ant-design/colors';
 
 export const iconStyles = `
 .gupoIcon {
@@ -92,3 +93,8 @@ export const generateSvgNode = (node: AbstractNode, key: string, rootProps?: { [
         (node.children || []).map((child, index) => generateSvgNode(child, `${key}-${node.tag}-${index}`))
     );
 };
+
+export function getSecondaryColor(primaryColor: string): string {
+    // choose the second color
+    return generateColor(primaryColor)[0];
+}
