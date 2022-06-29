@@ -110,6 +110,16 @@ const Icon: GupoIconType = (props, context) => {
     );
 };
 
+Icon.props = {
+    icon: Object as PropType<IconDefinition>,
+    primaryColor: String as PropType<string>, // only for two-tone
+    secondaryColor: String as PropType<string>, // only for two-tone
+    name: String as PropType<string>,
+    color: String as PropType<string>,
+    size: [Number, String] as PropType<number | string>,
+    rotate: [Number, String] as PropType<number | string>,
+    spin: Boolean as PropType<boolean>,
+};
 Icon.displayName = 'GupoIcon';
 Icon.getTwoToneColors = getTwoToneColors;
 Icon.setTwoToneColors = setTwoToneColors;
