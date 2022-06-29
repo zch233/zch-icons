@@ -6,18 +6,20 @@
 | -------------- | ------------------------------------------ | --------------------- | ------ | ---- |
 | rotate         | 图标旋转角度（IE9 无效）                   | number                | -      |      |
 | spin           | 是否有旋转动画                             | boolean               | false  |      |
+| size           | 图标的大小                                 | number                | -      |      |
 | style          | 设置图标的样式，例如 `fontSize` 和 `color` | CSSProperties         | -      |      |
 | primaryColor   | 仅适用双色图标。设置双色图标的主要颜色     | string (十六进制颜色) | -      |      |
 | secondaryColor | 仅适用双色图标。设置双色图标的次要颜色     | string (十六进制颜色) | -      |      |
 
-其中我们提供了三种主题的图标，不同主题的 Icon 组件名为图标名加主题做为后缀。
+其中我们提供了四种种主题的图标，不同主题的 Icon 组件名为图标名加主题做为后缀。
 
 ```jsx
-import { IconStarOutlined, IconStarFilled, IconStarTwoTone } from 'gupo-icons-vue3';
+import { IconStarOutlined, IconStarFilled, IconStarTwoTone, IconImageColorful } from 'gupo-icons-vue3';
 
 <icon-star-outlined />
 <icon-star-filled />
-<icon-star-two-tone primaryColor="#eb2f96" />
+<icon-star-twotone primaryColor="#eb2f96" />
+<icon-image-colorful primaryColor="#eb2f96" />
 ```
 
 ### SVG 图标
@@ -64,13 +66,13 @@ getTwoToneColor(); // #eb2f96
 ```jsx
 import { createFromIconfont } from 'gupo-icons-vue3';
 import { defineComponent } from 'vue';
-const MyIcon = createFromIconfont({
+const MyIconfont = createFromIconfont({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js', // 在 iconfont.cn 上生成
 });
 
 export default defineComponent({
     setup() {
-        return () => <MyIcon type='dianzan' />; // prefix 默认为 "icon"
+        return () => <MyIconfont type='dianzan' />; // prefix 默认为 "icon"
     },
 });
 ```
@@ -89,7 +91,7 @@ export default defineComponent({
 
 见 [iconfont.cn 使用帮助](http://iconfont.cn/help/detail?spm=a313x.7781069.1998910419.15&helptype=code) 查看如何生成 `js` 地址。
 
-### 使用本地 SVG 图标（尚未实现）
+### ~~使用本地 SVG 图标~~（尚未实现）
 
 ```jsx
 import { defineComponent } from 'vue';
@@ -108,4 +110,5 @@ export default defineComponent({
 | ------ | ------------------------------------------ | ------------- | ------ | ---- |
 | rotate | 图标旋转角度（IE9 无效）                   | number        | -      |      |
 | spin   | 是否有旋转动画                             | boolean       | false  |      |
+| size   | 图标的大小                                 | number        | -      |      |
 | style  | 设置图标的样式，例如 `fontSize` 和 `color` | CSSProperties | -      |      |
