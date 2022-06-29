@@ -1,4 +1,13 @@
 {
     "colorful": {},
-    "filled": {}
+    "filled": {
+        "account-book-filled": {
+            "key": "account-book-filled",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "xxx"
+        }
+    }
 }
