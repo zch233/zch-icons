@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/compare/v0.0.4...v0.0.6) (2022-06-29)
+
+### Features
+
+-   add getTwoToneColors & setTwoToneColors ([6b36d80](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/6b36d80d423db1cf10fb32221da2bfdee730cc9d))
+-   add props ([5d94c8d](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/5d94c8d3c2b993d177a3fc080534f9d956c72a89))
+-   add setTwoToneColor and getTwoToneColor export ([1c1be0f](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/1c1be0f96f1ba88364695802ae6e72f86d1726bf))
+-   release ([4b6598c](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/4b6598c5067cb46ccd748c8d1df7b4e00e4db1ff))
+-   update docs ([a0eb243](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/a0eb24334b423b8990bef34ff81767b3bea23093))
+
+### Bug Fixes
+
+-   fix type import ([39597ef](https://codeup.aliyun.com/gupo/node-modules/gupo-icons/commit/39597ef4f2450d83830f4b16f987b3255fab6326))
+
 ### 0.0.4 (2022-06-28)
 
 ### Features
