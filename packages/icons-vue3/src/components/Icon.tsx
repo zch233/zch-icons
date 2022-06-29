@@ -26,7 +26,7 @@ export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
 }
 
 interface Color {
-    getTwoToneColors: () => TwoToneColor;
+    getTwoToneColors: () => TwoToneColorPalette;
     setTwoToneColors: (twoToneColor: TwoToneColor) => void;
 }
 
@@ -48,10 +48,7 @@ const setTwoToneColors = ({ primaryColor, secondaryColor }: TwoToneColor): void 
     twoToneColorPalette.calculated = !!secondaryColor;
 };
 
-const getTwoToneColors = (): TwoToneColorPalette => {
-    const { calculated, ...rest } = twoToneColorPalette;
-    return rest;
-};
+const getTwoToneColors = (): TwoToneColorPalette => ({ ...twoToneColorPalette });
 
 // Initial setting
 setTwoToneColors({});
