@@ -1,4 +1,4 @@
-import { FunctionalComponent, HTMLAttributes } from 'vue';
+import { FunctionalComponent, HTMLAttributes, PropType } from 'vue';
 import { AbstractNode, IconDefinition } from 'gupo-icons-base/es/types';
 import { generateSvgNode, getSecondaryColor, useInsertStyles } from '../utils';
 
