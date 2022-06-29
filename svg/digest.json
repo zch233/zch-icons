@@ -16,6 +16,38 @@
             "version": "",
             "status": "error",
             "design": "xxx"
+        },
+        "病案首页": {
+            "key": "病案首页",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "xxx"
+        },
+        "患者基本信息": {
+            "key": "患者基本信息",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "xxx"
+        },
+        "门诊就诊信息": {
+            "key": "门诊就诊信息",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "xxx"
+        },
+        "入院记录信息": {
+            "key": "入院记录信息",
+            "theme": "filled",
+            "name": "",
+            "version": "",
+            "status": "stage",
+            "design": "xxx"
         }
     }
 }
