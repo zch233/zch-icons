@@ -3,6 +3,7 @@
         <div class="icons-header">
             <IconSearcher />
         </div>
+
         <div class="icons-main">
             <NTabs type="segment" v-if="permission.design">
                 <NTabPane
@@ -56,6 +57,9 @@
                             <p>{{ baseDigest[icon.theme][icon.originName].name }}</p>
                         </div>
                     </div>
+                </NTabPane>
+                <NTabPane name="lottie" tab="Lottie">
+                    <TheLottie />
                 </NTabPane>
             </NTabs>
         </div>
@@ -156,6 +160,7 @@ import { permission } from '~/store';
 import camelCase from 'lodash.camelcase';
 import baseDigestData from '~/packages/icons-base/scripts/digest.json';
 import { stageDigest } from '~/store';
+import TheLottie from './components/TheLottie';
 
 const baseDigest = ref(baseDigestData);
 const getImageUrl = path => new URL(`../../svg/${path}.svg`, import.meta.url).href;
