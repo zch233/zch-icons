@@ -85,6 +85,7 @@ const Icon: GupoIconType = (props, context) => {
 
     let target = icon;
     if (target && typeof target.icon === 'function') {
+        if (primaryColor) setTwoToneColors({ primaryColor, secondaryColor });
         target = {
             ...target,
             icon: target.icon(twoToneColorPalette.primaryColor, twoToneColorPalette.secondaryColor!),
