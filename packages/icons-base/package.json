@@ -1,6 +1,6 @@
 {
     "name": "icons-base",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "sideEffects": false,
     "author": "zhangchao <529743595@qq.com>",
     "license": "MIT",
@@ -61,7 +61,7 @@
         "typescript": "4.6.4"
     },
     "publishConfig": {
-        "registry": "https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/"
+        "registry": "https://registry.npmjs.org"
     },
     "dependencies": {}
 }
