@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PlusCircleTwotoneSvg from 'gupo-icons-base/es/asn/PlusCircleTwotone';
+import PlusCircleTwotoneSvg from 'icons-base/es/asn/PlusCircleTwotone';
 
 export interface PlusCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DashboardTwotoneSvg from 'gupo-icons-base/es/asn/DashboardTwotone';
+import DashboardTwotoneSvg from 'icons-base/es/asn/DashboardTwotone';
 
 export interface DashboardTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

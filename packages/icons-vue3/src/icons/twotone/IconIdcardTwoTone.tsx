@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import IdcardTwotoneSvg from 'gupo-icons-base/es/asn/IdcardTwotone';
+import IdcardTwotoneSvg from 'icons-base/es/asn/IdcardTwotone';
 
 export interface IdcardTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

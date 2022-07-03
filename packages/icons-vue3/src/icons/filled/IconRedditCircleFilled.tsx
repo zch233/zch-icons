@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedditCircleFilledSvg from 'gupo-icons-base/es/asn/RedditCircleFilled';
+import RedditCircleFilledSvg from 'icons-base/es/asn/RedditCircleFilled';
 
 export interface RedditCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BoxPlotOutlinedSvg from 'gupo-icons-base/es/asn/BoxPlotOutlined';
+import BoxPlotOutlinedSvg from 'icons-base/es/asn/BoxPlotOutlined';
 
 export interface BoxPlotOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

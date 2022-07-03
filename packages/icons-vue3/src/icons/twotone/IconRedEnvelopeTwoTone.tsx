@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedEnvelopeTwotoneSvg from 'gupo-icons-base/es/asn/RedEnvelopeTwotone';
+import RedEnvelopeTwotoneSvg from 'icons-base/es/asn/RedEnvelopeTwotone';
 
 export interface RedEnvelopeTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

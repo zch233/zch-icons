@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SortDescendingOutlinedSvg from 'gupo-icons-base/es/asn/SortDescendingOutlined';
+import SortDescendingOutlinedSvg from 'icons-base/es/asn/SortDescendingOutlined';
 
 export interface SortDescendingOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

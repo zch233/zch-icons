@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FallOutlinedSvg from 'gupo-icons-base/es/asn/FallOutlined';
+import FallOutlinedSvg from 'icons-base/es/asn/FallOutlined';
 
 export interface FallOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

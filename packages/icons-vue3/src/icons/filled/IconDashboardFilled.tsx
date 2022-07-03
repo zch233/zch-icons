@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DashboardFilledSvg from 'gupo-icons-base/es/asn/DashboardFilled';
+import DashboardFilledSvg from 'icons-base/es/asn/DashboardFilled';
 
 export interface DashboardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

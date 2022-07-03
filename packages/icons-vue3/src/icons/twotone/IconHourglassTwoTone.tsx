@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HourglassTwotoneSvg from 'gupo-icons-base/es/asn/HourglassTwotone';
+import HourglassTwotoneSvg from 'icons-base/es/asn/HourglassTwotone';
 
 export interface HourglassTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

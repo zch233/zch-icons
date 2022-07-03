@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FunnelPlotFilledSvg from 'gupo-icons-base/es/asn/FunnelPlotFilled';
+import FunnelPlotFilledSvg from 'icons-base/es/asn/FunnelPlotFilled';
 
 export interface FunnelPlotFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

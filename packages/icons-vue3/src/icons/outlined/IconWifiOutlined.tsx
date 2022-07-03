@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WifiOutlinedSvg from 'gupo-icons-base/es/asn/WifiOutlined';
+import WifiOutlinedSvg from 'icons-base/es/asn/WifiOutlined';
 
 export interface WifiOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

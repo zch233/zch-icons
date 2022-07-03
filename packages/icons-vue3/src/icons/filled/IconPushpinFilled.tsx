@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PushpinFilledSvg from 'gupo-icons-base/es/asn/PushpinFilled';
+import PushpinFilledSvg from 'icons-base/es/asn/PushpinFilled';
 
 export interface PushpinFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

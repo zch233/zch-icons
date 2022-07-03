@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UnlockFilledSvg from 'gupo-icons-base/es/asn/UnlockFilled';
+import UnlockFilledSvg from 'icons-base/es/asn/UnlockFilled';
 
 export interface UnlockFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ShareAltOutlinedSvg from 'gupo-icons-base/es/asn/ShareAltOutlined';
+import ShareAltOutlinedSvg from 'icons-base/es/asn/ShareAltOutlined';
 
 export interface ShareAltOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

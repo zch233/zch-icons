@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CoffeeOutlinedSvg from 'gupo-icons-base/es/asn/CoffeeOutlined';
+import CoffeeOutlinedSvg from 'icons-base/es/asn/CoffeeOutlined';
 
 export interface CoffeeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

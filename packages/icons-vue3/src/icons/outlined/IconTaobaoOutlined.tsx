@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TaobaoOutlinedSvg from 'gupo-icons-base/es/asn/TaobaoOutlined';
+import TaobaoOutlinedSvg from 'icons-base/es/asn/TaobaoOutlined';
 
 export interface TaobaoOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CloudSyncOutlinedSvg from 'gupo-icons-base/es/asn/CloudSyncOutlined';
+import CloudSyncOutlinedSvg from 'icons-base/es/asn/CloudSyncOutlined';
 
 export interface CloudSyncOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

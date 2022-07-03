@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StarOutlinedSvg from 'gupo-icons-base/es/asn/StarOutlined';
+import StarOutlinedSvg from 'icons-base/es/asn/StarOutlined';
 
 export interface StarOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

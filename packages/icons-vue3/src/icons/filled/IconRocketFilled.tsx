@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RocketFilledSvg from 'gupo-icons-base/es/asn/RocketFilled';
+import RocketFilledSvg from 'icons-base/es/asn/RocketFilled';
 
 export interface RocketFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

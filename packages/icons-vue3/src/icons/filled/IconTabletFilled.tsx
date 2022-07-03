@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TabletFilledSvg from 'gupo-icons-base/es/asn/TabletFilled';
+import TabletFilledSvg from 'icons-base/es/asn/TabletFilled';
 
 export interface TabletFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

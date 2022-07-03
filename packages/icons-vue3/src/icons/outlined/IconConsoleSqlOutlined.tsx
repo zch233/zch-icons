@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ConsoleSqlOutlinedSvg from 'gupo-icons-base/es/asn/ConsoleSqlOutlined';
+import ConsoleSqlOutlinedSvg from 'icons-base/es/asn/ConsoleSqlOutlined';
 
 export interface ConsoleSqlOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

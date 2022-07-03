@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HddOutlinedSvg from 'gupo-icons-base/es/asn/HddOutlined';
+import HddOutlinedSvg from 'icons-base/es/asn/HddOutlined';
 
 export interface HddOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

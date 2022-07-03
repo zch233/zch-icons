@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsertRowLeftOutlinedSvg from 'gupo-icons-base/es/asn/InsertRowLeftOutlined';
+import InsertRowLeftOutlinedSvg from 'icons-base/es/asn/InsertRowLeftOutlined';
 
 export interface InsertRowLeftOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

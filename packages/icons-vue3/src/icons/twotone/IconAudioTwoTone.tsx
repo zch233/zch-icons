@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AudioTwotoneSvg from 'gupo-icons-base/es/asn/AudioTwotone';
+import AudioTwotoneSvg from 'icons-base/es/asn/AudioTwotone';
 
 export interface AudioTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

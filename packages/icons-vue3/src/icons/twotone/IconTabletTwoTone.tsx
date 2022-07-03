@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TabletTwotoneSvg from 'gupo-icons-base/es/asn/TabletTwotone';
+import TabletTwotoneSvg from 'icons-base/es/asn/TabletTwotone';
 
 export interface TabletTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

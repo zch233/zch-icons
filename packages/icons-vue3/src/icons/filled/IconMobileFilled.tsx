@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MobileFilledSvg from 'gupo-icons-base/es/asn/MobileFilled';
+import MobileFilledSvg from 'icons-base/es/asn/MobileFilled';
 
 export interface MobileFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

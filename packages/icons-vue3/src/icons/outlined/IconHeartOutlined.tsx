@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HeartOutlinedSvg from 'gupo-icons-base/es/asn/HeartOutlined';
+import HeartOutlinedSvg from 'icons-base/es/asn/HeartOutlined';
 
 export interface HeartOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SwapRightOutlinedSvg from 'gupo-icons-base/es/asn/SwapRightOutlined';
+import SwapRightOutlinedSvg from 'icons-base/es/asn/SwapRightOutlined';
 
 export interface SwapRightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

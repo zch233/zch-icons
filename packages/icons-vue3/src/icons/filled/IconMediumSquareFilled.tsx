@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MediumSquareFilledSvg from 'gupo-icons-base/es/asn/MediumSquareFilled';
+import MediumSquareFilledSvg from 'icons-base/es/asn/MediumSquareFilled';
 
 export interface MediumSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

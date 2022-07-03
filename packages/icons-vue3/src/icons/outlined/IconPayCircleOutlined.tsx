@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PayCircleOutlinedSvg from 'gupo-icons-base/es/asn/PayCircleOutlined';
+import PayCircleOutlinedSvg from 'icons-base/es/asn/PayCircleOutlined';
 
 export interface PayCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

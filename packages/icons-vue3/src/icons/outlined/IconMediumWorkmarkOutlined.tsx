@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MediumWorkmarkOutlinedSvg from 'gupo-icons-base/es/asn/MediumWorkmarkOutlined';
+import MediumWorkmarkOutlinedSvg from 'icons-base/es/asn/MediumWorkmarkOutlined';
 
 export interface MediumWorkmarkOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

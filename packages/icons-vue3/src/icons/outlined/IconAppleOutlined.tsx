@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AppleOutlinedSvg from 'gupo-icons-base/es/asn/AppleOutlined';
+import AppleOutlinedSvg from 'icons-base/es/asn/AppleOutlined';
 
 export interface AppleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

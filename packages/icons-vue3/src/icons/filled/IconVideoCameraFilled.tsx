@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VideoCameraFilledSvg from 'gupo-icons-base/es/asn/VideoCameraFilled';
+import VideoCameraFilledSvg from 'icons-base/es/asn/VideoCameraFilled';
 
 export interface VideoCameraFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

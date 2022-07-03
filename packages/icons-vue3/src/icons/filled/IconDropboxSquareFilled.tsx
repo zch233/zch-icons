@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DropboxSquareFilledSvg from 'gupo-icons-base/es/asn/DropboxSquareFilled';
+import DropboxSquareFilledSvg from 'icons-base/es/asn/DropboxSquareFilled';
 
 export interface DropboxSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

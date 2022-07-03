@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CodeSandboxSquareFilledSvg from 'gupo-icons-base/es/asn/CodeSandboxSquareFilled';
+import CodeSandboxSquareFilledSvg from 'icons-base/es/asn/CodeSandboxSquareFilled';
 
 export interface CodeSandboxSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

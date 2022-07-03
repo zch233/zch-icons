@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ProfileFilledSvg from 'gupo-icons-base/es/asn/ProfileFilled';
+import ProfileFilledSvg from 'icons-base/es/asn/ProfileFilled';
 
 export interface ProfileFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SlidersTwotoneSvg from 'gupo-icons-base/es/asn/SlidersTwotone';
+import SlidersTwotoneSvg from 'icons-base/es/asn/SlidersTwotone';
 
 export interface SlidersTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

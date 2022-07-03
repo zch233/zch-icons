@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ClockCircleOutlinedSvg from 'gupo-icons-base/es/asn/ClockCircleOutlined';
+import ClockCircleOutlinedSvg from 'icons-base/es/asn/ClockCircleOutlined';
 
 export interface ClockCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

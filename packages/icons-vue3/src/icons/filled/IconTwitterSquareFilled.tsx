@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import TwitterSquareFilledSvg from 'gupo-icons-base/es/asn/TwitterSquareFilled';
+import TwitterSquareFilledSvg from 'icons-base/es/asn/TwitterSquareFilled';
 
 export interface TwitterSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

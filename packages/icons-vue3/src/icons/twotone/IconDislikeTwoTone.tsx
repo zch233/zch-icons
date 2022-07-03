@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DislikeTwotoneSvg from 'gupo-icons-base/es/asn/DislikeTwotone';
+import DislikeTwotoneSvg from 'icons-base/es/asn/DislikeTwotone';
 
 export interface DislikeTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

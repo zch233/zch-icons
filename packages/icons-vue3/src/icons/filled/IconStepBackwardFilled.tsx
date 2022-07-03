@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StepBackwardFilledSvg from 'gupo-icons-base/es/asn/StepBackwardFilled';
+import StepBackwardFilledSvg from 'icons-base/es/asn/StepBackwardFilled';
 
 export interface StepBackwardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

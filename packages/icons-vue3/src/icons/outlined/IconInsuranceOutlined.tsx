@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InsuranceOutlinedSvg from 'gupo-icons-base/es/asn/InsuranceOutlined';
+import InsuranceOutlinedSvg from 'icons-base/es/asn/InsuranceOutlined';
 
 export interface InsuranceOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

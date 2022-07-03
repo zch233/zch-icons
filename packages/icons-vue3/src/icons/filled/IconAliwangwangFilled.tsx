@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AliwangwangFilledSvg from 'gupo-icons-base/es/asn/AliwangwangFilled';
+import AliwangwangFilledSvg from 'icons-base/es/asn/AliwangwangFilled';
 
 export interface AliwangwangFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HistoryOutlinedSvg from 'gupo-icons-base/es/asn/HistoryOutlined';
+import HistoryOutlinedSvg from 'icons-base/es/asn/HistoryOutlined';
 
 export interface HistoryOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

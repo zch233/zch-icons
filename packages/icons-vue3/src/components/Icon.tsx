@@ -1,5 +1,5 @@
 import { FunctionalComponent, HTMLAttributes, PropType } from 'vue';
-import { AbstractNode, IconDefinition } from 'gupo-icons-base/es/types';
+import { AbstractNode, IconDefinition } from 'icons-base/es/types';
 import { generateSvgNode, getSecondaryColor, useInsertStyles } from '../utils';
 
 export interface TwoToneColor {

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MenuUnfoldOutlinedSvg from 'gupo-icons-base/es/asn/MenuUnfoldOutlined';
+import MenuUnfoldOutlinedSvg from 'icons-base/es/asn/MenuUnfoldOutlined';
 
 export interface MenuUnfoldOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

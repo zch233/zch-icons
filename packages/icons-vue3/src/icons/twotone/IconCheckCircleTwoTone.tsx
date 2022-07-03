@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CheckCircleTwotoneSvg from 'gupo-icons-base/es/asn/CheckCircleTwotone';
+import CheckCircleTwotoneSvg from 'icons-base/es/asn/CheckCircleTwotone';
 
 export interface CheckCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import InfoCircleOutlinedSvg from 'gupo-icons-base/es/asn/InfoCircleOutlined';
+import InfoCircleOutlinedSvg from 'icons-base/es/asn/InfoCircleOutlined';
 
 export interface InfoCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

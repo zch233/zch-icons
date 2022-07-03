@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PrinterOutlinedSvg from 'gupo-icons-base/es/asn/PrinterOutlined';
+import PrinterOutlinedSvg from 'icons-base/es/asn/PrinterOutlined';
 
 export interface PrinterOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GoldOutlinedSvg from 'gupo-icons-base/es/asn/GoldOutlined';
+import GoldOutlinedSvg from 'icons-base/es/asn/GoldOutlined';
 
 export interface GoldOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

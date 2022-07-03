@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FieldTimeOutlinedSvg from 'gupo-icons-base/es/asn/FieldTimeOutlined';
+import FieldTimeOutlinedSvg from 'icons-base/es/asn/FieldTimeOutlined';
 
 export interface FieldTimeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

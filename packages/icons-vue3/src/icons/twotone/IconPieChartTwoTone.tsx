@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PieChartTwotoneSvg from 'gupo-icons-base/es/asn/PieChartTwotone';
+import PieChartTwotoneSvg from 'icons-base/es/asn/PieChartTwotone';
 
 export interface PieChartTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedEnvelopeFilledSvg from 'gupo-icons-base/es/asn/RedEnvelopeFilled';
+import RedEnvelopeFilledSvg from 'icons-base/es/asn/RedEnvelopeFilled';
 
 export interface RedEnvelopeFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

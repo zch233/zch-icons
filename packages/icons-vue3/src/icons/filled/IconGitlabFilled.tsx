@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GitlabFilledSvg from 'gupo-icons-base/es/asn/GitlabFilled';
+import GitlabFilledSvg from 'icons-base/es/asn/GitlabFilled';
 
 export interface GitlabFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

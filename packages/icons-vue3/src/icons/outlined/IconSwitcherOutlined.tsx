@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SwitcherOutlinedSvg from 'gupo-icons-base/es/asn/SwitcherOutlined';
+import SwitcherOutlinedSvg from 'icons-base/es/asn/SwitcherOutlined';
 
 export interface SwitcherOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

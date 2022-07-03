@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BehanceCircleFilledSvg from 'gupo-icons-base/es/asn/BehanceCircleFilled';
+import BehanceCircleFilledSvg from 'icons-base/es/asn/BehanceCircleFilled';
 
 export interface BehanceCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

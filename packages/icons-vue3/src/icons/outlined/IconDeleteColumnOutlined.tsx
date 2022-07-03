@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DeleteColumnOutlinedSvg from 'gupo-icons-base/es/asn/DeleteColumnOutlined';
+import DeleteColumnOutlinedSvg from 'icons-base/es/asn/DeleteColumnOutlined';
 
 export interface DeleteColumnOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

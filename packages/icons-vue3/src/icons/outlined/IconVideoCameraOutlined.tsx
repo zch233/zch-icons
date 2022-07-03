@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import VideoCameraOutlinedSvg from 'gupo-icons-base/es/asn/VideoCameraOutlined';
+import VideoCameraOutlinedSvg from 'icons-base/es/asn/VideoCameraOutlined';
 
 export interface VideoCameraOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

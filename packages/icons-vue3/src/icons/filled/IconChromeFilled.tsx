@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ChromeFilledSvg from 'gupo-icons-base/es/asn/ChromeFilled';
+import ChromeFilledSvg from 'icons-base/es/asn/ChromeFilled';
 
 export interface ChromeFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

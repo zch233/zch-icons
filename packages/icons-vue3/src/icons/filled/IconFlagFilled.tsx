@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FlagFilledSvg from 'gupo-icons-base/es/asn/FlagFilled';
+import FlagFilledSvg from 'icons-base/es/asn/FlagFilled';
 
 export interface FlagFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

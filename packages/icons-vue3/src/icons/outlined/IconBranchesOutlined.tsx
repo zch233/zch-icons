@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BranchesOutlinedSvg from 'gupo-icons-base/es/asn/BranchesOutlined';
+import BranchesOutlinedSvg from 'icons-base/es/asn/BranchesOutlined';
 
 export interface BranchesOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

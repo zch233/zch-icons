@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PercentageOutlinedSvg from 'gupo-icons-base/es/asn/PercentageOutlined';
+import PercentageOutlinedSvg from 'icons-base/es/asn/PercentageOutlined';
 
 export interface PercentageOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

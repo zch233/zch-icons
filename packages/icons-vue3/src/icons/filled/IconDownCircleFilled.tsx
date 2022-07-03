@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownCircleFilledSvg from 'gupo-icons-base/es/asn/DownCircleFilled';
+import DownCircleFilledSvg from 'icons-base/es/asn/DownCircleFilled';
 
 export interface DownCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

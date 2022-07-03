@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileProtectOutlinedSvg from 'gupo-icons-base/es/asn/FileProtectOutlined';
+import FileProtectOutlinedSvg from 'icons-base/es/asn/FileProtectOutlined';
 
 export interface FileProtectOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BellTwotoneSvg from 'gupo-icons-base/es/asn/BellTwotone';
+import BellTwotoneSvg from 'icons-base/es/asn/BellTwotone';
 
 export interface BellTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

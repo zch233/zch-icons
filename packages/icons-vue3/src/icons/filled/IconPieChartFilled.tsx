@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PieChartFilledSvg from 'gupo-icons-base/es/asn/PieChartFilled';
+import PieChartFilledSvg from 'icons-base/es/asn/PieChartFilled';
 
 export interface PieChartFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

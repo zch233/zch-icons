@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AppstoreFilledSvg from 'gupo-icons-base/es/asn/AppstoreFilled';
+import AppstoreFilledSvg from 'icons-base/es/asn/AppstoreFilled';
 
 export interface AppstoreFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

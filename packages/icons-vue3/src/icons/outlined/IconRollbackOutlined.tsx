@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RollbackOutlinedSvg from 'gupo-icons-base/es/asn/RollbackOutlined';
+import RollbackOutlinedSvg from 'icons-base/es/asn/RollbackOutlined';
 
 export interface RollbackOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

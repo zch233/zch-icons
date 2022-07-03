@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RestOutlinedSvg from 'gupo-icons-base/es/asn/RestOutlined';
+import RestOutlinedSvg from 'icons-base/es/asn/RestOutlined';
 
 export interface RestOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

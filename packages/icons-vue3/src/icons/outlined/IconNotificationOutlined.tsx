@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import NotificationOutlinedSvg from 'gupo-icons-base/es/asn/NotificationOutlined';
+import NotificationOutlinedSvg from 'icons-base/es/asn/NotificationOutlined';
 
 export interface NotificationOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

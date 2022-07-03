@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BarsOutlinedSvg from 'gupo-icons-base/es/asn/BarsOutlined';
+import BarsOutlinedSvg from 'icons-base/es/asn/BarsOutlined';
 
 export interface BarsOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

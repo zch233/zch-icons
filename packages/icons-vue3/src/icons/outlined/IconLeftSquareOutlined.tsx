@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LeftSquareOutlinedSvg from 'gupo-icons-base/es/asn/LeftSquareOutlined';
+import LeftSquareOutlinedSvg from 'icons-base/es/asn/LeftSquareOutlined';
 
 export interface LeftSquareOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

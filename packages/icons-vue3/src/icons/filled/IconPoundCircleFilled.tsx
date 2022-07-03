@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PoundCircleFilledSvg from 'gupo-icons-base/es/asn/PoundCircleFilled';
+import PoundCircleFilledSvg from 'icons-base/es/asn/PoundCircleFilled';
 
 export interface PoundCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

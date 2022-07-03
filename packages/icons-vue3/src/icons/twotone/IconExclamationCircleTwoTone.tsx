@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExclamationCircleTwotoneSvg from 'gupo-icons-base/es/asn/ExclamationCircleTwotone';
+import ExclamationCircleTwotoneSvg from 'icons-base/es/asn/ExclamationCircleTwotone';
 
 export interface ExclamationCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

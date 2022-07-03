@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import QqOutlinedSvg from 'gupo-icons-base/es/asn/QqOutlined';
+import QqOutlinedSvg from 'icons-base/es/asn/QqOutlined';
 
 export interface QqOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

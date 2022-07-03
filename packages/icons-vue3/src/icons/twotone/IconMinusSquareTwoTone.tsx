@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MinusSquareTwotoneSvg from 'gupo-icons-base/es/asn/MinusSquareTwotone';
+import MinusSquareTwotoneSvg from 'icons-base/es/asn/MinusSquareTwotone';
 
 export interface MinusSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

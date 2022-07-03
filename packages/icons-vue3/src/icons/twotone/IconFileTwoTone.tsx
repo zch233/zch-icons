@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileTwotoneSvg from 'gupo-icons-base/es/asn/FileTwotone';
+import FileTwotoneSvg from 'icons-base/es/asn/FileTwotone';
 
 export interface FileTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

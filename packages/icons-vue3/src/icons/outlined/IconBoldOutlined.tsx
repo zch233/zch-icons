@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BoldOutlinedSvg from 'gupo-icons-base/es/asn/BoldOutlined';
+import BoldOutlinedSvg from 'icons-base/es/asn/BoldOutlined';
 
 export interface BoldOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

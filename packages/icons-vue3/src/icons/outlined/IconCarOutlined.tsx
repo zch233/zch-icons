@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CarOutlinedSvg from 'gupo-icons-base/es/asn/CarOutlined';
+import CarOutlinedSvg from 'icons-base/es/asn/CarOutlined';
 
 export interface CarOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

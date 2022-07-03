@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ThunderboltTwotoneSvg from 'gupo-icons-base/es/asn/ThunderboltTwotone';
+import ThunderboltTwotoneSvg from 'icons-base/es/asn/ThunderboltTwotone';
 
 export interface ThunderboltTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

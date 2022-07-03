@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SisternodeOutlinedSvg from 'gupo-icons-base/es/asn/SisternodeOutlined';
+import SisternodeOutlinedSvg from 'icons-base/es/asn/SisternodeOutlined';
 
 export interface SisternodeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

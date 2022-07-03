@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PaperClipOutlinedSvg from 'gupo-icons-base/es/asn/PaperClipOutlined';
+import PaperClipOutlinedSvg from 'icons-base/es/asn/PaperClipOutlined';
 
 export interface PaperClipOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

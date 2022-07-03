@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BellOutlinedSvg from 'gupo-icons-base/es/asn/BellOutlined';
+import BellOutlinedSvg from 'icons-base/es/asn/BellOutlined';
 
 export interface BellOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

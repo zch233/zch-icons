@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EyeInvisibleFilledSvg from 'gupo-icons-base/es/asn/EyeInvisibleFilled';
+import EyeInvisibleFilledSvg from 'icons-base/es/asn/EyeInvisibleFilled';
 
 export interface EyeInvisibleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

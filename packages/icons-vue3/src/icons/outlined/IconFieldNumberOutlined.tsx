@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FieldNumberOutlinedSvg from 'gupo-icons-base/es/asn/FieldNumberOutlined';
+import FieldNumberOutlinedSvg from 'icons-base/es/asn/FieldNumberOutlined';
 
 export interface FieldNumberOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

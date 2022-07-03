@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FilterTwotoneSvg from 'gupo-icons-base/es/asn/FilterTwotone';
+import FilterTwotoneSvg from 'icons-base/es/asn/FilterTwotone';
 
 export interface FilterTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

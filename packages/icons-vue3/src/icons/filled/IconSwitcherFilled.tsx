@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SwitcherFilledSvg from 'gupo-icons-base/es/asn/SwitcherFilled';
+import SwitcherFilledSvg from 'icons-base/es/asn/SwitcherFilled';
 
 export interface SwitcherFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

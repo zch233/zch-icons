@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RedditSquareFilledSvg from 'gupo-icons-base/es/asn/RedditSquareFilled';
+import RedditSquareFilledSvg from 'icons-base/es/asn/RedditSquareFilled';
 
 export interface RedditSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DoubleRightOutlinedSvg from 'gupo-icons-base/es/asn/DoubleRightOutlined';
+import DoubleRightOutlinedSvg from 'icons-base/es/asn/DoubleRightOutlined';
 
 export interface DoubleRightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

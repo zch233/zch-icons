@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DingdingOutlinedSvg from 'gupo-icons-base/es/asn/DingdingOutlined';
+import DingdingOutlinedSvg from 'icons-base/es/asn/DingdingOutlined';
 
 export interface DingdingOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

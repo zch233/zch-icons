@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CheckSquareFilledSvg from 'gupo-icons-base/es/asn/CheckSquareFilled';
+import CheckSquareFilledSvg from 'icons-base/es/asn/CheckSquareFilled';
 
 export interface CheckSquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

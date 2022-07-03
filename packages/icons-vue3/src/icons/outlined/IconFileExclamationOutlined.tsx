@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExclamationOutlinedSvg from 'gupo-icons-base/es/asn/FileExclamationOutlined';
+import FileExclamationOutlinedSvg from 'icons-base/es/asn/FileExclamationOutlined';
 
 export interface FileExclamationOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

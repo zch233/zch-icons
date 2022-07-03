@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RotateRightOutlinedSvg from 'gupo-icons-base/es/asn/RotateRightOutlined';
+import RotateRightOutlinedSvg from 'icons-base/es/asn/RotateRightOutlined';
 
 export interface RotateRightOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

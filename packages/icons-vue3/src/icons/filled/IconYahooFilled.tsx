@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import YahooFilledSvg from 'gupo-icons-base/es/asn/YahooFilled';
+import YahooFilledSvg from 'icons-base/es/asn/YahooFilled';
 
 export interface YahooFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

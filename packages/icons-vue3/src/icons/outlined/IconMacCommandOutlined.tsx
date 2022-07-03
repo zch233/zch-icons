@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MacCommandOutlinedSvg from 'gupo-icons-base/es/asn/MacCommandOutlined';
+import MacCommandOutlinedSvg from 'icons-base/es/asn/MacCommandOutlined';
 
 export interface MacCommandOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

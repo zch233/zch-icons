@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ShrinkOutlinedSvg from 'gupo-icons-base/es/asn/ShrinkOutlined';
+import ShrinkOutlinedSvg from 'icons-base/es/asn/ShrinkOutlined';
 
 export interface ShrinkOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

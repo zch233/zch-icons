@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ReloadOutlinedSvg from 'gupo-icons-base/es/asn/ReloadOutlined';
+import ReloadOutlinedSvg from 'icons-base/es/asn/ReloadOutlined';
 
 export interface ReloadOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ReconciliationOutlinedSvg from 'gupo-icons-base/es/asn/ReconciliationOutlined';
+import ReconciliationOutlinedSvg from 'icons-base/es/asn/ReconciliationOutlined';
 
 export interface ReconciliationOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

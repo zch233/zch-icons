@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import EuroCircleOutlinedSvg from 'gupo-icons-base/es/asn/EuroCircleOutlined';
+import EuroCircleOutlinedSvg from 'icons-base/es/asn/EuroCircleOutlined';
 
 export interface EuroCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ImageColorfulSvg from 'gupo-icons-base/es/asn/ImageColorful';
+import ImageColorfulSvg from 'icons-base/es/asn/ImageColorful';
 
 export interface ImageColorfulIconType extends FunctionalComponent<IconProps> {
     displayName: string;

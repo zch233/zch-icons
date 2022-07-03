@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LockOutlinedSvg from 'gupo-icons-base/es/asn/LockOutlined';
+import LockOutlinedSvg from 'icons-base/es/asn/LockOutlined';
 
 export interface LockOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

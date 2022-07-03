@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import HighlightFilledSvg from 'gupo-icons-base/es/asn/HighlightFilled';
+import HighlightFilledSvg from 'icons-base/es/asn/HighlightFilled';
 
 export interface HighlightFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

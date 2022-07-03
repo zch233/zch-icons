@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FileExclamationTwotoneSvg from 'gupo-icons-base/es/asn/FileExclamationTwotone';
+import FileExclamationTwotoneSvg from 'icons-base/es/asn/FileExclamationTwotone';
 
 export interface FileExclamationTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

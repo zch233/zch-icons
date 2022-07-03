@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ExceptionOutlinedSvg from 'gupo-icons-base/es/asn/ExceptionOutlined';
+import ExceptionOutlinedSvg from 'icons-base/es/asn/ExceptionOutlined';
 
 export interface ExceptionOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

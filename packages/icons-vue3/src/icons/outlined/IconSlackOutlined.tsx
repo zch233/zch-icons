@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SlackOutlinedSvg from 'gupo-icons-base/es/asn/SlackOutlined';
+import SlackOutlinedSvg from 'icons-base/es/asn/SlackOutlined';
 
 export interface SlackOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

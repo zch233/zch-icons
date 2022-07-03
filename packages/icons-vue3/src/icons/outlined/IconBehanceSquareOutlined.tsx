@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BehanceSquareOutlinedSvg from 'gupo-icons-base/es/asn/BehanceSquareOutlined';
+import BehanceSquareOutlinedSvg from 'icons-base/es/asn/BehanceSquareOutlined';
 
 export interface BehanceSquareOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

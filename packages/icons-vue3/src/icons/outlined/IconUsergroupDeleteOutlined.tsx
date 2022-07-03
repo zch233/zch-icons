@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import UsergroupDeleteOutlinedSvg from 'gupo-icons-base/es/asn/UsergroupDeleteOutlined';
+import UsergroupDeleteOutlinedSvg from 'icons-base/es/asn/UsergroupDeleteOutlined';
 
 export interface UsergroupDeleteOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DeleteTwotoneSvg from 'gupo-icons-base/es/asn/DeleteTwotone';
+import DeleteTwotoneSvg from 'icons-base/es/asn/DeleteTwotone';
 
 export interface DeleteTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import YoutubeFilledSvg from 'gupo-icons-base/es/asn/YoutubeFilled';
+import YoutubeFilledSvg from 'icons-base/es/asn/YoutubeFilled';
 
 export interface YoutubeFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import RadiusBottomleftOutlinedSvg from 'gupo-icons-base/es/asn/RadiusBottomleftOutlined';
+import RadiusBottomleftOutlinedSvg from 'icons-base/es/asn/RadiusBottomleftOutlined';
 
 export interface RadiusBottomleftOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PoweroffOutlinedSvg from 'gupo-icons-base/es/asn/PoweroffOutlined';
+import PoweroffOutlinedSvg from 'icons-base/es/asn/PoweroffOutlined';
 
 export interface PoweroffOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

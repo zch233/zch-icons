@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PoundCircleTwotoneSvg from 'gupo-icons-base/es/asn/PoundCircleTwotone';
+import PoundCircleTwotoneSvg from 'icons-base/es/asn/PoundCircleTwotone';
 
 export interface PoundCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

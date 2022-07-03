@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CompassFilledSvg from 'gupo-icons-base/es/asn/CompassFilled';
+import CompassFilledSvg from 'icons-base/es/asn/CompassFilled';
 
 export interface CompassFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

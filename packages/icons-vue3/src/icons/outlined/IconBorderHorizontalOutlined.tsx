@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BorderHorizontalOutlinedSvg from 'gupo-icons-base/es/asn/BorderHorizontalOutlined';
+import BorderHorizontalOutlinedSvg from 'icons-base/es/asn/BorderHorizontalOutlined';
 
 export interface BorderHorizontalOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

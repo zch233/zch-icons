@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WeiboCircleOutlinedSvg from 'gupo-icons-base/es/asn/WeiboCircleOutlined';
+import WeiboCircleOutlinedSvg from 'icons-base/es/asn/WeiboCircleOutlined';
 
 export interface WeiboCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

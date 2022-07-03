@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import QqCircleFilledSvg from 'gupo-icons-base/es/asn/QqCircleFilled';
+import QqCircleFilledSvg from 'icons-base/es/asn/QqCircleFilled';
 
 export interface QqCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

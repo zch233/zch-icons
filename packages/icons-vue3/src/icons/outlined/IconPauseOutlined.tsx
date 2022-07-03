@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import PauseOutlinedSvg from 'gupo-icons-base/es/asn/PauseOutlined';
+import PauseOutlinedSvg from 'icons-base/es/asn/PauseOutlined';
 
 export interface PauseOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

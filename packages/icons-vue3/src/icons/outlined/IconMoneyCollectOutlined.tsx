@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MoneyCollectOutlinedSvg from 'gupo-icons-base/es/asn/MoneyCollectOutlined';
+import MoneyCollectOutlinedSvg from 'icons-base/es/asn/MoneyCollectOutlined';
 
 export interface MoneyCollectOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FullscreenOutlinedSvg from 'gupo-icons-base/es/asn/FullscreenOutlined';
+import FullscreenOutlinedSvg from 'icons-base/es/asn/FullscreenOutlined';
 
 export interface FullscreenOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

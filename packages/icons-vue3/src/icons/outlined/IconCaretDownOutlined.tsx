@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CaretDownOutlinedSvg from 'gupo-icons-base/es/asn/CaretDownOutlined';
+import CaretDownOutlinedSvg from 'icons-base/es/asn/CaretDownOutlined';
 
 export interface CaretDownOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

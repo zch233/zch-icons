@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BugFilledSvg from 'gupo-icons-base/es/asn/BugFilled';
+import BugFilledSvg from 'icons-base/es/asn/BugFilled';
 
 export interface BugFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

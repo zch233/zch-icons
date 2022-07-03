@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import LeftCircleTwotoneSvg from 'gupo-icons-base/es/asn/LeftCircleTwotone';
+import LeftCircleTwotoneSvg from 'icons-base/es/asn/LeftCircleTwotone';
 
 export interface LeftCircleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

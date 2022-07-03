@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DiffOutlinedSvg from 'gupo-icons-base/es/asn/DiffOutlined';
+import DiffOutlinedSvg from 'icons-base/es/asn/DiffOutlined';
 
 export interface DiffOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

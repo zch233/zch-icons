@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import Loading3QuartersOutlinedSvg from 'gupo-icons-base/es/asn/Loading3QuartersOutlined';
+import Loading3QuartersOutlinedSvg from 'icons-base/es/asn/Loading3QuartersOutlined';
 
 export interface Loading3QuartersOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlipayCircleOutlinedSvg from 'gupo-icons-base/es/asn/AlipayCircleOutlined';
+import AlipayCircleOutlinedSvg from 'icons-base/es/asn/AlipayCircleOutlined';
 
 export interface AlipayCircleOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

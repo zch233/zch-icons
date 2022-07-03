@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BackwardFilledSvg from 'gupo-icons-base/es/asn/BackwardFilled';
+import BackwardFilledSvg from 'icons-base/es/asn/BackwardFilled';
 
 export interface BackwardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

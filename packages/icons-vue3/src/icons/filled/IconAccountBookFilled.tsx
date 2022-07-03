@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AccountBookFilledSvg from 'gupo-icons-base/es/asn/AccountBookFilled';
+import AccountBookFilledSvg from 'icons-base/es/asn/AccountBookFilled';
 
 export interface AccountBookFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

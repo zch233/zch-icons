@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CreditCardOutlinedSvg from 'gupo-icons-base/es/asn/CreditCardOutlined';
+import CreditCardOutlinedSvg from 'icons-base/es/asn/CreditCardOutlined';
 
 export interface CreditCardOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

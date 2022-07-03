@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import DownSquareTwotoneSvg from 'gupo-icons-base/es/asn/DownSquareTwotone';
+import DownSquareTwotoneSvg from 'icons-base/es/asn/DownSquareTwotone';
 
 export interface DownSquareTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

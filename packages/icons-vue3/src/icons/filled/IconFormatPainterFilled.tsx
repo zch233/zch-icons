@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import FormatPainterFilledSvg from 'gupo-icons-base/es/asn/FormatPainterFilled';
+import FormatPainterFilledSvg from 'icons-base/es/asn/FormatPainterFilled';
 
 export interface FormatPainterFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

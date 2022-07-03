@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AlipaySquareFilledSvg from 'gupo-icons-base/es/asn/AlipaySquareFilled';
+import AlipaySquareFilledSvg from 'icons-base/es/asn/AlipaySquareFilled';
 
 export interface AlipaySquareFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import StrikethroughOutlinedSvg from 'gupo-icons-base/es/asn/StrikethroughOutlined';
+import StrikethroughOutlinedSvg from 'icons-base/es/asn/StrikethroughOutlined';
 
 export interface StrikethroughOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

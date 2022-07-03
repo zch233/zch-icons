@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ShakeOutlinedSvg from 'gupo-icons-base/es/asn/ShakeOutlined';
+import ShakeOutlinedSvg from 'icons-base/es/asn/ShakeOutlined';
 
 export interface ShakeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

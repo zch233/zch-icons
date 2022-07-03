@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import QrcodeOutlinedSvg from 'gupo-icons-base/es/asn/QrcodeOutlined';
+import QrcodeOutlinedSvg from 'icons-base/es/asn/QrcodeOutlined';
 
 export interface QrcodeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

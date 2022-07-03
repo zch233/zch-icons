@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import BellFilledSvg from 'gupo-icons-base/es/asn/BellFilled';
+import BellFilledSvg from 'icons-base/es/asn/BellFilled';
 
 export interface BellFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

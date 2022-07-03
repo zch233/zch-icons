@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WarningFilledSvg from 'gupo-icons-base/es/asn/WarningFilled';
+import WarningFilledSvg from 'icons-base/es/asn/WarningFilled';
 
 export interface WarningFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

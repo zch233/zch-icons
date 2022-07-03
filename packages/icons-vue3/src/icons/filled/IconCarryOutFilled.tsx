@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CarryOutFilledSvg from 'gupo-icons-base/es/asn/CarryOutFilled';
+import CarryOutFilledSvg from 'icons-base/es/asn/CarryOutFilled';
 
 export interface CarryOutFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

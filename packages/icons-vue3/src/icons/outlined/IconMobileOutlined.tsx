@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import MobileOutlinedSvg from 'gupo-icons-base/es/asn/MobileOutlined';
+import MobileOutlinedSvg from 'icons-base/es/asn/MobileOutlined';
 
 export interface MobileOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

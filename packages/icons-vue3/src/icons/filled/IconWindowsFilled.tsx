@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import WindowsFilledSvg from 'gupo-icons-base/es/asn/WindowsFilled';
+import WindowsFilledSvg from 'icons-base/es/asn/WindowsFilled';
 
 export interface WindowsFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

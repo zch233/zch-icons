@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AudioOutlinedSvg from 'gupo-icons-base/es/asn/AudioOutlined';
+import AudioOutlinedSvg from 'icons-base/es/asn/AudioOutlined';
 
 export interface AudioOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

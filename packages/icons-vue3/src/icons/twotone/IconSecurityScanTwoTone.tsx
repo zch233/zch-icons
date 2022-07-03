@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import SecurityScanTwotoneSvg from 'gupo-icons-base/es/asn/SecurityScanTwotone';
+import SecurityScanTwotoneSvg from 'icons-base/es/asn/SecurityScanTwotone';
 
 export interface SecurityScanTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

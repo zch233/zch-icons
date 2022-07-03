@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import YoutubeOutlinedSvg from 'gupo-icons-base/es/asn/YoutubeOutlined';
+import YoutubeOutlinedSvg from 'icons-base/es/asn/YoutubeOutlined';
 
 export interface YoutubeOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

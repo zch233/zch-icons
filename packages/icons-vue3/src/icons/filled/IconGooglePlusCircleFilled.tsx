@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GooglePlusCircleFilledSvg from 'gupo-icons-base/es/asn/GooglePlusCircleFilled';
+import GooglePlusCircleFilledSvg from 'icons-base/es/asn/GooglePlusCircleFilled';
 
 export interface GooglePlusCircleFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

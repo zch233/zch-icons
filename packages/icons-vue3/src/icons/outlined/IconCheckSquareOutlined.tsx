@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import CheckSquareOutlinedSvg from 'gupo-icons-base/es/asn/CheckSquareOutlined';
+import CheckSquareOutlinedSvg from 'icons-base/es/asn/CheckSquareOutlined';
 
 export interface CheckSquareOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

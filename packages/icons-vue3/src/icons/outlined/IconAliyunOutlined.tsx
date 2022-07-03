@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import AliyunOutlinedSvg from 'gupo-icons-base/es/asn/AliyunOutlined';
+import AliyunOutlinedSvg from 'icons-base/es/asn/AliyunOutlined';
 
 export interface AliyunOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;

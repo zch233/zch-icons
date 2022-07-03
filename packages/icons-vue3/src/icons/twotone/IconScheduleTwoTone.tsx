@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import ScheduleTwotoneSvg from 'gupo-icons-base/es/asn/ScheduleTwotone';
+import ScheduleTwotoneSvg from 'icons-base/es/asn/ScheduleTwotone';
 
 export interface ScheduleTwotoneIconType extends FunctionalComponent<IconProps> {
     displayName: string;

@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import IdcardFilledSvg from 'gupo-icons-base/es/asn/IdcardFilled';
+import IdcardFilledSvg from 'icons-base/es/asn/IdcardFilled';
 
 export interface IdcardFilledIconType extends FunctionalComponent<IconProps> {
     displayName: string;

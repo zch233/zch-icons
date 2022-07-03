@@ -3,7 +3,7 @@
 
 import { FunctionalComponent } from 'vue';
 import Icon, { IconProps } from '../../components/Icon';
-import GooglePlusOutlinedSvg from 'gupo-icons-base/es/asn/GooglePlusOutlined';
+import GooglePlusOutlinedSvg from 'icons-base/es/asn/GooglePlusOutlined';
 
 export interface GooglePlusOutlinedIconType extends FunctionalComponent<IconProps> {
     displayName: string;
