@@ -9,9 +9,9 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
-"@ant-design-vue/tools@^3.1.2":
+"@ant-design-vue/tools@3.1.2":
   version "3.1.2"
-  resolved "https://registry.npmmirror.com/@ant-design-vue/tools/-/tools-3.1.2.tgz#f660925751ae7f87b2768cdd7a1f8c8b65aa5da8"
+  resolved "https://registry.npmjs.org/@ant-design-vue/tools/-/tools-3.1.2.tgz#f660925751ae7f87b2768cdd7a1f8c8b65aa5da8"
   integrity sha512-U8XCSQsXJg3pLgHkY/dtzK1HT4OD3TlLmlHQxvxtkshPxEbmwOUNQRBkSwhZZ+WI2O6R1c/nre9gX3Nle1mUwQ==
   dependencies:
     "@babel/core" "~7.2.2"
@@ -112,7 +112,7 @@
     xtemplate "^4.6.1"
     xtpl "^3.4.0"
 
-"@ant-design/colors@^6.0.0":
+"@ant-design/colors@6.0.0":
   version "6.0.0"
   resolved "https://registry.npmjs.org/@ant-design/colors/-/colors-6.0.0.tgz#9b9366257cffcc47db42b9d0203bb592c13c0298"
   integrity sha512-qAZRvPzfdWHtfameEGP2Qvuf838NhergR35o+EuVyB5XvSA98xod5r4utvi4TJ3ywmevm290g9nsCG5MryrdWQ==
@@ -7628,11 +7628,6 @@ gupo-deploy@1.0.9:
   resolved "https://registry.npmjs.org/gupo-deploy/-/gupo-deploy-1.0.9.tgz#07e092626e1006b23946ed3ea9c5a10d8abe4c34"
   integrity sha512-UZUmSZdVpB8K076IbXQh7oIfer0dPPI+viMQCpFFfYASEYgsf4j7MGIybczd5ocorIeQzd/VimiPY6CYZFze3g==
 
-gupo-icons-base@^0.0.2:
-  version "0.0.2"
-  resolved "https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/gupo-icons-base/-/gupo-icons-base-0.0.2.tgz#906dea28e588e0ee751a692614ae2d7e28a461e9"
-  integrity sha512-uH8ztLJR7gTe5rjBbyrCkJXRP8hgvqwsT6aJLnFzgltQvW4FhLfcTEK9MYsHoWG9Ycmg96bZbGMHlY3zsAU1Ng==
-
 gzip-size@^5.0.0:
   version "5.1.1"
   resolved "https://registry.npmmirror.com/gzip-size/-/gzip-size-5.1.1.tgz#cb9bee692f87c0612b232840a873904e4c135274"
@@ -8049,10 +8044,10 @@ humanize-url@^1.0.0:
     normalize-url "^1.0.0"
     strip-url-auth "^1.0.0"
 
-husky@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/husky/-/husky-7.0.0.tgz#3dbd5d28e76234689ee29bb41e048f28e3e46616"
-  integrity sha512-xK7lO0EtSzfFPiw+oQncQVy/XqV7UVVjxBByc+Iv5iK3yhW9boDoWgvZy3OGo48QKg/hUtZkzz0hi2HXa0kn7w==
+icons-base@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/icons-base/-/icons-base-0.0.1.tgz#d56b526781575b0019dc6f26d6d96c4b83b8d2ad"
+  integrity sha512-ikpvD98khWNptjVkCFGgKoJItS6AHnHvB6uae7xi8sR4BMICQlp1otsStuL3cQ6TVGiLGNFifYJwx/9MU2afHg==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
@@ -11753,9 +11748,9 @@ pretty-hrtime@^1.0.0:
   resolved "https://registry.npmmirror.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==
 
-pretty-quick@^3.1.3:
+pretty-quick@3.1.3:
   version "3.1.3"
-  resolved "https://registry.npmmirror.com/pretty-quick/-/pretty-quick-3.1.3.tgz#15281108c0ddf446675157ca40240099157b638e"
+  resolved "https://registry.npmjs.org/pretty-quick/-/pretty-quick-3.1.3.tgz#15281108c0ddf446675157ca40240099157b638e"
   integrity sha512-kOCi2FJabvuh1as9enxYmrnBC6tVMoVOenMaBqRfsvBHB0cbpYHjdQEpSglpASDFEXVwplpcGR4CLEaisYAFcA==
   dependencies:
     chalk "^3.0.0"
@@ -12966,9 +12961,9 @@ stack-utils@^2.0.2:
   dependencies:
     escape-string-regexp "^2.0.0"
 
-standard-version@^9.5.0:
+standard-version@9.5.0:
   version "9.5.0"
-  resolved "https://registry.npmmirror.com/standard-version/-/standard-version-9.5.0.tgz#851d6dcddf5320d5079601832aeb185dbf497949"
+  resolved "https://registry.npmjs.org/standard-version/-/standard-version-9.5.0.tgz#851d6dcddf5320d5079601832aeb185dbf497949"
   integrity sha512-3zWJ/mmZQsOaO+fOlsa0+QK90pwhNd042qEcw6hKFNoLFs7peGyvPffpEBbK/DSGPbyOvli0mUIFv5A4qTjh2Q==
   dependencies:
     chalk "^2.4.2"
