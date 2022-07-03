@@ -14,7 +14,7 @@
 其中我们提供了四种种主题的图标，不同主题的 Icon 组件名为图标名加主题做为后缀。
 
 ```jsx
-import { IconStarOutlined, IconStarFilled, IconStarTwoTone, IconImageColorful } from 'gupo-icons-vue3';
+import { IconStarOutlined, IconStarFilled, IconStarTwoTone, IconImageColorful } from 'icons-vue3';
 
 <icon-star-outlined />
 <icon-star-filled />
@@ -38,7 +38,7 @@ import { IconStarOutlined, IconStarFilled, IconStarTwoTone, IconImageColorful } 
     <icon-message-outlined :style="{fontSize: '16px', color: '#08c'}" />
 </template>
 <script>
-    import { IconMessageOutlined } from 'gupo-icons-vue3';
+    import { IconMessageOutlined } from 'icons-vue3';
     import { defineComponent } from 'vue';
     export default defineComponent({
         components: {
@@ -53,7 +53,7 @@ import { IconStarOutlined, IconStarFilled, IconStarTwoTone, IconImageColorful } 
 对于双色图标，可以通过使用 `Icon.getTwoToneColor()` 和 `Icon.setTwoToneColor(colorString)` 来全局设置图标主色。
 
 ```jsx
-import { getTwoToneColor, setTwoToneColor } from 'gupo-icons-vue3';
+import { getTwoToneColor, setTwoToneColor } from 'icons-vue3';
 
 setTwoToneColor('#eb2f96');
 getTwoToneColor(); // #eb2f96
@@ -64,7 +64,7 @@ getTwoToneColor(); // #eb2f96
 我们提供了一个 `createFromIconfont` 方法，方便开发者调用在 [iconfont.cn](http://iconfont.cn/) 上自行管理的图标。
 
 ```jsx
-import { createFromIconfont } from 'gupo-icons-vue3';
+import { createFromIconfont } from 'icons-vue3';
 import { defineComponent } from 'vue';
 const MyIconfont = createFromIconfont({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js', // 在 iconfont.cn 上生成
@@ -95,7 +95,7 @@ export default defineComponent({
 
 ```jsx
 import { defineComponent } from 'vue';
-import IconCustom from 'gupo-icons-vue3';
+import IconCustom from 'icons-vue3';
 
 export default defineComponent({
     setup() {

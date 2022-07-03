@@ -18,8 +18,8 @@
 </template>
 
 <script setup>
-import { IconSearchOutlined } from 'gupo-icons-vue3';
-import * as allIcons from 'gupo-icons-vue3';
+import { IconSearchOutlined } from 'icons-vue3';
+import * as allIcons from 'icons-vue3';
 
 const router = useRouter();
 const route = useRoute();

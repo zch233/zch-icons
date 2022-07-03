@@ -5,7 +5,7 @@
             <div class="docs-block">
                 <p class="docs-block-title">基本用法</p>
                 <p class="docs-block-subtitle">
-                    通过 gupo-icons 引用 Icon 组件，不同主题的 Icon 组件名为图标名加主题做为后缀，也可以通过设置 spin 属性来实现动画旋转效果，size
+                    通过 zch-icons 引用 Icon 组件，不同主题的 Icon 组件名为图标名加主题做为后缀，也可以通过设置 spin 属性来实现动画旋转效果，size
                     属性来控制图标大小。
                 </p>
                 <div class="docs-block-render">
@@ -62,7 +62,7 @@ import {
     IconHeartTwotone,
     IconCheckCircleTwotone,
     createFromIconfont,
-} from 'gupo-icons-vue3';
+} from 'icons-vue3';
 import CodeRender from '~/components/CodeRender';
 
 useHead({
@@ -80,7 +80,7 @@ const baseCode = `
     IconSettingFilled,
     IconSmileOutlined,
     IconSyncOutlined,
-  } from 'gupo-icons-vue3';
+  } from 'icons-vue3';
 
   <IconHomeOutlined />
   <IconLoadingOutlined :spin="true" />
@@ -93,7 +93,7 @@ const colorCode = `
     IconSmileTwoTone,
     IconHeartTwoTone,
     IconCheckCircleTwoTone,
-  } from 'gupo-icons-vue3';
+  } from 'icons-vue3';
 
   <IconHomeOutlined color="#c03" />
   <IconSmileTwoTone />
@@ -106,7 +106,7 @@ const iconfontCode = `
       <IconFont icon="twitter" />
   </template>
 
-  import { createFromIconfont } from 'gupo-icons-vue3';
+  import { createFromIconfont } from 'icons-vue3';
 
   const IconFont = createFromIconfont({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',

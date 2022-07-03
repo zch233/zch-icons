@@ -149,11 +149,11 @@
 
 <script setup>
 import copy from 'copy-to-clipboard';
-import * as allIcons from 'gupo-icons-vue3';
-import * as filledIcons from 'gupo-icons-vue3/es/icons/filled';
-import * as outlinedIcons from 'gupo-icons-vue3/es/icons/outlined';
-import * as twotoneIcons from 'gupo-icons-vue3/es/icons/twotone';
-import * as colorfulIcons from 'gupo-icons-vue3/es/icons/colorful';
+import * as allIcons from 'icons-vue3';
+import * as filledIcons from 'icons-vue3/es/icons/filled';
+import * as outlinedIcons from 'icons-vue3/es/icons/outlined';
+import * as twotoneIcons from 'icons-vue3/es/icons/twotone';
+import * as colorfulIcons from 'icons-vue3/es/icons/colorful';
 import { useMessage } from 'naive-ui';
 import { downloadFile, getHighlightCode, upperFirst } from '~/utils';
 import { permission } from '~/store';
@@ -211,7 +211,7 @@ const codeTemplate = computed(() =>
             ? `
 <i class="gupoIcon ${currentIcon.value.key}-${currentIcon.value.theme}"></i>`
             : `
-import ${currentIcon.value.iconName} from 'gupo-icons-${currentTab.value.toLowerCase()}';
+import ${currentIcon.value.iconName} from 'icons-${currentTab.value.toLowerCase()}';
 
 <${currentIcon.value.iconName} />`
     )

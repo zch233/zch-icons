@@ -20,10 +20,10 @@
                     <NuxtLink to="/icons">图标</NuxtLink>
                 </li>
                 <li class="nav-item">
-                    <NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">日志</NuxtLink>
+                    <NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/zch-icons" target="_blank">日志</NuxtLink>
                 </li>
                 <li class="nav-item">
-                    <NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/gupo-icons" target="_blank">Codeup</NuxtLink>
+                    <NuxtLink to="https://codeup.aliyun.com/gupo/node-modules/zch-icons" target="_blank">Codeup</NuxtLink>
                 </li>
             </ul>
             <div class="options">
@@ -141,7 +141,7 @@
 </template>
 <script setup>
 import { permission, setPermission, setStageDigest } from '~/store';
-import Icon from 'gupo-icons-vue3';
+import Icon from 'icons-vue3';
 
 onMounted(() => {
     setPermission('design', window.localStorage.getItem('permissionDesign') === '1');
