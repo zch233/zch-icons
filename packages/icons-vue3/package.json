@@ -1,6 +1,6 @@
 {
     "name": "icons-vue3",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "author": "zhangchao <529743595@qq.com>",
     "license": "MIT",
     "sideEffects": false,
@@ -35,7 +35,7 @@
     "dependencies": {
         "@ant-design/colors": "6.0.0",
         "icons-base": "0.0.1",
-        "vite-plugin-svg-loader": "^0.0.1",
+        "vite-plugin-svg-loader": "0.0.2",
         "vue": "3.2.33"
     },
     "devDependencies": {
