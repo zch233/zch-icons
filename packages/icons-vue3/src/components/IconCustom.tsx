@@ -1,13 +1,7 @@
-import { computed, FunctionalComponent } from 'vue';
+import { FunctionalComponent } from 'vue';
 import Icon from './Icon';
 
-export const IconCustom: FunctionalComponent<{ iconName: string }> = (props, context) => {
-    console.log(props);
-    const icon = computed(async () => {
-        const aa = await import('../../../../src/assets/svg/empty.svg');
-        console.log(aa);
-        return aa.default;
-    });
-    // @ts-ignore
-    return <Icon icon={icon.value} />;
+export const IconCustom: FunctionalComponent<{ icon: string }> = (props, context) => {
+    const modules = import.meta.globEager('../../../../src/assets/svg/*.svg');
+    return <Icon icon={{ icon: modules[`../../../../src/assets/svg/${props.icon}.svg`].default, theme: 'colorful', name: 'empty' }} />;
 };
