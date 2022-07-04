@@ -14468,11 +14468,6 @@ vite-plugin-mkcert@1.6.0:
     debug "^4.3.3"
     picocolors "^1.0.0"
 
-vite-plugin-svg-loader@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/vite-plugin-svg-loader/-/vite-plugin-svg-loader-0.0.1.tgz#efde615c5d65e5393906cfac0468623844f309e1"
-  integrity sha512-gl84oLwcDSVGgF/oUVDkRP+D8CCx/1N47J8stTLQO+uvGYq2TYucuVdl1bZ2wh3XHvqY5DyVfelcXgOLhsaDQQ==
-
 vite-plugin-vue-setup-extend@0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/vite-plugin-vue-setup-extend/-/vite-plugin-vue-setup-extend-0.4.0.tgz#ebbbe265320039b8c6a3b9fcae3b8d152ecf4a13"

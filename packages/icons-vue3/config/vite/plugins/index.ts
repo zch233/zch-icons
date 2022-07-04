@@ -6,7 +6,6 @@ import { configPluginVisualizer } from './rollupPluginVisualizer';
 import { configPluginCompression } from './vitePluginCompression';
 import { configPluginCertificate } from './vitePluginMkcert';
 import { configPluginVueSetupExtend } from './vitePluginVueSetupExtend';
-import svgLoader from 'vite-plugin-svg-loader';
 
 export const createVitePlugins = ({ mode, command }: ConfigEnv, viteEnv: ViteEnv) => {
     const isBuild = command === 'build';
@@ -18,7 +17,6 @@ export const createVitePlugins = ({ mode, command }: ConfigEnv, viteEnv: ViteEnv
         configPluginVueJsx(),
         configPluginVueSetupExtend(), // 支持在 setup 上使用组件 name
         configPluginHtml(isBuild, viteEnv),
-        svgLoader(),
     ];
 
     if (VITE_LISTEN_HTTPS) plugins.push(configPluginCertificate());
