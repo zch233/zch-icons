@@ -27,6 +27,6 @@ const EXTRA_ICON_NAMES = [
     'image',
 ];
 
-export const adjustViewBox: TransformFactory = assignAttrsAtTag('svg', ({ name }) => ({
-    viewBox: EXTRA_ICON_NAMES.includes(name) ? '0 0 1024 1024' : '64 64 896 896', // 特殊图标不做裁剪调整
+export const adjustViewBox: TransformFactory = assignAttrsAtTag('svg', ({ name, previousAttrs }) => ({
+    viewBox: EXTRA_ICON_NAMES.includes(name) ? previousAttrs.viewBox : '64 64 896 896', // 特殊图标不做裁剪调整
 }));
