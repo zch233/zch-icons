@@ -1,6 +1,6 @@
 import { h, nextTick } from 'vue';
 import insertCss from './insert-css';
-import { AbstractNode } from 'icons-base/es/types';
+import { AbstractNode } from 'gupo-icons-base/es/types';
 import { generate as generateColor } from '@ant-design/colors';
 
 export const iconStyles = `
@@ -14,7 +14,7 @@ export const iconStyles = `
     text-align: center;
     text-rendering: optimizelegibility;
     text-transform: none;
-    vertical-align: -0.125em;
+    transform: translateZ(0);
 }
 
 .gupoIcon > * {
@@ -44,17 +44,20 @@ export const iconStyles = `
 .gupoIcon-spin::before,
 .gupoIcon-spin {
     display: inline-block;
+    -webkit-animation: loadingCircle 1s infinite linear;
     animation: loading-circle 1s infinite linear;
 }
 
-@keyframes loading-circle {
+@-webkit-keyframes loading-circle {
     100% {
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
 
 @keyframes loading-circle {
     100% {
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
